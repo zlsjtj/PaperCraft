@@ -1,6 +1,6 @@
 interface:
   display_name: "PaperCraft｜论文叙事与精修"
   short_description: "据实强化创新定位与工程深度，联合科研绘图，交付可审阅论文与中文诊断"
-  default_prompt: "使用 $paper-evidence-framing（PaperCraft），定位全文论证和图文阅读的具体缺口，据实修订贡献价值、工程解释与结果叙事；核对对照、计数含义和结论强度，合并续改形成的重复解释，保留已有清楚表达。将选定新图实际入稿，交付黄色审阅稿、中文诊断及可追溯前后对照，说明实际改善和未解决项。"
+  default_prompt: "使用 $paper-evidence-framing（PaperCraft），先根据实际稿件定位读者仍需自行拼接的贡献、困难和证据关系。要求质量升级时，先试改关键段并对照原文，再判断改写或保留；检查邻段重复和入稿后的阅读负担。保留研究事实与边界，将选定新图实际入稿，交付黄色审阅稿、中文诊断及真实前后对照，说明改善和未解决项。"
 policy:
   allow_implicit_invocation: true

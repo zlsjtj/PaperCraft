@@ -37,3 +37,7 @@
 机制图应展示串行压缩后写入与相邻阶段重叠的具体对应，用同一批块比较。结果图保留 A、B、C，写清时间或吞吐比方向，标出持平线。没有逐次运行数据就不补误差条，不用透视放大收益。图源与图注、正文应共同说明这是教学数据。
 
 完整三段候选及逐项依据见[改稿](checkpoint-demo/revised-three-paragraphs.md)和[中文记录](checkpoint-demo/change-record.zh.md)。继续修改时参见[续改判断](actual-continuation-revision.md)。
+
+## 独立上下文中的完整局部试用
+
+[双通道读出示例](optical-readout-demo/README.md)保留原始事实、原段落、从动机进入和从检查进入的两稿。它说明如何把组件与验证清单连成问题、设计和证据，也记录篇幅增加的代价。不是只提供可替换名词的漂亮句式。

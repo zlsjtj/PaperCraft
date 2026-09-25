@@ -2,7 +2,7 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.8.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.9.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
 ## 安装
 
@@ -53,6 +53,12 @@ python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候
 输出目录应为新目录。含公式、域、交叉引用和混合格式的段落应走[复杂 Word 流程](references/complex-word.md)，不要强行交给简单段落工具。PDF 和逐页图片还需要宿主的 documents 技能、LibreOffice 与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
 
 新版补充[选择规则复核与定范围审阅](references/method-transfer-audit.md)：检查训练配置如何映射到测试输入，并通过 `make_review_packet.py` 只提供明确选定的段落和图片。生成材料不等于完成独立审阅。
+
+## 这次怎样判断是否改得更好
+
+先区分修错和解释提升。要求明显改善时，选关键段实际改写，再把它放回邻段和图注中比较：读者是否少补一步推理、技术选择各自解决什么问题、证据是否支持这个价值。事实齐全、字数增加、检查通过，都不能单独证明包装更好。
+
+本版改写了原有论证修复与读者效果规则，并用 [双通道读出 DEMO](references/optical-readout-demo/README.md)记录另一个上下文生成的两个真实段落候选。只要求局部修错时，不额外强制多稿流程。
 
 ## 示例与检查
 
