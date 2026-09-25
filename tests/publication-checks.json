@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-25",
+  "repository": "PaperCraft",
+  "skill_id": "paper-evidence-framing",
+  "version": "2.7.0",
+  "scope": "公开版代码回归及元信息校验；写作和美感判断不由测试自动给出",
+  "status": "PASS",
+  "total": 66,
+  "suites": [
+    {
+      "suite": "基础",
+      "passed": 18,
+      "total": 18,
+      "receipt_sha256": "dfd35b2c8e6e886bcc0cca2a78c96f9dd3046eb118e5857e648a7f3a736ca5c6"
+    },
+    {
+      "suite": "保护",
+      "passed": 20,
+      "total": 20,
+      "receipt_sha256": "e02872ed57cf074b9b40cdf1bc5bfbb8a4a6d63948cf51f43f49c01b201728a3"
+    },
+    {
+      "suite": "入稿",
+      "passed": 19,
+      "total": 19,
+      "receipt_sha256": "f574be589d306b51a91612d2d37d3d87bd628481208fa5bb974a5ce711bb0703"
+    },
+    {
+      "suite": "效果记录",
+      "passed": 9,
+      "total": 9,
+      "receipt_sha256": "c0cfda4385d7e7ea96f5e53bf473aa16199981e0aeed06343d619c014b18040b"
+    }
+  ],
+  "official_validation": "PASS",
+  "functional_python_unchanged_from_installed": true,
+  "source_sha256": {
+    "scripts/audit_effect_record.py": "5d1b271243f2b86aa6c11aba878a26afd06a7a1d3a2279c80dd390e19067f498",
+    "scripts/audit_figure_integration.py": "03c8f80b6c618413b498db66dc83ee72f3803c99be48c0b3be2f238774027606",
+    "scripts/audit_preservation.py": "22920d85563966f0af93401b4ce97170fa121c91e87418d0cf40f7b24c563fd9",
+    "scripts/check_dependencies.py": "355f5e01d62b253075b9c1b7a4bf7ebef471952ddaf621f13a2ce97a4ed1b566",
+    "scripts/render_review.py": "173bcacafb15414505425fe36d372629697147f8d72dcbc1b6674ad3320ebb80",
+    "scripts/review_docx.py": "c0548d0fa37a99459d5938d786d1215393efabc9424b292492caac15a27d4758",
+    "tests/run_effect_record_tests.py": "389e7e3655bc39ad9ef9cc91ce07dec76f637759bf31045927889e991fb8bcf5",
+    "tests/run_integration_tests.py": "cd990e0b05918deb4fe81ca74e61f6cfe5b51df477168b9b99bc763bc5feed42",
+    "tests/run_preservation_tests.py": "ed006e3d5b956f75585004543b305f9fb1cb4b67dc374e2a5bbfb5e44204128f",
+    "tests/run_tests.py": "29c467a400b707818a9560e7338da9e02081dea0d1be08b72f860293a4223e40"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows",
+    "lxml": "6.1.1",
+    "python-docx": "1.2.0",
+    "Pillow": "12.3.0",
+    "reportlab": "4.4.9",
+    "pypdf": "6.7.5",
+    "numpy": "2.3.5"
+  },
+  "not_run": [
+    "跨机器安装",
+    "新会话自动触发",
+    "原生 Microsoft Word 与真实打印",
+    "人类理解实验",
+    "期刊决定"
+  ]
+}

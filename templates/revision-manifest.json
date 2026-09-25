@@ -1,0 +1,20 @@
+{
+  "input_sha256": "REPLACE_WITH_ACTUAL_SOURCE_SHA256",
+  "scope": "full",
+  "execution": "sequential",
+  "operations": [
+    {"id": "E001", "kind": "replace", "target": "P0001", "expect": "Exact original plain paragraph", "text": "Author-reviewed replacement supported by the supplied material.", "purpose": "说明实际阅读问题", "evidence": "C01，原段与对应记录位置", "confirm": true}
+  ],
+  "report": {
+    "summary": "说明本轮实际改善和未验证部分。此文件是填写模板，不是一次运行的结果。",
+    "thesis": "具体约束、机制、能力和有证据的结果范围。",
+    "titles": [{"title": "Mechanism-focused candidate", "reason": "推荐理由及依据"}, {"title": "Application-focused candidate", "reason": "与第一个候选的实际侧重差异"}],
+    "dimensions": [{"name": "创新点", "before": "原问题", "after": "实际改动"}, {"name": "工作量", "before": "原问题", "after": "实际改动"}, {"name": "面子工程", "before": "原问题", "after": "实际改动"}],
+    "ledger": [{"id": "C01", "claim": "主张", "difference": "最近邻和实际差异", "source": "可定位源", "nature": "原文报告", "status": "待确认", "scope": "条件、样本和比较口径"}],
+    "workload": [{"name": "背景", "detail": "已核对内容"}, {"name": "研究现状", "detail": "已核对内容"}, {"name": "参数", "detail": "真实来源"}, {"name": "实验或模型", "detail": "构建和边界"}, {"name": "重复", "detail": "独立单位与重复数"}, {"name": "验证", "detail": "完成、失败、排除或待做"}],
+    "figures": [{"label": "图 1", "status": "待资料", "detail": "不要把建议当成完成"}],
+    "limitations": ["保留的不利结果和未解问题"],
+    "author_questions": ["仅列真正需要作者补充的事实"],
+    "checks": [{"name": "引用", "status": "未执行", "detail": "填写真实读取范围"}, {"name": "数据", "status": "未执行", "detail": "原文报告不等于原始记录核验"}]
+  }
+}
