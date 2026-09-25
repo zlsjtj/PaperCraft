@@ -2,7 +2,7 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.9.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.10.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
 ## 安装
 
@@ -56,9 +56,11 @@ python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候
 
 ## 这次怎样判断是否改得更好
 
-先区分修错和解释提升。要求明显改善时，选关键段实际改写，再把它放回邻段和图注中比较：读者是否少补一步推理、技术选择各自解决什么问题、证据是否支持这个价值。事实齐全、字数增加、检查通过，都不能单独证明包装更好。
+先让读者抓住一个主贡献，再安排支撑设计、证据和边界。面对已经完整但重点不清的段落，先重排、压缩或移位；缺事实时才补写。把工作量组织成“解决哪个疑问、用什么检查区分、得到什么判断”，不把实现步骤都放进入口。
 
-本版改写了原有论证修复与读者效果规则，并用 [双通道读出 DEMO](references/optical-readout-demo/README.md)记录另一个上下文生成的两个真实段落候选。只要求局部修错时，不额外强制多稿流程。
+本版重写[贡献层级](references/novelty-framing.md)和[读者效果](references/reader-effect.md)，先比较同等前部范围的第一项主贡献，再核对全文承接。新增[固定开口 DEMO](references/aperture-focus-demo/README.md)：先说同一开口如何区分两个对象，模型和构造检查放到下一段。入口更短，但全文并未缩短，这一代价明确保留。此前[光学读出示例](references/optical-readout-demo/README.md)适合学习补全解释，不能作为每段都要扩写的长度模板。
+
+审阅必须指出哪句让机制更早出现、哪些支撑不再抢主线、移出的信息在哪里。词数、四问答案齐全和检查通过都不能单独判定更好读。局部修错仍遵守用户指定范围。
 
 ## 示例与检查
 

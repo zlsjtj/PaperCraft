@@ -1,0 +1,35 @@
+{
+  "text_load": {
+    "count_definition": "Alphabetic English tokens, including identifiers such as A/B/d; numeric tokens counted separately. No inferred reading time.",
+    "original_paragraph": {
+      "latin_tokens": 76,
+      "numeric_tokens": 10
+    },
+    "first_draft_paragraph": {
+      "latin_tokens": 74
+    },
+    "final_P1": {
+      "latin_tokens": 36,
+      "numeric_tokens": 5
+    },
+    "final_P2": {
+      "latin_tokens": 60,
+      "numeric_tokens": 4
+    },
+    "final_C1": {
+      "latin_tokens": 54,
+      "numeric_tokens": 2
+    },
+    "final_all_prose_P1_P2": {
+      "latin_tokens": 96
+    }
+  },
+  "source_fact_sheet_sha256": "6a681401952cd1d05a9951b66d87a4a1d41abb1890348554d1f2669e897c1acf",
+  "paper_pdf_sha256": "597e389dc895948626cfe8ea7341cc3ea6dce79d43b3ce37690f10f077d3a343",
+  "final_svg_sha256": "a28bb45b666833fce2f160dc9f0bc00d47613315090e1bca965b0dc31c099213",
+  "scientific_scope": "Ideal 2D diameter-only DEMO. No experiments, performance data or new sieving law.",
+  "visual_review": "Existing PDF was rendered and actually viewed; figures copied without redraw.",
+  "independent_blind_review": "NOT_RUN",
+  "author_acceptance": "REVIEW_REQUIRED",
+  "reduction_claim": "Entry P1 36; total P1+P2 96 > original 76. No whole-paper compression claim."
+}

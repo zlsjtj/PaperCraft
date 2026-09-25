@@ -1,0 +1,15 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "Current public example files; not historical first-load evidence.",
+  "files": {
+    "audit.json": "6512a83ec531d9a57781215b5155f1740484eeefe4b6d14f466a69005c8b21fc",
+    "before-after.md": "bb04003ee63fc70b0e562be52b9e4f800875b23c5f11466fbb7901ac51133d67",
+    "brief.md": "6a681401952cd1d05a9951b66d87a4a1d41abb1890348554d1f2669e897c1acf",
+    "figures/baseline.png": "6c6b4a1dc29e13c41b289a93d89638bfddccc4275f7c5e3393f799c447d3cf04",
+    "figures/final.png": "c118a09269dd6579466d345703945df4ca9f9cffb850519b94b5041e79504b39",
+    "figures/final.svg": "a28bb45b666833fce2f160dc9f0bc00d47613315090e1bca965b0dc31c099213",
+    "information-map.md": "1ef93c8637be8af6cacacd1b89e32d8f8985a5b1ff7c5e7329ea0ddd54b4fc7d",
+    "paper-candidate.pdf": "597e389dc895948626cfe8ea7341cc3ea6dce79d43b3ce37690f10f077d3a343",
+    "README.md": "c0118e2efc0d279c35cea57ddb9ccb173cb8941065671232b77e1d28ac2b9b26"
+  }
+}
