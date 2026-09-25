@@ -50,3 +50,9 @@ python scripts/audit_preservation.py original.docx revised.docx --policy protect
 ## 最终交付
 
 渲染审阅稿、清稿和中文报告，查看每一页；核对 Word/PDF 的公式、分页、表头、图内文字及字段结果。分别记录结构保护、科学内容审阅、视觉审阅、作者认可。受控 OOXML 的一份长稿通过，不代表所有复杂 Word 文件都已覆盖。
+
+## SVG 和 PNG 双表示
+
+DrawingML 的 `a:blip` 可能只是 PNG 回退图，`asvg:svgBlip` 另指一个 SVG。不同渲染器会选用不同表示；只替换其中一种会导致论文仍显示旧图。新版入稿清单可逐图添加 `representations` 数组，每项含 `kind`（`primary` 或 `svg`）、`media_sha256`、`source_asset` 和 `source_asset_sha256`。主图原字段仍保留，表示集合必须完整。文件相同只证明绑定，仍要查看最终页面。
+
+`audit_figure_integration.py` 会核对两种嵌入内容与各自导出。多表示图片沿用旧清单时进入待审，不能拿只核对 PNG 的结果当整张图通过。每次替换后重新渲染；记录失败首轮和修复后的确切文件。

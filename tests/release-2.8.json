@@ -1,0 +1,720 @@
+{
+  "version": "2.8.0",
+  "status": "PASS",
+  "total": 87,
+  "suites": [
+    {
+      "suite": "basic",
+      "count": 18,
+      "status": "PASS",
+      "receipt_sha256": "4401436399a3f0e9160441085b786e9f4923fa13a41fd21218d06c3e07a32fcb",
+      "tests": [
+        {
+          "case": "dual_word_build",
+          "status": "PASS",
+          "detail": {
+            "status": "PASS",
+            "changed_parts": [
+              "word/document.xml"
+            ],
+            "objects": {
+              "m:oMath": 1,
+              "w:tbl": 1,
+              "w:drawing": 1,
+              "w:pict": 0,
+              "w:fldSimple": 1,
+              "w:fldChar": 0,
+              "w:instrText": 0,
+              "w:footnoteReference": 1,
+              "w:endnoteReference": 0,
+              "w:bookmarkStart": 1,
+              "w:bookmarkEnd": 1,
+              "w:hyperlink": 0
+            },
+            "source_sha256": "933933d43d94d4d1a3c2dc50a460f7ad2d7c3fd25825dba4880bdccb70f60f5a",
+            "output_sha256": "a099bbaa37c18d8a419b7cd6c5f2cb06c6c58e5c5bbc01a0b698eb7b95fa4e39",
+            "scope": "ZIP/XML object preservation only; content, citations and visual review are separate"
+          }
+        },
+        {
+          "case": "equation_table_figure_footnote_field_bookmark_preservation",
+          "status": "PASS",
+          "detail": {
+            "status": "PASS",
+            "changed_parts": [
+              "word/document.xml"
+            ],
+            "objects": {
+              "m:oMath": 1,
+              "w:tbl": 1,
+              "w:drawing": 1,
+              "w:pict": 0,
+              "w:fldSimple": 1,
+              "w:fldChar": 0,
+              "w:instrText": 0,
+              "w:footnoteReference": 1,
+              "w:endnoteReference": 0,
+              "w:bookmarkStart": 1,
+              "w:bookmarkEnd": 1,
+              "w:hyperlink": 0
+            },
+            "source_sha256": "933933d43d94d4d1a3c2dc50a460f7ad2d7c3fd25825dba4880bdccb70f60f5a",
+            "output_sha256": "a099bbaa37c18d8a419b7cd6c5f2cb06c6c58e5c5bbc01a0b698eb7b95fa4e39",
+            "scope": "ZIP/XML object preservation only; content, citations and visual review are separate"
+          }
+        },
+        {
+          "case": "new_highlights_and_existing_highlight_preservation",
+          "status": "PASS",
+          "detail": "New prose yellow; clean candidate retains pre-existing green highlight"
+        },
+        {
+          "case": "complete_change_mapping_and_status_separation",
+          "status": "PASS",
+          "detail": "All edit IDs and new positions resolve; deletion, movement and format explicitly mapped"
+        },
+        {
+          "case": "supported_OOXML_property_order",
+          "status": "PASS",
+          "detail": "Supported formatting properties use OOXML schema order"
+        },
+        {
+          "case": "wrong_baseline_refused",
+          "status": "PASS",
+          "detail": "Baseline SHA-256 differs"
+        },
+        {
+          "case": "wrong_expected_text_refused",
+          "status": "PASS",
+          "detail": "Expected source text differs for P0001"
+        },
+        {
+          "case": "native_equation_edit_refused",
+          "status": "PASS",
+          "detail": "P0010: complex paragraph child; use a format-aware manual edit"
+        },
+        {
+          "case": "field_edit_refused",
+          "status": "PASS",
+          "detail": "P0024: complex paragraph child; use a format-aware manual edit"
+        },
+        {
+          "case": "existing_highlight_edit_refused",
+          "status": "PASS",
+          "detail": "P0002: existing highlight; use a format-aware manual edit"
+        },
+        {
+          "case": "mixed_run_formatting_refused",
+          "status": "PASS",
+          "detail": "P0001: mixed run formatting; use a format-aware manual edit"
+        },
+        {
+          "case": "existing_native_revisions_refused",
+          "status": "PASS",
+          "detail": "Existing tracked revisions: use the documents workflow without accepting them silently"
+        },
+        {
+          "case": "candidate_overwrite_refused",
+          "status": "PASS",
+          "detail": "Existing candidate protected"
+        },
+        {
+          "case": "diagnosis_mode_mutation_refused",
+          "status": "PASS",
+          "detail": "Build requires an editing scope"
+        },
+        {
+          "case": "local_scope_changes_one_paragraph",
+          "status": "PASS",
+          "detail": "Exactly requested paragraph P0006 changed; other paragraphs retained"
+        },
+        {
+          "case": "continuation_preserves_prior_edits",
+          "status": "PASS",
+          "detail": "New parent hash and inventory; accepted prior content retained"
+        },
+        {
+          "case": "missing_reference_detected",
+          "status": "PASS",
+          "detail": [
+            {
+              "source": "SKILL.md",
+              "target": "references/missing.md"
+            }
+          ]
+        },
+        {
+          "case": "source_immutable",
+          "status": "PASS",
+          "detail": "Original SHA-256 unchanged"
+        }
+      ]
+    },
+    {
+      "suite": "protection",
+      "count": 20,
+      "status": "PASS",
+      "receipt_sha256": "e02872ed57cf074b9b40cdf1bc5bfbb8a4a6d63948cf51f43f49c01b201728a3",
+      "tests": [
+        {
+          "case": "unchanged_content_and_status_separation",
+          "status": "PASS",
+          "detail": {
+            "source": {
+              "native_math": 1,
+              "tables": 1,
+              "drawings": 1
+            },
+            "candidate": {
+              "native_math": 1,
+              "tables": 1,
+              "drawings": 1
+            }
+          }
+        },
+        {
+          "case": "zero_native_math_not_exercised",
+          "status": "PASS",
+          "detail": "Empty pair does not claim nonempty native-math coverage"
+        },
+        {
+          "case": "all_native_math_deleted_still_fails",
+          "status": "PASS",
+          "detail": "Adding or deleting every formula remains a detected content change"
+        },
+        {
+          "case": "native_math_added_to_empty_still_fails",
+          "status": "PASS",
+          "detail": "Adding or deleting every formula remains a detected content change"
+        },
+        {
+          "case": "formula_adjacent_prose_edit_supported",
+          "status": "PASS",
+          "detail": "Native formula and protected content remain identical while adjacent prose changes"
+        },
+        {
+          "case": "same_count_formula_value_change_detected",
+          "status": "PASS",
+          "detail": "native_math_content failure detected; top-level failure propagated"
+        },
+        {
+          "case": "same_count_table_value_change_detected",
+          "status": "PASS",
+          "detail": "tables failure detected; top-level failure propagated"
+        },
+        {
+          "case": "table_merge_change_detected",
+          "status": "PASS",
+          "detail": "tables failure detected; top-level failure propagated"
+        },
+        {
+          "case": "field_target_change_detected",
+          "status": "PASS",
+          "detail": "fields failure detected; top-level failure propagated"
+        },
+        {
+          "case": "bookmark_change_detected",
+          "status": "PASS",
+          "detail": "bookmarks failure detected; top-level failure propagated"
+        },
+        {
+          "case": "hyperlink_anchor_change_detected",
+          "status": "PASS",
+          "detail": "hyperlinks failure detected; top-level failure propagated"
+        },
+        {
+          "case": "footnote_content_change_detected",
+          "status": "PASS",
+          "detail": "protected_parts failure detected; top-level failure propagated"
+        },
+        {
+          "case": "protected_declaration_change_detected",
+          "status": "PASS",
+          "detail": "protected_paragraphs failure detected; top-level failure propagated"
+        },
+        {
+          "case": "citation_token_change_detected",
+          "status": "PASS",
+          "detail": "numeric_citation_tokens failure detected; top-level failure propagated"
+        },
+        {
+          "case": "math_format_difference_requires_review",
+          "status": "PASS",
+          "detail": "Formatting difference needs review; math equality alone does not produce overall PASS"
+        },
+        {
+          "case": "missing_protection_policy_is_explicit",
+          "status": "PASS",
+          "detail": "No false declaration-preservation claim without explicit policy"
+        },
+        {
+          "case": "nonexistent_source_protection_rejected",
+          "status": "PASS",
+          "detail": "Protected paragraph absent in source: 0"
+        },
+        {
+          "case": "missing_required_import_fails",
+          "status": "PASS",
+          "detail": "Required docx dependency failure is explicit and affects the overall status"
+        },
+        {
+          "case": "missing_renderer_dependency_fails",
+          "status": "PASS",
+          "detail": "Missing renderer and soffice fail dependency preflight without attempting or claiming render"
+        },
+        {
+          "case": "input_file_unchanged",
+          "status": "PASS",
+          "detail": "Source SHA-256 unchanged"
+        }
+      ]
+    },
+    {
+      "suite": "integration",
+      "count": 19,
+      "status": "PASS",
+      "receipt_sha256": "f574be589d306b51a91612d2d37d3d87bd628481208fa5bb974a5ce711bb0703",
+      "tests": [
+        {
+          "case": "new_asset_really_embedded",
+          "status": "PASS"
+        },
+        {
+          "case": "standalone_export_but_old_word_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "wrong_expected_figure_bytes_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "shrunk_placement_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "wrong_drawing_index_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "missing_caption_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "exact_caption_detects_lost_run_space",
+          "status": "PASS"
+        },
+        {
+          "case": "matching_exact_caption_passes",
+          "status": "PASS"
+        },
+        {
+          "case": "unintended_change_to_preserved_figure_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "missing_source_export_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "incomplete_inventory_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "duplicate_inventory_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "stale_docx_manifest_detected",
+          "status": "PASS"
+        },
+        {
+          "case": "unsupported_vml_never_silent_pass",
+          "status": "PASS"
+        },
+        {
+          "case": "external_image_rejected",
+          "status": "PASS"
+        },
+        {
+          "case": "genuine_preserved_image_passes",
+          "status": "PASS"
+        },
+        {
+          "case": "explicit_decorative_item_supported",
+          "status": "PASS"
+        },
+        {
+          "case": "zero_drawings_not_false_pass",
+          "status": "PASS"
+        },
+        {
+          "case": "actual_cli_preserves_review_boundary",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "effect",
+      "count": 9,
+      "status": "PASS",
+      "receipt_sha256": "6a78cf59689b1a9b1386a53744df367da12a841630546476e6eff087b65b8de1",
+      "tests": [
+        {
+          "name": "valid_bindings_not_effect_certification",
+          "status": "PASS",
+          "expected_technical": "PASS",
+          "actual": {
+            "technical_status": "PASS",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "279c192b06d75aa348e6cb97eca098f6dfb7dc62887234f7e773982c3079df9a",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 1,
+            "errors": [],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 1,
+              "partial": 0,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "hash_mismatch",
+          "status": "PASS",
+          "expected_technical": "FAIL",
+          "actual": {
+            "technical_status": "FAIL",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "6a0d085c2edf4e0cc0bc52c1490b5108c2011fb0b2cbc9fbee57da2d3c3d5c4c",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 1,
+            "errors": [
+              "Artifact hash mismatch: candidate"
+            ],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 1,
+              "partial": 0,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "missing_file",
+          "status": "PASS",
+          "expected_technical": "FAIL",
+          "actual": {
+            "technical_status": "FAIL",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "7a50d85c95fcfe32fcba752389afaff2a34d0994342d999c8023fb30985cc760",
+            "artifacts": [],
+            "requirements_checked": 1,
+            "errors": [
+              "Missing artifact: candidate"
+            ],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 1,
+              "partial": 0,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "unknown_evidence_artifact",
+          "status": "PASS",
+          "expected_technical": "FAIL",
+          "actual": {
+            "technical_status": "FAIL",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "be140306566d16e31aaba0b9c4dd3649f6d173d400a42e9537e0a73a15cd66bd",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 1,
+            "errors": [
+              "R1: unknown evidence artifact"
+            ],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 1,
+              "partial": 0,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "missing_locator",
+          "status": "PASS",
+          "expected_technical": "FAIL",
+          "actual": {
+            "technical_status": "FAIL",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "ea535568bcd0ff82e439681cd1fdfc10435fe6679ef6eaff41df4ae87704ff33",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 1,
+            "errors": [
+              "R1: missing evidence locator"
+            ],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 1,
+              "partial": 0,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "duplicate_requirement",
+          "status": "PASS",
+          "expected_technical": "FAIL",
+          "actual": {
+            "technical_status": "FAIL",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "4f73294f32dcd5e4602ba2a77ac7080714cfe88caf31167e267df2e3bc9b2e4e",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 2,
+            "errors": [
+              "Requirement IDs must be nonempty and unique"
+            ],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 2,
+              "partial": 0,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "unresolved_without_reason",
+          "status": "PASS",
+          "expected_technical": "FAIL",
+          "actual": {
+            "technical_status": "FAIL",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "ce08fa55899c2c596d742dfeb0c90d088d86a0e2026014b1d0e52f14eb921bb3",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 1,
+            "errors": [
+              "R1: unresolved outcome needs a stated remaining issue"
+            ],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 0,
+              "partial": 1,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "honest_partial_is_valid_record",
+          "status": "PASS",
+          "expected_technical": "PASS",
+          "actual": {
+            "technical_status": "PASS",
+            "overall_status": "REVIEW_REQUIRED",
+            "scope": "Record completeness and exact file bindings only. Does not judge observations, inspect locators semantically or verify author acceptance.",
+            "record_sha256": "256554930e6147c1a2e8dba8ee4de8d764b0daf3df1a6827d4a6f097bb0ee35d",
+            "artifacts": [
+              {
+                "id": "candidate",
+                "sha256": "2f28ed1aa197cf7f63b972c0020159bf62130f019d97b7d90bd9aa02ba42c1c6"
+              }
+            ],
+            "requirements_checked": 1,
+            "errors": [],
+            "recorded_assessments": {
+              "equivalent": 0,
+              "improved": 0,
+              "partial": 1,
+              "pending": 0,
+              "unmet": 0
+            }
+          }
+        },
+        {
+          "name": "existing_output_refused",
+          "status": "PASS",
+          "exit_code": 2
+        }
+      ]
+    },
+    {
+      "suite": "review-packet",
+      "count": 13,
+      "status": "PASS",
+      "receipt_sha256": "0dd8b89466ad47f29942a60687194d870bf75c8e6f4b19d95e21fac77896ee73",
+      "tests": [
+        {
+          "name": "selected prose copied",
+          "status": "PASS"
+        },
+        {
+          "name": "excluded prose absent from every output",
+          "status": "PASS"
+        },
+        {
+          "name": "editor purpose excluded from reviewer files",
+          "status": "PASS"
+        },
+        {
+          "name": "full source not copied",
+          "status": "PASS"
+        },
+        {
+          "name": "source unchanged",
+          "status": "PASS"
+        },
+        {
+          "name": "tool does not claim blind review",
+          "status": "PASS"
+        },
+        {
+          "name": "wrong source refused before output",
+          "status": "PASS"
+        },
+        {
+          "name": "wrong paragraph refused before output",
+          "status": "PASS"
+        },
+        {
+          "name": "unknown paragraph refused before output",
+          "status": "PASS"
+        },
+        {
+          "name": "duplicate paragraph refused before output",
+          "status": "PASS"
+        },
+        {
+          "name": "empty scope refused before output",
+          "status": "PASS"
+        },
+        {
+          "name": "unknown selector refused before output",
+          "status": "PASS"
+        },
+        {
+          "name": "existing output protected",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "suite": "representations",
+      "count": 8,
+      "status": "PASS",
+      "receipt_sha256": "b95ffc10410826cd97dcd45653fa50f1e3ec4b97fd18eb90bf77460b0888c457",
+      "tests": [
+        {
+          "name": "both-representations-updated",
+          "status": "PASS",
+          "actual": "PASS"
+        },
+        {
+          "name": "stale-svg-with-new-png",
+          "status": "PASS",
+          "actual": "FAIL"
+        },
+        {
+          "name": "legacy-manifest-needs-review",
+          "status": "PASS",
+          "actual": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "incomplete-representation-set",
+          "status": "PASS",
+          "actual": "FAIL"
+        },
+        {
+          "name": "duplicate-representation",
+          "status": "PASS",
+          "actual": "FAIL"
+        },
+        {
+          "name": "missing-svg-export",
+          "status": "PASS",
+          "actual": "FAIL"
+        },
+        {
+          "name": "unbound-svg-export",
+          "status": "PASS",
+          "actual": "REVIEW_REQUIRED"
+        },
+        {
+          "name": "external-svg-refused",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "python": "3.12.14",
+  "dependencies": {
+    "lxml": "6.1.1",
+    "python-docx": "1.2.0",
+    "Pillow": "12.3.0",
+    "reportlab": "4.4.9",
+    "pypdf": "6.7.5",
+    "numpy": "2.3.5"
+  },
+  "source_hashes": {
+    "scripts/audit_effect_record.py": "5d1b271243f2b86aa6c11aba878a26afd06a7a1d3a2279c80dd390e19067f498",
+    "scripts/audit_figure_integration.py": "94ebd835b895da6c40f9c4f03c2832808f0337b977913789f3987aede49a051e",
+    "scripts/audit_preservation.py": "22920d85563966f0af93401b4ce97170fa121c91e87418d0cf40f7b24c563fd9",
+    "scripts/check_dependencies.py": "355f5e01d62b253075b9c1b7a4bf7ebef471952ddaf621f13a2ce97a4ed1b566",
+    "scripts/make_review_packet.py": "25aefc9eb36623432f86536a4adcdb39a12d4d647d42c20a91dc9037b7c69b40",
+    "scripts/render_review.py": "173bcacafb15414505425fe36d372629697147f8d72dcbc1b6674ad3320ebb80",
+    "scripts/review_docx.py": "c0548d0fa37a99459d5938d786d1215393efabc9424b292492caac15a27d4758",
+    "tests/run_effect_record_tests.py": "389e7e3655bc39ad9ef9cc91ce07dec76f637759bf31045927889e991fb8bcf5",
+    "tests/run_integration_tests.py": "cd990e0b05918deb4fe81ca74e61f6cfe5b51df477168b9b99bc763bc5feed42",
+    "tests/run_preservation_tests.py": "ed006e3d5b956f75585004543b305f9fb1cb4b67dc374e2a5bbfb5e44204128f",
+    "tests/run_representation_tests.py": "51f060a9d6318ebaa3bfac38c2915e14edf8aa0cb577780564d70dbf8fee7b77",
+    "tests/run_review_packet_tests.py": "ec7cf3e70c7a8b128e96fcfac9e77acc2b5e601d127f37aed04c12a97ddb4ee1",
+    "tests/run_tests.py": "29c467a400b707818a9560e7338da9e02081dea0d1be08b72f860293a4223e40"
+  },
+  "limits": [
+    "Automated regression only; actual artifact review is recorded separately.",
+    "No human acceptance, native Word or physical print is claimed."
+  ]
+}

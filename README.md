@@ -2,7 +2,7 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.7.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.8.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
 ## 安装
 
@@ -52,6 +52,8 @@ python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候
 
 输出目录应为新目录。含公式、域、交叉引用和混合格式的段落应走[复杂 Word 流程](references/complex-word.md)，不要强行交给简单段落工具。PDF 和逐页图片还需要宿主的 documents 技能、LibreOffice 与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
 
+新版补充[选择规则复核与定范围审阅](references/method-transfer-audit.md)：检查训练配置如何映射到测试输入，并通过 `make_review_packet.py` 只提供明确选定的段落和图片。生成材料不等于完成独立审阅。
+
 ## 示例与检查
 
 [检查点流水线示例](references/checkpoint-demo/input.md)提供原文、限定证据、英文改稿和中文改动记录。数据是教学构造值，不能作为研究结果引用。其他[完整示例](references/worked-examples.md)展示贡献、工程段和结果段的修改理由。
@@ -61,9 +63,11 @@ python tests/run_tests.py --work-dir test-output/basic
 python tests/run_preservation_tests.py --work-dir test-output/protection
 python tests/run_integration_tests.py --out test-output/integration
 python tests/run_effect_record_tests.py --out test-output/effect
+python tests/run_review_packet_tests.py --out test-output/reading
+python tests/run_representation_tests.py --out test-output/representations
 ```
 
-四组测试覆盖 66 项检查，使用临时教学文件。再次执行时换用新的输出目录。当前发布检查及未验证部分见 [验收记录](tests/acceptance-results.md)。
+原四组测试覆盖 66 项检查，新增定范围审阅材料测试 13 项、双表示入稿测试 8 项，共 87 项，使用临时教学文件。再次执行时换用新的输出目录。当前发布检查及未验证部分见 [验收记录](tests/acceptance-results.md)。
 
 ## 文件与发布范围
 

@@ -41,6 +41,12 @@ python scripts/audit_figure_integration.py final.docx figures.json --parent pare
 
 示例仅展示一条，真实清单须含全部主文档 drawing，顺序从1开始。`preserved` 要求与父稿媒体字节相同；`revised` 要求不同且绑定实际导出。未改图如只调整尺寸仍用 `preserved`，在人工清单写明版式修改。无图注的装饰对象可显式给 `kind: decorative` 和 `reason`，不能假作科研图绕过检查。
 
-可选 `docx_sha256`、`parent_sha256` 防止拿错版本；宽度容差0.05 mm。检查器不验证图注语义、正文引用或实际字号；不是渲染器，也不保证外来 Word 全面覆盖。`overall_status` 始终待审，技术通过必须与科学、视觉、作者认可分开报告。
+可选 `docx_sha256`、`parent_sha256` 防止拿错版本；宽度容差0.05 mm。检查器不验证图注语义、正文引用或实际字号；不是渲染器，也不保证外来 Word 全面覆盖。技术失败时 `overall_status` 为 `FAIL`，其余情况保留 `REVIEW_REQUIRED`；技术通过必须与科学、视觉、作者认可分开报告。
 
 如果本轮改了图注，再给 `caption_exact` 绑定最终完整可见文字；可以检出跨run编辑时丢空格等差异。复杂公式/字段图注不能仅靠 `w:t` 拼接验收，按限制人工核对。`caption_contains` 只用于确认可见定位文本存在，不能替代全文一致性。
+
+## SVG 和 PNG 双表示
+
+DrawingML 的 `a:blip` 可能只是 PNG 回退图，`asvg:svgBlip` 另指一个 SVG。不同渲染器会选用不同表示；只替换其中一种会导致论文仍显示旧图。新版入稿清单可逐图添加 `representations` 数组，每项含 `kind`（`primary` 或 `svg`）、`media_sha256`、`source_asset` 和 `source_asset_sha256`。主图原字段仍保留，表示集合必须完整。文件相同只证明绑定，仍要查看最终页面。
+
+`audit_figure_integration.py` 会核对两种嵌入内容与各自导出。多表示图片沿用旧清单时进入待审，不能拿只核对 PNG 的结果当整张图通过。每次替换后重新渲染；记录失败首轮和修复后的确切文件。

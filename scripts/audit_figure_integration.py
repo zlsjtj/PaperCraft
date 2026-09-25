@@ -45,12 +45,19 @@ def inspect(path):
                 drawings.append({'index': index, 'status': 'REVIEW_REQUIRED'}); continue
             size = [int(extent.get(k, '0')) / 36000 for k in ('cx', 'cy')]
             if min(size) <= 0: raise ValueError('Non-positive figure extent')
-            drawings.append({'index': index, 'part': target, 'sha256': sha(z.read(target)),
+            representations=[{'kind':'primary','part':target,'sha256':sha(z.read(target))}]
+            svg_nodes=[n for n in node.iter() if n.tag=='{http://schemas.microsoft.com/office/drawing/2016/SVG/main}svgBlip']
+            if len(svg_nodes)>1:unsupported.append(f'drawing {index}: multiple SVG alternatives')
+            for svg in svg_nodes:
+                svgrel=rels.get(svg.get('{'+NS['r']+'}embed'))
+                if svgrel is None or svgrel.get('TargetMode')=='External':raise ValueError('Missing or external SVG relationship')
+                svgpart=posixpath.normpath(posixpath.join('word',svgrel['Target']))
+                if not svgpart.startswith('word/media/'):raise ValueError('SVG target escapes media directory')
+                representations.append({'kind':'svg','part':svgpart,'sha256':sha(z.read(svgpart))})
+            drawings.append({'index': index, 'part': target, 'sha256': sha(z.read(target)), 'representations':representations,
                              'width_mm': size[0], 'height_mm': size[1], 'status': 'AUDITABLE'})
         if root.findall('.//v:imagedata', NS): unsupported.append('VML images')
         if root.findall('.//mc:AlternateContent', NS): unsupported.append('AlternateContent fallback')
-        # SVG or other extension representation is not inferred from its raster fallback.
-        if any(n.tag.endswith('}svgBlip') for n in root.iter()): unsupported.append('SVG extension representation')
     return {'sha256': sha(Path(path).read_bytes()), 'drawings': drawings,
             'paragraphs': paragraphs, 'unsupported': unsupported}
 
@@ -113,10 +120,30 @@ def audit(docx, manifest, parent=None):
             elif row.get('source_asset_sha256') != d['sha256']:
                 found.append('Source export bytes differ from embedded image')
         elif disposition=='revised': pending.append(f'{row.get("id")}: final export path not bound')
+        # A PNG fallback and an SVG can render differently. Bind each explicitly.
+        declared=row.get('representations')
+        if declared is None and len(d['representations'])>1:
+            pending.append(f'{row.get("id")}: every embedded representation must be declared; primary image alone is insufficient')
+        elif declared is not None:
+            actual={x['kind']:x for x in d['representations']}
+            kinds=[x.get('kind') for x in declared]
+            if len(kinds)!=len(set(kinds)) or set(kinds)!=set(actual):found.append('Missing, extra or duplicate embedded representation')
+            for rep in declared:
+                a=actual.get(rep.get('kind'))
+                if a is None:continue
+                if rep.get('media_sha256')!=a['sha256']:found.append('Embedded '+rep['kind']+' differs from declared final asset')
+                if rep.get('source_asset'):
+                    f=Path(manifest).resolve().parent/rep['source_asset']
+                    if not f.is_file() or sha(f.read_bytes())!=rep.get('source_asset_sha256') or rep.get('source_asset_sha256')!=a['sha256']:
+                        found.append('Source '+rep['kind']+' export missing or differs from embedded representation')
+                elif disposition=='revised':pending.append(f'{row.get("id")}: {rep["kind"]} export path not bound')
+            if before and disposition=='preserved' and idx<=len(before['drawings']):
+                oldreps=before['drawings'][idx-1].get('representations',[])
+                if oldreps!=d['representations']:found.append('Preserved alternative representation changed')
         checks.append({'id':row.get('id'), 'actual': d, 'status':'FAIL' if found else 'PASS', 'errors':found})
         errors += [f'{row.get("id")}: {e}' for e in found]
     status = 'FAIL' if errors else ('REVIEW_REQUIRED' if pending else 'PASS')
-    return {'tool_version':'2.4.0','technical_status':status,'overall_status':'REVIEW_REQUIRED',
+    return {'tool_version':'2.8.0','technical_status':status,'overall_status':'FAIL' if status=='FAIL' else 'REVIEW_REQUIRED',
             'docx_sha256':now['sha256'],'parent_sha256':before['sha256'] if before else None,
             'checks':checks,'errors':errors,'pending':pending,
             'limits':['Main-document DrawingML only; headers, text boxes and other parts require separate inventory.',

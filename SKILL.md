@@ -2,7 +2,7 @@
 name: paper-evidence-framing
 description: PaperCraft 用于研究论文的创新定位、工作量呈现、图文精修和透明审阅。按已有证据交付实际修订稿、黄色审阅标记与中文诊断，也支持仅审阅、局部修改、续改和实验未完成的稿件。
 metadata:
-  version: "2.7.0"
+  version: "2.8.0"
 ---
 
 # PaperCraft｜论文叙事与精修
@@ -39,13 +39,15 @@ metadata:
 
 **图文呈现。**修改结构、语言、图注、图形和版式，同时保留数学细节、负结果、受保护声明和引用。按[呈现与审阅](references/presentation-review.md)处理。涉及期刊要求时核查现行官方信息，不为满足篇幅目标扩写讨论。
 
-需要 FigureCraft 时，填写[图形交接单](templates/figure-handoff.md)：图要回答的问题、对象和关系、锁定数值、来源、图注、正文引用和最终尺寸。按[图文交付](references/integrated-delivery.md)核对每张图，并把选定文件真正嵌入稿件。图片变化必须用旧图和新图展示，黄色文字不能替代。
+需要 FigureCraft 时，填写[图形交接单](templates/figure-handoff.md)：图要回答的问题、对象和关系、锁定数值、来源、图注、正文引用和最终尺寸。按[图文交付](references/integrated-delivery.md)核对每张图，并把选定文件真正嵌入稿件。同一张图可能同时嵌入 SVG 和 PNG；逐一绑定最终导出，不能只替换预览图。图片变化必须用旧图和新图展示，黄色文字不能替代。
 
 ## 审阅实际效果
 
 全文改稿按[读者效果审阅](references/reader-effect.md)检查。具备授权与条件时，让独立审阅者先读同等范围的前部、记录理解，再读全文；先不提供改动理由。没有独立审阅就如实记录自审，不模拟盲读。代理练习不等于人类理解实验。
 
 比较修改前后读者能否解释约束、差异、价值和证据，同时检查丢失的条件和新增阅读负担。图形按相同物理尺寸比较。续改特别检查相邻段的重复解释、摘要和方法的结论强度、计数与效果是否混淆，见[续改示例](references/actual-continuation-revision.md)。
+
+训练与测试范围不一致时，按[选择规则复核](references/method-transfer-audit.md)追踪一个具体测试输入。先确认特征、分桶、查表和回退如何衔接，再决定是否补正文。首次阅读使用明确段落 ID 和哈希导出的材料，避免停止条件失效泄漏全文。
 
 使用[完整示例](references/worked-examples.md)学习判断，不照搬句式。[变化映射](templates/change-map.md)和[效果记录](templates/reader-effect.md)连接用户要求、实际产物、改善证据与残留问题。`audit_effect_record.py` 只检查记录和文件对应，不能自动判断说服力或美感。
 
