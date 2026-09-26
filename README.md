@@ -2,9 +2,13 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.10.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.15.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+
+本版在已有信息分层方法上，补齐标题的修饰对象与证据层级，以及有独立清稿时的高亮恢复规则。首读问题仍由前部实际对照检验，必要事实在全文有明确位置。方法见[入口设计](references/novelty-framing.md)，本轮实际试用、限制与检查见[当前记录](tests/current-validation.md)。
 
 ## 安装
+
+使用本地交付包时，备份已有同名目录，再把整个技能目录复制到自己的 skills 目录。下面的克隆命令取得远端已发布状态，应以实际 SKILL.md 的版本为准；本地升级不代表已经推送 GitHub。
 
 将仓库克隆到 Codex 的技能目录，目录名保留调用标识。以下命令适用于 PowerShell；设置了 `CODEX_HOME` 时使用该目录，否则使用用户目录下的 `.codex`。
 
@@ -56,11 +60,11 @@ python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候
 
 ## 这次怎样判断是否改得更好
 
-先让读者抓住一个主贡献，再安排支撑设计、证据和边界。面对已经完整但重点不清的段落，先重排、压缩或移位；缺事实时才补写。把工作量组织成“解决哪个疑问、用什么检查区分、得到什么判断”，不把实现步骤都放进入口。
+先看实际阅读阻碍，再决定改哪里。入口要分清主贡献、支撑、证据和边界；方法要让具体困难先变得可见，实验要说明每个比较在区分什么。必要推导和参数完整留在论文内，不把“简洁”变成删掉证据。
 
-本版重写[贡献层级](references/novelty-framing.md)和[读者效果](references/reader-effect.md)，先比较同等前部范围的第一项主贡献，再核对全文承接。新增[固定开口 DEMO](references/aperture-focus-demo/README.md)：先说同一开口如何区分两个对象，模型和构造检查放到下一段。入口更短，但全文并未缩短，这一代价明确保留。此前[光学读出示例](references/optical-readout-demo/README.md)适合学习补全解释，不能作为每段都要扩写的长度模板。
+2.11 重写了[论证修复](references/argument-repair.md)，把局部有效的组织方法继续用于全文：比较例子与规则的先后、设计困难与实现决定的连接、实验问题与结果的承接。已有清楚的内容可以保留，不要求每段重写，也不再硬性限制入口只留一个因果连接。
 
-审阅必须指出哪句让机制更早出现、哪些支撑不再抢主线、移出的信息在哪里。词数、四问答案齐全和检查通过都不能单独判定更好读。局部修错仍遵守用户指定范围。
+审阅用实际前后稿回答：读者先看见什么，重要工作为何必要，哪里仍需往返查找。没有真实读者时明确称模型辅助评估。词数、答案齐全和工具通过不证明整篇好读；局部修改也不能冒充全文修订。
 
 ## 示例与检查
 
@@ -75,7 +79,7 @@ python tests/run_review_packet_tests.py --out test-output/reading
 python tests/run_representation_tests.py --out test-output/representations
 ```
 
-原四组测试覆盖 66 项检查，新增定范围审阅材料测试 13 项、双表示入稿测试 8 项，共 87 项，使用临时教学文件。再次执行时换用新的输出目录。当前发布检查及未验证部分见 [验收记录](tests/acceptance-results.md)。
+历史四组测试覆盖 66 项检查，定范围审阅材料测试 13 项、双表示入稿测试 8 项，共 87 项，使用临时教学文件。再次执行时换用新的输出目录。本轮执行范围见[当前记录](tests/current-validation.md)，旧结果保留在[历史验收](tests/acceptance-results.md)，不能作为本轮全量回归通过。
 
 ## 文件与发布范围
 
@@ -84,3 +88,5 @@ python tests/run_representation_tests.py --out test-output/representations
 公开版保留当前功能代码，使用中文说明和匿名教学案例。私人稿件、未公开测量记录、本机路径、代理会话记录和历次生成缓存留在本地归档。英文论文示例、命令参数和第三方专有名称保留原文。来源见[来源说明](references/video-source-notes.md)，许可状态见 [LICENSE.md](LICENSE.md)。
 
 包装不能补出不存在的研究贡献，也不能保证期刊初审。已经表达清楚的段落可以保留；缺实验、缺对照和缺来源应明确记录。
+
+本轮聚焦入口的理解依赖与候选选择，替换重复入口规则，并在完整示例中比较两种实际叙事。首读审阅使用隔离材料；技术检查与表达效果分开记录。详见 tests/acceptance-results.md。

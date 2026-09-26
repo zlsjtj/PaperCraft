@@ -1,0 +1,48 @@
+{
+  "version": "2.12.0",
+  "date": "2026-09-26",
+  "technical_regression": {
+    "status": "PASS",
+    "count": 87,
+    "existing_python_code_unchanged": true,
+    "core_code_sha256": {
+      "scripts/audit_effect_record.py": "5d1b271243f2b86aa6c11aba878a26afd06a7a1d3a2279c80dd390e19067f498",
+      "scripts/audit_figure_integration.py": "94ebd835b895da6c40f9c4f03c2832808f0337b977913789f3987aede49a051e",
+      "scripts/audit_preservation.py": "22920d85563966f0af93401b4ce97170fa121c91e87418d0cf40f7b24c563fd9",
+      "scripts/check_dependencies.py": "355f5e01d62b253075b9c1b7a4bf7ebef471952ddaf621f13a2ce97a4ed1b566",
+      "scripts/make_review_packet.py": "25aefc9eb36623432f86536a4adcdb39a12d4d647d42c20a91dc9037b7c69b40",
+      "scripts/render_review.py": "173bcacafb15414505425fe36d372629697147f8d72dcbc1b6674ad3320ebb80",
+      "scripts/review_docx.py": "c0548d0fa37a99459d5938d786d1215393efabc9424b292492caac15a27d4758",
+      "tests/run_effect_record_tests.py": "389e7e3655bc39ad9ef9cc91ce07dec76f637759bf31045927889e991fb8bcf5",
+      "tests/run_integration_tests.py": "cd990e0b05918deb4fe81ca74e61f6cfe5b51df477168b9b99bc763bc5feed42",
+      "tests/run_preservation_tests.py": "ed006e3d5b956f75585004543b305f9fb1cb4b67dc374e2a5bbfb5e44204128f",
+      "tests/run_representation_tests.py": "51f060a9d6318ebaa3bfac38c2915e14edf8aa0cb577780564d70dbf8fee7b77",
+      "tests/run_review_packet_tests.py": "ec7cf3e70c7a8b128e96fcfac9e77acc2b5e601d127f37aed04c12a97ddb4ee1",
+      "tests/run_tests.py": "29c467a400b707818a9560e7338da9e02081dea0d1be08b72f860293a4223e40"
+    }
+  },
+  "official_skill_validator": {
+    "status": "PASS",
+    "stdout": "Skill is valid!",
+    "validator_sha256": "6068513d924ed3559e186dfcdead7439129828dcf402167fd925c06dffbf2806"
+  },
+  "relative_links": {
+    "status": "PASS",
+    "broken": []
+  },
+  "python_syntax": {
+    "status": "PASS",
+    "files": 14
+  },
+  "effect_evidence": "Entry-first prose and local-address geometry trial; fresh-context inspection-cover demo. See Chinese acceptance for limits, not a human study or isolated causal skill test.",
+  "author_acceptance": "PENDING",
+  "not_run": [
+    "native Word UI",
+    "human readability study",
+    "physical print",
+    "all CVD conditions",
+    "new host machine",
+    "true 3D",
+    "new-session automatic skill triggering"
+  ]
+}

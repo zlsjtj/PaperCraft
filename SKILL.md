@@ -2,7 +2,7 @@
 name: paper-evidence-framing
 description: PaperCraft 用于研究论文的创新定位、工作量呈现、图文精修和透明审阅。按已有证据交付实际修订稿、黄色审阅标记与中文诊断，也支持仅审阅、局部修改、续改和实验未完成的稿件。
 metadata:
-  version: "2.10.0"
+  version: "2.15.0"
 ---
 
 # PaperCraft｜论文叙事与精修
@@ -29,7 +29,7 @@ metadata:
 
 用[贡献与证据记录](templates/claim-evidence-ledger.md)比较最接近的已有机制、本文差异和证据强度。区分原文报告、原始记录核验、推导、模拟、物理实测和假设。未找到相同论文不证明创新成立；强化文献比较前先读来源。
 
-先按[入口与贡献层级](references/novelty-framing.md)确定首读只需抓住的主贡献、支撑设计、证据与边界，再按[论证修复](references/argument-repair.md)决定重排、压缩、移位或补写。质量升级先做一段实际对照；不仅问答案能否找到，也问哪一句先抓住差异、支撑细节是否抢了主线。事实保存在整篇及证据中，不要求每个入口段重复完整推导。
+先按[入口与贡献层级](references/novelty-framing.md)核对标题的修饰对象与证据层级，再组织读者需要理解的变化，而非先罗列技术名词。质量升级的首个实稿直接覆盖尚未满足的目标位置；首读问题用摘要或引言入口检验。按该参考中的“理解依赖”和候选示例选择叙事路线，再按[论证修复](references/argument-repair.md)贯通方法与证据。候选应改变理解顺序或解释对象，不能只换句式。独有事实在全文有明确承接，入口不重复完整推导。
 
 ## 三类修改相互衔接
 
@@ -61,4 +61,4 @@ metadata:
 
 文件检查、编辑判断、视觉审阅、作者认可和投稿状态分开记录。已知问题修复后复验受影响部分；已有表达有效时停止无依据的反复润色。不自动开展实验、修改研究实现、上传或投稿，不承诺期刊等级和接受率。
 
-维护时使用[行为用例](references/behavior-cases.md)和[发布验收](tests/acceptance-results.md)。新版本应检查自己的实际产物，不能沿用旧版 PASS。
+维护时使用[行为用例](references/behavior-cases.md)、[历史验收](tests/acceptance-results.md)和[当前增量记录](tests/current-validation.md)。新版本应检查自己的实际产物，不能沿用旧版 PASS。
