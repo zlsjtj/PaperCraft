@@ -13,31 +13,47 @@ NS={'w':W};Q=lambda s:'{'+W+'}'+s
 XMLSPACE='{http://www.w3.org/XML/1998/namespace}space'
 def c14n(n):return E.tostring(n,method='c14n')
 
+class FieldStructureError(ValueError):
+    def __init__(self,message,node):
+        self.location=node.getroottree().getpath(node)
+        super().__init__(message+' at '+self.location+'; no edits applied')
+
 def field_runs(root):
     """Return protected run IDs and complete field payloads, across paragraphs."""
-    depth=0;protected=set();groups=[];current=[]
+    stack=[];protected=set();groups=[];current=[]
     for run in root.iter(Q('r')):
-        was=depth
-        for fc in run.findall('.//w:fldChar',NS):
-            kind=fc.get(Q('fldCharType'))
-            if kind=='begin':depth+=1
+        was=bool(stack)
+        for node in run.iter():
+            if node.tag==Q('instrText'):
+                if not stack:raise FieldStructureError('Field instruction outside a complex field',node)
+                if stack[-1][1]:raise FieldStructureError('Field instruction after result separator',node)
+            if node.tag!=Q('fldChar'):continue
+            kind=node.get(Q('fldCharType'))
+            if kind=='begin':stack.append([node,False])
             elif kind=='end':
-                if not depth:raise ValueError('Unmatched field end; no edits applied')
-                depth-=1
-            elif kind=='separate' and not depth:raise ValueError('Unmatched field separator; no edits applied')
-        if was or depth or run.find('.//w:fldChar',NS) is not None:
+                if not stack:raise FieldStructureError('Unmatched field end',node)
+                stack.pop()
+            elif kind=='separate':
+                if not stack:raise FieldStructureError('Unmatched field separator',node)
+                if stack[-1][1]:raise FieldStructureError('Repeated field separator',node)
+                stack[-1][1]=True
+            else:raise FieldStructureError('Unknown or missing field character type',node)
+        if was or stack or run.find('.//w:fldChar',NS) is not None:
             protected.add(run);current.append(c14n(run))
-            if depth==0:groups.append(current);current=[]
-    if depth:raise ValueError('Unclosed complex field; no edits applied')
+            if not stack:groups.append(current);current=[]
+    if stack:raise FieldStructureError('Unclosed complex field',stack[0][0])
     return protected,groups
 
-def eligible(run,field_set):
-    if run.tag!=Q('r') or run in field_set:return False
-    if any(c.tag not in (Q('rPr'),Q('t')) for c in run):return False
-    if len(run.findall('w:t',NS))!=1:return False
-    if run.find('w:rPr/w:highlight',NS) is not None:return False
-    if run.find('w:rPr/w:rPrChange',NS) is not None:return False
-    return True
+def ineligible_reason(run,field_set):
+    if run.tag!=Q('r'):return 'not a direct ordinary text run'
+    if run in field_set:return 'complex field code or cached result'
+    if any(c.tag not in (Q('rPr'),Q('t')) for c in run):return 'complex run content'
+    if len(run.findall('w:t',NS))!=1:return 'ordinary span requires exactly one text node per run'
+    if run.find('w:rPr/w:highlight',NS) is not None:return 'existing highlight'
+    if run.find('w:rPr/w:rPrChange',NS) is not None:return 'existing run-property revision'
+    return None
+
+def eligible(run,field_set):return ineligible_reason(run,field_set) is None
 
 def groups(p,field_set):
     result=[];group=[];style=None
@@ -52,6 +68,21 @@ def groups(p,field_set):
     return result
 
 def run_text(r):return r.find('w:t',NS).text or ''
+
+def span_matches(run_groups,before):
+    """The same exact, overlapping match rule for inspect and apply."""
+    if not before:return []
+    return [(group,m.start()) for group in run_groups
+            for m in re.finditer('(?='+re.escape(before)+')',''.join(run_text(r) for r in group))]
+
+def paragraph_span_reason(p):
+    if p.find('w:pPr/w:sectPr',NS) is not None:return 'section boundary; retained'
+    return None
+
+def span_text_reason(before,after):
+    if not isinstance(before,str) or not before or not isinstance(after,str):return 'Span before must be nonempty and after must be text'
+    if any(c in before+after for c in '\r\n\t'):return 'Multiline spans are unsupported; original retained'
+    return None
 def new_run(run,value,highlight=False):
     r=copy.deepcopy(run);r.find('w:t',NS).text=value;r.find('w:t',NS).set(XMLSPACE,'preserve')
     if highlight:
@@ -65,12 +96,9 @@ def new_run(run,value,highlight=False):
     return r
 
 def replace_span(p,before,after,highlight,field_set):
-    if not isinstance(before,str) or not before or not isinstance(after,str):raise ValueError('Span before must be nonempty and after must be text')
-    if any(c in before+after for c in '\r\n\t'):raise ValueError('Multiline spans are unsupported; original retained')
-    candidates=[]
-    for group in groups(p,field_set):
-        s=''.join(run_text(r) for r in group)
-        candidates.extend((group,m.start()) for m in re.finditer('(?='+re.escape(before)+')',s))
+    reason=span_text_reason(before,after)
+    if reason:raise ValueError(reason)
+    candidates=span_matches(groups(p,field_set),before)
     if len(candidates)!=1:
         raise ValueError(f'Span has {len(candidates)} eligible matches; it is absent, ambiguous, or crosses protected content/style: {before!r}')
     group,start=candidates[0];end=start+len(before);offset=0;inserted=False
@@ -105,7 +133,8 @@ def apply_span_plan(source,plan,highlight,*,paragraphs,text,protected,namespaces
         if not op.get('purpose') or not op.get('evidence') or not isinstance(op.get('confirm'),bool):raise ValueError('Each change needs purpose, evidence and Boolean confirm')
         ids.add(cid);targets.add(pid);p=lookup[pid];before=text(p)
         if op.get('expect')!=before:raise ValueError('Expected source text differs for '+pid)
-        if p.find('w:pPr/w:sectPr',NS) is not None:raise ValueError(pid+': section boundary; retained')
+        reason=paragraph_span_reason(p)
+        if reason:raise ValueError(pid+': '+reason)
         spans=op.get('spans')
         if not isinstance(spans,list) or not spans:raise ValueError('replace_span needs a nonempty spans list')
         for span in spans:

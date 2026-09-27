@@ -17,6 +17,8 @@ _span_spec=importlib.util.spec_from_file_location('_papercraft_spans',Path(__fil
 SPAN=importlib.util.module_from_spec(_span_spec);_span_spec.loader.exec_module(SPAN)
 PROTECTED=['m:oMath','w:tbl','w:drawing','w:pict','w:fldSimple','w:fldChar','w:instrText',
            'w:footnoteReference','w:endnoteReference','w:bookmarkStart','w:bookmarkEnd','w:hyperlink']
+WHOLE_OPERATIONS=['replace','insert_after','delete','move_after','format']
+WHOLE_HISTORY_QUERY='//w:ins | //w:del | //w:moveFrom | //w:moveTo | //w:pPrChange | //w:rPrChange'
 def sha(b):return hashlib.sha256(b).hexdigest()
 def text(p):return ''.join(p.xpath('.//w:t/text() | .//m:t/text()',namespaces=NS))
 def canonical(p):return E.tostring(p,method='c14n')
@@ -26,13 +28,80 @@ def read_package(path):
         infos=z.infolist();parts={i.filename:z.read(i.filename) for i in infos}
     return infos,parts,E.fromstring(parts['word/document.xml'])
 def paragraphs(root):return root.find('w:body',NS).findall('w:p',NS)
+def whole_document_reason(root):
+    if root.xpath(WHOLE_HISTORY_QUERY,namespaces=NS):
+        return 'Existing tracked revisions: use replace_span for eligible ordinary text; history must remain unchanged'
+
+def whole_paragraph_reason(p,field_set):
+    reason=plain_reason(p)
+    if reason:return reason
+    if any(r in field_set for r in p.iter(Q('r'))):return 'complex field code or cached result'
+    return None
+
+def located_object(node,reason):
+    return {'kind':E.QName(node).localname,'location':node.getroottree().getpath(node),
+            'text':''.join(node.xpath('.//w:t/text() | .//w:delText/text() | .//w:instrText/text() | .//m:t/text()',namespaces=NS)),
+            'reason':reason}
+
+def span_inventory(p,pid,field_set,blockers):
+    run_groups=SPAN.groups(p,field_set) if field_set is not None else []
+    reason=SPAN.paragraph_span_reason(p)
+    blocked=list(blockers)+([reason] if reason else [])
+    result=[]
+    for i,group in enumerate(run_groups,1):
+        value=''.join(SPAN.run_text(r) for r in group);matches=SPAN.span_matches(run_groups,value)
+        refusal=SPAN.span_text_reason(value,'')
+        if not refusal and len(matches)!=1:refusal=f'Full group text has {len(matches)} eligible matches in this paragraph'
+        rp=group[0].find('w:rPr',NS)
+        result.append({'id':f'{pid}.G{i:03d}','text':value,'text_sha256':sha(value.encode()),
+          'run_locations':[r.getroottree().getpath(r) for r in group],
+          'paragraph_child_indices':[p.index(r)+1 for r in group],
+          'run_count':len(group),'format_sha256':sha(SPAN.c14n(rp) if rp is not None else b''),
+          'eligible':True,'replaceable_as_whole_group':not blocked and refusal is None,
+          'eligible_match_count':len(matches),'reason':'; '.join(blocked) or refusal,
+          'operation':{'kind':'replace_span','target':pid,'before':value} if not blocked and refusal is None else None})
+    available=any(g['replaceable_as_whole_group'] for g in result)
+    return {'available':available,'operations':['replace_span'] if available else [],'blocked_by':blocked,
+            'groups':result,'selection_rule':'Choose nonempty single-line before text unique across all eligible groups in this paragraph; group IDs and XML paths locate source content, not manifest targets. Recheck after each span.'}
+
 def inventory(path):
     _,parts,root=read_package(path)
+    document_blockers=[];field_set=None;field_error=[]
+    try:field_set=SPAN.field_runs(root)[0]
+    except SPAN.FieldStructureError as exc:
+        field_error=[str(exc)]
+        document_blockers.append({'code':'invalid_complex_fields','reason':str(exc),'locations':[exc.location],
+                                  'operations':WHOLE_OPERATIONS+['replace_span']})
+    history_reason=whole_document_reason(root)
+    if history_reason:
+        document_blockers.append({'code':'existing_tracked_revisions','reason':history_reason,
+          'locations':[n.getroottree().getpath(n) for n in root.xpath(WHOLE_HISTORY_QUERY,namespaces=NS)],
+          'operations':WHOLE_OPERATIONS})
+    rows=[]
+    for i,p in enumerate(paragraphs(root),1):
+        pid=f'P{i:04d}';legacy_reason=plain_reason(p)
+        whole_reason=whole_paragraph_reason(p,field_set or set())
+        whole_blocked=[b['reason'] for b in document_blockers]+([whole_reason] if whole_reason else [])
+        span=span_inventory(p,pid,field_set,field_error)
+        whole={'available':not whole_blocked,'operations':WHOLE_OPERATIONS if not whole_blocked else [],'blocked_by':whole_blocked}
+        protected_content=[located_object(child,field_error[0] if field_error else SPAN.ineligible_reason(child,field_set))
+                           for child in p if child.tag!=Q('pPr') and (field_error or not SPAN.eligible(child,field_set))]
+        rows.append({'id':pid,'text':text(p),'text_sha256':sha(text(p).encode()),
+          'editable':legacy_reason is None,'reason':legacy_reason,'editable_scope':'legacy whole-paragraph structure only; not an executable capability',
+          'whole_paragraph':whole,'ordinary_spans':span,'protected_content':protected_content,
+          'operations':whole['operations']+span['operations'],
+          'recommended_route':'replace' if whole['available'] else 'replace_span' if span['available'] else None})
     return {'file':str(Path(path).resolve()),'sha256':sha(Path(path).read_bytes()),
-      'paragraphs':[{'id':f'P{i:04d}','text':text(p),'text_sha256':sha(text(p).encode()),
-                     'editable':plain_reason(p) is None,'reason':plain_reason(p)}
-                    for i,p in enumerate(paragraphs(root),1)],
+      'capability_schema_version':1,'paragraphs':rows,'document_blockers':document_blockers,
+      'field_structure':{'status':'BLOCKED' if field_error else 'VALID','errors':field_error},
+      'operation_scope':'Direct document.xml body paragraphs only. Capabilities are structural; authored after text, evidence, expect, source hash and operation arguments remain required. Do not mix replace_span and whole-paragraph operations in one plan.',
+      'plan_selection':{'when_any_target_uses_replace_span':'Use replace_span for every target, including ordinary paragraphs; select their eligible groups. Multiple spans in one paragraph belong in one operation.',
+                        'whole_only_actions':'insert_after, delete, move_after and format cannot join a span plan. If available and authorized, use a separate build, then inspect its exact output for new paragraph IDs and source hash.'},
+      'unsupported_operations':['rewrite equations, fields/cached results, hyperlinks or existing highlighted text',
+        'accept, reject or edit tracked revisions','span across formatting/protected boundaries or paragraphs',
+        'edit table-cell, header/footer, footnote or other non-direct-body text','native Track Changes, field refresh or external link update'],
       'objects':{n:len(root.xpath('//'+n,namespaces=NS)) for n in PROTECTED},
+      'protected_objects':[located_object(n,'protected object; retained') for tag in PROTECTED for n in root.xpath('//'+tag,namespaces=NS)],
       'media_parts':sum(n.startswith('word/media/') for n in parts)}
 def plain_reason(p):
     # A refusal is preferable to flattening a field, equation, hyperlink or run styling.
@@ -62,8 +131,9 @@ def apply_plan(source,plan,highlight=True):
     root=copy.deepcopy(source);base=paragraphs(root)
     lookup={f'P{i:04d}':p for i,p in enumerate(base,1)}
     changes=[];ids=set();used=set()
-    if root.xpath('//w:ins | //w:del | //w:moveFrom | //w:moveTo | //w:pPrChange | //w:rPrChange',namespaces=NS):
-        raise ValueError('Existing tracked revisions: use replace_span for eligible ordinary text; history must remain unchanged')
+    field_set=SPAN.field_runs(root)[0]
+    reason=whole_document_reason(root)
+    if reason:raise ValueError(reason)
     for op in plan['operations']:
         cid=op['id'];kind=op['kind'];pid=op['target']
         if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]*',cid) or cid in ids:raise ValueError('Invalid/duplicate change ID')
@@ -73,7 +143,7 @@ def apply_plan(source,plan,highlight=True):
         if p.getparent() is None:raise ValueError('Target already deleted')
         before=text(p)
         if op['expect']!=before:raise ValueError('Expected source text differs for '+pid)
-        reason=plain_reason(p)
+        reason=whole_paragraph_reason(p,field_set)
         if reason:raise ValueError(f'{pid}: {reason}; use replace_span for eligible ordinary text, see references/complex-word.md')
         if not op.get('purpose') or not op.get('evidence') or not isinstance(op.get('confirm'),bool):
             raise ValueError('Each change requires purpose, evidence and Boolean confirm')

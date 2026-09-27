@@ -4,7 +4,11 @@
 
 ## 可直接执行的文字片段路径
 
-先用 `review_docx.py inspect` 取得目标段号、完整 expect 和输入哈希。沿用原 build 命令，将操作写成：
+先用 `review_docx.py inspect` 取得目标段号、完整 expect 和输入哈希。不要仅看兼容字段 `editable`：它表示旧的整段局部结构判断。读取 `whole_paragraph`、`ordinary_spans`、`document_blockers` 和 `recommended_route` 决定工具路径；复杂段 editable=false 仍可有可执行普通片段，文档有历史修订时普通段 editable=true 也不能整段替换。
+
+从 `ordinary_spans.groups` 选择 `replaceable_as_whole_group: true` 的组，按其 `operation.target`、`operation.before` 填写计划；run_locations、paragraph_child_indices 与 format_sha256 标明连续同格式组的来源。需要更短片段时，只选该组内单行原文，并确认在该段全部 eligible 组中唯一；构建时仍按同一匹配规则复核。重复的组会列出但不提供可执行 operation。protected_content 给出不能改写的域缓存、公式、链接、高亮和历史修订的位置。
+
+沿用原 build 命令，将操作写成：
 
 ```json
 {"id":"C1","kind":"replace_span","target":"P0003","expect":"inspect返回的完整原段",
@@ -13,6 +17,10 @@
 ```
 
 同一段多个替换放在一个 spans 数组；每段只列一次。匹配必须在一个普通文本区内唯一，允许跨相邻且格式完全相同的run。遇到不同样式、公式、链接、字段代码或结果、历史高亮、原生修订就停止该匹配，返回段号和具体片段，不把这些节点改造成纯文本。表内文、跨段重排和原生修订内的修改尚不支持。原生修订的显示方式由编辑器控制，清稿保留它们，不等于接受历史修改。
+
+一份计划只走一条操作路径。有复杂片段目标时，其余普通段也从清单选组并使用 replace_span，不能混入 replace。插入整段、删段、移动和段落格式操作若可用且属于授权范围，需要独立 build；后续计划重新 inspect 该产物以更新 expect、段号和父哈希。不要为了拼成一份计划绕过历史修订保护。
+
+inspect 遇到异常域结构会保留只读清单，返回 `field_structure.status: BLOCKED` 及 XML 位置，并关闭所有编辑路线；build 以相同字段判定拒绝。域文字仍保留，不能把格式异常解释成普通可改文本。
 
 审阅稿只给新文字加黄标；清稿不加本轮黄标。已有绿色/黄色高亮和历史插入删除保持原XML。任何片段失败都不发布半份候选。重新选择明确可编辑片段，或将不支持项记录为原样保留；不能改成整段 replace 绕过拒绝。
 

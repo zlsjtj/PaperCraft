@@ -2,7 +2,7 @@
 name: paper-evidence-framing
 description: PaperCraft 用于研究论文的创新定位、工作量呈现、图文精修和透明审阅。按已有证据交付实际修订稿、黄色审阅标记与中文诊断，也支持仅审阅、局部修改、续改和实验未完成的稿件。
 metadata:
-  version: "2.15.0"
+  version: "2.16.0"
 ---
 
 # PaperCraft｜论文叙事与精修
@@ -21,11 +21,11 @@ metadata:
 | 继续修改 | 核对当前版、父版和历史记录，保留已有有效修改 |
 | 实验未完成 | 先完成已有证据支持的工作，依赖结果的结论保持待定，不擅自开展实验 |
 
-先检查[真实依赖](references/dependencies.md)。复杂段落中的普通文字可按[片段修改路径](references/complex-word.md)用 `replace_span` 接续；公式、域、链接和历史修订保留。超出支持范围的对象明确定位，不用整段重建绕过保护。
+先检查[真实依赖](references/dependencies.md)。Word 先运行 `review_docx.py inspect`，按能力清单的操作与片段选择工具；旧 `editable` 字段不是整个段落的通用许可。复杂段落中的普通文字按[片段修改路径](references/complex-word.md)用 `replace_span` 接续；公式、域、链接和历史修订保留。超出支持范围的对象明确定位，不用整段重建绕过保护。
 
 ## 诊断整篇论证
 
-实质性修订先用[审阅方法](references/reviewer-method.md)和[全文对应表](templates/argument-map.md)，将研究约束、实际改变、价值、必要条件、验证、主要结果和边界对应到正文位置。工作表只辅助编辑，不强塞进论文。
+实质性修订先用[审阅方法](references/reviewer-method.md)。材料未整理时，先从原稿、实现和记录追踪具体操作及基线差异，再选择主线；不要把原稿贡献清单直接当成答案。用[全文对应表](templates/argument-map.md)将必要条件、验证、结果和边界对应到实际正文。工作表只辅助编辑，不强塞进论文。
 
 用[贡献与证据记录](templates/claim-evidence-ledger.md)比较最接近的已有机制、本文差异和证据强度。区分原文报告、原始记录核验、推导、模拟、物理实测和假设。未找到相同论文不证明创新成立；强化文献比较前先读来源。
 
