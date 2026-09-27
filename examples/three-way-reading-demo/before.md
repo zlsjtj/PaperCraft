@@ -1,0 +1,7 @@
+## Introduction
+
+After an input changes, full recomputation evaluates every node in the acyclic graph, including nodes whose results can still be reused. The candidate instead follows successor edges from changed nodes to propagate invalidation and schedules only affected nodes, reusing stored results elsewhere. Reuse requires more than equal values: an unchanged value does not ensure that its dependencies still have the same versions. The implementation therefore maintains an input signature for each node and checks both the signature and dependency versions whenever a result is reused. These checks support a single change in execution behavior: limiting recomputation to the affected portion of a fixed acyclic graph. Dynamic topology and cyclic graphs are outside its scope.
+
+## Results
+
+In the three constructed 120-node examples, selective recomputation reduced node evaluations for localized changes but offered no count reduction for a global change. The candidate evaluated 12 nodes after a single-branch change and 48 after a cross-branch change, compared with 120 for full recomputation in each case. Both approaches evaluated all 120 nodes after a global change. Output values agreed with full recomputation in all three cases. This agreement is limited to these teaching records and does not establish general correctness. The counts show less node execution in two cases, not measured acceleration: signature checking adds work, and neither wall-clock time nor peak memory was measured. No concurrent-execution records were supplied.

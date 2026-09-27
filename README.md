@@ -4,7 +4,7 @@ PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工
 
 当前版本 **2.15.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
-本版在已有信息分层方法上，补齐标题的修饰对象与证据层级，以及有独立清稿时的高亮恢复规则。首读问题仍由前部实际对照检验，必要事实在全文有明确位置。方法见[入口设计](references/novelty-framing.md)，本轮实际试用、限制与检查见[当前记录](tests/current-validation.md)。
+当前本地维护补齐复杂 Word 片段修改、局部报告和明确退步/回退记录，保留原有入口设计。未改版本号冒充效果升级，精确状态以本地提交和[本轮记录](tests/current-validation.md)为准；尚未推送时远端不包含这些修复。
 
 ## 安装
 
@@ -54,7 +54,7 @@ python scripts/review_docx.py build manuscript.docx revision.json output --clean
 python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候选稿.docx --out protection.json
 ```
 
-输出目录应为新目录。含公式、域、交叉引用和混合格式的段落应走[复杂 Word 流程](references/complex-word.md)，不要强行交给简单段落工具。PDF 和逐页图片还需要宿主的 documents 技能、LibreOffice 与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
+输出目录应为新目录。含公式、域、交叉引用和混合格式的段落，其普通文字可用 replace_span；完整样例见[复杂 Word 流程](references/complex-word.md)。整段替换仍严格保护这些对象。PDF 和逐页图片还需要宿主的 documents 技能、LibreOffice 与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
 
 新版补充[选择规则复核与定范围审阅](references/method-transfer-audit.md)：检查训练配置如何映射到测试输入，并通过 `make_review_packet.py` 只提供明确选定的段落和图片。生成材料不等于完成独立审阅。
 
@@ -67,6 +67,14 @@ python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候
 审阅用实际前后稿回答：读者先看见什么，重要工作为何必要，哪里仍需往返查找。没有真实读者时明确称模型辅助评估。词数、答案齐全和工具通过不证明整篇好读；局部修改也不能冒充全文修订。
 
 ## 示例与检查
+
+当前统一技术入口：
+
+```powershell
+python tests/run_all_tests.py --out test-output/current
+```
+
+它检查全库Python语法、旧回归、自动发现的单元测试和复杂Word示例的源码生成/build/verify路径。逐组报告失败、缺依赖和跳过，不能把这些状态合并成全部通过。输出不包括页面视觉验收或论文表达效果；这两项要另看精确产物。下面的旧单组命令继续有效，适合只复验受影响部分。
 
 [检查点流水线示例](references/checkpoint-demo/input.md)提供原文、限定证据、英文改稿和中文改动记录。数据是教学构造值，不能作为研究结果引用。其他[完整示例](references/worked-examples.md)展示贡献、工程段和结果段的修改理由。
 
@@ -90,3 +98,5 @@ python tests/run_representation_tests.py --out test-output/representations
 包装不能补出不存在的研究贡献，也不能保证期刊初审。已经表达清楚的段落可以保留；缺实验、缺对照和缺来源应明确记录。
 
 本轮聚焦入口的理解依赖与候选选择，替换重复入口规则，并在完整示例中比较两种实际叙事。首读审阅使用隔离材料；技术检查与表达效果分开记录。详见 tests/acceptance-results.md。
+
+新增可执行示例：[复杂 Word 局部修改](examples/complex-word/README.md)、[明确退步与回退](examples/effect-tradeoff/README.md)、[三组真实改写对照](examples/three-way-reading-demo/README.md)。

@@ -2,17 +2,19 @@
 This helper applies authored prose. It is not a scientific fact checker or LLM.
 """
 from __future__ import annotations
-import argparse,copy,hashlib,json,re,tempfile,zipfile
+import argparse,copy,hashlib,json,re,tempfile,zipfile,importlib.util,sys
 from pathlib import Path
 from lxml import etree as E
 from docx import Document
-from docx.shared import Inches,Pt
+from docx.shared import Inches,Pt,RGBColor
 from docx.oxml import OxmlElement,parse_xml
 from docx.oxml.ns import qn
 
 W='http://schemas.openxmlformats.org/wordprocessingml/2006/main'
 M='http://schemas.openxmlformats.org/officeDocument/2006/math'
 NS={'w':W,'m':M};Q=lambda n:'{'+W+'}'+n
+_span_spec=importlib.util.spec_from_file_location('_papercraft_spans',Path(__file__).with_name('docx_spans.py'))
+SPAN=importlib.util.module_from_spec(_span_spec);_span_spec.loader.exec_module(SPAN)
 PROTECTED=['m:oMath','w:tbl','w:drawing','w:pict','w:fldSimple','w:fldChar','w:instrText',
            'w:footnoteReference','w:endnoteReference','w:bookmarkStart','w:bookmarkEnd','w:hyperlink']
 def sha(b):return hashlib.sha256(b).hexdigest()
@@ -55,11 +57,13 @@ def write_text(p,value,highlight):
     r=E.SubElement(p,Q('r'));r.append(rp);t=E.SubElement(r,Q('t'))
     t.set('{http://www.w3.org/XML/1998/namespace}space','preserve');t.text=value
 def apply_plan(source,plan,highlight=True):
+    if any(op.get('kind')=='replace_span' for op in plan['operations']):
+        return SPAN.apply_span_plan(source,plan,highlight,paragraphs=paragraphs,text=text,protected=PROTECTED,namespaces=NS,canonical=canonical)
     root=copy.deepcopy(source);base=paragraphs(root)
     lookup={f'P{i:04d}':p for i,p in enumerate(base,1)}
     changes=[];ids=set();used=set()
     if root.xpath('//w:ins | //w:del | //w:moveFrom | //w:moveTo | //w:pPrChange | //w:rPrChange',namespaces=NS):
-        raise ValueError('Existing tracked revisions: use the documents workflow without accepting them silently')
+        raise ValueError('Existing tracked revisions: use replace_span for eligible ordinary text; history must remain unchanged')
     for op in plan['operations']:
         cid=op['id'];kind=op['kind'];pid=op['target']
         if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]*',cid) or cid in ids:raise ValueError('Invalid/duplicate change ID')
@@ -70,7 +74,7 @@ def apply_plan(source,plan,highlight=True):
         before=text(p)
         if op['expect']!=before:raise ValueError('Expected source text differs for '+pid)
         reason=plain_reason(p)
-        if reason:raise ValueError(f'{pid}: {reason}; use a format-aware manual edit')
+        if reason:raise ValueError(f'{pid}: {reason}; use replace_span for eligible ordinary text, see references/complex-word.md')
         if not op.get('purpose') or not op.get('evidence') or not isinstance(op.get('confirm'),bool):
             raise ValueError('Each change requires purpose, evidence and Boolean confirm')
         pp=p.find('w:pPr',NS);before_format=E.tostring(pp,encoding='unicode') if pp is not None else ''
@@ -130,11 +134,15 @@ def verify_pair(source,output):
     if set(changed)-{'word/document.xml'}:raise ValueError('Unexpected package mutation')
     for tag in PROTECTED:
         if list(map(canonical,ar.xpath('//'+tag,namespaces=NS)))!=list(map(canonical,br.xpath('//'+tag,namespaces=NS))):raise ValueError('Protected object mismatch: '+tag)
+    if SPAN.protected_history(ar)!=SPAN.protected_history(br):raise ValueError('Existing tracked revisions changed')
+    if SPAN.field_runs(ar)[1]!=SPAN.field_runs(br)[1]:raise ValueError('Field payload changed')
     return {'status':'PASS','changed_parts':changed,'objects':inventory(output)['objects'],
             'source_sha256':sha(Path(source).read_bytes()),'output_sha256':sha(Path(output).read_bytes()),
             'scope':'ZIP/XML object preservation only; content, citations and visual review are separate'}
 def make_report(path,source,plan,changes,checks):
     report=plan['report']
+    if plan.get('report_scope',plan.get('scope'))=='local':
+        return make_local_report(path,source,plan,changes,checks)
     required={'summary','thesis','titles','dimensions','ledger','workload','figures','limitations','author_questions','checks'}
     if required-set(report):raise ValueError('Missing report fields: '+str(required-set(report)))
     d=Document();s=d.sections[0];s.page_width=Inches(8.27);s.page_height=Inches(11.69)
@@ -179,6 +187,32 @@ def make_report(path,source,plan,changes,checks):
     for x in report['checks']:line(x['name']+'：'+x['status']+'；'+x['detail'])
     line('本报告生成时视觉检查尚未执行。最终逐页结果见随交付的 visual-review.json；没有该文件表示未验收。作者最终认可未取得，未执行投稿。')
     d.save(path)
+
+def make_local_report(path,source,plan,changes,checks):
+    """A local change record, without requiring irrelevant thesis/figure fields."""
+    report=plan['report']
+    if not isinstance(report.get('summary'),str) or not report['summary'].strip():raise ValueError('Local report requires summary')
+    for key in ('limitations','checks'):
+        if key in report and not isinstance(report[key],list):raise ValueError('Local '+key+' must be a list')
+    d=Document();d.styles['Normal'].font.name='Calibri';d.styles['Normal'].font.size=Pt(10.5)
+    for name in ('Normal','Title','Heading 1'):
+        st=d.styles[name];st.font.color.rgb=RGBColor(0,0,0)
+        rp=st._element.get_or_add_rPr();fonts=rp.find(qn('w:rFonts'))
+        if fonts is None:fonts=OxmlElement('w:rFonts');rp.insert(0,fonts)
+        fonts.set(qn('w:eastAsia'),'Microsoft YaHei')
+    d.add_paragraph('局部修改记录','Title');d.add_paragraph(report['summary'])
+    d.add_paragraph('基线：'+Path(source).name+'\nSHA-256：'+plan['input_sha256'])
+    for change in changes:
+        d.add_paragraph(change['id']+' '+change['old_location'],'Heading 1')
+        spans=change.get('spans',[{'before':change['before'],'after':change['after']}])
+        for span in spans:
+            d.add_paragraph('原文：'+span['before']);d.add_paragraph('改文：'+span['after'])
+        d.add_paragraph('理由：'+change['purpose']+'\n依据：'+change['evidence'])
+    d.add_paragraph('受影响检查：'+checks['status']+'；'+checks['scope'])
+    for item in report.get('checks',[]):d.add_paragraph(str(item))
+    for issue in report.get('limitations',[]):d.add_paragraph('剩余问题：'+str(issue))
+    d.add_paragraph('黄色仅标本轮改写，不是原生修订；历史高亮和原生修订未接受或清除。页面渲染另行验收，作者认可尚未取得。')
+    d.save(path)
 def build(source,manifest,out,clean=False):
     source=Path(source).resolve();out=Path(out).resolve();plan=json.loads(Path(manifest).read_text(encoding='utf-8-sig'))
     if out.exists():raise ValueError('Output directory must be new; do not overwrite a candidate')
@@ -203,6 +237,10 @@ def build(source,manifest,out,clean=False):
         for p in temp.iterdir():p.replace(out/p.name)
     return payload
 def main():
+    # JSON carries Unicode equations and paths. A legacy Windows output codepage
+    # must not turn a successfully published candidate into a reported refusal.
+    for stream in (sys.stdout,sys.stderr):
+        if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     p=argparse.ArgumentParser(description=__doc__);sp=p.add_subparsers(dest='cmd',required=True)
     a=sp.add_parser('inspect');a.add_argument('source');a.add_argument('--out')
     a=sp.add_parser('build');a.add_argument('source');a.add_argument('manifest');a.add_argument('output_dir');a.add_argument('--clean',action='store_true')
