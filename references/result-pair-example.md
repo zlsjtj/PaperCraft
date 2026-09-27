@@ -8,15 +8,21 @@
 
 固定构造值中，突发取消时 L0→L1 的及时完成为 120,000→136,800，CPU 为 360→372 核秒；稳定流量下，及时完成为 117,600→117,120，CPU 为 104→112 核秒。偏斜流量下，L1→L2 的及时完成为 180,500→194,750，CPU 为 420→443 核秒。没有重复测量，未比较逐租户扫描上限，也未测账本内存。
 
-## 两种入口及选择
+## 从完整比较到摘要与正文
 
-**结果先行：** “In constructed cancellation-burst values, separating slot ownership from queue membership raises timely completions by 14%, with CPU time increasing from 360 to 372 core seconds; under steady traffic, timely completions instead fall. The separation allows cancelled requests to return admission slots before their queue entries are removed, while retaining the deadline queues.”
+先建立完整比较，再决定读者在入口需要的粒度。下面的密集稿没有造假，但把完整账目与主要变化同时交给第一次接触该服务的读者。
 
-收益和代价容易发现，适合已知资源模型的读者；对第一次接触该服务的人，先读到抽象的“分离”，需要后一句才能理解为什么有用。本例不采用这一理解次序，并不认为所有结果先行的入口都不好。
+**摘要修改前：** “L1 separates slot ownership from queue membership using a reservation ledger and checks ownership, cancellation and expiration on dispatch. In constructed cancellation bursts, timely completions increase from 120,000 to 136,800 and CPU time rises from 360 to 372 core seconds. Under steady traffic, completions change from 117,600 to 117,120 and CPU time rises from 104 to 112 core seconds. L2 adds an earlier borrowing rule, increasing skewed-traffic completions from 180,500 to 194,750 at 420 to 443 core seconds. These values do not establish general superiority.”
 
-**障碍先行：** “A cancelled request may keep an admission slot until its queue entry is removed. Separating slot ownership from queue membership permits earlier reuse while retaining the deadline queues. In the constructed cancellation burst, timely completions rise by 14%, with CPU time increasing from 360 to 372 core seconds; under steady traffic, timely completions instead fall.”
+**摘要修改后：** “A cancelled request can block a new admission while its queue entry awaits removal. We release its reserved slot through a separate ownership ledger while retaining the deadline queues. In constructed cancellation bursts, this change raises timely completions by 14% at higher CPU cost; under steady traffic, completions instead decline. The contribution is earlier reuse after cancellation, with ownership checks that prevent refunding running work. The sequential construction does not establish concurrent safety.”
 
-采用第二种。它先交代有用的变化，再给有界结果；借用另到其比较段说明。这里不是以更少字获胜，而是让同一机制及其证据形成一个可读单元。完整状态条件仍需留在方法。
+采用这个入口，是因为读者先知道被什么挡住，再理解为什么要另记所有权。摘要仍给出收益、CPU 代价方向和不利流量，没有把“代价较高”替换为无内容的谨慎警句。这里的主张是有代价的可用性变化，不是资源效率；如果稿件主张净效率、更低成本或跨过某个部署预算，就必须在入口留下足以判断该主张的成本量级。L2 是继承规则的集成比较，退出摘要但留在下方实际结果段。
+
+**方法承接段：** “The ledger records the owner of each reserved slot independently of the queue node. Cancellation can release the reservation before that node is removed. Dispatch still checks ownership, cancellation and expiration; a running request cannot receive an early refund. These state checks define the sequential release decision. They do not prove that simultaneous cancellation and dispatch are safe.”
+
+**主结果承接段：** “Against L0, L1 raises timely completions from 120,000 to 136,800 in the constructed cancellation burst, while CPU time increases from 360 to 372 core seconds. The same separation does not help steady traffic: completions fall from 117,600 to 117,120 and CPU time increases from 104 to 112 core seconds. Thus the example supports recovering admission capacity after cancellation, not a workload-independent completion or efficiency gain. These fixed values have no repeated-trial uncertainty estimate.”
+
+完整数值并未搬到编辑报告里，而是紧挨对应结果出现在论文中。方法承接了退出入口的状态条件；CPU 代价和负结果仍参与结论。未测账本内存及逐租户扫描上限放在讨论中：“The construction does not quantify ledger memory or compare per-tenant scan limits; neither cost can be treated as zero.”
 
 ## 结果段的实际修复
 
@@ -24,7 +30,7 @@
 
 **修复稿：** “With workers and parsing unchanged, adding the earlier borrowing rule raises timely completions from 180,500 to 194,750 under tenant skew, while CPU time rises from 420 to 443 core seconds. This comparison concerns the integration of borrowing; it does not establish a new borrowing policy.”
 
-重复百分比和空泛警句被实际代价及归因边界替换。逐租户扫描与内存缺口到相应方法/讨论位置说明；不能因为这段没提，就从全文消失。
+重复百分比和空泛警句被实际代价及归因边界替换。这段继续出现在主结果之后，因而 L2 的退出入口没有抹去其实际工作。
 
 ## 执行后应检查什么
 

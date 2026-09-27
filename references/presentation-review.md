@@ -6,6 +6,29 @@
 
 读取当次目标期刊真实规范。无法访问时写暂定格式；不擅自改投。优先可复现编辑图源并检查最终放置尺寸，适配图形技能，不把 AI 位图当成精确性能图。
 
+## 把主比较变成页面上的阅读路径
+
+先指出读者要在哪些行列间作比较，再决定层次与对齐。以下延续[取消预约槽位的虚构案例](result-pair-example.md)，不是所有论文的表格模板。
+
+**修改前的实际段落与表题：** “Table 1 gives all outputs. L1 obtains 136,800 timely completions in the burst. L2 obtains 194,750 under skew. CPU values are also listed.” / “Table 1 Results.” 页面把案例名、模式和数值全部左对齐，所有格线同样重，正文把两个不同基线的最高值并列。
+
+**修改后的段落与表题：** “Table 1 pairs each change with its own baseline. Read the burst and steady rows together to test whether early release helps beyond cancellation; read the skew rows separately to assess the inherited borrowing rule.” / “Table 1 Constructed completions and CPU cost for each matched comparison.” 表中保留原始行序和单元格内容：
+
+| Case | Mode | Timely completions | CPU core seconds |
+|---|---|---:|---:|
+| burst | L0 | 120,000 | 360 |
+| burst | L1 | 136,800 | 372 |
+| steady | L0 | 117,600 | 104 |
+| steady | L1 | 117,120 | 112 |
+| skew | L1 | 180,500 | 420 |
+| skew | L2 | 194,750 | 443 |
+
+在最终 Word 中，案例与模式仍是独立单元格，不合并或删除重复名称；各案例起始行加略强的横线，组内用较轻的线，数值右对齐。表头允许自然换行并留出内边距；不缩小整表去迁就等宽列，也不单独加粗最大的完成数。这样行分组表明比较基线，列对齐使完成数和 CPU 代价能一起扫读。Markdown 只能预览内容与对齐，最终行线、字号及分页要在渲染页上判断。
+
+页面动作也应有明确对象。例如原页的长标题占三行、首节标题孤立在页底、表题与表分开时，先收紧标题到真实主贡献，调整标题字号和段后距离；节标题与下一段、表题与首行同页；清除正文继承的整页 keep-with-next 链。随后检查摘要到方法的间距、公式前后行距及表后的解释是否连续，不用把所有段落缩成小字来制造“成熟”。行内变量按数学记号排版，与原生公式一致；操作现有普通文本 run，不重建原生数学对象。
+
+这类修改的记录应能回答“哪组更容易比较、为什么”，而不只写“统一字体”。若约定不改表值与结构，就逐 cell 核对文字、顺序、公式和合并信息，并单独记录 tblPr、tcPr、段落及 run 的属性变化。此时表 XML 预期不同，不能写成“整个表 XML 相同”。
+
 ## Word 保护
 
 对原包定位修改，保留 OMML、表格、图片、脚注/尾注、域、引用、书签和交叉引用。记录前后数量与语义变化；存在旧修订时保留状态，不自动接受旧修订。复杂对象用经过验证的格式感知路径；辅助工具拒绝某类段落时，不绕过拒绝后仍称对象已保留。
