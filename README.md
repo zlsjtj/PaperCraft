@@ -2,7 +2,7 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.16.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.17.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
 2.16 增加按操作区分的 Word 能力清单，并把散乱材料的操作追踪与贡献选择接到实际改稿。版本号标识功能变化；表达效果、验证范围和未解决项见[本轮记录](tests/current-validation.md)。2.15 的上一轮维护提交已发布，历史“未推送”描述仅对应当时状态。
 
