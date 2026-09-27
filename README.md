@@ -4,7 +4,9 @@ PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工
 
 当前版本 **2.17.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
-2.16 增加按操作区分的 Word 能力清单，并把散乱材料的操作追踪与贡献选择接到实际改稿。版本号标识功能变化；表达效果、验证范围和未解决项见[本轮记录](tests/current-validation.md)。2.15 的上一轮维护提交已发布，历史“未推送”描述仅对应当时状态。
+2.17 重点调整创新入口、真实工程工作和最终呈现的衔接。先把一次实际比较中的收益、代价和边界连起来，再决定摘要应保留的粒度；完整数值仍在对应正文。新增[完整的入口与结果示例](references/result-pair-example.md)，并把[表格与页面呈现](references/presentation-review.md)落实到具体比较、对齐和分页动作。
+
+本轮新材料试用出现了明确得失：三稿都找到了主贡献，但新版首跑摘要更密，复跑更轻。后续据此修复示例和实际成稿，未把版本号当成全面胜出的证明。详见[本轮记录](tests/current-validation.md)。
 
 ## 安装
 
@@ -97,6 +99,6 @@ python tests/run_representation_tests.py --out test-output/representations
 
 包装不能补出不存在的研究贡献，也不能保证期刊初审。已经表达清楚的段落可以保留；缺实验、缺对照和缺来源应明确记录。
 
-2.16 使用未预先标明贡献的原创材料，比较普通提示、旧技能与新版，并追加新版复跑。四版均能找到主要机制，具体解释与证据保留各有得失；详见[当前验收](tests/current-validation.md)，不把历史结果当成本轮质量结论。
+历史 2.16 的普通提示、旧技能与新版试用在 Git 历史中保留；不能用它代替当前版本验证。本轮继续使用未提供贡献答案的原创材料，并分别记录初始生成、匿名模型审阅、开发修复和冻结后再生成。
 
 新增可执行示例：[复杂 Word 局部修改](examples/complex-word/README.md)、[明确退步与回退](examples/effect-tradeoff/README.md)、[三组真实改写对照](examples/three-way-reading-demo/README.md)。
