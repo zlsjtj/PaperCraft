@@ -97,6 +97,6 @@ python tests/run_representation_tests.py --out test-output/representations
 
 包装不能补出不存在的研究贡献，也不能保证期刊初审。已经表达清楚的段落可以保留；缺实验、缺对照和缺来源应明确记录。
 
-本轮聚焦入口的理解依赖与候选选择，替换重复入口规则，并在完整示例中比较两种实际叙事。首读审阅使用隔离材料；技术检查与表达效果分开记录。详见 tests/acceptance-results.md。
+2.16 使用未预先标明贡献的原创材料，比较普通提示、旧技能与新版，并追加新版复跑。四版均能找到主要机制，具体解释与证据保留各有得失；详见[当前验收](tests/current-validation.md)，不把历史结果当成本轮质量结论。
 
 新增可执行示例：[复杂 Word 局部修改](examples/complex-word/README.md)、[明确退步与回退](examples/effect-tradeoff/README.md)、[三组真实改写对照](examples/three-way-reading-demo/README.md)。
