@@ -2,7 +2,7 @@
 name: paper-evidence-framing
 description: PaperCraft 用于研究论文的创新定位、工作量呈现、图文精修和透明审阅。按已有证据交付实际修订稿、黄色审阅标记与中文诊断，也支持仅审阅、局部修改、续改和实验未完成的稿件。
 metadata:
-  version: "2.19.0"
+  version: "2.20.0"
 ---
 
 # PaperCraft｜论文叙事与精修
@@ -27,14 +27,14 @@ metadata:
 | 重要实现只有清单、记录中遗漏必要工作 | [工程取证](references/workload-framing.md) |
 | 收益、代价、比较范围分离 | [论证修复](references/argument-repair.md) |
 | 训练与测试、特征与实际执行可能不同 | [追踪一次输入](references/method-transfer-audit.md) |
-| 表图、段落和页面需要实质整理 | [呈现动作](references/presentation-review.md) |
+| 图文需要更好的造型、构图、阅读层次或页面完成度，包括“面子工程” | [呈现动作与完整图文案例](references/presentation-review.md)，在事实正确之外实际比较表达方案 |
 | 需要独立前后阅读比较 | [读者效果](references/reader-effect.md) |
 
 ## 文件路径必须能执行
 
 先查[真实依赖](references/dependencies.md)。Word 用 `review_docx.py inspect` 的能力清单选择整段或 `replace_span`；公式邻接文字和复杂对象按[复杂 Word 路径](references/complex-word.md)接续。不能清空段落重建纯文本来绕过保护。原生公式、域、链接、表图、历史修订和原有高亮保持可追溯。
 
-图形确实需要改变时，用[交接单](templates/figure-handoff.md)传递科学关系、数据、图注与入稿尺寸，按[图文联合交付](references/integrated-delivery.md)核对实际嵌入。旧图正确不等于解释已充分；保留、重排和重画按实际读图效果决定。图形改动必须展示图片前后对照，黄色文字不能代替。
+用户要求提升图文完成度时，进入上述呈现路径，即使旧图没有科学错误。PaperCraft 负责选定图要解释的变化、表示方式及最终页面；绘图由可用的 FigureCraft 或合适的原生绘图工具完成，交出规格不算完成。用[短交接单](templates/figure-handoff.md)传递必要事实与设计选择，按[图文联合交付](references/integrated-delivery.md)检查成稿。已清楚且视觉成熟的图可以保留，但须看实际尺寸下的候选再判断；不能只因无错而结束。图形改动展示真实图片前后对照，黄色文字不能代替。
 
 ## 修订与交付
 

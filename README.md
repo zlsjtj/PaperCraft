@@ -2,11 +2,11 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.19.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.20.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
-2.19 把分散的全文指导收拢到一条[主编辑路径](references/reviewer-method.md)：沿具体操作找到值得讲的差异，用必要决定及其后果解释工程工作，再把比较结果组织成有条件的判断。配套的[完整示例](references/result-pair-example.md)贯通标题、摘要、方法和结果，也保留不如旧句的改写。原始材料完整保存，但附件里的每个字段不再默认进入正文。
+全文修订沿[主编辑路径](references/reviewer-method.md)组织贡献与证据。2.20 补足其中的图文设计：明确由 PaperCraft 选择表示方式、完成造型与构图比较，再把图、图注和正文放回实际页面。示例包含[过滤组件的取舍与完整源码](examples/visual-editorial/README.md)，以及独立新材料生成的[膜片观察夹具](examples/membrane-observation/README.md)。没有把某个期刊或一种立体画法当作通用模板。
 
-本轮用两份新构造的完整材料，在独立上下文生成，再匿名阅读前部、全文和实际页面。第一份比较普通提示、旧版与开发候选，没有全面胜者；第二份使用冻结后的最终指令与旧版重跑。实际得失及没有验证的范围见[当前验收](tests/current-validation.md)，旧长稿修订保留在[2.18记录](tests/validation-2.18.md)。演示中的数值均为构造材料，不是真实科研测量，也不证明真实审稿人认可。
+本轮固定结构案例经过真实重画与入稿，另用相同的新材料在独立上下文比较旧、新技能，先匿名看作品再看页面。实际得失和未验证范围见[当前验收](tests/current-validation.md)；上轮全文试用保留在[2.19记录](tests/validation-2.19.md)。演示不是真实科研测量，也不证明审稿人认可或稳定达到某期刊的插图水准。
 
 ## 安装
 
@@ -102,3 +102,5 @@ python tests/run_representation_tests.py --out test-output/representations
 历史试用在 Git 历史和版本验收中保留，不能代替当前版本验证。本轮区分首次完整稿、自主复读、外部评语后的开发修改，以及冻结后换材料再生成；共同排版工具的修复不记作某一生成条件的优势。
 
 新增可执行示例：[复杂 Word 局部修改](examples/complex-word/README.md)、[明确退步与回退](examples/effect-tradeoff/README.md)、[三组真实改写对照](examples/three-way-reading-demo/README.md)。
+
+科研图示例的重建依赖单独列在示例目录。可用 `python -m pip install -r examples/visual-editorial/requirements.txt` 安装 Python 部分，另提供本机字体和 Poppler；生成 Word 后仍需实际渲染和检查页面。

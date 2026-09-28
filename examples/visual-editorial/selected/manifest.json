@@ -1,0 +1,49 @@
+{
+  "view": "spatial",
+  "size_mm": [
+    160,
+    71.66666666666667
+  ],
+  "minimum_label_pt": 8.976377952755907,
+  "editable": "Separate vector geometry and text in SVG/PDF; PNG preview only",
+  "depth": "Illustrative 2.5D, no physical model",
+  "logical_objects": {
+    "conventional": [
+      "housing",
+      "left-pipe",
+      "right-pipe"
+    ],
+    "candidate": [
+      "housing",
+      "inlet",
+      "outlet",
+      "seal",
+      "cartridge-frame",
+      "filter-1",
+      "filter-2"
+    ]
+  },
+  "repeated_reference": "Dashed seated cartridge position; same frame and layers, not extra inventory",
+  "no_performance_data": true,
+  "fonts": {
+    "regular": "arial.ttf",
+    "bold": "arialbd.ttf"
+  },
+  "command": [
+    "pdftoppm",
+    "-png",
+    "-singlefile",
+    "-r",
+    "300",
+    "figure.pdf",
+    "figure"
+  ],
+  "files": {
+    "figure.svg": "a9e7223dfc81f17724cc04709dcb4113807fb54a18455cc3d78fc8497dc6e9ad",
+    "figure.pdf": "a2faf930b5969acce7f5b4d14d189ed85b5a88b5829c8e6bc1f14712626ee15f",
+    "figure.png": "0786130a4a0f14dea4ec0bfa11328297ceb5d9eaa541f14f2fcb7bf0934ea506",
+    "caption.txt": "108c3e608cf2a662b27c5f8987acc9b0589b406054f4cf33d40f3f4be0ba3f97"
+  },
+  "quality": "REVIEW_REQUIRED",
+  "candidate_state": "SELECTED_AFTER_REVIEW"
+}
