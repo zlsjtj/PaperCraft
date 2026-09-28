@@ -5,7 +5,7 @@
 | 能力 | 真实依赖 | 本包如何使用 | 不可用时 |
 |---|---|---|---|
 | 文稿读取、推理、改写 | 宿主模型与本包参考文件 | 核对材料并编写补丁和诊断 | 不能把模板填充宣称为智能修订 |
-| Word 定位修改与报告 | Python 3、lxml、python-docx | `scripts/review_docx.py`；只改简单正文段落，保留其他 ZIP 部件 | 缺库时明确 Word 生成未完成，不伪造链接 |
+| Word 定位修改与报告 | Python 3、lxml、python-docx | `scripts/review_docx.py`；按能力清单修改普通整段或受控文字片段，保留受保护对象及其他 ZIP 部件 | 缺库时明确 Word 生成未完成，不伪造链接 |
 | 复杂 Word | 实际安装的 documents skill 及脚本 | 按该技能读 OOXML/红线指引做受控修改 | 不把复杂对象扁平化；保留原件并报告具体未完成编辑 |
 | 最终视觉验收 | documents 的 `render_docx.py`、LibreOffice、PDF 渲染依赖 | 真正导出 PNG，逐页视觉检查并注明人类或模型评估 | 标记视觉未验收；结构检查仍可执行 |
 | 公式、表图与引用保护 | lxml、XML/ZIP 检查及内容审阅 | `audit_preservation.py` 检查原生数学结构、表格内容、关系/域源和明确保护段 | 数量相同不代表内容相同，保护相同不证明科学正确 |

@@ -2,11 +2,11 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.18.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.19.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
-2.18 把全文修订集中到审稿人需要接受的中心判断：问题为什么值得解决，什么实际改变回应了困难，哪些比较支撑这个判断，各节怎样推进而非重复介绍同一机制。改动落实在[审阅方法](references/reviewer-method.md)和[读者效果审阅](references/reader-effect.md)，保留现有 Word 保护及证据边界。
+2.19 把分散的全文指导收拢到一条[主编辑路径](references/reviewer-method.md)：沿具体操作找到值得讲的差异，用必要决定及其后果解释工程工作，再把比较结果组织成有条件的判断。配套的[完整示例](references/result-pair-example.md)贯通标题、摘要、方法和结果，也保留不如旧句的改写。原始材料完整保存，但附件里的每个字段不再默认进入正文。
 
-验证使用一份已多轮编辑的真实长稿，在新的执行上下文实际修订，再做匿名的前部与全文阅读比较。它检验的是本轮全文改进，不是未见材料上的普遍优势或期刊接收保证。首稿、审阅指出的退步与最终修复分别记录，详见[当前验收](tests/current-validation.md)；上一轮新材料试用见[2.17记录](tests/validation-2.17.md)。
+本轮用两份新构造的完整材料，在独立上下文生成，再匿名阅读前部、全文和实际页面。第一份比较普通提示、旧版与开发候选，没有全面胜者；第二份使用冻结后的最终指令与旧版重跑。实际得失及没有验证的范围见[当前验收](tests/current-validation.md)，旧长稿修订保留在[2.18记录](tests/validation-2.18.md)。演示中的数值均为构造材料，不是真实科研测量，也不证明真实审稿人认可。
 
 ## 安装
 
@@ -89,7 +89,7 @@ python tests/run_review_packet_tests.py --out test-output/reading
 python tests/run_representation_tests.py --out test-output/representations
 ```
 
-历史四组测试覆盖 66 项检查，定范围审阅材料测试 13 项、双表示入稿测试 8 项，共 87 项，使用临时教学文件。再次执行时换用新的输出目录。本轮执行范围见[当前记录](tests/current-validation.md)，旧结果保留在[历史验收](tests/acceptance-results.md)，不能作为本轮全量回归通过。
+再次执行时换用新的输出目录。本轮实际运行范围和产出审阅分别见[当前记录](tests/current-validation.md)，旧结果保留在[历史验收](tests/acceptance-results.md)。脚本通过不能作为写作效果的替代证据。
 
 ## 文件与发布范围
 
@@ -99,6 +99,6 @@ python tests/run_representation_tests.py --out test-output/representations
 
 包装不能补出不存在的研究贡献，也不能保证期刊初审。已经表达清楚的段落可以保留；缺实验、缺对照和缺来源应明确记录。
 
-历史 2.16 的普通提示、旧技能与新版试用在 Git 历史中保留；不能用它代替当前版本验证。本轮继续使用未提供贡献答案的原创材料，并分别记录初始生成、匿名模型审阅、开发修复和冻结后再生成。
+历史试用在 Git 历史和版本验收中保留，不能代替当前版本验证。本轮区分首次完整稿、自主复读、外部评语后的开发修改，以及冻结后换材料再生成；共同排版工具的修复不记作某一生成条件的优势。
 
 新增可执行示例：[复杂 Word 局部修改](examples/complex-word/README.md)、[明确退步与回退](examples/effect-tradeoff/README.md)、[三组真实改写对照](examples/three-way-reading-demo/README.md)。
