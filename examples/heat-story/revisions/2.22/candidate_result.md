@@ -1,0 +1,5 @@
+# DEMO: When Guarded Conductance Reuse Pays for Its Decisions
+
+In a stipulated heat-transport comparison, a fixed four-step refresh is faster than guarded reuse but exceeds the temperature-error limit in four of five nonconstant cases. Guarded reuse offers an acceptable saving for the boundary ramp and moving heat source, while paying more memory and losing time in two other cases. The design keeps a face coefficient and both endpoint snapshots under one owner so that independent neighboring refreshes do not invalidate its local test. These comparisons motivate selective reuse without claiming a global accuracy guarantee or measured acceleration.
+
+This result-first entry makes the use conditions explicit before the operation is familiar. It is retained as a rejected editorial candidate, not part of the paper.

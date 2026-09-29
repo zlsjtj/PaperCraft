@@ -1,0 +1,51 @@
+{
+  "revision": "final",
+  "evidence": "DEMO_STIPULATED; no solver execution, physical experiment or novelty evidence",
+  "inputs": {
+    "implementation_notes.md": "67d2fad2b638d583a9022f237234eff1cc7cf43002fb61c060186d3d6acf66b6",
+    "manuscript.md": "72cc610b28966fb0aef42690ce6aef2195b7505b327c7b2bca91d6554d043aca",
+    "results_guard_sweep.csv": "654eeb6b523f0186d76b2e9bcde1b8bda93a4fd3700f0479b26bdf02b07cc964",
+    "results_runtime.csv": "ab9c88eab49baec53f18ea75c4ceea12eac54e87be564211c47cae8c6b6c0ac4",
+    "sources_and_limits.md": "496a7fb43cb6e0304c8c102b03666b190c8e97f31b595083d61475cdcd985df5"
+  },
+  "builder_sha256": "9578aa4a6941c4cd2bf29fd6f08d9a485fa63d7047c17f73e0b590244ffcbd2a",
+  "font_sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+  "bold_font_sha256": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5",
+  "exports": {
+    "derived_metrics.json": "e14c5017c1034a95537515f05b821b04f70cae1a4882b4cb60723debce058d53",
+    "figure1_owner_states_final.pdf": "c48f07b28d4d975b5de468dd66e30c9aa1773107443935dd672e42872216dfa8",
+    "figure1_owner_states_final.png": "82a3d035d0290222a028b556f77fd6d853a4dd770ae79adcace0730a43945cc6",
+    "figure1_owner_states_final.svg": "45972b4acab79801a0a271a66a7ebd26ad417341603ab0b843cbf590d9179cbd",
+    "figure1_owner_states_final_deuteranopia.png": "ecefeb3d0049a956ba05545ec03951f13620049356f916a372debcdd5bac650c",
+    "figure1_owner_states_final_gray.png": "568d8d923388e35494badecf190d346df8770652d795edc4cb7c626210445f60",
+    "figure1_owner_states_final_technical.json": "ae811588be59d43c675658c284724f319c51ee762828df88e93f6206ffe9971c",
+    "figure2_cost_and_qualification.pdf": "74beba6f84a39038d52a6fe4d1d36b6cd6d1ea6582e790dcecc82645fb850e3b",
+    "figure2_cost_and_qualification.png": "cfc61c3ce889905df9c4608a357d99cc790502baa80a2ba3342afe6972cac4c7",
+    "figure2_cost_and_qualification.svg": "b45df763d82ce85d37c6b6ef6289ccb47df314ed055615aa075ca337c080cf04",
+    "figure2_cost_and_qualification_deuteranopia.png": "e4ce38535b975e80be5abb5ae388a3b42fc4d0be9511e4ca9e5a89fc794759ba",
+    "figure2_cost_and_qualification_gray.png": "0624f21a38f148dbf1b254284c9380c6badf477606ebb8147161d71f8c106846",
+    "figure2_cost_and_qualification_technical.json": "d646ca736f31db7154b1b9479904957a4522dfc5110159f0a30e8cf6d14f5057"
+  },
+  "technical_status": "PASS",
+  "scientific_review_status": "REVIEW_REQUIRED",
+  "visual_review_status": "REVIEW_REQUIRED",
+  "author_acceptance": "PENDING",
+  "overall_status": "REVIEW_REQUIRED",
+  "original_build_export_hashes": {
+    "derived_metrics.json": "e14c5017c1034a95537515f05b821b04f70cae1a4882b4cb60723debce058d53",
+    "figure1_owner_states_final.pdf": "c48f07b28d4d975b5de468dd66e30c9aa1773107443935dd672e42872216dfa8",
+    "figure1_owner_states_final.png": "82a3d035d0290222a028b556f77fd6d853a4dd770ae79adcace0730a43945cc6",
+    "figure1_owner_states_final.svg": "45972b4acab79801a0a271a66a7ebd26ad417341603ab0b843cbf590d9179cbd",
+    "figure1_owner_states_final_deuteranopia.png": "ecefeb3d0049a956ba05545ec03951f13620049356f916a372debcdd5bac650c",
+    "figure1_owner_states_final_gray.png": "568d8d923388e35494badecf190d346df8770652d795edc4cb7c626210445f60",
+    "figure1_owner_states_final_technical.json": "d9f068bcac6808702a86d39eeca3d1044197e626b3fb5c4eca062f9a35cd5515",
+    "figure2_cost_and_qualification.pdf": "8f76848bad279de6a4951f95df923ed154339f8c7602927909bbff68f8dc56ac",
+    "figure2_cost_and_qualification.png": "cfc61c3ce889905df9c4608a357d99cc790502baa80a2ba3342afe6972cac4c7",
+    "figure2_cost_and_qualification.svg": "b45df763d82ce85d37c6b6ef6289ccb47df314ed055615aa075ca337c080cf04",
+    "figure2_cost_and_qualification_deuteranopia.png": "e4ce38535b975e80be5abb5ae388a3b42fc4d0be9511e4ca9e5a89fc794759ba",
+    "figure2_cost_and_qualification_gray.png": "0624f21a38f148dbf1b254284c9380c6badf477606ebb8147161d71f8c106846",
+    "figure2_cost_and_qualification_technical.json": "677b07ad7952405bdb1e8f2a28e15c5998cae508ef64bcee7a1a77c880c56e8a"
+  },
+  "original_builder_sha256": "9578aa4a6941c4cd2bf29fd6f08d9a485fa63d7047c17f73e0b590244ffcbd2a",
+  "publication_note": "Package text normalized to LF; Python AST unchanged. Original build identifiers retained separately. Figure2 PDF has run timestamps; its drawing stream, extracted text, SVG and PNG match the source rebuild."
+}

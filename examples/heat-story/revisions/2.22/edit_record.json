@@ -1,0 +1,11 @@
+{
+  "status": "development_first_draft",
+  "source": "revisions/2.21-complete/manuscript.md (repository-relative provenance)",
+  "equations_exact": true,
+  "table_lines_exact": true,
+  "candidate_choice": "mechanism-first: establish operation before asking readers to compare three methods",
+  "candidate_result_tradeoff": "foregrounds use conditions but introduces three unfamiliar methods before a mental model",
+  "added_discussion": "interprets existing comparisons; no new experiment or causal measurement",
+  "remaining": "Figure 1/caption pending candidate selection; final content/Word review not yet performed",
+  "publication_note": "Machine path replaced in public copy; original local receipt retained."
+}

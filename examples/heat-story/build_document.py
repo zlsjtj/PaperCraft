@@ -46,7 +46,7 @@ def inline(p,s,yellow=False):
         if yellow:
             h=OxmlElement('w:highlight');h.set(qn('w:val'),'yellow');r._element.get_or_add_rPr().append(h)
 
-def build(source,out,base=None,review=False,figures=None,font=None,font_bold=None):
+def build(source,out,base=None,review=False,figures=None,font=None,font_bold=None,compact=False):
     if out.exists():raise FileExistsError('Use a new output path: '+str(out))
     if not font or not font_bold:raise ValueError('Provide --font and --font-bold for actual table text measurement')
     bs=blocks(source.read_text(encoding='utf8'))
@@ -61,7 +61,8 @@ def build(source,out,base=None,review=False,figures=None,font=None,font_bold=Non
         fonts.set(qn('w:eastAsia'),'Microsoft YaHei')
         for attr in ['asciiTheme','hAnsiTheme','eastAsiaTheme','cstheme']:
             fonts.attrib.pop(qn('w:'+attr),None)
-        st.paragraph_format.line_spacing=1.12;st.paragraph_format.space_after=Pt(6)
+        st.paragraph_format.line_spacing=1.10 if compact else 1.12
+        st.paragraph_format.space_after=Pt(5 if compact else 6)
         st.paragraph_format.widow_control=True
         if name!='Normal':st.paragraph_format.keep_with_next=True
         for node in list(st._element.xpath('.//w:pBdr')):node.getparent().remove(node)
@@ -95,6 +96,17 @@ def build(source,out,base=None,review=False,figures=None,font=None,font_bold=Non
                     # Let words in the header wrap; never cut numeric data to fit.
                     fraction=(table_width-sum(body_min))/(sum(minimum)-sum(body_min))
                     widths=[b+(m-b)*fraction for b,m in zip(body_min,minimum)]
+            else:
+                # Small tables also need measured token widths. Character
+                # counts alone split headers such as "Condition" mid-word.
+                from PIL import ImageFont
+                face=ImageFont.truetype(str(font),38)
+                bold=ImageFont.truetype(str(font_bold),38)
+                # These cells retain Word's standard left/right padding.
+                minimum=[max([bold.getlength(s) for s in plain(value[0][c]).split()]+[face.getlength(s) for row in value[1:] for s in plain(row[c]).split()])*25.4/288+4.0 for c in range(len(value[0]))]
+                if sum(minimum)>table_width:
+                    raise ValueError('Table tokens do not fit at 9.5 pt with normal cell padding; revise column grouping.')
+                widths=[m+(table_width-sum(minimum))*w/total for m,w in zip(minimum,weights)]
             for c,w in enumerate(widths):t.columns[c].width=Mm(w)
             pr=t._tbl.tblPr; borders=OxmlElement('w:tblBorders')
             for side in ['top','bottom','left','right','insideH','insideV']:
@@ -130,6 +142,7 @@ def build(source,out,base=None,review=False,figures=None,font=None,font_bold=Non
             continue
         if kind=='math':
             p=d.add_paragraph();p.alignment=WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.keep_with_next = j + 1 < len(bs) and bs[j + 1][0] == 'math'
             obj=OxmlElement('m:oMath');run=OxmlElement('m:r')
             # The inputs use explicit linear notation. Preserve it as math text;
             # LibreOffice otherwise reparses "abs(...)" into broken delimiters.
@@ -151,12 +164,12 @@ def build(source,out,base=None,review=False,figures=None,font=None,font_bold=Non
         caption._p.addprevious(pic._p)
         bound.append({'asset':str(asset),'sha256':hashlib.sha256(asset.read_bytes()).hexdigest(),'width_mm':width,'caption':caption.text})
     out.parent.mkdir(parents=True,exist_ok=True);d.save(out)
-    receipt={'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output':str(out),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'shared_typography':True,'text_rewriting_by_renderer':False,'yellow_scope':'New or rewritten text blocks relative to the supplied baseline; unchanged math/tables and pure moves not highlighted. Not native tracked changes.','changed_blocks':changed,'blocks':len(bs),'figures':bound}
+    receipt={'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output':str(out),'output_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'shared_typography':True,'compact_spacing':compact,'text_rewriting_by_renderer':False,'yellow_scope':'New or rewritten text blocks relative to the supplied baseline; unchanged math/tables and pure moves not highlighted. Not native tracked changes.','changed_blocks':changed,'blocks':len(bs),'figures':bound}
     out.with_suffix('.build.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf8')
     print(json.dumps({k:receipt[k] for k in ['output','output_sha256','blocks']}))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('source',type=Path);p.add_argument('output',type=Path);p.add_argument('--baseline',type=Path);p.add_argument('--review',action='store_true');p.add_argument('--figures',type=Path);p.add_argument('--font',type=Path,required=True);p.add_argument('--font-bold',type=Path,required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('source',type=Path);p.add_argument('output',type=Path);p.add_argument('--baseline',type=Path);p.add_argument('--review',action='store_true');p.add_argument('--figures',type=Path);p.add_argument('--font',type=Path,required=True);p.add_argument('--font-bold',type=Path,required=True);p.add_argument('--compact',action='store_true',help='11 pt short-paper spacing: 1.10 lines, 5 pt after paragraphs; never changes wording or figure size');a=p.parse_args()
     figures=json.loads(a.figures.read_text(encoding='utf8')) if a.figures else []
     for item in figures:item['asset']=str((a.figures.parent/item['asset']).resolve())
-    build(a.source,a.output,a.baseline,a.review,figures,a.font,a.font_bold)
+    build(a.source,a.output,a.baseline,a.review,figures,a.font,a.font_bold,a.compact)

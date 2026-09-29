@@ -1,0 +1,116 @@
+{
+  "time_change_formula": "(method_ms / V_ms - 1) * 100",
+  "runtime_rows_read": 18,
+  "sweep_rows_read": 6,
+  "duplicate_sweep_row": "eta=0.003 equals moving_source G; not counted independently",
+  "derived": [
+    {
+      "case": "plate_slow",
+      "method": "P4",
+      "source_total_ms": 329.0,
+      "reference_V_ms": 400.0,
+      "time_change_pct": -17.75,
+      "accuracy_pass": true,
+      "error_K": 0.006
+    },
+    {
+      "case": "plate_slow",
+      "method": "G",
+      "source_total_ms": 354.6,
+      "reference_V_ms": 400.0,
+      "time_change_pct": -11.349999999999994,
+      "accuracy_pass": true,
+      "error_K": 0.003
+    },
+    {
+      "case": "boundary_ramp",
+      "method": "P4",
+      "source_total_ms": 345.0,
+      "reference_V_ms": 420.0,
+      "time_change_pct": -17.85714285714286,
+      "accuracy_pass": false,
+      "error_K": 0.024
+    },
+    {
+      "case": "boundary_ramp",
+      "method": "G",
+      "source_total_ms": 390.0,
+      "reference_V_ms": 420.0,
+      "time_change_pct": -7.14285714285714,
+      "accuracy_pass": true,
+      "error_K": 0.007
+    },
+    {
+      "case": "moving_source",
+      "method": "P4",
+      "source_total_ms": 1285.0,
+      "reference_V_ms": 1580.0,
+      "time_change_pct": -18.670886075949365,
+      "accuracy_pass": false,
+      "error_K": 0.071
+    },
+    {
+      "case": "moving_source",
+      "method": "G",
+      "source_total_ms": 1510.0,
+      "reference_V_ms": 1580.0,
+      "time_change_pct": -4.430379746835444,
+      "accuracy_pass": true,
+      "error_K": 0.009
+    },
+    {
+      "case": "switching_load",
+      "method": "P4",
+      "source_total_ms": 1300.0,
+      "reference_V_ms": 1600.0,
+      "time_change_pct": -18.75,
+      "accuracy_pass": false,
+      "error_K": 0.114
+    },
+    {
+      "case": "switching_load",
+      "method": "G",
+      "source_total_ms": 1723.2,
+      "reference_V_ms": 1600.0,
+      "time_change_pct": 7.699999999999996,
+      "accuracy_pass": true,
+      "error_K": 0.009
+    },
+    {
+      "case": "small_mesh",
+      "method": "P4",
+      "source_total_ms": 6.5,
+      "reference_V_ms": 8.0,
+      "time_change_pct": -18.75,
+      "accuracy_pass": false,
+      "error_K": 0.018
+    },
+    {
+      "case": "small_mesh",
+      "method": "G",
+      "source_total_ms": 10.32,
+      "reference_V_ms": 8.0,
+      "time_change_pct": 29.000000000000004,
+      "accuracy_pass": true,
+      "error_K": 0.002
+    },
+    {
+      "case": "static_conduction",
+      "method": "P4",
+      "source_total_ms": 300.0,
+      "reference_V_ms": 300.0,
+      "time_change_pct": 0.0,
+      "accuracy_pass": true,
+      "error_K": 0.0
+    },
+    {
+      "case": "static_conduction",
+      "method": "G",
+      "source_total_ms": 300.0,
+      "reference_V_ms": 300.0,
+      "time_change_pct": 0.0,
+      "accuracy_pass": true,
+      "error_K": 0.0
+    }
+  ]
+}

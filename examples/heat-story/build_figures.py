@@ -233,7 +233,14 @@ def main():
     dup=next(r for r in sweep if float(r['eta'])==.003)
     assert dup==next(r for r in rows if r['case']=='moving_source' and r['method']=='G')
     args.out.mkdir(parents=True)
-    mechanism(args,args.out);deriv=results(args,args.out,rows)
+    if args.revision == 'final':
+        from build_snapshot import candidate_a
+        pdfmetrics.registerFont(TTFont('Arial',str(args.font)))
+        pdfmetrics.registerFont(TTFont('ArialBold',str(args.bold_font)))
+        candidate_a(args.out,args,refined=True)
+    else:
+        mechanism(args,args.out)
+    deriv=results(args,args.out,rows)
     (args.out/'derived_metrics.json').write_text(json.dumps({'time_change_formula':'(method_ms / V_ms - 1) * 100','runtime_rows_read':18,'sweep_rows_read':6,'duplicate_sweep_row':'eta=0.003 equals moving_source G; not counted independently','derived':deriv},indent=2),encoding='utf-8')
     manifest={'revision':args.revision,'evidence':'DEMO_STIPULATED; no solver execution, physical experiment or novelty evidence','inputs':{p.name:sha(p) for p in sorted(args.input.iterdir()) if p.is_file()},'builder_sha256':sha(__file__),'font_sha256':sha(args.font),'bold_font_sha256':sha(args.bold_font),'exports':{p.name:sha(p) for p in sorted(args.out.iterdir()) if p.is_file()},'technical_status':'PASS','scientific_review_status':'REVIEW_REQUIRED','visual_review_status':'REVIEW_REQUIRED','author_acceptance':'PENDING','overall_status':'REVIEW_REQUIRED'}
     (args.out/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')

@@ -1,18 +1,20 @@
-# DEMO: Conductance Reuse with Consistent Snapshots in Explicit Heat Transport
+# DEMO: Consistent Snapshots for Conductance Reuse in Explicit Heat Transport
 
 DEMO FICTION. This paper describes an invented engineering study. All workloads, timings, errors, residuals, and implementation outcomes are stipulated editing material. There is no executable solver, measured performance, physical experiment, or claim of actual novelty.
 
 ## Abstract
 
-A fixed refresh schedule ignores how quickly temperatures change. We instead bound conductance drift using endpoint temperatures saved at each coefficient's own refresh. Keeping both snapshots with the face's owner lets neighboring groups refresh independently without changing the retained coefficient's reference state. This decision adds an exponential test per active group, snapshot reads, and 50% more reserved array memory. In fictional accounting, it reduces total time in three of five nonconstant cases; all five meet a 0.010 K final-temperature comparison limit. A fixed four-step schedule is faster in all five but meets the limit only for the slow plate, where it is also cheaper. The guarded method loses time to full refresh on switching loads and a small mesh. Selective reuse must therefore repay its guard, and its local coefficient bound still requires a separate check of global temperature accuracy.
+Temperature-dependent heat-transport solvers repeatedly evaluate conductances that may change little between steps. Reusing them can save work, but independently refreshed cell groups must judge each stored conductance against the temperatures that produced it. We keep both endpoint snapshots with the face coefficient's owner, so a neighbor's refresh cannot change that reference state. The resulting group test bounds local coefficient drift; global temperature accuracy remains a separate check. In a stipulated six-case accounting study, guarded reuse meets the 0.010 K comparison limit and saves total time in three of five nonconstant cases. Its useful advantage over a fixed four-step schedule occurs for a boundary ramp and a moving heat source, where that cheaper schedule fails the error limit. Fixed scheduling is preferable for slow heating; full refresh avoids the guard's losses on switching loads and a small mesh. Active guarding reserves 50% more array memory. These results identify the conditions for evaluating reuse, rather than demonstrate measured solver acceleration.
 
-## 1. The decision between refreshing and reusing
+## 1. Reuse must follow the changing temperature field
 
-Slowly changing heating can leave face conductances nearly unchanged over several steps. A moving or switching heater complicates reuse: the same elapsed step count can conceal very different temperature changes. The question is when a stored coefficient can be reused, and whether deciding this costs less than recomputing it.
+A slowly heated plate may need many time steps without appreciable changes in its face conductances. Recomputing every conductance can then repeat work. A moving heat source changes the decision: some regions may retain useful coefficients while others need fresh ones. Updating every fourth step avoids decisions, but the elapsed step count alone does not describe how much the temperature field has changed.
 
-Method G tests temperature change since a coefficient was formed. A face can join cell groups that refresh at different times: replacing one endpoint's snapshot during a neighboring refresh would change the reference state of the retained coefficient. G therefore keeps both endpoint snapshots with the face's owner. Figure 1 shows that relationship; Section 3 derives the coefficient bound and separates reuse from time-step acceptance.
+The difficult case is a face shared by two cell groups. Its coefficient depends on temperatures at both endpoints. Suppose the group that owns the coefficient reuses it while its neighbor refreshes. If the neighbor also replaces the stored endpoint temperature used by the owner's test, that test no longer refers to the state that produced the retained coefficient. The design in Figure 1 prevents this mismatch by keeping both snapshots with the coefficient's owner. Groups can refresh independently while each reuse decision retains a consistent reference state.
 
-The comparison asks when this decision is worth making. Reference V already separates interleaved coefficient and flux calculations into contiguous, vector-friendly loops, computes one flux per face, and evaluates constant conductances once. P4 retains V's flux and temperature-update code but refreshes every four accepted steps. Reuse and these inherited choices are not contributions of G; no literature search supports priority. Figure 2 compares final-temperature error and total time alongside the memory cost: avoided face work must repay the guard while meeting the error limit.
+This ownership rule supports a bound on coefficient change, not a guarantee of final-temperature accuracy or lower runtime. Method G pays for snapshot reads and one exponential test per active group; it is useful only when avoided face evaluations repay that cost and the separate temperature comparison passes. The method therefore presents two linked questions: can the reuse test refer to the correct state, and when is making that decision worthwhile?
+
+The comparison separates this choice from inherited optimizations. Reference V already uses contiguous, vector-friendly coefficient loops, one flux per face, and one-time evaluation for constant conductances. P4 keeps the same flux and temperature-update code but refreshes every four accepted steps. Neither reuse in general nor these inherited choices is claimed as new, and no literature search establishes priority. We derive the ownership-based test, specify what must happen when a proposed step fails, and compare G with V and P4 using matched fictional accounting. Figure 2 keeps time, accuracy and the cost of the guard in the same reading path.
 
 ## 2. Model and the quantities that reuse must preserve
 
@@ -34,11 +36,13 @@ This condition excludes source terms. It neither limits prescribed cooling nor p
 
 ## 3. Making the reuse bound refer to the right state
 
-### 3.1. Ownership and endpoint snapshots
+### 3.1. The coefficient and its reference state stay together
 
-In Figure 1, A retains its coefficient while B refreshes. The coefficient still depends on both temperatures at A's refresh, including the endpoint in B. The mesh uses 16 × 16 cell groups; each face is oriented from the smaller to the larger row-major cell index. The first endpoint's group owns the face and stores its coefficient and all required endpoint snapshots. Snapshots share the owner's refresh counter; a nonowner never overwrites them.
+Consider a boundary face whose coefficient belongs to group A and whose second endpoint lies in group B. When B refreshes its own coefficients, A may still retain its earlier one. Both temperature snapshots used to test that retained coefficient must therefore remain at A's refresh, even though one snapshot describes an endpoint in B. Figure 1 makes this distinction explicit: a temperature's location does not decide who may replace its stored reference value.
 
-Figure 1. A boundary face retains its owner's refresh history. The cells are a detail of different 16 × 16 groups; i < j assigns face f to A. Dashed lines link endpoints to their stored temperatures at A's refresh r. If A reuses while B refreshes at its own counter s, A's coefficient and both snapshots stay at r. The counters r and s are independent.
+The mesh is divided into 16 × 16 cell groups. Each face is oriented from the smaller to the larger row-major cell index; the first endpoint's group owns it. That owner stores the coefficient and both required endpoint snapshots under its own refresh counter. A nonowner cannot overwrite those snapshots. This is the necessary bookkeeping behind independent group decisions, rather than an additional claim of acceleration.
+
+Figure 1. One face record survives its neighbor's refresh. The mesh is a cropped detail of two 16 × 16 groups; i < j assigns face f to A. Across the same decision event, A retains its coefficient and both endpoint snapshots from refresh r while B advances its own face set from s to s + 1. Arrows below the mesh denote state transitions, not heat flow. The two views of A's record are the same stored record, not duplicate allocations.
 
 Let D be the largest absolute change from an owner's snapshots among all endpoints its faces require. The change of each face-mean temperature is at most D. For the stated fixed, nonnegative beta and positive cached conductance, the exponential law yields:
 
@@ -124,7 +128,11 @@ The next question is whether changing eta removes this tradeoff. Table 2 varies 
 
 At eta = 0.0005 and 0.001, totals of 1658 and 1594 ms exceed V's 1580 ms despite passing accuracy. Values 0.002 and 0.003 both save time and pass. Values 0.006 and 0.010 reduce time further but fail at 0.019 and 0.038 K. Thus a local coefficient tolerance cannot by itself select acceptable solution error. There is no automatic eta controller. Small energy residuals across passing and failing rows also show why energy accounting cannot replace the temperature comparison.
 
-## 6. What remains to be established
+## 6. What the comparison establishes and leaves open
+
+The relevant decision is not how many face evaluations can be removed, but which qualifying alternative is cheapest. P4 supplies this test: when it passes the error limit, guarding must justify its additional decision and storage costs; when P4 fails, G must be compared with V. This separates a useful reuse policy from a large local work reduction. The stipulated cases exercise both sides rather than establish a universal schedule.
+
+Coefficient drift, energy accounting, and final-temperature error answer different questions. The tolerance sweep makes this distinction observable: smaller work totals eventually cease to qualify, whereas energy residuals remain small. A reuse bound therefore supports a decision about coefficients; it does not select eta for a required solution error.
 
 The bound and two-cell arithmetic are directly checkable. The times, face fractions, final errors, and floating-point residuals are stipulated, with no solver trajectories or sampled variance behind them. Missing source arrays and trajectories prevent solver reproduction. Snapshot traffic, cache behavior, vector occupancy, parallel scaling, mixed materials, and time-dependent beta remain untested. Arithmetic reproducibility therefore does not establish measured benefit. Without literature validation, novelty and superiority to published methods remain unresolved; neither statistical significance nor production readiness is established.
 

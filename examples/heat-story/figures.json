@@ -1,7 +1,7 @@
 [
   {
-    "asset": "figures/figure1_owner_guard.png",
-    "caption": "Figure 1. A boundary face retains its owner's refresh history. The cells are a detail of different 16 × 16 groups; i < j assigns face f to A. Dashed lines link endpoints to their stored temperatures at A's refresh r. If A reuses while B refreshes at its own counter s, A's coefficient and both snapshots stay at r. The counters r and s are independent.",
+    "asset": "figures/figure1_owner_states_final.png",
+    "caption": "Figure 1. One face record survives its neighbor's refresh. The mesh is a cropped detail of two 16 × 16 groups; i < j assigns face f to A. Across the same decision event, A retains its coefficient and both endpoint snapshots from refresh r while B advances its own face set from s to s + 1. Arrows below the mesh denote state transitions, not heat flow. The two views of A's record are the same stored record, not duplicate allocations.",
     "width_mm": 160
   },
   {

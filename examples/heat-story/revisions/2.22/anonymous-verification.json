@@ -1,0 +1,105 @@
+{
+  "tables": [
+    {
+      "version": "K",
+      "runtimeRows": 18,
+      "sweepRows": 6,
+      "comparedCells": 270,
+      "mismatches": []
+    },
+    {
+      "version": "L",
+      "runtimeRows": 18,
+      "sweepRows": 6,
+      "comparedCells": 270,
+      "mismatches": []
+    }
+  ],
+  "costIssues": [],
+  "accuracyIssues": [],
+  "memoryIssues": [],
+  "timeChanges": [
+    {
+      "case": "plate_slow",
+      "method": "P4",
+      "time_change_pct": -17.75,
+      "error_K": "0.006"
+    },
+    {
+      "case": "plate_slow",
+      "method": "G",
+      "time_change_pct": -11.349999999999994,
+      "error_K": "0.003"
+    },
+    {
+      "case": "boundary_ramp",
+      "method": "P4",
+      "time_change_pct": -17.85714285714286,
+      "error_K": "0.024"
+    },
+    {
+      "case": "boundary_ramp",
+      "method": "G",
+      "time_change_pct": -7.14285714285714,
+      "error_K": "0.007"
+    },
+    {
+      "case": "moving_source",
+      "method": "P4",
+      "time_change_pct": -18.670886075949365,
+      "error_K": "0.071"
+    },
+    {
+      "case": "moving_source",
+      "method": "G",
+      "time_change_pct": -4.430379746835444,
+      "error_K": "0.009"
+    },
+    {
+      "case": "switching_load",
+      "method": "P4",
+      "time_change_pct": -18.75,
+      "error_K": "0.114"
+    },
+    {
+      "case": "switching_load",
+      "method": "G",
+      "time_change_pct": 7.699999999999996,
+      "error_K": "0.009"
+    },
+    {
+      "case": "small_mesh",
+      "method": "P4",
+      "time_change_pct": -18.75,
+      "error_K": "0.018"
+    },
+    {
+      "case": "small_mesh",
+      "method": "G",
+      "time_change_pct": 29.000000000000004,
+      "error_K": "0.002"
+    },
+    {
+      "case": "static_conduction",
+      "method": "P4",
+      "time_change_pct": 0.0,
+      "error_K": "0"
+    },
+    {
+      "case": "static_conduction",
+      "method": "G",
+      "time_change_pct": 0.0,
+      "error_K": "0"
+    }
+  ],
+  "math": {
+    "G": 2.2103418361512954,
+    "q": 44.20683672302591,
+    "Ti_next": 39.557931632769744,
+    "Tj_next": 20.44206836723026,
+    "sigma": 0.022103418361512955,
+    "bound_D02": 0.002002001334000303,
+    "bound_D04": 0.004008010677341911
+  },
+  "figure2Identical": true
+}

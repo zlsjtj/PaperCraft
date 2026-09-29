@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "source_unchanged": true,
+  "source_hashes": {
+    "scripts/audit_effect_record.py": "03669a04c1928d7a8b1bc90e2d51f1cb191c8a2e2d3c182edddb7b355ae09aa5",
+    "scripts/audit_figure_integration.py": "94ebd835b895da6c40f9c4f03c2832808f0337b977913789f3987aede49a051e",
+    "scripts/audit_preservation.py": "22920d85563966f0af93401b4ce97170fa121c91e87418d0cf40f7b24c563fd9",
+    "scripts/check_dependencies.py": "355f5e01d62b253075b9c1b7a4bf7ebef471952ddaf621f13a2ce97a4ed1b566",
+    "scripts/docx_spans.py": "8e66e484f73f5831a7984fc445ef917239087bef6f46ae93950eddb37c6aefd4",
+    "scripts/make_review_packet.py": "25aefc9eb36623432f86536a4adcdb39a12d4d647d42c20a91dc9037b7c69b40",
+    "scripts/render_review.py": "173bcacafb15414505425fe36d372629697147f8d72dcbc1b6674ad3320ebb80",
+    "scripts/review_docx.py": "7b935635cae751dd2e25f00eae50ab9ecf57880164320790ddfe53950cf94121",
+    "tests/run_all_tests.py": "bb5f7cb3eb479eb4f00e8564d00a1ef9affbe06d2c4d6201ef0dbdb2ee5139dd",
+    "tests/run_effect_record_tests.py": "389e7e3655bc39ad9ef9cc91ce07dec76f637759bf31045927889e991fb8bcf5",
+    "tests/run_integration_tests.py": "cd990e0b05918deb4fe81ca74e61f6cfe5b51df477168b9b99bc763bc5feed42",
+    "tests/run_preservation_tests.py": "ed006e3d5b956f75585004543b305f9fb1cb4b67dc374e2a5bbfb5e44204128f",
+    "tests/run_representation_tests.py": "51f060a9d6318ebaa3bfac38c2915e14edf8aa0cb577780564d70dbf8fee7b77",
+    "tests/run_review_packet_tests.py": "ec7cf3e70c7a8b128e96fcfac9e77acc2b5e601d127f37aed04c12a97ddb4ee1",
+    "tests/run_tests.py": "29c467a400b707818a9560e7338da9e02081dea0d1be08b72f860293a4223e40",
+    "tests/run_unit_tests.py": "b7b630e37ac81f90bcc53bee286e4b9e4133d7534065daf3eb4ae805d8f15368",
+    "tests/test_complex_spans.py": "f708906cf18ea1b38db2ce170b98e0cd35aa9d5f301679e10f4d3ed06794fc77",
+    "tests/test_effect_decisions.py": "f8e59f62e794cc970b96c9063d67e6a3d3b7a9e74521ba80ea9eb428bd4251f0",
+    "tests/test_inventory_capabilities.py": "1f4cb418c09b1046bf928fc85cff6aa13a794851338c8dbde75db1ca410ce212",
+    "examples/bin-latch/build_document.py": "c83ff5eb2ca43b48c88c0d04d0091de4ab9290b62801e9c0cf0d847241db977f",
+    "examples/bin-latch/build_figure.py": "93f79c3ac9a0e98fb2bb6e0eec153dfbb7225495dfa1f9aa2e087d2a717371d5",
+    "examples/complex-word/build_fixture.py": "f0d576ebe1573d3622accdeb2f8ac054088054e8aa3796af854667c4528d94c3",
+    "examples/effect-tradeoff/build.py": "d7eb2306ebcd353ea6a50359c1e559fba149f1c0e33d1b8a753594ae3e8e9e5d",
+    "examples/heat-story/build_document.py": "ff0d3405bfeeff5fcb9423af129cfbc26f8754e82714c747139caacb060a8776",
+    "examples/heat-story/build_example.py": "150e5e6aaf5ff126874a0462243609b4e9bd7c28d5f802fec1f7c2ec6ac44b6b",
+    "examples/heat-story/build_figures.py": "9578aa4a6941c4cd2bf29fd6f08d9a485fa63d7047c17f73e0b590244ffcbd2a",
+    "examples/heat-story/build_snapshot.py": "50c1d4ee3510ff4ebee4062686b90aace2898eff85645c86adb314423c3160e2",
+    "examples/membrane-observation/source.py": "d002161712f7ac209f365cd5b5e7e4a15dd60068f8f6333b8f2e27dc406e2ab0",
+    "examples/space-illustrations/build_example.py": "298fe30b01447a1d059765b696faa6af9d6a7eddec4bdfa1debe9967c4a1bb2c",
+    "examples/space-illustrations/document_page.py": "ed9f5a0364c8b234c110642b339584fdafe5a9a2204cf3bdb0507931a7c0d0c2",
+    "examples/surface-rendering/build_continuous.py": "36f79c6a5845b6a2348f74cf0217b759afbccd7848719029c42dfb1e5d5a1bb7",
+    "examples/surface-rendering/drawing_backend.py": "45c72e64791bd57f0e00c34cf1f843f7d7f6af14b0023a179051d5ed0ca52cea",
+    "examples/surface-rendering/geometry_scene.py": "f71f3fa94560cecac599fb9a3f7d95d2a633c709bb4eec2e98d4ff1e875270db",
+    "examples/surface-rendering/mesh_surface.py": "51417c7cf40180b6842e01a6fdf862b81fcc2c23349ddf186eef9648f3d47578",
+    "examples/surface-rendering/test_surface.py": "3970780bf34f9e5ec3fa2aef5636623612738d4ecb9e1671f968babae98303cf",
+    "examples/visual-editorial/build_document.py": "c1f6191e1bcaf686133056d6fec8edcc090a2272120f02a3f5337e64eb700191",
+    "examples/visual-editorial/build_figure.py": "ff4142cb7883b251b531cda2b2cb8b288623ec9a96fabd8e93b498f8a5398cf6",
+    "examples/heat-story/first/build_figures_first.py": "595a5d023d4f086a81184f677794db688c222ec344285795204e4522ab41b6c2",
+    "examples/heat-story/revisions/2.20/build_example.py": "79488529ea5ab24efbcbcc2db51d3921646cf6272c7d597c6b1ded314790bc94",
+    "examples/heat-story/revisions/2.21-complete/build_document.py": "9bf91e893bfb10c7e2e51ee757d36ce4a835885e1d6dab5a76a831a6cd71a2c7",
+    "examples/heat-story/revisions/2.21-complete/build_example.py": "150e5e6aaf5ff126874a0462243609b4e9bd7c28d5f802fec1f7c2ec6ac44b6b",
+    "examples/heat-story/revisions/2.21-complete/build_figures.py": "79d6253ec9c7e207ed1e00f6b2e068cfe1dfe162cc3812011dabafbf2d8b845e",
+    "examples/space-illustrations/particles/rebuild.py": "45e61c871787943ad60539d188b83fb387620d89a947ece3687d33511512a620",
+    "examples/space-illustrations/strip/drawing_backend.py": "45c72e64791bd57f0e00c34cf1f843f7d7f6af14b0023a179051d5ed0ca52cea",
+    "examples/space-illustrations/strip/rebuild.py": "8a334dbde8794f9a451135b755de79d28a1e77e46d5444c437f661aca9954533",
+    "examples/space-illustrations/strip/self_review_source.py": "45c72e64791bd57f0e00c34cf1f843f7d7f6af14b0023a179051d5ed0ca52cea",
+    "examples/space-illustrations/particles/first/rebuild.py": "fc49d805f16cf1441b8824be27eefb6f08759b0797e8670dd4b4fa98734df594",
+    "examples/space-illustrations/strip/first/rebuild.py": "26ec1e36681849cc1bb870011303d32c2eacf3ddf69bb8aa6a9ef7fb71c1d24b",
+    "references/rotating-cover-demo/rebuild.py": "ced8177294e3875c968c429e54181c171490e361cfa508650a1f54d50cfea4ff"
+  },
+  "quality_verdict": "NOT_DETERMINED_BY_TESTS",
+  "after": "publication line ending normalization",
+  "suites": [
+    {
+      "suite": "syntax",
+      "status": "PASS"
+    },
+    {
+      "suite": "basic",
+      "status": "PASS"
+    },
+    {
+      "suite": "preservation",
+      "status": "PASS"
+    },
+    {
+      "suite": "integration",
+      "status": "PASS"
+    },
+    {
+      "suite": "effect",
+      "status": "PASS"
+    },
+    {
+      "suite": "review-packet",
+      "status": "PASS"
+    },
+    {
+      "suite": "representations",
+      "status": "PASS"
+    },
+    {
+      "suite": "units",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-fixture",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-build",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-verify",
+      "status": "PASS"
+    }
+  ]
+}
