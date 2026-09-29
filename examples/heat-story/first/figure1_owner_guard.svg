@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="104mm" viewBox="0 0 160 104">
+<title>DEMO FICTION: owner-consistent heat-conductance reuse</title>
+<desc>Constructed design and stipulated accounting; no solver was executed.</desc>
+<rect x="0" y="0" width="160" height="104" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0.28"/>
+<text id="t0" x="2" y="6" font-family="Arial, sans-serif" font-size="3.704166666666666" font-weight="bold" text-anchor="start" fill="#213741">a   One face, one owner, one snapshot event</text>
+<text id="t1" x="158" y="6" font-family="Arial, sans-serif" font-size="2.998611111111111" font-weight="normal" text-anchor="end" fill="#52636C">DEMO SCHEMATIC</text>
+<text id="t2" x="18" y="16" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#213741">Group A</text>
+<text id="t3" x="50" y="16" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#213741">Group B</text>
+<rect x="5" y="20" width="29" height="22" rx="0" fill="#E4F2EE" stroke="#137C77" stroke-width="0.4"/>
+<rect x="34" y="20" width="29" height="22" rx="0" fill="#F1F5F6" stroke="#52636C" stroke-width="0.4"/>
+<line x1="34" y1="18" x2="34" y2="44" stroke="#213741" stroke-width="0.55" stroke-dasharray="1.2 1"/>
+<text id="t4" x="19.5" y="27" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="middle" fill="#213741">Cell i</text>
+<text id="t5" x="48.5" y="27" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="middle" fill="#213741">Cell j</text>
+<circle cx="19.5" cy="33" r="0.9" fill="#213741" stroke="none" stroke-width="0.3"/>
+<circle cx="48.5" cy="33" r="0.9" fill="#213741" stroke="none" stroke-width="0.3"/>
+<line x1="20.5" y1="33" x2="47.5" y2="33" stroke="#213741" stroke-width="0.6"/>
+<polygon points="47.5,33 45.7,32.2 45.7,33.8" fill="#213741" stroke="none" stroke-width="0.3"/>
+<text id="t6" x="34" y="39" font-family="Arial, sans-serif" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">f : i &lt; j</text>
+<line x1="19.5" y1="43" x2="19.5" y2="57" stroke="#137C77" stroke-width="0.35" stroke-dasharray="1.2 1"/>
+<line x1="48.5" y1="43" x2="48.5" y2="57" stroke="#137C77" stroke-width="0.35" stroke-dasharray="1.2 1"/>
+<text id="t7" x="34" y="50" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#213741">Owner A stores together</text>
+<rect x="5" y="55" width="58" height="15" rx="1.3" fill="#E4F2EE" stroke="#137C77" stroke-width="0.5"/>
+<line x1="24.3" y1="55" x2="24.3" y2="70" stroke="#137C77" stroke-width="0.3"/>
+<line x1="43.6" y1="55" x2="43.6" y2="70" stroke="#137C77" stroke-width="0.3"/>
+<text id="t8" x="14.6" y="64" font-family="Arial, sans-serif" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">G cached</text>
+<text id="t9" x="33.9" y="64" font-family="Arial, sans-serif" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">T i at r</text>
+<text id="t10" x="53.3" y="64" font-family="Arial, sans-serif" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">T j at r</text>
+<text id="t11" x="34" y="76" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="middle" fill="#213741">Same refresh event r</text>
+<line x1="69" y1="16" x2="69" y2="80" stroke="#B9C7CD" stroke-width="0.3"/>
+<text id="t12" x="76" y="16" font-family="Arial, sans-serif" font-size="3.704166666666666" font-weight="bold" text-anchor="start" fill="#213741">b   Guard before flux</text>
+<rect x="77" y="22" width="80" height="15" rx="1.4" fill="#E9F1F8" stroke="#306EA0" stroke-width="0.4"/>
+<text id="t13" x="117" y="31" font-family="Arial, sans-serif" font-size="3.880555555555555" font-weight="normal" text-anchor="middle" fill="#213741">b(D) = exp(βD) − 1</text>
+<line x1="117" y1="37" x2="117" y2="41" stroke="#306EA0" stroke-width="0.4"/>
+<line x1="94" y1="41" x2="141" y2="41" stroke="#306EA0" stroke-width="0.4"/>
+<line x1="94" y1="41" x2="94" y2="49" stroke="#137C77" stroke-width="0.45"/>
+<polygon points="94,49 94.8,47.2 93.2,47.2" fill="#137C77" stroke="none" stroke-width="0.3"/>
+<line x1="141" y1="41" x2="141" y2="49" stroke="#B47B12" stroke-width="0.45"/>
+<polygon points="141,49 141.8,47.2 140.2,47.2" fill="#B47B12" stroke="none" stroke-width="0.3"/>
+<text id="t14" x="88" y="46" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="end" fill="#137C77">≤ η</text>
+<text id="t15" x="147" y="46" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="start" fill="#B47B12">&gt; η</text>
+<rect x="77" y="50" width="34" height="18" rx="1.3" fill="#E4F2EE" stroke="#137C77" stroke-width="0.4"/>
+<rect x="123" y="50" width="34" height="18" rx="1.3" fill="#F8EFDA" stroke="#B47B12" stroke-width="0.4"/>
+<text id="t16" x="94" y="57" font-family="Arial, sans-serif" font-size="3.880555555555555" font-weight="bold" text-anchor="middle" fill="#213741">Reuse</text>
+<text id="t17" x="94" y="64" font-family="Arial, sans-serif" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">stored pair</text>
+<text id="t18" x="140" y="57" font-family="Arial, sans-serif" font-size="3.880555555555555" font-weight="bold" text-anchor="middle" fill="#213741">Refresh</text>
+<text id="t19" x="140" y="64" font-family="Arial, sans-serif" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">whole owner</text>
+<line x1="94" y1="69" x2="94" y2="75" stroke="#137C77" stroke-width="0.4"/>
+<line x1="140" y1="69" x2="140" y2="75" stroke="#B47B12" stroke-width="0.4"/>
+<line x1="94" y1="75" x2="140" y2="75" stroke="#213741" stroke-width="0.35"/>
+<line x1="117" y1="75" x2="117" y2="81" stroke="#213741" stroke-width="0.4"/>
+<polygon points="117,81 117.8,79.2 116.2,79.2" fill="#213741" stroke="none" stroke-width="0.3"/>
+<rect x="3" y="85" width="154" height="15" rx="1" fill="#F1F5F6" stroke="none" stroke-width="0.28"/>
+<text id="t20" x="80" y="91" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="middle" fill="#213741">All decisions finish → check row sums → one flux per face</text>
+<text id="t21" x="80" y="97" font-family="Arial, sans-serif" font-size="3.5277777777777772" font-weight="normal" text-anchor="middle" fill="#213741">Same q enters its two cells with opposite signs</text>
+</svg>

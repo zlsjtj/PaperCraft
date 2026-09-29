@@ -1,0 +1,172 @@
+{
+  "evidence": "DEMO_STIPULATED",
+  "width_mm": 160,
+  "height_mm": 70,
+  "primary_particle_ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6"
+  ],
+  "support_layers": 2,
+  "repeated_detail": "P6",
+  "geometry": "analytic surfaces projected to editable vectors; not a measured model or physical simulation",
+  "surface_parameters": [
+    {
+      "id": "P1",
+      "center": [
+        30.300000000000004,
+        25.959999999999997
+      ],
+      "radius_mm": 8.84,
+      "detail_of": null,
+      "cut_normal": null,
+      "cut_offset_in_outer_radius": null,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 3200
+    },
+    {
+      "id": "P2",
+      "center": [
+        52.400000000000006,
+        25.959999999999997
+      ],
+      "radius_mm": 8.84,
+      "detail_of": null,
+      "cut_normal": null,
+      "cut_offset_in_outer_radius": null,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 3200
+    },
+    {
+      "id": "P3",
+      "center": [
+        74.5,
+        25.959999999999997
+      ],
+      "radius_mm": 8.84,
+      "detail_of": null,
+      "cut_normal": null,
+      "cut_offset_in_outer_radius": null,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 3200
+    },
+    {
+      "id": "P4",
+      "center": [
+        23.1,
+        40.36
+      ],
+      "radius_mm": 8.84,
+      "detail_of": null,
+      "cut_normal": null,
+      "cut_offset_in_outer_radius": null,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 3200
+    },
+    {
+      "id": "P5",
+      "center": [
+        45.2,
+        40.36
+      ],
+      "radius_mm": 8.84,
+      "detail_of": null,
+      "cut_normal": null,
+      "cut_offset_in_outer_radius": null,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 3200
+    },
+    {
+      "id": "P6",
+      "center": [
+        67.3,
+        40.36
+      ],
+      "radius_mm": 8.84,
+      "detail_of": null,
+      "cut_normal": null,
+      "cut_offset_in_outer_radius": null,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 3200
+    },
+    {
+      "id": "P6-detail",
+      "center": [
+        126,
+        34
+      ],
+      "radius_mm": 22,
+      "detail_of": "P6",
+      "cut_normal": [
+        0.901986073297317,
+        0.09955696173259569,
+        0.42013037851155377
+      ],
+      "cut_offset_in_outer_radius": 0.15,
+      "core_radius_ratio": 0.65,
+      "front_surface_patch_count": 1177
+    }
+  ],
+  "light_direction": [
+    -0.4499560611237541,
+    0.5624450764046925,
+    0.6936822608991209
+  ],
+  "labels": [
+    {
+      "text": "Six intact particles",
+      "pt": 10.5,
+      "x": 5,
+      "y": 7
+    },
+    {
+      "text": "P6 cutaway",
+      "pt": 10.5,
+      "x": 112,
+      "y": 7
+    },
+    {
+      "text": "P6",
+      "pt": 9.5,
+      "x": 67.3,
+      "y": 41.46
+    },
+    {
+      "text": "Coating",
+      "pt": 9.5,
+      "x": 110,
+      "y": 15
+    },
+    {
+      "text": "Core",
+      "pt": 9.5,
+      "x": 155,
+      "y": 55
+    },
+    {
+      "text": "Upper layer",
+      "pt": 9.5,
+      "x": 57,
+      "y": 68
+    },
+    {
+      "text": "Lower layer",
+      "pt": 9.5,
+      "x": 19,
+      "y": 68
+    },
+    {
+      "text": "Same P6",
+      "pt": 9.5,
+      "x": 126,
+      "y": 63
+    }
+  ],
+  "scientific_review": "REQUIRED",
+  "visual_review": "REQUIRED",
+  "author_acceptance": "NOT_OBTAINED",
+  "builder_sha256": "45e61c871787943ad60539d188b83fb387620d89a947ece3687d33511512a620"
+}

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="120mm" viewBox="0 0 160 120">
+<title>DEMO FICTION: owner-consistent heat-conductance reuse</title>
+<desc>Constructed design and stipulated accounting; no solver was executed.</desc>
+<rect x="0" y="0" width="160" height="120" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0.28"/>
+<text id="t0" x="2" y="6" font-family="Arial" font-size="3.704166666666666" font-weight="bold" text-anchor="start" fill="#213741">a   Read time savings together with accuracy</text>
+<text id="t1" x="158" y="6" font-family="Arial" font-size="2.998611111111111" font-weight="normal" text-anchor="end" fill="#52636C">DEMO ACCOUNTING</text>
+<circle cx="5" cy="12" r="1.3" fill="#137C77" stroke="none" stroke-width="0.3"/>
+<text id="t2" x="8" y="13" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="start" fill="#213741">G</text>
+<polygon points="20,10.6 21.4,12 20,13.4 18.6,12" fill="#656076" stroke="#656076" stroke-width="0.4"/>
+<text id="t3" x="23" y="13" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="start" fill="#213741">P4</text>
+<polygon points="40,10.6 41.4,12 40,13.4 38.6,12" fill="#FFFFFF" stroke="#AF3D40" stroke-width="0.4"/>
+<line x1="38.8" y1="13.2" x2="41.2" y2="10.8" stroke="#AF3D40" stroke-width="0.35"/>
+<text id="t4" x="44" y="13" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="start" fill="#213741">Fails 0.010 K limit</text>
+<text id="t5" x="116" y="13" font-family="Arial" font-size="3.175" font-weight="bold" text-anchor="start" fill="#213741">Final error (K)</text>
+<text id="t6" x="133" y="18" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#656076">P4</text>
+<text id="t7" x="151" y="18" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#137C77">G</text>
+<line x1="49.333333333333336" y1="20" x2="49.333333333333336" y2="66" stroke="#B9C7CD" stroke-width="0.25"/>
+<text id="t8" x="49.333333333333336" y="72" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">-20</text>
+<line x1="74.66666666666667" y1="20" x2="74.66666666666667" y2="66" stroke="#B9C7CD" stroke-width="0.25" stroke-dasharray="1.2 1"/>
+<text id="t9" x="74.66666666666667" y="72" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">V = 0</text>
+<line x1="100.0" y1="20" x2="100.0" y2="66" stroke="#B9C7CD" stroke-width="0.25"/>
+<text id="t10" x="100.0" y="72" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">+20</text>
+<line x1="112.66666666666666" y1="20" x2="112.66666666666666" y2="66" stroke="#B9C7CD" stroke-width="0.25"/>
+<text id="t11" x="112.66666666666666" y="72" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">+30</text>
+<text id="t12" x="2" y="24.0" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="start" fill="#213741">Slow plate</text>
+<line x1="74.66666666666667" y1="21.75" x2="52.18333333333334" y2="21.75" stroke="#656076" stroke-width="0.42"/>
+<polygon points="52.18333333333334,20.3 53.63333333333334,21.75 52.18333333333334,23.2 50.733333333333334,21.75" fill="#656076" stroke="#656076" stroke-width="0.38"/>
+<text id="t13" x="133" y="24.0" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.006</text>
+<line x1="74.66666666666667" y1="24.25" x2="60.290000000000006" y2="24.25" stroke="#137C77" stroke-width="0.42"/>
+<circle cx="60.290000000000006" cy="24.25" r="1.2" fill="#137C77" stroke="#137C77" stroke-width="0.38"/>
+<text id="t14" x="151" y="24.0" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.003</text>
+<text id="t15" x="2" y="31.9" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="start" fill="#213741">Boundary ramp</text>
+<line x1="74.66666666666667" y1="29.65" x2="52.047619047619044" y2="29.65" stroke="#656076" stroke-width="0.42"/>
+<polygon points="52.047619047619044,28.2 53.49761904761905,29.65 52.047619047619044,31.099999999999998 50.59761904761904,29.65" fill="#FFFFFF" stroke="#656076" stroke-width="0.38"/>
+<line x1="50.74761904761905" y1="30.95" x2="53.34761904761904" y2="28.349999999999998" stroke="#AF3D40" stroke-width="0.4"/>
+<text id="t16" x="133" y="31.9" font-family="Arial" font-size="3.175" font-weight="bold" text-anchor="middle" fill="#AF3D40">0.024</text>
+<line x1="74.66666666666667" y1="32.15" x2="65.61904761904762" y2="32.15" stroke="#137C77" stroke-width="0.42"/>
+<circle cx="65.61904761904762" cy="32.15" r="1.2" fill="#137C77" stroke="#137C77" stroke-width="0.38"/>
+<text id="t17" x="151" y="31.9" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.007</text>
+<text id="t18" x="2" y="39.8" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="start" fill="#213741">Moving source</text>
+<line x1="74.66666666666667" y1="37.55" x2="51.016877637130804" y2="37.55" stroke="#656076" stroke-width="0.42"/>
+<polygon points="51.016877637130804,36.099999999999994 52.46687763713081,37.55 51.016877637130804,39.0 49.5668776371308,37.55" fill="#FFFFFF" stroke="#656076" stroke-width="0.38"/>
+<line x1="49.71687763713081" y1="38.849999999999994" x2="52.3168776371308" y2="36.25" stroke="#AF3D40" stroke-width="0.4"/>
+<text id="t19" x="133" y="39.8" font-family="Arial" font-size="3.175" font-weight="bold" text-anchor="middle" fill="#AF3D40">0.071</text>
+<line x1="74.66666666666667" y1="40.05" x2="69.05485232067511" y2="40.05" stroke="#137C77" stroke-width="0.42"/>
+<circle cx="69.05485232067511" cy="40.05" r="1.2" fill="#137C77" stroke="#137C77" stroke-width="0.38"/>
+<text id="t20" x="151" y="39.8" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.009</text>
+<text id="t21" x="2" y="47.7" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="start" fill="#213741">Switching load</text>
+<line x1="74.66666666666667" y1="45.45" x2="50.916666666666664" y2="45.45" stroke="#656076" stroke-width="0.42"/>
+<polygon points="50.916666666666664,44.0 52.36666666666667,45.45 50.916666666666664,46.900000000000006 49.46666666666666,45.45" fill="#FFFFFF" stroke="#656076" stroke-width="0.38"/>
+<line x1="49.61666666666667" y1="46.75" x2="52.21666666666666" y2="44.150000000000006" stroke="#AF3D40" stroke-width="0.4"/>
+<text id="t22" x="133" y="47.7" font-family="Arial" font-size="3.175" font-weight="bold" text-anchor="middle" fill="#AF3D40">0.114</text>
+<line x1="74.66666666666667" y1="47.95" x2="84.41999999999999" y2="47.95" stroke="#137C77" stroke-width="0.42"/>
+<circle cx="84.41999999999999" cy="47.95" r="1.2" fill="#137C77" stroke="#137C77" stroke-width="0.38"/>
+<text id="t23" x="151" y="47.7" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.009</text>
+<text id="t24" x="2" y="55.6" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="start" fill="#213741">Small mesh</text>
+<line x1="74.66666666666667" y1="53.35" x2="50.916666666666664" y2="53.35" stroke="#656076" stroke-width="0.42"/>
+<polygon points="50.916666666666664,51.9 52.36666666666667,53.35 50.916666666666664,54.800000000000004 49.46666666666666,53.35" fill="#FFFFFF" stroke="#656076" stroke-width="0.38"/>
+<line x1="49.61666666666667" y1="54.65" x2="52.21666666666666" y2="52.050000000000004" stroke="#AF3D40" stroke-width="0.4"/>
+<text id="t25" x="133" y="55.6" font-family="Arial" font-size="3.175" font-weight="bold" text-anchor="middle" fill="#AF3D40">0.018</text>
+<line x1="74.66666666666667" y1="55.85" x2="111.4" y2="55.85" stroke="#137C77" stroke-width="0.42"/>
+<circle cx="111.4" cy="55.85" r="1.2" fill="#137C77" stroke="#137C77" stroke-width="0.38"/>
+<text id="t26" x="151" y="55.6" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.002</text>
+<text id="t27" x="2" y="63.5" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="start" fill="#213741">Constant law</text>
+<line x1="74.66666666666667" y1="61.25" x2="74.66666666666667" y2="61.25" stroke="#656076" stroke-width="0.42"/>
+<polygon points="74.66666666666667,59.8 76.11666666666667,61.25 74.66666666666667,62.7 73.21666666666667,61.25" fill="#656076" stroke="#656076" stroke-width="0.38"/>
+<text id="t28" x="133" y="63.5" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.000</text>
+<line x1="74.66666666666667" y1="63.75" x2="74.66666666666667" y2="63.75" stroke="#137C77" stroke-width="0.42"/>
+<circle cx="74.66666666666667" cy="63.75" r="1.2" fill="#137C77" stroke="#137C77" stroke-width="0.38"/>
+<text id="t29" x="151" y="63.5" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#213741">0.000</text>
+<text id="t30" x="80" y="78" font-family="Arial" font-size="3.3513888888888888" font-weight="normal" text-anchor="middle" fill="#213741">Total time change from V (%)</text>
+<text id="t31" x="2" y="88" font-family="Arial" font-size="3.704166666666666" font-weight="bold" text-anchor="start" fill="#213741">b   G on slow plate: 90% fewer face evaluations, 11.4% less total time</text>
+<text id="t32" x="12" y="95.3" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="end" fill="#213741">V</text>
+<rect x="20" y="92.0" width="76.72380952380952" height="4.3" rx="0" fill="#CBD5DB" stroke="none" stroke-width="0.28"/>
+<rect x="96.72380952380952" y="92.0" width="24.228571428571428" height="4.3" rx="0" fill="#B47B12" stroke="none" stroke-width="0.28"/>
+<text id="t33" x="122.95238095238095" y="95.3" font-family="Arial" font-size="3.3513888888888888" font-weight="normal" text-anchor="start" fill="#213741">400 ms</text>
+<text id="t34" x="12" y="101.39999999999999" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="end" fill="#213741">P4</text>
+<rect x="20" y="98.1" width="76.97619047619047" height="4.3" rx="0" fill="#CBD5DB" stroke="none" stroke-width="0.28"/>
+<rect x="96.97619047619047" y="98.1" width="6.057142857142857" height="4.3" rx="0" fill="#B47B12" stroke="none" stroke-width="0.28"/>
+<text id="t35" x="105.03333333333333" y="101.39999999999999" font-family="Arial" font-size="3.3513888888888888" font-weight="normal" text-anchor="start" fill="#213741">329 ms</text>
+<text id="t36" x="12" y="107.5" font-family="Arial" font-size="3.3513888888888888" font-weight="bold" text-anchor="end" fill="#213741">G</text>
+<rect x="20" y="104.2" width="78.23809523809524" height="4.3" rx="0" fill="#CBD5DB" stroke="none" stroke-width="0.28"/>
+<rect x="98.23809523809524" y="104.2" width="2.4228571428571426" height="4.3" rx="0" fill="#B47B12" stroke="none" stroke-width="0.28"/>
+<rect x="100.66095238095238" y="104.2" width="8.833333333333332" height="4.3" rx="0" fill="#306EA0" stroke="none" stroke-width="0.28"/>
+<text id="t37" x="111.49428571428571" y="107.5" font-family="Arial" font-size="3.3513888888888888" font-weight="normal" text-anchor="start" fill="#213741">354.6 ms</text>
+<rect x="20" y="114" width="3" height="3" rx="0" fill="#CBD5DB" stroke="none" stroke-width="0.28"/>
+<text id="t38" x="25" y="116.8" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="start" fill="#213741">Transport</text>
+<rect x="62" y="114" width="3" height="3" rx="0" fill="#B47B12" stroke="none" stroke-width="0.28"/>
+<text id="t39" x="67" y="116.8" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="start" fill="#213741">Coefficients</text>
+<rect x="111" y="114" width="3" height="3" rx="0" fill="#306EA0" stroke="none" stroke-width="0.28"/>
+<text id="t40" x="116" y="116.8" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="start" fill="#213741">Group test</text>
+</svg>

@@ -1,0 +1,7 @@
+provenance,case,method,cells,accepted_steps,dt_s,final_time_s,eta,face_eval_pct,guard_ms,coefficient_ms,transport_ms,total_ms,max_abs_error_K,accuracy_limit_K,accuracy_pass,energy_balance_rel,memory_MiB,rejected_trials,status
+DEMO_STIPULATED,moving_source,G,1048576,1000,0.1,100,0.0005,88,120,352,1186,1658,0.001,0.01,TRUE,3.3e-14,96,0,ACCEPTED
+DEMO_STIPULATED,moving_source,G,1048576,1000,0.1,100,0.001,72,120,288,1186,1594,0.003,0.01,TRUE,3.6e-14,96,0,ACCEPTED
+DEMO_STIPULATED,moving_source,G,1048576,1000,0.1,100,0.002,61,120,244,1186,1550,0.006,0.01,TRUE,3.8e-14,96,0,ACCEPTED
+DEMO_STIPULATED,moving_source,G,1048576,1000,0.1,100,0.003,51,120,204,1186,1510,0.009,0.01,TRUE,4.1e-14,96,0,ACCEPTED
+DEMO_STIPULATED,moving_source,G,1048576,1000,0.1,100,0.006,32,120,128,1186,1434,0.019,0.01,FALSE,4.3e-14,96,0,ACCEPTED
+DEMO_STIPULATED,moving_source,G,1048576,1000,0.1,100,0.01,18,120,72,1186,1378,0.038,0.01,FALSE,4.7e-14,96,0,ACCEPTED

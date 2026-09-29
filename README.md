@@ -2,11 +2,13 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.20.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.21.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+
+2.21 汇集此前保留的[热传输全文](examples/heat-story/README.md)、[空间对象](examples/space-illustrations/README.md)和[连续表面](examples/surface-rendering/README.md)开发，并继续检查完整构图和全文论证。绘制组件的当前维护入口在FigureCraft；PaperCraft负责选择表达、组织证据和实际入稿，旧独立案例仍可重建。本轮成果与限制见[2.21记录](tests/validation-2.21.md)。历史首稿、未采用候选和反馈后修复分别保留。
 
 全文修订沿[主编辑路径](references/reviewer-method.md)组织贡献与证据。2.20 补足其中的图文设计：明确由 PaperCraft 选择表示方式、完成造型与构图比较，再把图、图注和正文放回实际页面。示例包含[过滤组件的取舍与完整源码](examples/visual-editorial/README.md)，以及独立新材料生成的[膜片观察夹具](examples/membrane-observation/README.md)。没有把某个期刊或一种立体画法当作通用模板。
 
-本轮固定结构案例经过真实重画与入稿，另用相同的新材料在独立上下文比较旧、新技能，先匿名看作品再看页面。实际得失和未验证范围见[当前验收](tests/current-validation.md)；上轮全文试用保留在[2.19记录](tests/validation-2.19.md)。演示不是真实科研测量，也不证明审稿人认可或稳定达到某期刊的插图水准。
+此前固定结构案例及旧/新技能比较见[2.20历史验收](tests/current-validation.md)；更早全文试用保留在[2.19记录](tests/validation-2.19.md)。演示不是真实科研测量，版本号标识功能内容，不证明审稿人认可或稳定达到某期刊的插图水准。
 
 ## 安装
 

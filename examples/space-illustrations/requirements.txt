@@ -1,0 +1,6 @@
+numpy>=1.24
+Pillow>=9
+reportlab>=4
+pypdf>=4
+python-docx>=1.1
+lxml>=4

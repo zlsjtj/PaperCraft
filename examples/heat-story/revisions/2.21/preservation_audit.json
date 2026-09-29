@@ -1,0 +1,19 @@
+{
+  "kind": "DEMO development, not unseen validation",
+  "self_review_passes": 1,
+  "word_counts_whitespace": {
+    "before": 3253,
+    "first_draft": 3464,
+    "final": 3220
+  },
+  "six_equations_identical": true,
+  "all_table_lines_identical_and_in_order": true,
+  "table_data_rows": 24,
+  "figure_captions_unchanged": true,
+  "source_repository_modified": false,
+  "image_content_modified": false,
+  "word_pdf_visual_review": "parent task",
+  "independent_review": "parent task",
+  "author_acceptance": "not obtained",
+  "table_values_and_order_match_raw_csv": true
+}

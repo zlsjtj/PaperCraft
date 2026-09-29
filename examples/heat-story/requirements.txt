@@ -1,0 +1,4 @@
+-r ../../requirements.txt
+reportlab>=4
+pypdf>=5
+numpy>=1.26

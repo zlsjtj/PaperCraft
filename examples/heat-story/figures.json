@@ -1,0 +1,12 @@
+[
+  {
+    "asset": "figures/figure1_owner_guard.png",
+    "caption": "Figure 1. A boundary face retains its owner's refresh history. The cells are a detail of different 16 × 16 groups; i < j assigns face f to A. Dashed lines link endpoints to their stored temperatures at A's refresh r. If A reuses while B refreshes at its own counter s, A's coefficient and both snapshots stay at r. The counters r and s are independent.",
+    "width_mm": 160
+  },
+  {
+    "asset": "figures/figure2_cost_and_qualification.png",
+    "caption": "Figure 2. Read modeled savings with final-temperature error. G uses eta = 0.003 and reserves 50% more array memory when active; the constant-law bypass adds none. (a) Total-time change from V is (t_method/t_V − 1) × 100%; negative values are faster. Crossed diamonds fail the 0.010 K limit. V defines zero change and zero comparison error in each case. (b) Complete slow-plate costs: G removes 90% of face evaluation but only 11.35% of total time. Values are stipulated, without sampled uncertainty; the full accounting records remain in Table 1.",
+    "width_mm": 160
+  }
+]
