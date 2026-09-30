@@ -1,0 +1,68 @@
+{
+  "baseline_commit": "2efeeaee76f3df75bf03ff3290e9398e6aca96e8",
+  "generation": "Fresh independent context; same inherited model configuration; one first output plus one self-revision. Feedback repairs recorded separately.",
+  "scope": "Only actually loaded skill files; new delivered example files were curated afterwards and not falsely counted as generation inputs.",
+  "loaded": [
+    {
+      "path": "SKILL.md",
+      "generation_sha256": "e401950cb856570c8ff0a8f84e29db30d3264ca0c70e7db644389a70aaa63259",
+      "published_sha256": "97e243e68835436735e538e322fda62b81fdb36acdcf12b6d92cf4381f02d2be",
+      "unchanged": false,
+      "only_version_metadata": true
+    },
+    {
+      "path": "references/reviewer-method.md",
+      "generation_sha256": "d874ebc4fe8b28a4acdffe0fcfecd45d7f6bdc3373629b49073658ece24c9e63",
+      "published_sha256": "d874ebc4fe8b28a4acdffe0fcfecd45d7f6bdc3373629b49073658ece24c9e63",
+      "unchanged": true,
+      "only_version_metadata": false
+    },
+    {
+      "path": "references/dependencies.md",
+      "generation_sha256": "14e232b04d5f297e7fe906072158490a0d390c6e574becc705724c18e873bfad",
+      "published_sha256": "d8a13248e63202cdebb10a0cf3957f607af27d0377b0acec87b3043b2e93446e",
+      "unchanged": false,
+      "only_version_metadata": false,
+      "only_line_endings": true
+    },
+    {
+      "path": "references/video-source-notes.md",
+      "generation_sha256": "eb9a96d2eeee0a1dc0140eeeb43d6cfc366444fab4e2c70968d3ca521db6c3f4",
+      "published_sha256": "eb9a96d2eeee0a1dc0140eeeb43d6cfc366444fab4e2c70968d3ca521db6c3f4",
+      "unchanged": true,
+      "only_version_metadata": false
+    },
+    {
+      "path": "references/story-and-main-figure.md",
+      "generation_sha256": "6f5598d0b5354bcbefcc43be29a85627db020fab43bc0c29edb6288a4f0492b8",
+      "published_sha256": "6f5598d0b5354bcbefcc43be29a85627db020fab43bc0c29edb6288a4f0492b8",
+      "unchanged": true,
+      "only_version_metadata": false
+    },
+    {
+      "path": "references/result-pair-example.md",
+      "generation_sha256": "b543790a035ccf5eb02728e71abcf45bea2a0bfa1ecdac2af994d6f2338265b6",
+      "published_sha256": "b543790a035ccf5eb02728e71abcf45bea2a0bfa1ecdac2af994d6f2338265b6",
+      "unchanged": true,
+      "only_version_metadata": false
+    },
+    {
+      "path": "references/presentation-review.md",
+      "generation_sha256": "3e99a9e6a4f4b77224e8e5cae4417a8eedff6dd71afb16cba4f68312950da6d5",
+      "published_sha256": "3e99a9e6a4f4b77224e8e5cae4417a8eedff6dd71afb16cba4f68312950da6d5",
+      "unchanged": true,
+      "only_version_metadata": false
+    },
+    {
+      "path": "references/workload-framing.md",
+      "generation_sha256": "d819e994db068d65834b082a8676090fcbfb0a8b7f99726ace792d1d57ebe6c6",
+      "published_sha256": "d819e994db068d65834b082a8676090fcbfb0a8b7f99726ace792d1d57ebe6c6",
+      "unchanged": true,
+      "only_version_metadata": false
+    }
+  ],
+  "human_acceptance": false,
+  "ordinary_prompt_condition": "NOT_EXECUTED",
+  "strict_token_control": "NOT_EXECUTED",
+  "publication_normalization": "Repository text attributes store Markdown as LF; any loaded file marked only_line_endings differs only by CRLF to LF."
+}

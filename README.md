@@ -2,9 +2,9 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.22.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前版本 **2.23.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
 
-2.22 根据视频中的故事、工作量和主图要求，重做[热传输完整案例](examples/heat-story/README.md)：先解释一次会失去参照的操作，再把所有权设计、成本和适用条件连成论证；主图实际比较两种组织。生成入口见[主编辑路径](references/reviewer-method.md)，实际得失见[本轮验收](tests/validation-2.22.md)。
+2.23增加[有界缓存完整案例](examples/cache-reserve/README.md)：从未预写贡献答案的材料中，先承认简单办法已有的能力，再解释剩下的决定与代价。保留旧、新技能首稿、独立模型阅读意见后的修复、20行完整结果和实际Word/PDF。此前的[热传输案例](examples/heat-story/README.md)继续保留。实际范围见[2.23验收](tests/validation-2.23.md)。
 
 此前[空间对象](examples/space-illustrations/README.md)、[连续表面](examples/surface-rendering/README.md)和[过滤组件](examples/visual-editorial/README.md)保留；局部造型成功不能替代完整研究主图与论文的效果。版本号用于定位内容，不证明审稿人接受或统一期刊风格。
 

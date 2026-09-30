@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "suites": [
+    {
+      "suite": "syntax",
+      "status": "PASS"
+    },
+    {
+      "suite": "basic",
+      "status": "PASS"
+    },
+    {
+      "suite": "preservation",
+      "status": "PASS"
+    },
+    {
+      "suite": "integration",
+      "status": "PASS"
+    },
+    {
+      "suite": "effect",
+      "status": "PASS"
+    },
+    {
+      "suite": "review-packet",
+      "status": "PASS"
+    },
+    {
+      "suite": "representations",
+      "status": "PASS"
+    },
+    {
+      "suite": "units",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-fixture",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-build",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-verify",
+      "status": "PASS"
+    }
+  ],
+  "technical_receipt_sha256": "3357c9abfa67e81e3f7ac44f263487a18dd1df92640f6df78753a8806d6feb83",
+  "effect_judgment": "See validation narrative and artifacts; not inferred from tests.",
+  "official_validator": "PASS",
+  "delivery_receipt_sha256": "2ebed5806317753aa6d0eb1b4e2656c91041dbd2dac0d175127a758cedd628b4",
+  "human_acceptance": false
+}
