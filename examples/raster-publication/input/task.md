@@ -1,0 +1,7 @@
+# Revision task
+
+All materials in this folder are ORIGINAL SYNTHETIC DEMO materials written for an editorial evaluation, not real experiments or a publication. Preserve this disclosure as a short note above the manuscript. Do not add real-world citations, invented measurements, or new experiments.
+
+Use draft.md, implementation.md, results.csv, and notebook.md to produce a coherent English mini-paper (roughly 1200–1600 words excluding tables). You may change the title and order. Include title, abstract, introduction, method, evaluation, discussion and conclusion; headings need not match the draft. Keep scientifically meaningful facts, comparisons and limitations; distinguish demonstrated observations from explanation. Improve the innovation framing, presentation of necessary technical work and ease of reading. Do not ask the user to supply the argument or intended contribution. Tables may be reorganized from the fixed data; no diagrams required in this writing task.
+
+Output first.md as your first complete draft. Then once, using only the provided sources and your own reading, revise into final.md and save a short self-review.md explaining actual gains and losses. Save a concise decision.md describing the competing framing you considered and why you selected your final route, without claiming human approval. Do not overwrite first.md. Record loaded files and hashes in loaded.json. No source code changes, no external searches; local DEMO sources are the entire evidence universe. Budget: one first draft, one self-revision, no outside feedback.

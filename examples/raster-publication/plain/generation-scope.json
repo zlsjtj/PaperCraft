@@ -1,0 +1,13 @@
+{
+  "condition": "plain",
+  "first_and_self_revision_preserved": true,
+  "inputs": {
+    "draft.md": "298d63730e63cb791422ed8e82f50ba10c6dba33c4a60845b1a5b8237359c59e",
+    "implementation.md": "6ac13847c3418a428d79e971e58a0beaf44dfb4ecb805228db658a52fe1e8c98",
+    "notebook.md": "e3b763d55f812e9b8388ae082d75f5a26f673b4c50dc0c34e5f88c26aab39ce4",
+    "results.csv": "2868055fa25dcfe3f5616720701f714849338fcf7f3f584419495a91d7a89b01",
+    "task.md": "3b970e7b6b4fd68b72f8eacf65774a40dc316d666b48922cd27b04e6a27a0e77"
+  },
+  "loaded_record_retained_in_local_archive": true,
+  "human_reader_test": false
+}

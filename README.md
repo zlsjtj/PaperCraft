@@ -2,7 +2,9 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前版本 **2.23.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前内容版本 **2.24.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+
+本版加入[栅格传输生成对照](examples/raster-publication/README.md)、[光学扫描新材料试用](examples/reference-bracketing/README.md)及受保护Word段落的可执行续改工具。实际得失和发布范围见[2.24验收](tests/validation-2.24.md)；版本标识用于定位文件，不是质量评级。上轮未推送时的[本地记录](tests/local-video-20261001.md)保留其历史状态。
 
 2.23增加[有界缓存完整案例](examples/cache-reserve/README.md)：从未预写贡献答案的材料中，先承认简单办法已有的能力，再解释剩下的决定与代价。保留旧、新技能首稿、独立模型阅读意见后的修复、20行完整结果和实际Word/PDF。此前的[热传输案例](examples/heat-story/README.md)继续保留。实际范围见[2.23验收](tests/validation-2.23.md)。
 
