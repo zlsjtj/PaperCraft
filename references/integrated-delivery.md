@@ -14,7 +14,25 @@
 
 对于视觉提升任务，还要看同页上的实际表现：主图是否被长图注或重复正文淹没，主对象、局部与标签是否有清楚层次，空间表达是否帮助理解而未诱发错误。先核科学关系，再判断表达与美观；不能因一个层次通过而替另一个层次签字。独立图更漂亮但入稿后更难读属于退步，应修复或保留旧版。完整操作案例见[过滤组件](../examples/visual-editorial/README.md)。
 
-## 可选的只读绑定检查
+## 实际写入与接续
+
+先完成有来源的文字补丁，图注也属于这份补丁。`apply_authored_edits.py` 将相同补丁分别写成清稿和本轮黄标稿；它保护原生公式、字段和已有修订，支持在普通文字边界受控分段。支持范围见[复杂 Word 路径](complex-word.md)。
+
+```text
+python scripts/apply_authored_edits.py --source parent.docx --edits authored-edits.json --skill . --out text-stage
+python scripts/apply_figure_edits.py text-stage/clean.docx clean-images.json final-clean.docx --receipt clean-images-receipt.json
+python scripts/apply_figure_edits.py text-stage/review.docx review-images.json final-review.docx --receipt review-images-receipt.json
+```
+
+替图清单以**对应文字输出**的 SHA256 为基线；清稿和黄标稿哈希不同，分别建清单。每项指定 `drawing_index`，以及其全部 `representations`：`kind`、原 `part`、`old_media_sha256`、选中 `source_asset`、`source_asset_sha256`。相对资源路径从清单所在目录解析。先用 `audit_figure_integration.inspect()` 取得实际媒体映射，不从文件名猜图号。完整字段见脚本帮助和原创完整交付示例。
+
+此工具只替换同格式、相同比例的主文档 PNG 与 SVG 媒体，保留正文 XML、关系和其他 ZIP 成员。漏交 SVG、基线过期、跨图共用媒体、无法可靠定位的结构均拒绝写出，防止一种查看器显示新版而另一种仍显示旧图。改变图框比例、增加图号或复杂 fallback 仍走格式感知编辑，不声称工具覆盖全部 Word。报告技术写入结果不代表科学或审美通过。
+
+中文简报先放真实文字和图片前后对照，再记录改善与代价。最后主编辑者打开**已合图**的整篇输出，检查入口、方法、证据和结论接续；分工者的单项通过不能替代这一步。对已知可修缺口先修作品，不另开无关示例转移验收。保护检查、逐页阅读和作者认可仍分别记录。
+
+需要简短 Word 对照时可用 `python scripts/build_editorial_report.py report.json report.docx`。JSON 提供人工撰写的 `title`、`summary`、`baseline`、`changes`、`checks`、`remaining`；`figures` 中传入真实前后图片，脚本不自动生成效果结论。字段与完整材料见 `examples/complete-fixture`。既有 `review_docx.py build` 的完整/局部报告接口仍可使用；没有必要为同一任务两套都生成。
+
+## 只读绑定检查
 
 `scripts/audit_figure_integration.py` 只核对主文档 DrawingML 图像。适合有明确图像映射的 Word 联合稿；复杂 fallback、VML 或外部图片应由格式感知流程继续处理，不能因工具不支持而静默漏掉。
 

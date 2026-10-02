@@ -1,0 +1,43 @@
+{
+  "reviewer": "same generating model; self-review, not independent or human acceptance",
+  "first_complete_document": "../first-complete-v1/clean.docx",
+  "first_complete_figure": "../first-figure/figure.png",
+  "prose_changes": [
+    {
+      "paragraph": "P0004",
+      "first": "Restoring three separate reference hoses can complicate replacement work in a modular pressure fixture. This DEMO study replaces those hoses with one removable reference base while keeping the three sample modules in position. The base exposes all three sensor reference sides to one connected volume; diaphragms preserve sample isolation. Two locating pins and one gasket register and seal the common interface. In three fixed synthetic paired conditions, the base reduces setup time from 8.0–8.6 to 3.0–3.3 min, with all six hose/base leak checks passing. Maximum absolute differences from matched reference readings change from 0.11–0.14 to 0.12–0.14 kPa. Removing the pins shortens attempts further but produces two failed leak checks in three attempts. The comparison therefore links replacement time to sealing qualification, without establishing physical performance or reliability.",
+      "final": "Restoring three separate reference hoses can complicate replacement work in a modular pressure fixture. This DEMO study replaces those hoses with one removable reference base while keeping the three sample modules in position. The base exposes all three sensor reference sides to one connected volume; diaphragms preserve sample isolation. Two locating pins and one gasket register and seal the common interface. In three fixed synthetic paired conditions, the base reduces setup time from 8.0–8.6 to 3.0–3.3 min, with both assemblies passing all three leak checks. Maximum absolute differences from matched reference readings increase by 0.01 kPa in two conditions and remain unchanged in the third. Removing the pins shortens attempts further but produces two failed leak checks in three attempts. The comparison therefore links replacement time to sealing qualification, without establishing physical performance or reliability.",
+      "reason": "Make the actual pressure-difference cost visible early and remove repeated operation descriptions while preserving the baseline and qualification condition."
+    },
+    {
+      "paragraph": "P0008",
+      "first": "Figure 1 shows three mutually isolated sample chambers, S1–S3, above a common reference base. Each sensor compares the pressure in its own sample chamber with the pressure on the opposite side of its diaphragm. The base contains one connected reference volume extending beneath all three sensors; the sample chambers communicate neither with one another nor with that volume. The diaphragms provide the physical separation, not a route for flow.\n\nIn the hose baseline, each reference side instead connects to the same reference source through its own hose. The base assembly preserves the sensor range and software difference calculation. Its practical change is to replace all three reference hose segments with one removable component while the sample modules remain in their original positions.",
+      "final": "Figure 1 shows three mutually isolated sample chambers, S1–S3, above a common reference base. Each sensor compares the pressure in its own sample chamber with the pressure on the opposite side of its diaphragm. The base contains one connected reference volume extending beneath all three sensors; the sample chambers communicate neither with one another nor with that volume. The diaphragms provide the physical separation, not a route for flow.\n\nThe hose baseline connects each reference side to the same source through its own hose. Replacing these hoses with the base leaves the sensor range and software difference calculation unchanged.",
+      "reason": "Make the actual pressure-difference cost visible early and remove repeated operation descriptions while preserving the baseline and qualification condition."
+    },
+    {
+      "paragraph": "P0017",
+      "first": "The base changes how the common reference is assembled, not what pressure principle is available. The hose baseline already provides the common reference and remains a functional comparator in all three synthetic conditions. The base trades three individual hose connections for a single interface whose alignment and sealing must work together. Its recorded benefit is therefore the shorter setup of the complete, leak-passing assembly; the pin-free failures prevent treating the fastest attempt as the best usable configuration.\n\nThese records identify a design tradeoff to test, rather than validate a device. They do not establish pressure equivalence, resolution, response time, lifetime, fatigue or manufacturing reliability. Long-term leakage, repeated insertion and behavior during the discarded stabilization interval remain unknown. No physical fixture has been built or experimentally validated, and no literature comparison establishes novelty. Within the stated DEMO conditions, the aligned removable base offers a coherent replacement operation, with its time advantage contingent on passing the leak check.",
+      "final": "The paired conditions make replacement an interface-level tradeoff. The hose baseline already passes every leak check; the base must retain that qualification while reducing setup time. It exchanges three individual hose connections for a single interface whose alignment and sealing must work together. Its recorded benefit is therefore the shorter setup of the complete, leak-passing assembly; the pin-free failures prevent treating the fastest attempt as the best usable configuration.\n\nThese records identify a design tradeoff to test, rather than validate a device. They do not establish pressure equivalence, resolution, response time, lifetime, fatigue or manufacturing reliability. Long-term leakage, repeated insertion and behavior during the discarded stabilization interval remain unknown. No physical fixture has been built or experimentally validated, and no literature comparison establishes novelty. Within the stated DEMO conditions, the aligned removable base offers a coherent replacement operation, with its time advantage contingent on passing the leak check.",
+      "reason": "Make the actual pressure-difference cost visible early and remove repeated operation descriptions while preserving the baseline and qualification condition."
+    }
+  ],
+  "figure_change": {
+    "first": "Gasket leader runs across the central reference-volume label.",
+    "final": "Leader and label are routed down the outer left margin; no information removed.",
+    "reason": "Actual PNG inspection detected a crossing missed by the engine geometry PASS."
+  },
+  "selection": {
+    "selected": "Assembled section; direct adjacency and one continuous reference cavity are simultaneously visible.",
+    "rejected": "Exploded alternative breaks visible diaphragm-reference adjacency and leaves pin leaders detached after translation.",
+    "retained_tradeoff": "The section shows one gasket as several cut segments; the caption explains that convention. The hose baseline is explained in prose, not a second diagram."
+  },
+  "evidence_recheck": [
+    "All nine CSV records retained in native table",
+    "Two failed pin-free leak checks and NA pressure results retained",
+    "No inference of pressure equivalence from near values",
+    "No physical, sampled-statistical, manufacturing or novelty claim",
+    "60-second exclusion applies equally to hose and base; transient behavior remains unknown"
+  ],
+  "scope": "candidate-only fresh transfer; not an old/plain controlled comparison or proof of general Nature quality"
+}

@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "method": "Copied six public scripts and original input into a new directory; invoked README command from another directory with explicit Python/skills/Arial/Poppler paths.",
+  "generation_evidence": "Fixed reconstruction only; not an additional independent model transfer.",
+  "tool_content_versions": {
+    "PaperCraft": "2.25.0",
+    "FigureCraft": "1.22.0",
+    "note": "Original independent generation used candidate-labelled2.24.0/1.21.0; original private receipt preserved. Rebuild tool hashes recorded separately."
+  },
+  "comparisons": [
+    {
+      "file": "first-complete-v1/clean.docx",
+      "delivered_sha256": "8bbfd6c957ca1a7eb9e3cc90fc6d8313c88d98f64870725a1a24c45190234781",
+      "rebuilt_sha256": "8bbfd6c957ca1a7eb9e3cc90fc6d8313c88d98f64870725a1a24c45190234781",
+      "byte_identical": true
+    },
+    {
+      "file": "first-complete-v1/review.docx",
+      "delivered_sha256": "c1ca1aa98504da47ef17808b4aa11b98ea7f0d62fe689cb644634cadd4872563",
+      "rebuilt_sha256": "c1ca1aa98504da47ef17808b4aa11b98ea7f0d62fe689cb644634cadd4872563",
+      "byte_identical": true
+    },
+    {
+      "file": "first-figure/figure.png",
+      "delivered_sha256": "35da7de72c6b581a35ebe6f71c56cefd6c693a208a45f9f12e97b62b7ac0f15f",
+      "rebuilt_sha256": "35da7de72c6b581a35ebe6f71c56cefd6c693a208a45f9f12e97b62b7ac0f15f",
+      "byte_identical": true
+    },
+    {
+      "file": "final-complete/clean.docx",
+      "delivered_sha256": "5203cc135630d5892c437d4a1d28580f64725305b5a297936498d2282fc28179",
+      "rebuilt_sha256": "5203cc135630d5892c437d4a1d28580f64725305b5a297936498d2282fc28179",
+      "byte_identical": true
+    },
+    {
+      "file": "final-complete/review.docx",
+      "delivered_sha256": "20789fece74e13dba200284f26290c57912ecbcf8d61890df5c0057574757d7e",
+      "rebuilt_sha256": "20789fece74e13dba200284f26290c57912ecbcf8d61890df5c0057574757d7e",
+      "byte_identical": true
+    },
+    {
+      "file": "final-delivery/clean.docx",
+      "delivered_sha256": "2ee962132d38a1202873922725ebd97dfd5284af68efd47010f945fd593d4693",
+      "rebuilt_sha256": "2ee962132d38a1202873922725ebd97dfd5284af68efd47010f945fd593d4693",
+      "byte_identical": true
+    },
+    {
+      "file": "final-delivery/review.docx",
+      "delivered_sha256": "e6564912ecaf1b6482e89156e4cab04759d194f33cf9a7ec288ca4b1e10b80b3",
+      "rebuilt_sha256": "e6564912ecaf1b6482e89156e4cab04759d194f33cf9a7ec288ca4b1e10b80b3",
+      "byte_identical": true
+    },
+    {
+      "file": "final-figure/figure.png",
+      "delivered_sha256": "c57475ceced1a4e8758dd8eacebb40cff3c4761a42bc5818eff76806a5d4614c",
+      "rebuilt_sha256": "c57475ceced1a4e8758dd8eacebb40cff3c4761a42bc5818eff76806a5d4614c",
+      "byte_identical": true
+    },
+    {
+      "file": "final-figure/figure.svg",
+      "delivered_sha256": "aa0fb65489b40fec949781f2c033fd79b958d5e592150f878b3a4c4f2c35eb4b",
+      "rebuilt_sha256": "aa0fb65489b40fec949781f2c033fd79b958d5e592150f878b3a4c4f2c35eb4b",
+      "byte_identical": true
+    }
+  ],
+  "privacy_scan": {
+    "status": "PASS",
+    "findings": [],
+    "binary_checks": [
+      {
+        "file": "editorial-report-final.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "alternative-figure\\figure.pdf",
+        "scope": "PDF document metadata and extracted page text"
+      },
+      {
+        "file": "final-complete\\clean.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "final-complete\\review.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "final-delivery\\clean.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "final-delivery\\review.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "final-figure\\figure.pdf",
+        "scope": "PDF document metadata and extracted page text"
+      },
+      {
+        "file": "first-complete-v1\\clean.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "first-complete-v1\\review.docx",
+        "scope": "all DOCX XML and relationships"
+      },
+      {
+        "file": "first-figure\\figure.pdf",
+        "scope": "PDF document metadata and extracted page text"
+      },
+      {
+        "file": "input\\source.docx",
+        "scope": "all DOCX XML and relationships"
+      }
+    ],
+    "text_scope": "All public Python/Markdown/JSON/TXT/CSV/SVG source",
+    "limits": "Checks local-path/project markers in DOCX XML, PDF metadata/text and text sources; not a semantic privacy certification."
+  },
+  "page_rendering": "Final lead-editor rendering separate; no human acceptance inferred."
+}

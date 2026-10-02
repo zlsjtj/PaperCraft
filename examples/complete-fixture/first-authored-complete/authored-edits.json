@@ -1,0 +1,125 @@
+{
+  "source_sha256": "bf2e2a19563b725a808ae38e29cce0092bee3a6f15768c144857b3a2364ee65e",
+  "edits": [
+    {
+      "paragraph_id": "P0001",
+      "operation": "replace_paragraph",
+      "before": "Assembly of a three-channel pressure fixture",
+      "after": "An aligned reference base for a three-channel pressure fixture",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0004",
+      "operation": "replace_paragraph",
+      "before": "A fixture has three sample chambers, three pressure sensors, a reference base, two pins and one gasket. The sensors are processed with a differential measurement. A replacement base was designed and assembly times were collected. The fixture was compared with an assembly that uses three hoses. A control without pins was also prepared. Some values were missing in the control. The design, the test window and the results are described here.",
+      "after": "Restoring three separate reference hoses can complicate replacement work in a modular pressure fixture. This DEMO study replaces those hoses with one removable reference base while keeping the three sample modules in position. The base exposes all three sensor reference sides to one connected volume; diaphragms preserve sample isolation. Two locating pins and one gasket register and seal the common interface. In three fixed synthetic paired conditions, the base reduces setup time from 8.0–8.6 to 3.0–3.3 min, with all six hose/base leak checks passing. Maximum absolute differences from matched reference readings change from 0.11–0.14 to 0.12–0.14 kPa. Removing the pins shortens attempts further but produces two failed leak checks in three attempts. The comparison therefore links replacement time to sealing qualification, without establishing physical performance or reliability.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0006",
+      "operation": "replace_paragraph",
+      "before": "Modular test fixtures contain several connections that must be restored after a component is changed. A technician can spend time reconnecting these parts. This example concerns a pressure fixture with three sample modules. It includes a base and several sealing interfaces. The setup time and a pressure difference are reported. The example does not provide lifetime or fatigue data.",
+      "after": "A three-channel pressure fixture can already compare each sample with a common reference by connecting three sensor reference ports to the same source through separate hoses. The remaining assembly question is how to restore those reference connections while leaving the sample modules in place. Here, a single removable base replaces the three hose segments. This changes the replacement interface, while retaining the common reference, sensors, diaphragms and differential calculation.\n\nThe interface must both locate the base and seal its three reference ports. The design couples two locating pins with a single gasket, so its shorter setup time must be read alongside leakage outcomes. The synthetic comparison below asks whether the complete assembly saves time in each paired condition and what is lost when the pins are omitted. It makes no claim of a new sensing principle or priority over published apparatus.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0008",
+      "operation": "replace_paragraph",
+      "before": "Each sample chamber remains isolated from the other sample chambers. A diaphragm separates its sample pressure from a reference pressure. The earlier assembly connects the three reference sides to the same reference source through three individual hoses. Its sensors and difference calculation are unchanged in the base assembly. The replacement base occupies the lower part of the fixture and contains one connected reference volume facing all three reference sides. The three sample modules remain in their positions during a base replacement.",
+      "after": "Figure 1 shows three mutually isolated sample chambers, S1–S3, above a common reference base. Each sensor compares the pressure in its own sample chamber with the pressure on the opposite side of its diaphragm. The base contains one connected reference volume extending beneath all three sensors; the sample chambers communicate neither with one another nor with that volume. The diaphragms provide the physical separation, not a route for flow.\n\nIn the hose baseline, each reference side instead connects to the same reference source through its own hose. The base assembly preserves the sensor range and software difference calculation. Its practical change is to replace all three reference hose segments with one removable component while the sample modules remain in their original positions.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0009",
+      "operation": "replace_paragraph",
+      "before": "The new assembly has two locating pins and a single gasket. The pins register the base against the three sealing seats. Before opening the fixture, pressure must be released. A version without locating pins was included. The table reports a setup attempt even if its leak check failed; a failed assembly has no pressure result. No divided-reference-base design was built.",
+      "after": "The upper surface of the base carries three sealing seats. Two locating pins register the base with those interfaces, and one gasket surrounds all three reference ports. Pressure must be released before the fixture is opened. A control omits the pins but can still be assembled, allowing the records to distinguish a quick attempt from an assembly that passes its leak check. A failed attempt retains its setup time and has no pressure result. An alternative with three disconnected reference boxes was neither manufactured nor tested and contributes no result.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0010",
+      "operation": "replace_paragraph",
+      "before": "The reported quantity is the maximum absolute difference from the matched reference reading during the retained window. In each condition, the first 60 seconds after a pressure change are excluded in both assemblies. The three conditions are paired synthetic cases, not a statistical sample. The comparison does not establish resolution, response time or manufacturing lifetime.",
+      "after": "The pressure quantity is the maximum absolute difference from the matched reference reading over the retained window. The first 60 s after each pressure change are excluded using the same time window for the hose and base assemblies. C1–C3 are fixed paired synthetic conditions, not random samples. Table 1 reports every assembly attempt, including failures; NA denotes a missing pressure result after a failed leak check, not zero. The records permit direct comparisons of these conditions, not population significance tests.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0012",
+      "operation": "replace_paragraph",
+      "before": "Fig. 1. Components listed for the fixture. The diagram is schematic and not to scale.",
+      "after": "Fig. 1. DEMO sectional schematic of the removable reference base, not to scale. Three isolated sample chambers face one connected reference volume across three sensor diaphragms. The diaphragm boundaries remain closed. Two locating pins align the base; the orange segments are sections through one gasket around the three reference ports. The sample modules stay in position during replacement. Housing dimensions and the pin and gasket geometry are illustrative; pressure must be released before opening.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0014",
+      "operation": "replace_paragraph",
+      "before": "The table contains three paired conditions and three attempts without locating pins. The base assembly has shorter setup times in the paired conditions. Pressure differences are similar in this small constructed set. The pin-free version is faster to assemble but two attempts fail the leak check. It should not be described as an additional usable improvement. NA denotes a missing result after failure and is not a zero.",
+      "after": "For C1, C2 and C3, respectively, setup time falls from 8.4 to 3.1, 8.0 to 3.0, and 8.6 to 3.3 min when the three hoses are replaced by the aligned base (Table 1). The absolute reductions are 5.3, 5.0 and 5.3 min, equivalent to 63.1%, 62.5% and 61.6% of each matched hose time. Both assemblies pass all three leak checks. Their maximum absolute pressure differences are 0.12 versus 0.13 kPa in C1, 0.11 versus 0.12 kPa in C2, and 0.14 versus 0.14 kPa in C3. Thus the shorter setup is accompanied by a 0.01 kPa increase in two conditions and no change in the third; it is not a demonstrated accuracy improvement.\n\nThe pin-free attempts take 2.7, 2.6 and 2.8 min. C1 and C2 fail the leak check and have no pressure value; only C3 passes, with a maximum absolute difference of 0.15 kPa. The two failed attempts cannot be counted as additional usable time savings. The complete base comparison changes the reference packaging as a whole, so these records do not isolate the separate time contributions of the pins, gasket or hose removal.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0015",
+      "operation": "replace_paragraph",
+      "before": "Table 1. Fixed synthetic conditions; NA follows a failed leak check.",
+      "after": "Table 1. Complete DEMO records for the fixed paired conditions. Setup time is in minutes and maximum absolute difference is in kPa. NA follows a failed leak check.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0017",
+      "operation": "replace_paragraph",
+      "before": "The base is a different way to package the reference connection. The common reference pressure and the differential sensor principle are also present in the hose assembly. The recorded values apply only to the synthetic conditions in Table 1. Long-term leakage, repeated insertion and behavior during the discarded stabilization interval remain unknown. The fixture has not been built or experimentally validated.",
+      "after": "The base changes how the common reference is assembled, not what pressure principle is available. The hose baseline already provides the common reference and remains a functional comparator in all three synthetic conditions. The base trades three individual hose connections for a single interface whose alignment and sealing must work together. Its recorded benefit is therefore the shorter setup of the complete, leak-passing assembly; the pin-free failures prevent treating the fastest attempt as the best usable configuration.\n\nThese records identify a design tradeoff to test, rather than validate a device. They do not establish pressure equivalence, resolution, response time, lifetime, fatigue or manufacturing reliability. Long-term leakage, repeated insertion and behavior during the discarded stabilization interval remain unknown. No physical fixture has been built or experimentally validated, and no literature comparison establishes novelty. Within the stated DEMO conditions, the aligned removable base offers a coherent replacement operation, with its time advantage contingent on passing the leak check.",
+      "reason": "Organize the assembly change, matched evidence and limitations into a connected argument.",
+      "source": [
+        "source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    }
+  ]
+}

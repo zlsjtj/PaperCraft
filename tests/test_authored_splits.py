@@ -2,6 +2,8 @@
 import importlib.util
 from pathlib import Path
 import unittest
+import json,subprocess,sys,tempfile
+from docx import Document
 from lxml import etree as E
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +18,15 @@ def paragraph(inner):
     return body, body[0]
 
 class AuthoredSplits(unittest.TestCase):
+    def test_cli_refuses_stale_source_before_writing(self):
+        with tempfile.TemporaryDirectory() as folder:
+            d=Path(folder);doc=Document();doc.add_paragraph('Source words.');doc.save(d/'source.docx')
+            (d/'edits.json').write_text(json.dumps({'source_sha256':'0'*64,'edits':[]}),encoding='utf8')
+            r=subprocess.run([sys.executable,str(ROOT/'scripts/apply_authored_edits.py'),'--source',str(d/'source.docx'),'--edits',str(d/'edits.json'),'--skill',str(ROOT),'--out',str(d/'output')],capture_output=True,text=True)
+            self.assertNotEqual(r.returncode,0)
+            self.assertIn('different source revision',r.stderr)
+            self.assertFalse((d/'output').exists())
+
     def test_equation_and_italic_run_remain_exact(self):
         body, p = paragraph('<w:pPr><w:spacing w:after="80"/></w:pPr><w:r><w:t>Use </w:t></w:r><m:oMath><m:r><m:t>x</m:t></m:r></m:oMath><w:r><w:t> safely. Next decision.</w:t></w:r><w:r><w:rPr><w:i/></w:rPr><w:t>y</w:t></w:r>')
         math = E.tostring(p[2]); italic = E.tostring(p[-1]); original = D.text(p)

@@ -1,0 +1,1 @@
+DEMO sectional diagram. Three separate sample spaces S1, S2 and S3 each terminate at a closed diaphragm. Below all three is a single connected green reference cavity inside a removable base. Two exterior pins align the base; sections through one orange gasket flank the three reference ports. No arrows cross any diaphragm.

@@ -1,0 +1,56 @@
+{
+  "technical_status": "PASS",
+  "source_sha256": "5203cc135630d5892c437d4a1d28580f64725305b5a297936498d2282fc28179",
+  "output_sha256": "2ee962132d38a1202873922725ebd97dfd5284af68efd47010f945fd593d4693",
+  "script_sha256": "5d70b290e017de24fa06982a8dddd7fbab54151be2a30f7f8d1420b8bf3b890e",
+  "trigger": "Lead editor examined the exact clean/review/report pages and found a code-style broken table header on page 3. This is a subsequent page-layout repair, after the first output and one self-review.",
+  "changed": {
+    "header_before": [
+      "condition",
+      "assembly",
+      "setup_min",
+      "max_abs_difference_kPa",
+      "leak_check"
+    ],
+    "header_after": [
+      "Condition",
+      "Assembly",
+      "Setup (min)",
+      "Max. absolute difference (kPa)",
+      "Leak check"
+    ],
+    "column_width_mm": [
+      21,
+      42,
+      25,
+      48,
+      24
+    ],
+    "header_font_pt": 10,
+    "header_bold": true,
+    "header_fill": "#E9EFF3",
+    "fixed_table_layout": true,
+    "repeat_header": true
+  },
+  "preserved": {
+    "data_rows": 9,
+    "entire_data_row_xml_identical": true,
+    "data_row_sha256": [
+      "04ea964974f39564b47d0386acfcf4ad50cfe73ca569b185eef1dff5d8d06a01",
+      "0c89fab33bbe6f2fb73ef4ca7aa6e3af749c7e84ec4830fa66caa815b165bdf3",
+      "e2f81f81908106dba5e94c4f9bd76c0e42f8e214187fefc950628e63ae247f90",
+      "7c6f85b6fe5a153bab7cfee52ada1cc7868e28c1dc0a54d603fb3e68a1f56bc0",
+      "12d95f897e752579553ff843104a566e3f7bc8a7825d04ccf268d658e3b9d44e",
+      "15f410f66a4be106bda710266cc008c41b405d0e830ad5ccb12d0e49417cdb69",
+      "85c466669820223c78ff74e68c85736e7d39ea7d3bd36f14a03eed432beb5ccd",
+      "5719b9a76a8a2108844c7e6190aeacb30f70ad62839bf7c5881d0c8387af8664",
+      "2c73b192ec0ae90115f934614db176e62ef552db2760fb6ece7b454ce14787ba"
+    ],
+    "non_table_document_content_identical": true,
+    "all_media_and_other_zip_members_identical": true
+  },
+  "whole_table_xml_identical": false,
+  "science_and_figure_changes": "none",
+  "final_page_rendering": "separate lead-editor step",
+  "author_acceptance": false
+}

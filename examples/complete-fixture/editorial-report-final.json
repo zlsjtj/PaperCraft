@@ -1,0 +1,61 @@
+{
+  "title": "三腔压力夹具：完整图文迁移试用简报",
+  "summary": "本次从未使用过的原创 DEMO 输入独立完成英文短稿与 160×85 mm 机制图。主线为：保留原有共同参考测量，把三根参考软管变为一个可更换、需定位并密封的底座。全部结果仍为合成输入。",
+  "baseline": "原稿以部件清单和结果概述为主，原图只列四类部件。清稿与本轮黄色审阅稿由同一文字补丁生成，再由正式替图工具写入所选 PNG；源 DOCX 未覆盖。",
+  "changes": [
+    {
+      "focus": "入口：先让读者看到一次具体的装配改变",
+      "before": "Modular test fixtures contain several connections that must be restored after a component is changed. A technician can spend time reconnecting these parts. This example concerns a pressure fixture with three sample modules. It includes a base and several sealing interfaces. The setup time and a pressure difference are reported. The example does not provide lifetime or fatigue data.",
+      "after": "A three-channel pressure fixture can already compare each sample with a common reference by connecting three sensor reference ports to the same source through separate hoses The remaining assembly question is how to restore those reference connections while leaving the sample modules in place Here, a single removable base replaces the three hose segments.",
+      "reason": "承认软管式基线已有共同参考，随后明确仍需解决的更换接口问题。",
+      "evidence": "source.docx 与 implementation.md：三样品模块不动；三软管被一个可更换底座替代。",
+      "limits": "未建立文献首创；新稿不是实物验证。"
+    },
+    {
+      "focus": "结果：让时间、泄漏与压力差共同决定解释",
+      "before": "Pressure differences are similar in this small constructed set. The pin-free version is faster to assemble but two attempts fail the leak check.",
+      "after": "Thus the shorter setup is accompanied by a 0.01 kPa increase in two conditions and no change in the third; it is not a demonstrated accuracy improvement. The two failed attempts cannot be counted as additional usable time savings.",
+      "reason": "用实际配对代价替换含混的 similar，并保留失败对可用节时的限制。",
+      "evidence": "results.csv 全部 9 行保留；三对时间减少 5.3、5.0、5.3 min；两次 pin-free 失败及 NA 均保留。",
+      "limits": "三工况不是随机样本，没有总体显著性或量产可靠性结论。"
+    }
+  ],
+  "figures": [
+    {
+      "title": "实际图形前后对照（同为 160×85 mm）",
+      "before": "input/original.png",
+      "after": "final-figure/figure.png",
+      "caption": "原图是部件列表。新图用三个封闭隔膜和连续参考空间直接显示隔离与共享的同时成立；橙色断面表示一片带三个口的密封垫。代价：平面剖面需要图注说明密封垫断面，软管基线由正文承担。未选展开候选，因为它削弱了隔膜与参考侧的直接邻接；该候选及首稿仍保留。",
+      "source_spec": "final-authored/figure_spec.json",
+      "caption_file": "final-authored/caption.txt",
+      "embedded_asset": "final-figure/figure.png"
+    }
+  ],
+  "checks": [
+    {
+      "scope": "数据与对象",
+      "status": "技术通过",
+      "detail": "final-complete 的原生整表曾完整保留。后续 final-delivery 仅修表头和布局；9条数据行的完整规范化XML、非表正文、图及其他ZIP部件保持一致。整表XML已改变，不冒称完全保留。图像绑定与160×85 mm尺寸另行核对；本稿无原生公式。"
+    },
+    {
+      "scope": "图形与自修",
+      "status": "模型自审已完成",
+      "detail": "正常色、灰度和单条件色觉模拟已查看。首次图的密封垫引线穿字，经一次修复后移至外侧；PDF 最小字号 9.45 pt。"
+    },
+    {
+      "scope": "主编辑者后续页面修复",
+      "status": "已执行，待最终页面复验",
+      "detail": "主编辑者检查9页后发现第3页代码式长表头断词。随后改为易读英文表头、21/42/25/48/24 mm列宽、10 pt粗体浅底色；这是自修稿之后的版式收尾，不倒写为首次稿已做到。"
+    }
+  ],
+  "remaining": [
+    "真实实验、领域同行评审与作者认可均未发生；不能据此称为 Nature 通用质量或一般迁移能力已证实。",
+    "这是候选技能的一次新上下文完整迁移，没有普通模型／旧技能的同期受控比较。",
+    "首份完整稿为 first-complete-v1；一次自修稿为 final-complete；当前 final-delivery 只追加主编辑者指出的表头版式修复。最终页面渲染记录另存。"
+  ],
+  "final_files": [
+    "英文清稿：final-delivery/clean.docx；黄色审阅稿：final-delivery/review.docx。",
+    "实际入稿图：final-figure/figure.png；图源：final-authored/figure_spec.json；SVG/PDF：final-figure/figure.svg、figure.pdf。",
+    "图注：final-authored/caption.txt；替代文字：final-authored/alt_text.txt；表头改动：final-delivery/*-table-receipt.json。"
+  ]
+}

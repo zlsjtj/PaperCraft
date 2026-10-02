@@ -1,0 +1,33 @@
+{
+  "source_sha256": "3ae57d4179519e6cefbca2f40835189853b338b064be26879ef4836f7b81c008",
+  "rows": [
+    {
+      "condition": "C1",
+      "hose_min": 8.4,
+      "base_min": 3.1,
+      "absolute_reduction_min": 5.3,
+      "relative_reduction_pct": 63.09523809523811,
+      "denominator": "matched hose setup time",
+      "synthetic": true
+    },
+    {
+      "condition": "C2",
+      "hose_min": 8.0,
+      "base_min": 3.0,
+      "absolute_reduction_min": 5.0,
+      "relative_reduction_pct": 62.5,
+      "denominator": "matched hose setup time",
+      "synthetic": true
+    },
+    {
+      "condition": "C3",
+      "hose_min": 8.6,
+      "base_min": 3.3,
+      "absolute_reduction_min": 5.3,
+      "relative_reduction_pct": 61.627906976744185,
+      "denominator": "matched hose setup time",
+      "synthetic": true
+    }
+  ],
+  "inference": "direct arithmetic only; no statistics or real-device performance"
+}

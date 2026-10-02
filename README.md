@@ -2,13 +2,11 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前内容版本 **2.24.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可以配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用，两者可独立安装。
+当前内容版本 **2.25.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用。
 
-本版加入[栅格传输生成对照](examples/raster-publication/README.md)、[光学扫描新材料试用](examples/reference-bracketing/README.md)及受保护Word段落的可执行续改工具。实际得失和发布范围见[2.24验收](tests/validation-2.24.md)；版本标识用于定位文件，不是质量评级。上轮未推送时的[本地记录](tests/local-video-20261001.md)保留其历史状态。
+这次补齐完整交付路径：受保护文字续改后，同步替换 Word 图片的 PNG/SVG 表示，输出带真实前后图片的中文报告，最后查看确切成稿。主编辑者负责全文收尾，不能用独立样例代替用户指定稿件。[完整压力夹具示例](examples/complete-fixture/README.md)包含原始合成材料、首次生成、一次自修、清稿、黄标稿、图源和重建脚本。
 
-2.23增加[有界缓存完整案例](examples/cache-reserve/README.md)：从未预写贡献答案的材料中，先承认简单办法已有的能力，再解释剩下的决定与代价。保留旧、新技能首稿、独立模型阅读意见后的修复、20行完整结果和实际Word/PDF。此前的[热传输案例](examples/heat-story/README.md)继续保留。实际范围见[2.23验收](tests/validation-2.23.md)。
-
-此前[空间对象](examples/space-illustrations/README.md)、[连续表面](examples/surface-rendering/README.md)和[过滤组件](examples/visual-editorial/README.md)保留；局部造型成功不能替代完整研究主图与论文的效果。版本号用于定位内容，不证明审稿人接受或统一期刊风格。
+本轮修复与实际范围见[2.25验收](tests/validation-2.25.md)。版本用于定位文件；真实全文比较只有小幅优势，旧稿更直接的实验动机已保留。源码重建、一次新材料生成、模型阅读评估和作者认可分别记录。之前的[生成对照](examples/raster-publication/README.md)、[有界缓存](examples/cache-reserve/README.md)、[热传输](examples/heat-story/README.md)与[空间对象](examples/space-illustrations/README.md)保留，历史结果不视为本次重做。
 
 ## 安装
 

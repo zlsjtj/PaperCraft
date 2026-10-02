@@ -52,7 +52,10 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--source',type=Path,required=True);ap.add_argument('--edits',type=Path,required=True);ap.add_argument('--skill',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
     if a.out.exists():raise ValueError('Output must be new')
     spec=importlib.util.spec_from_file_location('revision_tool',a.skill/'scripts/review_docx.py');D=importlib.util.module_from_spec(spec);spec.loader.exec_module(D)
-    edits=json.loads(a.edits.read_text(encoding='utf-8'));edits=edits.get('edits',edits) if isinstance(edits,dict) else edits
+    edits=json.loads(a.edits.read_text(encoding='utf-8'))
+    if isinstance(edits,dict) and edits.get('source_sha256') and edits['source_sha256']!=sha(a.source):
+        raise ValueError('Authored edits name a different source revision')
+    edits=edits.get('edits',edits) if isinstance(edits,dict) else edits
     inv=D.inventory(a.source);lookup={p['id']:p for p in inv['paragraphs']}
     infos,parts,original=D.read_package(a.source);ops=[];splits={};records=[]
     for i,e in enumerate(edits,1):

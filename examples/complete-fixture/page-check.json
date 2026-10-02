@@ -1,0 +1,59 @@
+[
+  {
+    "file": "clean.docx",
+    "docx_sha256": "2ee962132d38a1202873922725ebd97dfd5284af68efd47010f945fd593d4693",
+    "pdf_sha256": "c9df49790ea4aff77affaa1dc65cd46a4ec2f101a82774f5a77a576d90cb1111",
+    "pages": 3,
+    "page_png_hashes": {
+      "page-1.png": "4c7db475d5a767c0715d768b3195fdd8fde4dff3851eb7ab37b26049028f187f",
+      "page-2.png": "4e94443e6a8fef0d72bd1d0e50f6e52eb8acbd6c604d68a8900d4aac50fdfb50",
+      "page-3.png": "c680ecbd41a680face38d49c309967ed0d8f934f1808d37c45bc29f3f60833ba"
+    },
+    "render_source_hash_matches": true,
+    "pdf_reopened_and_text_extracted": true,
+    "visual_method": "All three pages re-rendered and viewed after the final table property-order repair.",
+    "visual_status": "MODEL_PAGE_REVIEW_COMPLETED",
+    "observed_issues": "No observed clipping, overlap or misplaced highlights in these pages; source math and data are audited separately.",
+    "native_word_application": "NOT_RUN",
+    "real_print": "NOT_RUN",
+    "human_or_author_acceptance": false
+  },
+  {
+    "file": "review.docx",
+    "docx_sha256": "e6564912ecaf1b6482e89156e4cab04759d194f33cf9a7ec288ca4b1e10b80b3",
+    "pdf_sha256": "36bed204a423eaf09b721a744aa67f9c2b49f62620386d1e83aec69fdcf39dc6",
+    "pages": 3,
+    "page_png_hashes": {
+      "page-1.png": "0381269d2ca43c441c14099f090e24205cc09b68338d7cc4755e7a3741c6eb50",
+      "page-2.png": "ce974ffd1a27404e27b67dcc7c0b9a3d2747f313b1b0df9f5806504cc25dbf78",
+      "page-3.png": "e85f1bfff9fa36bbdc8d13b648c3bb06481b8a04f948a3d132c0f51926ad7600"
+    },
+    "render_source_hash_matches": true,
+    "pdf_reopened_and_text_extracted": true,
+    "visual_method": "All three pages re-rendered and viewed after the final table property-order repair.",
+    "visual_status": "MODEL_PAGE_REVIEW_COMPLETED",
+    "observed_issues": "No observed clipping, overlap or misplaced highlights in these pages; source math and data are audited separately.",
+    "native_word_application": "NOT_RUN",
+    "real_print": "NOT_RUN",
+    "human_or_author_acceptance": false
+  },
+  {
+    "file": "editorial-report-final.docx",
+    "docx_sha256": "24646815b334f5a34fc5a8bac16ea6c69397997ed5f245cce3769d40aa72b97f",
+    "pdf_sha256": "261e63d79f8b3ed73218feecaefc7e745b9398f8a63e5e91047439695818499b",
+    "pages": 3,
+    "page_png_hashes": {
+      "page-1.png": "65407bb5228812f67d27de65e69a7b7a21bf33123291497950f8e055be590145",
+      "page-2.png": "47c2b9e98cd52c71acb7e5ae5dfffbf8688aece818ebcffda189690521036632",
+      "page-3.png": "416633b03726332b906b71f445934e7fa836892bf4e84bef619ad68a0793987f"
+    },
+    "render_source_hash_matches": true,
+    "pdf_reopened_and_text_extracted": true,
+    "visual_method": "All three exact report pages viewed; page-check.json records the subsequent completed page review.",
+    "visual_status": "MODEL_PAGE_REVIEW_COMPLETED",
+    "observed_issues": "No observed clipping, overlap or misplaced highlights in these pages; source math and data are audited separately.",
+    "native_word_application": "NOT_RUN",
+    "real_print": "NOT_RUN",
+    "human_or_author_acceptance": false
+  }
+]
