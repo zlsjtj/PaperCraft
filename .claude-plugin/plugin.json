@@ -1,0 +1,13 @@
+{
+  "name": "papercraft",
+  "version": "2.31.1",
+  "description": "PaperCraft｜论文叙事与精修",
+  "author": {
+    "name": "zlsjtj"
+  },
+  "repository": "https://github.com/zlsjtj/PaperCraft",
+  "license": "MIT",
+  "skills": [
+    "./"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "zlsjtj-papercraft",
+  "owner": {
+    "name": "zlsjtj"
+  },
+  "plugins": [
+    {
+      "name": "papercraft",
+      "source": "./",
+      "description": "PaperCraft｜论文叙事与精修"
+    }
+  ],
+  "metadata": {
+    "description": "PaperCraft 官方仓库的单技能安装入口，由 zlsjtj 维护。"
+  }
+}

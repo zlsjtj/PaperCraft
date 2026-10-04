@@ -21,6 +21,8 @@
     "docs/install.md",
     "docs/first-use.md",
     "docs/multihost-validation.md",
-    "COMPATIBILITY.md"
+    "COMPATIBILITY.md",
+    ".claude-plugin/plugin.json",
+    "docs/client-entry-validation.md"
   ]
 }

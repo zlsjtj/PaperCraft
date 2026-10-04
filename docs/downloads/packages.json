@@ -1,24 +1,38 @@
 {
   "skill": "paper-evidence-framing",
-  "version": "2.31.0",
+  "version": "2.31.1",
   "packages": {
+    "paper-evidence-framing-codex.zip": {
+      "sha256": "61dcdbc3de7da38ec7c3fcf2bfd2fbdeb75995d3e80d742331fa75eab93d41ad",
+      "bytes": 2941372,
+      "host": "codex",
+      "files": 151,
+      "host_execution": "NOT_RUN_BY_PACKAGER"
+    },
+    "paper-evidence-framing-claude-code.zip": {
+      "sha256": "b7aae703aeaa9f67c751d3735f665659e865d31c9e0bdf028c19d4d0c9b584d7",
+      "bytes": 2941794,
+      "host": "claude-code",
+      "files": 152,
+      "host_execution": "NOT_RUN_BY_PACKAGER"
+    },
     "paper-evidence-framing-claude.zip": {
-      "sha256": "f6852090cee7b2912cfc887b5764b739b29bc3257e5a649272b122edcfff6fb1",
-      "bytes": 2935136,
+      "sha256": "0ede905f7a3cd7dd936ef02f5890a89fa947bbc4e50eca02d4d2ba854977a2c9",
+      "bytes": 2941373,
       "host": "claude",
-      "files": 149,
+      "files": 151,
       "host_execution": "NOT_RUN_BY_PACKAGER"
     },
     "paper-evidence-framing-workbuddy.zip": {
-      "sha256": "27048b855515c2cc0534015495bdfb963a07460422f0e27ffee7d64361cdced5",
-      "bytes": 2935246,
+      "sha256": "8d6422b8388f6320d064d82ae8d23112e38e692b08458def0c69ec4086781f68",
+      "bytes": 2941489,
       "host": "workbuddy",
-      "files": 149,
+      "files": 151,
       "host_execution": "NOT_RUN_BY_PACKAGER"
     },
     "paper-evidence-framing-first-use.zip": {
-      "sha256": "a91496cf29ff2ea96794361fd98b06b76bc03b5cedaabd6a646b56f261224363",
-      "bytes": 43463,
+      "sha256": "89353084724e305175087606480fb37624018a52a9d7571f2f09c7428c739f96",
+      "bytes": 43476,
       "purpose": "RAW_MATERIALS_ONLY",
       "generation": "NOT_RUN"
     }
