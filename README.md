@@ -1,7 +1,7 @@
-<h1 align="center">PaperCraft</h1>
-<p align="center"><strong>把研究讲清楚，让贡献被看见。</strong></p>
-<p align="center">论文叙事与精修 · 创新定位 · 技术工作与证据 · Word / PDF 成稿</p>
-<p align="center"><a href="#改写效果">看改写效果</a> · <a href="#开始使用">下载安装</a> · <a href="docs/examples.md">案例与成稿</a> · <a href="LICENSE">MIT</a></p>
+<p align="center">
+  <a href="docs/social-preview/README.md"><img src="docs/social-preview/social-preview.jpg" width="100%" alt="PaperCraft 品牌封面：暖纸色、纸页与红色书签"></a>
+</p>
+<p align="center"><a href="#改写效果">看改写效果</a> · <a href="#开始使用">下载安装</a> · <a href="docs/examples.md">案例与源码</a> · <a href="LICENSE">MIT</a></p>
 
 给 AI 研究助手使用的论文精修技能。从原稿、实现说明和结果中找到值得讲的主线，把**做了什么**写成**为什么值得做、难在哪里、证据支持什么**。从标题、摘要到方法与结果，最后交付可继续编辑的 **Word 清稿、黄色审阅稿和 PDF**。
 

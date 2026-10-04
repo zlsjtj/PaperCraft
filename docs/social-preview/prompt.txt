@@ -1,0 +1,12 @@
+Create a finished, exceptionally art-directed GitHub social preview cover for the open-source research writing tool PaperCraft. This is a brand poster, not a scientific evidence graphic.
+OUTPUT: one landscape image, exact 2:1 aspect ratio, ideally 1280 x 640. No border, no rounded card around it, no mockup scene.
+Art direction: a contemporary university press / independent design journal cover, bold editorial typography, intentional asymmetry, tactile ivory paper with a subtle fine grain, deep near-black typography, one precise vermilion editing accent. Confident, restrained, unmistakable visual identity. High-quality physically credible paper craft, not a generic SaaS graphic. Avoid stock icons, glowing particles, gradient blobs, plastic chrome, cartoon, pseudo-writing, badges, dashboards, checklists, or little feature boxes.
+Composition: left 52% contains strong typography in a disciplined editorial grid, generous spacing. Project name PaperCraft in a huge beautiful high-contrast editorial serif, sharp and accurately typeset. Below, a clear Chinese sans serif headline in two lines. A tiny vermilion line makes an editorial marker. One subordinate Chinese description and compact footer. Right 48% contains a striking original sculptural object: many thin ivory manuscript sheets rise in a precisely cut fan, gently curling around an upright rectangular sheet with a single vermilion paper ribbon aligned through the layers. The object should feel like a museum-quality paper sculpture, with precise repeated fine edges, beautiful tension between flat pages and curvature, warm realistic shadows from upper left. Crop the sculpture slightly at right for scale, but leave margins to all text. The focal red ribbon signifies discovering a throughline; do not draw readable fake manuscript text. One discreet red circular proofreader-like mark can echo the ribbon, but no arrows or abstract clutter.
+Exact text ONLY, clearly spelled and readable:
+top small: "RESEARCH · WRITING · CRAFT"
+main name: "PaperCraft"
+Chinese headline, two lines: "把研究讲透" / "让贡献被看见"
+lower description: "创新定位 · 工作量呈现 · 图文精修"
+footer left: "Word / PDF"
+footer right: "github.com/zlsjtj/PaperCraft"
+The Chinese headline must be large and confident, all Chinese glyphs correct. Main project name and Chinese headline must read immediately when reduced to a 400px-wide card. Avoid many small labels. The result should be compelling through typography, material, composition and the one memorable sculpture, not through exaggerated claims.

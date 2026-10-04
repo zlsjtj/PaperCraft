@@ -1,21 +1,30 @@
-# PaperCraft 分享预览
+# PaperCraft 品牌封面
 
-[PNG](social-preview.png) · [可编辑 SVG](social-preview.svg) · [PDF](social-preview.pdf) · [布局内容](layout.json)
+![PaperCraft 封面](social-preview.jpg)
 
-用于分享仓库链接时的预览，1280 × 640。正文取自[压头锁止案例](../../examples/clamp-timing/README.md)的中文摘述，展示“列步骤与数字”到“先解释何时锁止及收益、代价”的变化。数值为教学构造值；不是新实验、实时生成截图或录用证明。完整条件与英文稿仍看原案例。
+这张图用于仓库首页与 GitHub 分享预览。暖纸色、纸页与红色书签构成主视觉，缩小后仍以项目名称和用途为重点。
 
-采用已有作品排版，没有重新生成科研图或使用新的图像模型。字体、配色和导航层级与 FigureCraft 配套。SVG 保留文字、线和颜色；打开 SVG 时需要对应字体，PDF 已嵌入所用字形。没有分发字体文件。
+## 文件
 
-## 重建
+- `artwork.png`：选定的原始封面，1774 × 887 像素。
+- `social-preview.jpg`：网页与分享版本，小于 1 MB。
+- `social-preview.png`：无损副本；`preview-400.png`、`preview-640.png` 用于小尺寸检查。
+- `prompt.txt`：本次内置 image_gen 的生成提示词。
+- `build.py`、`build-record.json`：格式导出脚本与文件记录。
 
-需要 Python 的 `reportlab`、`pypdf`，支持中文的 TrueType 字体（可为 TTC），以及 Poppler 的 `pdftoppm`。在仓库根目录执行，将占位替换为本机路径：
+## 重建导出文件
 
-```text
-python docs/social-preview/build.py --out ../PaperCraft-share --font CJK_TTF --bold-font CJK_BOLD_TTF --latin-font LATIN_TTF --latin-bold-font LATIN_BOLD_TTF --pdftoppm PDFTOPPM
+在仓库根目录运行，输出目录必须尚不存在：
+
+```sh
+python -m pip install Pillow
+python docs/social-preview/build.py --out /path/to/new-output
 ```
 
-输出目录必须不存在且在仓库外。工具检查文字越界、PDF 文字、PNG 尺寸和体积；`build-record.json` 保存来源、字体及输出哈希。这些检查不能证明版式好看，需要打开实际 PNG 复核。
+脚本从已保存的原图导出 JPEG 和小尺寸预览，不调用图像服务，不改布局。重复运行生成提示词会得到新的候选，不能保证逐像素复现。
 
-生成 PNG 后，在仓库 Settings → Social preview 上传；本地重建不会上传或改设置。[GitHub 说明](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
+## 用途与来源
 
-该图未重复插入首页；首页已有可直接阅读的前后文，分享图也不代替清稿与审阅稿的下载入口。
+本图由内置 image_gen 生成，用于品牌展示。它是位图插画，不是实验结果，也不是 `paper-evidence-framing` 科研产出的验收案例。实际案例、原始材料和可编辑图源见[案例页](../examples.md)。封面中的输出格式指技能交付能力，不表示此封面自身具有独立可编辑的矢量图层。
+
+上一版的通用图标式构图已改为一个更突出的主体，并减少重复的功能说明。设计比较及小尺寸检查属于模型辅助评估，没有记录为真人审美测试。
