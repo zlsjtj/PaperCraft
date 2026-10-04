@@ -1,0 +1,38 @@
+{
+  "input_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "scope": "local",
+  "execution": "sequential",
+  "operations": [
+    {
+      "id": "E1",
+      "kind": "replace",
+      "target": "P0002",
+      "expect": "Compression fixture evaluation",
+      "text": "When to lock a compression pad",
+      "purpose": "前置锁止时序和有效比较，删除摘要中的部件枚举；其余正文保留。",
+      "evidence": "input/implementation.md 的 E/F/L 定义；results.csv 中 pitch、flat、roll 全部记录；八次装夹与无不确定性区间限制。",
+      "confirm": true
+    },
+    {
+      "id": "E2",
+      "kind": "replace",
+      "target": "P0004",
+      "expect": "Three modes were tried with an existing pivoting compression pad. The components included a frame, a pin, a clamp, a pad and a lower platen. The records include nine rows. In the pitch condition, mode L had a force coefficient of variation of 2.3%, drift of 19 micrometres and seating time of 32 seconds. E had 7.2%, 12 micrometres and 18 seconds. In flat and roll conditions there were also differences. The fixture was operated at a preload of 10 N and a displacement of 0.20 mm. Repeatability and displacement during the ramp are discussed. These are constructed teaching records.",
+      "text": "A pivoting compression pad can follow a slope yet drift during loading. We compare locking before approach, remaining free, and locking under preload after seating, using existing components and constructed teaching records. On a one-degree pitch slope, locking after seating reduced median drift from 125 to 19 micrometres versus remaining free, but increased preparation time from 17 to 32 seconds. Its force variation was 2.3%, compared with 7.2% when locked before approach. These are eight reseatings of one coupon per condition, without uncertainty intervals. Flat coupons showed no repeatability gain; roll-direction slopes remained uncorrected. The records illustrate a timing trade-off, not improved force accuracy.",
+      "purpose": "前置锁止时序和有效比较，删除摘要中的部件枚举；其余正文保留。",
+      "evidence": "input/implementation.md 的 E/F/L 定义；results.csv 中 pitch、flat、roll 全部记录；八次装夹与无不确定性区间限制。",
+      "confirm": true
+    }
+  ],
+  "report": {
+    "summary": "首次试用路径：仅改英文标题和摘要。维护者使用已知教学材料执行，不能作为独立质量验证。",
+    "limitations": [
+      "教学构造值不是真实实验；此试用没有改善方法、结果段或图件。",
+      "没有真人阅读评价或作者审美认可。"
+    ],
+    "checks": [
+      "数据已对照输入九行 CSV 和实现说明。",
+      "页面将在构建后检查，见本例独立验收记录。"
+    ]
+  }
+}

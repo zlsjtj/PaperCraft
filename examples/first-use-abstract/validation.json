@@ -1,0 +1,37 @@
+{
+  "status": "LOCAL_PATH_VERIFIED",
+  "input_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "files": {
+    "clean": {
+      "docx_sha256": "529ca2a291e7ecb150dcd914480a02ff978d0e46a326039de6beb1b686ab3dc3",
+      "pdf_sha256": "1c4c8b7aa83d517fd624e5ea46fdb81f425cf1cdaf37baaf371326aae923277d",
+      "changed_paragraphs": [
+        2,
+        4
+      ],
+      "other_paragraph_xml": "EXACT_MATCH",
+      "other_zip_parts": "EXACT_MATCH",
+      "table_xml": "EXACT_MATCH",
+      "pages": 2,
+      "page_review": "MODEL_VISUAL_REVIEW_COMPLETED",
+      "human_acceptance": false
+    },
+    "review": {
+      "docx_sha256": "e79bca7beed521d3c5fa46b0c304219d4d25a6b94d2f3a3e4151470b4e8b8324",
+      "pdf_sha256": "228b362e7733bf28f59d4c58ef87205c4ae18b5236737dcc8803937814842cae",
+      "changed_paragraphs": [
+        2,
+        4
+      ],
+      "other_paragraph_xml": "EXACT_MATCH",
+      "other_zip_parts": "EXACT_MATCH",
+      "table_xml": "EXACT_MATCH",
+      "pages": 2,
+      "page_review": "MODEL_VISUAL_REVIEW_COMPLETED",
+      "human_acceptance": false
+    }
+  },
+  "reviewer": "maintenance model",
+  "figure_generation": "NOT_IN_SCOPE",
+  "native_word_open": "NOT_RUN"
+}

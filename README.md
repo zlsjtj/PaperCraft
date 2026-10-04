@@ -4,7 +4,7 @@
 
 这是一个 **Codex skill**，适合研究已有基础、文章还没把价值讲清楚的情况。可以改全文，也可以只改摘要、引言或一段难读的方法说明。
 
-[看改写示例](#看一段改写) · [开始使用](#开始使用) · [历史版本 2.30.1](https://github.com/zlsjtj/PaperCraft/releases/tag/v2.30.1) · [科研绘图 FigureCraft](https://github.com/zlsjtj/FigureCraft)
+[看改写示例](#看一段改写) · [按问题选案例](docs/examples.md) · [开始使用](#开始使用) · [历史版本 2.30.1](https://github.com/zlsjtj/PaperCraft/releases/tag/v2.30.1) · [科研绘图 FigureCraft](https://github.com/zlsjtj/FigureCraft)
 
 ## 32 秒看一个完整案例
 
@@ -45,6 +45,8 @@
 
 ## 开始使用
 
+**还没有合适的材料？[用公开材料完成第一次试用](docs/first-use.md)。** 先做一个小任务，再决定是否处理自己的全文。
+
 在可以读写本地文件的 Codex 环境中使用。安装前请查看[许可说明](docs/licensing.md)，已有同名技能目录时先备份。
 
 用 PowerShell 安装当前默认分支，包含 MIT 许可证：
@@ -75,6 +77,8 @@ Word 工具需要 Python 依赖，PDF 另需文档渲染环境。安装和命令
 - [复杂 Word 中只改一句话](examples/complex-word/README.md)：保留公式、斜体、交叉引用、超链接和历史修订。
 - [三种提示方式的改写对照](examples/three-way-reading-demo/README.md)：看不同写法实际得到和失去了什么。
 - [箱角解锁案例](examples/bin-latch/README.md)：从原始材料到前后稿，包含图形、源码与评阅。
+
+[教程：做了不少工作，为什么论文还是没讲清楚？](docs/from-materials-to-paper.md) 用上面的案例讲清改写和重画的具体选择。
 
 ## 使用边界与反馈
 
