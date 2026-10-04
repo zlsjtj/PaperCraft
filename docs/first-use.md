@@ -1,44 +1,37 @@
-# 第一次用：先改一份教学稿的摘要
+# 第一次用：只改标题和摘要
 
-先用公开材料走通一次，再处理自己的论文。这次只改标题和摘要，其他段落与文档对象保留。无需准备真实稿件，也不需要 FigureCraft。
+先用公开的教学材料完成一个小任务。材料是构造示例，不需要上传未发表论文。先按[工具入口](install.md)安装技能。
 
-## 1. 准备材料
+## 直接拿材料试
 
-按[首页](../README.md#开始使用)安装后，在 PowerShell 运行：
+1. [下载试用材料包](downloads/paper-evidence-framing-first-use.zip)并解压。
+2. 本地工具读取整个目录；Claude 网页端上传 TASK.md 和 input/ 中的文件。
+3. 告诉所用工具：**使用 PaperCraft（paper-evidence-framing），执行 TASK.md，把结果放进独立 output/。**
 
-```powershell
-$skillRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME 'skills' } else { Join-Path $env:USERPROFILE '.codex/skills' }
-python (Join-Path $skillRoot 'paper-evidence-framing/scripts/first_run.py') --out './PaperCraft-try'
-```
+包中只有原始材料和任务要求，没有改写答案或已选构图。不需要先运行准备脚本。导出文件需要宿主环境中的实际依赖；安装步骤与[依赖说明](usage.md)分开。
 
-`python` 要指向可用的 Python 3；若本机命令是 `python3`，相应替换。输出目录必须不存在，并放在技能文件夹外。
+## 喜欢用命令行时
 
-命令复制原稿 Word、便于阅读的文本、实现说明和结果表，生成 `TASK.md`。**它只准备任务，不调用模型、不改稿，也不安装依赖。** 原始任务要求改全文，这里的任务已收窄为标题与摘要；成品和评阅没有混入输入。
-
-## 2. 交给 Codex
-
-在一个新的 Codex 会话中，把下面的路径换成上一步打印的绝对路径：
+在已安装技能的根目录运行：
 
 ```text
-请执行 C:/你的试用目录/PaperCraft-try/TASK.md 中的首次试用任务。
+python scripts/first_run.py --host codex --out ../PaperCraft-try
 ```
 
-Codex 会读取指定的 `SKILL.md` 和 `input/`，将结果写入独立 `output/`。先确认它找到了技能和原稿，再开始编辑。材料里的数字全部是教学构造值，输出仍应保留这一标记。
+`--host` 可换成 `claude-code`、`claude` 或 `workbuddy`。不传时仍为 Codex，兼容旧命令。输出目录必须是新目录，且位于技能目录外。
 
-准备命令只需 Python 标准库；Word 编辑需要 `lxml`、`python-docx` 等包，PDF 渲染还需要文档工具、LibreOffice 和 Poppler。`environment.json` 只记录查找到的模块和程序，**不是运行通过的证明**。缺依赖时按[进阶使用](usage.md)处理，或让 Codex 明确报告缺少的项目；没有 PDF 时不能说页面检查已完成。
+这条命令只复制材料、准备 TASK.md，不调用模型、不生成成品、不安装依赖。`claude` 使用相对附件路径；本地宿主的任务会指明实际技能路径。environment.json 是环境查找记录，不是运行结果。命令会显示所用 Python 和缺少的模块；材料准备成功不代表该 Python 已能导出成品。云端任务不检查本机 Python。
 
-## 3. 看结果是否值得留下
+## 拿到什么，怎么看
 
-先打开清稿和审阅稿，问三个问题：原来在比什么，现在是否更快看出来？数据说明了收益，也交代了代价吗？摘要之外的公式、表格、引用和已有高亮是否保留？
+得到独立 Word 清稿、黄色审阅稿、PDF 和简短中文说明。黄色表示本轮改写，不是原生 Track Changes。先看读者是否更快知道研究在比较什么、收益与代价是否说准确，再核对摘要之外的公式、表格、引用和已有标记。
 
-预期得到独立 Word 清稿、黄色审阅稿、对应 PDF 和简短中文说明。黄色表示本轮文字变化，不是 Word 原生修订。不要用文件数量或字数变化替代阅读判断。
+字体、模块或 PDF 渲染缺失时，应说明未完成的导出，不把文件存在当作视觉验收。作品效果仍需阅读和看图。
 
-本轮按这个范围得到的[局部清稿与审阅稿](../examples/first-use-abstract/README.md)可供对照。
-
-完成后再看[公开完整案例](../examples/clamp-timing/README.md)。它修过全文和图件，所以文件不会与你这次局部任务相同，也不是必须照抄的标准答案。你可以比较开头如何交代问题、对照和限制。
+完成后再看[公开案例](../examples/first-use-abstract/README.md)，比较它怎样组织解释，而非逐句或逐形照抄。首次试用与固定源码重建是两种检查，记录见[本轮范围](multihost-validation.md)。
 
 ## 换成自己的材料
 
-提供稿件、实现说明和结果表，明确本次修改范围。实现说明不必先替技能总结创新点，但要讲清哪些部件、算法和设置是沿用的，哪些做法是新增的。数据不全时先修改有依据的内容，研究缺口另列。
+提供原稿、实现说明和结果表，先明确要改的章节。说明沿用了什么、改了什么，但不必提前替技能总结创新点。
 
-准备器的保护性检查：`python tests/test_first_run.py`（在仓库根目录）。它也已纳入现有单元测试发现入口。首次试用验证范围见[记录](first-use-validation.md)。
+材料不足时先完成有依据的部分，缺项单独列出。保留原件，新结果另存。

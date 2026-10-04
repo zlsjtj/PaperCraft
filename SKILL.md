@@ -2,7 +2,7 @@
 name: paper-evidence-framing
 description: PaperCraft 用于研究论文的创新定位、工作量呈现、图文精修和透明审阅。按已有证据交付实际修订稿、黄色审阅标记与中文诊断，也支持仅审阅、局部修改、续改和实验未完成的稿件。
 metadata:
-  version: "2.30.1"
+  version: "2.31.0"
 ---
 
 # PaperCraft｜论文叙事与精修

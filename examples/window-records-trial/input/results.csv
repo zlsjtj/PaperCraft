@@ -1,0 +1,11 @@
+profile,variant,windows,first_output_wait_s,initial_exact_windows,final_exact_windows,generated_corrections,peak_retained_state_KiB
+on_time,F120,48,120,48,48,0,96
+on_time,I5,48,5,48,48,0,12
+on_time,R5,48,5,48,48,0,124
+bursty,F120,48,120,48,48,0,96
+bursty,I5,48,5,31,31,0,12
+bursty,R5,48,5,31,48,17,124
+bursty,U5,48,5,31,38,17,124
+beyond_retention,F120,48,120,44,44,0,96
+beyond_retention,I5,48,5,36,36,0,12
+beyond_retention,R5,48,5,36,44,8,124

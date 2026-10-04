@@ -1,0 +1,37 @@
+Constructed demonstration. All numerical records are teaching fixtures and must not be presented as real research evidence.
+
+A window record collector with several operating variants
+
+Abstract
+
+We implemented F120, I5 and R5 for a collector and checked different profiles. Each profile had 48 windows. The implementation uses window state, sample identifiers, revision identifiers, a sum and a count. The R5 record has five fields. For the bursty profile, the R5 final result was correct in 48 windows and the I5 final result was correct in 31 windows. The retained state was 124 KiB for R5, 96 KiB for F120 and 12 KiB for I5. The first output wait was 5 s in two variants and 120 s in the other one. Beyond retention the final results were 44 windows for R5. Transactions and late-data handling were used. These results describe a constructed replay.
+
+1 Introduction
+
+A sample collector receives packets and reports values for event-time windows. Packets contain an event time and a stable sample identifier. Packets can arrive after a window has closed. The previous collector has a wait parameter and emits one record after this wait. There can also be repeated deliveries and deliveries in the wrong order between the collector and a receiver. In this work we used a map of windows, kept identifiers, wrote records and tested several variants. We report three arrival profiles and a diagnostic. There are benefits as well as limitations. Our work concerns the emission and replacement of records in this collector; it is not a new aggregation formula.
+
+2 Implementation
+
+The input stream is partitioned into 20 s windows using event timestamps. The earlier implementation already provides this partitioning, count and sum. The count and sum are updated for a newly seen sample identifier. Duplicate input packets are ignored. A window remains until its state expires. The record fields are stream_id, window_end, revision, count and sum. The value displayed by a receiver is defined by Eq. (1).
+
+mean = sum / count
+
+F120 uses a 120 s wait and emits once. I5 uses a 5 s wait and emits once. R5 uses a 5 s wait and keeps state until 120 s after window closure. It increments revision and generates another record when a newly accepted late packet changes the aggregate. The receiver checks revision and stores count and sum together. It has to reject an older revision and a repeated revision. The update is a replacement, not an added correction. At expiry, the collector removes the sample-ID set and aggregate. Packets for the expired window are logged and rejected. They do not get moved into the next window. The fixed expiry rule was used for every profile.
+
+The sum and count form one version of a record. If count is read from one version and sum from another, the displayed mean need not correspond to an emitted record. A transaction is used for this pair. The prototype has one writer per stream; reconnects, concurrent writers and storage failures were not tested. A development attempt considered adding deltas, but a duplicated delivery would add a correction twice. No measured test of that attempt is included. U5 instead uses complete record replacements and omits only the receiver revision-order check.
+
+3 Replay and results
+
+The profiles are on_time, bursty and beyond_retention. Each contains 48 windows; they are not repeated benchmark trials. Table 1 contains all results. The scheduled first-output wait is an input setting and should not be interpreted as execution speed. Exact agreement means both count and sum match the complete offline list of packets. Peak retained state counts serialized window aggregates and sample IDs, not total process memory. Generated corrections count revisions after first emission and exclude duplicate transmissions introduced by transport.
+
+Table 1. Constructed replay records. Exact windows are initial/final out of 48; state is retained-state KiB.
+
+For on_time all variants agree in every window. In bursty, I5 agrees in 31 windows and R5 agrees in 48 at the end, but R5 also starts with 31 correct windows. F120 agrees in all 48 on first emission. The bursty trace requires 17 corrections and all needed packets arrive by 90 s. U5 ends with 38 exact windows because ten windows are overwritten by an older delivery. In beyond_retention, R5 generates eight corrections and ends with 44 exact windows. F120 also ends with 44, while I5 ends with 36. Four needed packets arrive at 180 s, after both 120 s cutoffs. R5 retains 124 KiB in the supplied records. This is greater than F120 and I5. No other parameter selection was evaluated.
+
+4 Conclusion
+
+The collector has window records and replacement handling. The different variants have different output waits and final agreement. R5 uses state, revisions and a transaction to update its output. It has additional costs and does not repair data after eviction. The implementation can be studied further. These constructed records cannot establish robustness in production or general superiority over stream processing systems.
+
+Sources and scope
+
+The implementation notebook and results.csv supplied with this demonstration are the only sources. There is no literature review or external novelty claim. All supplied rows, including negative outcomes, remain part of the manuscript.

@@ -2,9 +2,32 @@
 
 第一次使用可先走[短任务入口](first-use.md)；想先看效果，可按问题选[三个代表案例](examples.md)。
 
-[返回首页](../README.md)
+[返回首页](../README.md) · [多宿主安装](install.md) · [安装包与本轮验证](multihost-validation.md)
 
 这里收录依赖、脚本命令和检查方法。命令从仓库根目录运行；输出目录应为新目录。先通过宿主模型完成写作或构图，再用这些工具执行受控修改和导出。
+
+技能 ZIP 包含当前安装、试用和依赖说明，可直接运行包内脚本。下文的 `tests/` 回归命令用于完整源码仓库；上传包不附整套测试。未收录的拓展示例链接指向 GitHub，查看它们需要网络；本地候选新增的下载链接须等对应文件发布后才能在线使用。已有 ZIP 可直接安装，首次材料也可用包内 `scripts/first_run.py` 准备。
+
+## 先确认执行环境
+
+如果只是使用宿主完成任务，直接交给它 TASK.md 与材料即可。下面的命令用于手动运行脚本；准备材料不需要安装整套依赖。
+
+```text
+python -c "import sys; print(sys.executable)"
+```
+
+先看这条命令实际指向哪里。本机就曾指向 LibreOffice 自带的 Python：材料准备成功，绘图却缺少包。若是其他软件的内置环境，先选用宿主提供的运行时或独立 Python；不要直接往办公软件目录安装依赖。`ModuleNotFoundError` 时，应在**执行脚本的同一 Python 环境**中检查包，而不是反复用另一个 pip 安装。
+
+使用自己管理的独立 Python 时，推荐新建隔离环境。Windows PowerShell 示例（先确认 `python` 是你选定的解释器）：
+
+```powershell
+python -m venv ../PaperCraft-env
+$skillPython = (Resolve-Path '../PaperCraft-env/Scripts/python.exe').Path
+& $skillPython -m pip install -r requirements.txt
+& $skillPython scripts/first_run.py --out ../PaperCraft-try
+```
+
+不需要激活环境；后面的 `python ...` 命令都改为 `& $skillPython ...`。macOS / Linux 使用同一环境的 `bin/python`。已由宿主准备好依赖时可直接使用其解释器，无需重复创建环境。字体、LibreOffice 和 Poppler 仍是单独的原生依赖；找不到 `pdftoppm` 时提供实际路径，不能把 PDF 已生成当成 PNG 也已导出。
 
 ## 工具与依赖
 
@@ -25,7 +48,14 @@ python scripts/review_docx.py build manuscript.docx revision.json output --clean
 python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候选稿.docx --out protection.json
 ```
 
-输出目录应为新目录。含公式、域、交叉引用和混合格式的段落，其普通文字可用 replace_span；完整样例见[复杂 Word 流程](../references/complex-word.md)。已完成整段写作但普通文字分成许多 run 时，可用 `apply_authored_edits.py` 的 `rewrite_prose_preserving_runs` 接续；示例和拒绝边界见复杂 Word 流程。整段替换仍严格保护这些对象。PDF 和逐页图片还需要宿主的 documents 技能、可用文档渲染器与 Poppler；这些不随本仓库打包，详细说明见[依赖](../references/dependencies.md)。
+输出目录应为新目录。含公式、域、交叉引用和混合格式的段落，其普通文字可用 replace_span；完整样例见[复杂 Word 流程](../references/complex-word.md)。已完成整段写作但普通文字分成许多 run 时，可用 `apply_authored_edits.py` 的 `rewrite_prose_preserving_runs` 接续；示例和拒绝边界见复杂 Word 流程。整段替换仍严格保护这些对象。PDF 和逐页图片可使用随包独立渲染器，需要 LibreOffice 与 Poppler，无须另装 documents 技能。也可显式沿用已有 documents 后端，详细说明见[依赖](../references/dependencies.md)。
+
+```text
+python scripts/check_dependencies.py . --require render --soffice SOFFICE --pdftoppm PDFTOPPM
+python scripts/render_review.py revised.docx rendered --soffice SOFFICE --pdftoppm PDFTOPPM
+```
+
+把大写占位换成实际程序路径。程序在 PATH 中时可省略对应参数。旧 `--documents-skill`、`--poppler-dir` 继续可用；显式给 documents 路径即选该后端，失败不会静默改用另一条路径。导出完成后逐页查看 PNG/PDF。
 
 新版补充[选择规则复核与定范围审阅](../references/method-transfer-audit.md)：检查训练配置如何映射到测试输入，并通过 `make_review_packet.py` 只提供明确选定的段落和图片。生成材料不等于完成独立审阅。
 

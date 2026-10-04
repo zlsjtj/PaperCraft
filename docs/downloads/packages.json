@@ -1,0 +1,26 @@
+{
+  "skill": "paper-evidence-framing",
+  "version": "2.31.0",
+  "packages": {
+    "paper-evidence-framing-claude.zip": {
+      "sha256": "7c6124fcf0623ebe340fac6615c055cfc43d128f52353f2dc3b752ced6f84c7c",
+      "bytes": 2934327,
+      "host": "claude",
+      "files": 149,
+      "host_execution": "NOT_RUN_BY_PACKAGER"
+    },
+    "paper-evidence-framing-workbuddy.zip": {
+      "sha256": "40d2da2d85aefd46543c1f8d7a56c10e64d73c918333d7273b2b7e5be109bf9b",
+      "bytes": 2934435,
+      "host": "workbuddy",
+      "files": 149,
+      "host_execution": "NOT_RUN_BY_PACKAGER"
+    },
+    "paper-evidence-framing-first-use.zip": {
+      "sha256": "a91496cf29ff2ea96794361fd98b06b76bc03b5cedaabd6a646b56f261224363",
+      "bytes": 43463,
+      "purpose": "RAW_MATERIALS_ONLY",
+      "generation": "NOT_RUN"
+    }
+  }
+}

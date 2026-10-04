@@ -1,0 +1,194 @@
+{
+  "name": "PaperCraft",
+  "width": 1280,
+  "height": 640,
+  "background": "#FAFBFA",
+  "title": "PaperCraft｜论文叙事与精修",
+  "description": "同材料的中文摘述，展示从步骤清单到问题与取舍的变化。所有数字均为教学构造值。",
+  "sources": [
+    "README.md",
+    "examples/clamp-timing/README.md",
+    "examples/clamp-timing/input/rough.txt"
+  ],
+  "nodes": [
+    {
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 8,
+      "fill": "#276682"
+    },
+    {
+      "type": "text",
+      "x": 56,
+      "y": 91,
+      "text": "PaperCraft",
+      "size": 54,
+      "font": "latin-bold",
+      "fill": "#193A48"
+    },
+    {
+      "type": "text",
+      "x": 59,
+      "y": 139,
+      "text": "论文叙事与精修",
+      "size": 27,
+      "font": "regular",
+      "fill": "#465E68"
+    },
+    {
+      "type": "text",
+      "x": 884,
+      "y": 88,
+      "text": "从步骤清单，写出问题与取舍",
+      "size": 21,
+      "font": "regular",
+      "fill": "#276682"
+    },
+    {
+      "type": "line",
+      "x": 56,
+      "y": 176,
+      "x2": 1224,
+      "y2": 176,
+      "stroke": "#D8E2E6",
+      "width": 1
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 229,
+      "text": "原稿摘述",
+      "size": 23,
+      "font": "bold",
+      "fill": "#687C83"
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 286,
+      "text": "比较三种操作模式，",
+      "size": 34,
+      "font": "regular",
+      "fill": "#50656F"
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 338,
+      "text": "记录九行结果。",
+      "size": 34,
+      "font": "regular",
+      "fill": "#50656F"
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 403,
+      "text": "L 模式：漂移 19 μm，就位 32 秒。",
+      "size": 23,
+      "font": "regular",
+      "fill": "#607681"
+    },
+    {
+      "type": "line",
+      "x": 529,
+      "y": 221,
+      "x2": 529,
+      "y2": 465,
+      "stroke": "#D8E2E6",
+      "width": 1
+    },
+    {
+      "type": "text",
+      "x": 584,
+      "y": 229,
+      "text": "改后主线",
+      "size": 23,
+      "font": "bold",
+      "fill": "#276682"
+    },
+    {
+      "type": "text",
+      "x": 584,
+      "y": 286,
+      "text": "关键在于",
+      "size": 39,
+      "font": "bold",
+      "fill": "#193A48"
+    },
+    {
+      "type": "text",
+      "x": 584,
+      "y": 338,
+      "text": "何时锁住压头。",
+      "size": 39,
+      "font": "bold",
+      "fill": "#193A48"
+    },
+    {
+      "type": "text",
+      "x": 584,
+      "y": 391,
+      "text": "先就位再锁定，相比全程自由：",
+      "size": 25,
+      "font": "regular",
+      "fill": "#324F5C"
+    },
+    {
+      "type": "text",
+      "x": 584,
+      "y": 436,
+      "text": "漂移 125 → 19 μm；就位 17 → 32 秒。",
+      "size": 26,
+      "font": "bold",
+      "fill": "#276682"
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 481,
+      "text": "同一斜面记录；平面无重复性收益，另一方向的斜面仍未矫正。",
+      "size": 20,
+      "font": "regular",
+      "fill": "#607681"
+    },
+    {
+      "type": "line",
+      "x": 56,
+      "y": 505,
+      "x2": 1224,
+      "y2": 505,
+      "stroke": "#D8E2E6",
+      "width": 1
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 551,
+      "text": "Word 清稿 · 黄色审阅稿 · PDF",
+      "size": 25,
+      "font": "regular",
+      "fill": "#193A48"
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 597,
+      "text": "中文摘述 · 教学构造数据",
+      "size": 19,
+      "font": "regular",
+      "fill": "#607681"
+    },
+    {
+      "type": "text",
+      "x": 1050,
+      "y": 597,
+      "text": "zlsjtj/PaperCraft",
+      "size": 20,
+      "font": "latin",
+      "fill": "#607681"
+    }
+  ]
+}

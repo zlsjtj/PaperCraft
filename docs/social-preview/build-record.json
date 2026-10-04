@@ -1,0 +1,150 @@
+{
+  "title": "PaperCraft｜论文叙事与精修",
+  "layout_sha256": "45167b27c68cf54d842581b1e611d0b1e0de5bdd0657af07b4d20405b28a55ec",
+  "source_files": {
+    "README.md": "bdc72ff795454a009c35a26d0eecefa251e6599bc0da90b4e477b24f9b1ca65c",
+    "examples/clamp-timing/README.md": "6c98bccd909d0c612ae9402f51bcea348aeffebf8c705771599bc79948dbb784",
+    "examples/clamp-timing/input/rough.txt": "b017636cdec5ab8e5325d2c5eaf6b3b0a14284b922cf3926621b21666877e88f"
+  },
+  "source_images": [],
+  "png_size": [
+    1280,
+    640
+  ],
+  "png_bytes": 103961,
+  "text_bounds": [
+    {
+      "text": "PaperCraft",
+      "x": 56,
+      "baseline": 91,
+      "width": 276.0908203125,
+      "size": 54
+    },
+    {
+      "text": "论文叙事与精修",
+      "x": 59,
+      "baseline": 139,
+      "width": 189.0,
+      "size": 27
+    },
+    {
+      "text": "从步骤清单，写出问题与取舍",
+      "x": 884,
+      "baseline": 88,
+      "width": 273.0,
+      "size": 21
+    },
+    {
+      "text": "原稿摘述",
+      "x": 58,
+      "baseline": 229,
+      "width": 92.0,
+      "size": 23
+    },
+    {
+      "text": "比较三种操作模式，",
+      "x": 58,
+      "baseline": 286,
+      "width": 306.0,
+      "size": 34
+    },
+    {
+      "text": "记录九行结果。",
+      "x": 58,
+      "baseline": 338,
+      "width": 238.00000000000003,
+      "size": 34
+    },
+    {
+      "text": "L 模式：漂移 19 μm，就位 32 秒。",
+      "x": 58,
+      "baseline": 403,
+      "width": 365.7763671875,
+      "size": 23
+    },
+    {
+      "text": "改后主线",
+      "x": 584,
+      "baseline": 229,
+      "width": 92.0,
+      "size": 23
+    },
+    {
+      "text": "关键在于",
+      "x": 584,
+      "baseline": 286,
+      "width": 156.0,
+      "size": 39
+    },
+    {
+      "text": "何时锁住压头。",
+      "x": 584,
+      "baseline": 338,
+      "width": 273.0,
+      "size": 39
+    },
+    {
+      "text": "先就位再锁定，相比全程自由：",
+      "x": 584,
+      "baseline": 391,
+      "width": 350.0,
+      "size": 25
+    },
+    {
+      "text": "漂移 125 → 19 μm；就位 17 → 32 秒。",
+      "x": 584,
+      "baseline": 436,
+      "width": 483.23437500000006,
+      "size": 26
+    },
+    {
+      "text": "同一斜面记录；平面无重复性收益，另一方向的斜面仍未矫正。",
+      "x": 58,
+      "baseline": 481,
+      "width": 560.0,
+      "size": 20
+    },
+    {
+      "text": "Word 清稿 · 黄色审阅稿 · PDF",
+      "x": 58,
+      "baseline": 551,
+      "width": 338.51318359375,
+      "size": 25
+    },
+    {
+      "text": "中文摘述 · 教学构造数据",
+      "x": 58,
+      "baseline": 597,
+      "width": 205.81787109375,
+      "size": 19
+    },
+    {
+      "text": "zlsjtj/PaperCraft",
+      "x": 1050,
+      "baseline": 597,
+      "width": 141.15234375,
+      "size": 20
+    }
+  ],
+  "font_sha256": {
+    "regular": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f",
+    "bold": "4508821b3dffe01f0ef5e5326a3e60df705a44633858811f67b6982dce3f6ee6",
+    "latin": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+    "latin-bold": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5"
+  },
+  "font_families": {
+    "regular": "Microsoft YaHei",
+    "bold": "Microsoft YaHei",
+    "latin": "Arial",
+    "latin-bold": "Arial"
+  },
+  "pdf_text_checked": true,
+  "files": {
+    "social-preview.pdf": "43867b1e74843d94a197bbb303dcc3a4b8d0a415a67994474c85d61b0cbc6557",
+    "social-preview.png": "c614d39eca2f95f6006bc1839965706e1e09f4a017427b3ebf9cde52da59d240",
+    "social-preview.svg": "b7874d1de9bf67df7ed5205eea5eccfd92589b05a2f860fce17c4f648c3bcb27"
+  },
+  "scope": "既有公开案例的分享排版，不是新的科研成果、技能新生成或用户转化验证；SVG 文字编辑需要相应字体。",
+  "visual_review": "NOT_PERFORMED_BY_SCRIPT",
+  "published": false
+}

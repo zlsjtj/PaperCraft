@@ -1,0 +1,37 @@
+{
+  "input_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "scope": "local",
+  "execution": "sequential",
+  "operations": [
+    {
+      "id": "E001",
+      "kind": "replace",
+      "target": "P0002",
+      "expect": "Compression fixture evaluation",
+      "text": "Post-seating locking limits drift in a single-axis compression fixture",
+      "purpose": "把锁止时序、比较和代价前置；只修改标题和摘要。",
+      "evidence": "implementation.md 的 E/F/L 定义；results.csv 的 pitch_1deg、flat、roll_1deg 三组记录。",
+      "confirm": true
+    },
+    {
+      "id": "E002",
+      "kind": "replace",
+      "target": "P0004",
+      "expect": "Three modes were tried with an existing pivoting compression pad. The components included a frame, a pin, a clamp, a pad and a lower platen. The records include nine rows. In the pitch condition, mode L had a force coefficient of variation of 2.3%, drift of 19 micrometres and seating time of 32 seconds. E had 7.2%, 12 micrometres and 18 seconds. In flat and roll conditions there were also differences. The fixture was operated at a preload of 10 N and a displacement of 0.20 mm. Repeatability and displacement during the ramp are discussed. These are constructed teaching records.",
+      "text": "An existing pivoting compression pad can accommodate a pitch slope, but remaining free during loading may permit drift. We compare locking before approach, remaining free, and locking under preload after seating. For a constructed 1° pitch example, post-seating locking reduced drift from 125 to 19 μm relative to remaining free, while seating time rose from 17 to 32 s. Force variation was 2.3%, versus 2.1% when free and 7.2% with early locking. Flat coupons gained no repeatability benefit, and cross-axis tilt remained uncorrected. Eight reseatings per coupon illustrate this tradeoff; they do not establish force accuracy.",
+      "purpose": "把锁止时序、比较和代价前置；只修改标题和摘要。",
+      "evidence": "implementation.md 的 E/F/L 定义；results.csv 的 pitch_1deg、flat、roll_1deg 三组记录。",
+      "confirm": true
+    }
+  ],
+  "report": {
+    "summary": "只修改标题和摘要。正文和原生对象保留；数据为构造值。",
+    "limitations": [
+      "当前维护模型在已知案例上的再生成，不是新材料独立测试。",
+      "未获得真实读者或作者认可。"
+    ],
+    "checks": [
+      "数字与条件：对照三种时序、八次重新就位与跨轴限制，未改变数据。"
+    ]
+  }
+}

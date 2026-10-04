@@ -4,7 +4,7 @@
 
 ## 使用
 
-在已加载 documents 技能并完成其本次作者操作标记后，用宿主提供的 Python：
+使用当前宿主可用的 Python。若宿主另有文档技能，遵循它的实际操作要求；本包的受控修改工具本身不依赖该技能：
 
 ```text
 python scripts/review_docx.py inspect input.docx --out inventory.json

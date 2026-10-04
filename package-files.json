@@ -1,0 +1,26 @@
+{
+  "repository_url": "https://github.com/zlsjtj/PaperCraft",
+  "display_name": "PaperCraft｜论文叙事与精修",
+  "description_en": "Revise research manuscripts with evidence, editable Word outputs and visible changes.",
+  "include": [
+    "SKILL.md",
+    "LICENSE",
+    "requirements.txt",
+    "scripts",
+    "references",
+    "templates",
+    "agents",
+    "examples/clamp-timing",
+    "examples/complex-word",
+    "examples/replacement-story",
+    "examples/first-use-abstract",
+    "package-files.json",
+    "docs/licensing.md",
+    "docs/usage.md",
+    "README.md",
+    "docs/install.md",
+    "docs/first-use.md",
+    "docs/multihost-validation.md",
+    "COMPATIBILITY.md"
+  ]
+}
