@@ -4,7 +4,15 @@
 
 这是一个 **Codex skill**，适合研究已有基础、文章还没把价值讲清楚的情况。可以改全文，也可以只改摘要、引言或一段难读的方法说明。
 
-[看改写示例](#看一段改写) · [开始使用](#开始使用) · [下载 2.30.1](https://github.com/zlsjtj/PaperCraft/releases/tag/v2.30.1) · [科研绘图 FigureCraft](https://github.com/zlsjtj/FigureCraft)
+[看改写示例](#看一段改写) · [开始使用](#开始使用) · [历史版本 2.30.1](https://github.com/zlsjtj/PaperCraft/releases/tag/v2.30.1) · [科研绘图 FigureCraft](https://github.com/zlsjtj/FigureCraft)
+
+## 32 秒看一个完整案例
+
+[![点击播放：从输入材料到最终文件的四步演示](docs/quick-tour/poster.png)](docs/quick-tour/tour.gif)
+
+[播放动图](docs/quick-tour/tour.gif) · [静态逐步版与文件链接](docs/quick-tour/README.md)
+
+演示整理自下方已完成的公开案例，使用构造材料，不是实时生成录像。静态版可以慢慢看，每一步都能回到原文件。
 
 ## 看一段改写
 
@@ -39,13 +47,15 @@
 
 在可以读写本地文件的 Codex 环境中使用。安装前请查看[许可说明](LICENSE.md)，已有同名技能目录时先备份。
 
-下载 [Release 中的技能包](https://github.com/zlsjtj/PaperCraft/releases/latest)，将 `paper-evidence-framing` 文件夹放进 `~/.codex/skills/`；设置了 `CODEX_HOME` 时放进该目录下的 `skills/`。也可以用 PowerShell 安装：
+用 PowerShell 安装当前默认分支，包含 MIT 许可证：
 
 ```powershell
 $skillRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME 'skills' } else { Join-Path $env:USERPROFILE '.codex/skills' }
 New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
 git clone https://github.com/zlsjtj/PaperCraft.git (Join-Path $skillRoot 'paper-evidence-framing')
 ```
+
+也可以[下载当前源码 ZIP](https://github.com/zlsjtj/PaperCraft/archive/refs/heads/main.zip)，解压后将仓库文件夹改名为 `paper-evidence-framing`，放入 `~/.codex/skills/`；设置了 `CODEX_HOME` 时使用它下面的 `skills/` 目录。
 
 在新的 Codex 会话中提供稿件和相关材料，然后这样说：
 
@@ -76,4 +86,4 @@ Word 工具需要 Python 依赖，PDF 另需文档渲染环境。安装和命令
 
 [测试与验证](docs/usage.md#示例与检查) · [来源说明](references/video-source-notes.md) · [许可说明](LICENSE.md)
 
-当前自有内容尚未指定开源许可证，相关使用与再分发授权请联系维护者。技能内容版本为 2.30.1；历史发布的文件清单对应其固定 Git 标签。
+自有代码、技能说明和原创示例采用 [MIT 许可](LICENSE)。第三方内容遵循各自许可，详见[许可说明](LICENSE.md)。技能内容版本为 2.30.1；历史发布的文件清单对应其固定 Git 标签。

@@ -1,0 +1,54 @@
+{
+  "scenes": [
+    {
+      "width": 1120,
+      "height": 760,
+      "overflow": [],
+      "images": []
+    },
+    {
+      "width": 1120,
+      "height": 760,
+      "overflow": [],
+      "images": []
+    },
+    {
+      "width": 1120,
+      "height": 760,
+      "overflow": [],
+      "images": []
+    },
+    {
+      "width": 1120,
+      "height": 760,
+      "overflow": [],
+      "images": [
+        {
+          "src": "assets/clean-page.png",
+          "width": 651,
+          "height": 920
+        },
+        {
+          "src": "assets/review-page.png",
+          "width": 651,
+          "height": 920
+        }
+      ]
+    }
+  ],
+  "manual_navigation": "passed",
+  "duration_seconds": 32,
+  "source_sha256": {
+    "../../examples/clamp-timing/input/rough.txt": "b017636cdec5ab8e5325d2c5eaf6b3b0a14284b922cf3926621b21666877e88f",
+    "../../examples/clamp-timing/clean.pdf": "97e0c5cf64e91838e8c072847135109b98ffac9e9847da4c4af7dcd5071e8885",
+    "assets/clean-page.png": "32032efb0022d81e99e875ab0019991cafe5c379eebe1ebcc4a24d426e92f9dd",
+    "../../examples/clamp-timing/review.pdf": "dbd2dde1f41e16c5bcfe2e7ab9ea07cf711dddd71f8fdf43d9191dbf9dc17a77",
+    "assets/review-page.png": "674e7a4b750a00de7aefb8999548e4620d8d8d4bf01b4ecc091f7b16ed79d33a",
+    "../../examples/clamp-timing/clean.docx": "359926521e763b6b0d3b4dd73fae2a5fe02b903bb1a64adcbc1d668e64608af8",
+    "../../examples/clamp-timing/review.docx": "32e8bfe5ed7c8d6c49b4613572768314acaa98aa6fed2f50aaf0b8827011a827",
+    "../../examples/clamp-timing/authored-edits.json": "bf609abab5be29f351de0da62327f907ccbfbeec2dcb985edc05f623701ea897",
+    "../../examples/clamp-timing/README.md": "6c98bccd909d0c612ae9402f51bcea348aeffebf8c705771599bc79948dbb784"
+  },
+  "gif_sha256": "d1b95455d8374f3ee18ede3bc4d652c702634d11367f28e317b8354437757932",
+  "scope": "固定公开案例的展示重建；不评价技能在新任务上的生成质量"
+}
