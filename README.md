@@ -7,30 +7,15 @@
 
 ## 改写效果
 
-同一组材料，怎样从“做了不少工作”写到“读者理解这项工作的价值”？
+[![从结果清单到设计选择：同一套夹具，改变的是锁定时机](examples/clamp-timing/showcase/assets/contribution.png)](examples/clamp-timing/showcase/README.md)
 
-**原稿：模式和数字齐了，问题还没讲出来。**
+**先抓住选择，再讲工作与证据。** 可转动的压头能贴合斜面，但加载时继续保持自由也可能漂移。改稿将“何时锁住”前置，把收益、代价和必要操作串成一条论证。
 
-> 比较了现有压头的三种操作模式，记录包含九行结果。在倾斜条件下，L 模式的力变异系数为 2.3%，横向漂移为 19 μm，就位时间为 32 秒。其他条件也有差异。
-
-**改稿：先抓住设计选择——何时锁住压头。**
-
-> 可转动的压头能贴合斜面，但加载时继续保持自由，也可能产生横向漂移。关键在于何时锁住它。在给定斜面记录中，先就位再锁定，相比全程自由，漂移从 125 μm 降至 19 μm，就位时间则从 17 秒增至 32 秒。平面条件没有重复性收益，另一方向的斜面也未得到矫正。
-
-主线提前了，收益与代价也有了归属。预载保持、锁定时不抬起压头等必要工作，接着在方法段展开。
-
-**[阅读清稿 PDF](examples/clamp-timing/clean.pdf)** · [黄色审阅 PDF](examples/clamp-timing/review.pdf) · [下载 Word](examples/clamp-timing/clean.docx) · [查看原稿与逐段修改](examples/clamp-timing/README.md)
+**[完整前后对照](examples/clamp-timing/showcase/README.md)** · [技术工作怎样写](examples/clamp-timing/showcase/README.md#2-把操作写成必要的决定) · [读清稿 PDF](examples/clamp-timing/clean.pdf) · [看黄色审阅 PDF](examples/clamp-timing/review.pdf)
 
 <sub>英文案例的中文摘述；数值为教学构造数据。</sub>
 
-<details>
-<summary>展开查看：实际清稿与黄色审阅稿</summary>
-
-[![实际清稿与黄色审阅稿的第一页](docs/quick-tour/assets/step-4.png)](examples/clamp-timing/README.md)
-
-[下载审阅 Word](examples/clamp-timing/review.docx)。黄色高亮标记本轮改写，与 Word 原生修订分开保留。[32 秒案例导览](docs/quick-tour/tour.gif)可查看从材料到成稿的过程。
-
-</details>
+[Word 清稿](examples/clamp-timing/clean.docx) · [Word 审阅稿](examples/clamp-timing/review.docx) · [原始材料](examples/clamp-timing/input/rough.docx) · [30 秒案例导览](examples/clamp-timing/showcase/assets/tour.gif)
 
 ## 用在你的论文里
 

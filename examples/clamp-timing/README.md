@@ -4,6 +4,10 @@
 
 [读清稿 PDF](clean.pdf) · [看黄色修改](review.pdf) · [下载 Word 清稿](clean.docx) · [下载 Word 审阅稿](review.docx)
 
+[![创新定位、技术工作与完整成稿的前后对照](showcase/assets/contribution.png)](showcase/README.md)
+
+**[看完整三步对照](showcase/README.md)** · [30 秒导览](showcase/assets/tour.gif)
+
 ## 改写抓住了什么
 
 - 把“何时锁住已有压头”放在前面，不把已有转动结构写成新部件。

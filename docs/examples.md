@@ -4,9 +4,11 @@
 
 ## 摘要有很多信息，却看不出重点
 
+[![同一套夹具，改变的是锁定时机](../examples/clamp-timing/showcase/assets/contribution.png)](../examples/clamp-timing/showcase/README.md)
+
 **压头锁止时序。** 原稿列部件、模式和九行结果；改稿把“何时锁住已有压头”及漂移与操作时间的取舍前置。预载保持、锁定时不抬起等工程工作，留在方法中解释其作用。
 
-[原始材料](../examples/clamp-timing/input/rough.txt) · [清稿 PDF](../examples/clamp-timing/clean.pdf) · [黄色稿 PDF](../examples/clamp-timing/review.pdf) · [完整案例与源码](../examples/clamp-timing/README.md)
+[原始材料](../examples/clamp-timing/input/rough.txt) · [清稿 PDF](../examples/clamp-timing/clean.pdf) · [黄色稿 PDF](../examples/clamp-timing/review.pdf) · [三步前后对照](../examples/clamp-timing/showcase/README.md) · [完整案例与源码](../examples/clamp-timing/README.md)
 
 适合先试标题和摘要。它没有把已有转动副包装成新部件，也没有用重复装夹代替独立样本。[拿这份材料开始](first-use.md)。
 

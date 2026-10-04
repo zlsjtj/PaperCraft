@@ -1,0 +1,38 @@
+{
+  "clean": {
+    "checks": {
+      "native_formula_xml_exact": true,
+      "table_xml_exact": true,
+      "italic_runs_xml_exact": true,
+      "ref_instruction_xml_exact": true,
+      "field_nodes_xml_exact": true,
+      "bookmarks_xml_exact": true,
+      "hyperlinks_xml_exact": true,
+      "native_revisions_xml_exact": true,
+      "existing_yellow_retained": true,
+      "nine_csv_rows_exact": true,
+      "existing_docx_unchanged": true,
+      "existing_pdf_unchanged": true,
+      "three_pages_rendered": true
+    },
+    "docx_sha256": "359926521e763b6b0d3b4dd73fae2a5fe02b903bb1a64adcbc1d668e64608af8",
+    "pdf_sha256": "97e0c5cf64e91838e8c072847135109b98ffac9e9847da4c4af7dcd5071e8885"
+  },
+  "review": "维护模型查看清稿与审阅稿全部六页、三张展示图；未进行真人评审",
+  "visible_text_equal": true,
+  "source_rebuild": {
+    "contribution.pdf": true,
+    "contribution.png": true,
+    "contribution.svg": true,
+    "delivery.pdf": true,
+    "delivery.png": true,
+    "delivery.svg": true,
+    "engineering.pdf": true,
+    "engineering.png": true,
+    "engineering.svg": true,
+    "tour.gif": true
+  },
+  "scope": "公开案例的展示改进；没有再次改稿，也不是从新材料生成测试",
+  "effect": "完整案例更容易找到；首页直接呈现选择、必要工作和可下载成稿",
+  "remaining": "完整稿仍偏密，第三页留白较多；展示不等于普遍生成能力证明"
+}
