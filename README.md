@@ -45,7 +45,7 @@
 
 ## 开始使用
 
-在可以读写本地文件的 Codex 环境中使用。安装前请查看[许可说明](LICENSE.md)，已有同名技能目录时先备份。
+在可以读写本地文件的 Codex 环境中使用。安装前请查看[许可说明](docs/licensing.md)，已有同名技能目录时先备份。
 
 用 PowerShell 安装当前默认分支，包含 MIT 许可证：
 
@@ -84,6 +84,6 @@ Word 工具需要 Python 依赖，PDF 另需文档渲染环境。安装和命令
 
 觉得这些例子有用，可以点个 **Star** 留着下次改稿时用。
 
-[测试与验证](docs/usage.md#示例与检查) · [来源说明](references/video-source-notes.md) · [许可说明](LICENSE.md)
+[测试与验证](docs/usage.md#示例与检查) · [来源说明](references/video-source-notes.md) · [许可说明](docs/licensing.md)
 
-自有代码、技能说明和原创示例采用 [MIT 许可](LICENSE)。第三方内容遵循各自许可，详见[许可说明](LICENSE.md)。技能内容版本为 2.30.1；历史发布的文件清单对应其固定 Git 标签。
+自有代码、技能说明和原创示例采用 [MIT 许可](LICENSE)。第三方内容遵循各自许可，详见[许可说明](docs/licensing.md)。技能内容版本为 2.30.1；历史发布的文件清单对应其固定 Git 标签。
