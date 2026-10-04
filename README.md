@@ -65,4 +65,4 @@
 
 **觉得有用，点个 Star，留给下一次改稿。** 科研配图可搭配 [FigureCraft](https://github.com/zlsjtj/FigureCraft)。
 
-原创部分采用 [MIT](LICENSE)；[第三方许可](docs/licensing.md)、[实现与验证记录](docs/client-entry-validation.md)另列。
+[转发这个案例](docs/from-materials-to-paper.md) · 原创部分采用 [MIT](LICENSE)；[第三方许可](docs/licensing.md)、[实现与验证记录](docs/client-entry-validation.md)另列。

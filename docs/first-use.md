@@ -39,6 +39,10 @@ python scripts/first_run.py --host codex --out ../PaperCraft-try
 
 </details>
 
+## 留下一个具体反馈
+
+[打开使用反馈](https://github.com/zlsjtj/PaperCraft/issues/new?template=usage.yml)，写清使用工具和摘要主线是否更清楚、哪条证据仍难理解。结果已经满意也可以记录具体改善；未得到成品时，说明卡在哪一步即可。材料或截图可选，不必上传完整论文。
+
 ## 换成自己的材料
 
 提供原稿、实现说明和结果表，先明确要改的章节。说明沿用了什么、改了什么，但不必提前替技能总结创新点。
