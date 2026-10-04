@@ -1,18 +1,45 @@
 # PaperCraft｜论文叙事与精修
 
-PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
+从已有稿件、实现说明和结果表中提炼贡献，把技术难点与证据讲顺，交付可继续修改的 Word 稿。
 
-当前内容版本 **2.30.1**，调用标识 **`$paper-evidence-framing`**。科研绘图可配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用。
+这是一个 **Codex skill**，适合研究已有基础、文章还没把价值讲清楚的情况。可以改全文，也可以只改摘要、引言或一段难读的方法说明。
 
-本轮去掉固定计算案例的入口偏向，按证据问题组织论证，并修正负面过断言。陌生材料比较显示旧、新版各有优点，评后修复与首次生成分开记录。
+[看改写示例](#看一段改写) · [开始使用](#开始使用) · [下载 2.30.1](https://github.com/zlsjtj/PaperCraft/releases/tag/v2.30.1) · [科研绘图 FigureCraft](https://github.com/zlsjtj/FigureCraft)
 
-本次公开版本汇总近期经过验证的图文交付改进。[验证记录](tests/validation-2.30.1.md)说明实际得失、技术检查和未验证范围。内容版本用于识别文件，不能代表审稿或审美认证。
+## 看一段改写
 
-## 安装
+一个压头锁止时序的例子。原稿有部件、步骤和九行结果，但读者很难看出这些比较为什么值得做。下面是英文稿的中文摘述；**数据为教学构造值，不是真实实验**。
 
-安装前备份已有同名目录。下面的克隆命令取得默认分支；复现本次发布可再切换到标签 `v2.30.1`，或下载对应 Release。
+**原稿：列出做了什么**
 
-将仓库克隆到 Codex 的技能目录，目录名保留调用标识。以下命令适用于 PowerShell；设置了 `CODEX_HOME` 时使用该目录，否则使用用户目录下的 `.codex`。
+> 比较了现有压头的三种操作模式，记录包含九行结果。在倾斜条件下，L 模式的力变异系数为 2.3%，横向漂移为 19 μm，就位时间为 32 秒。其他条件也有差异。
+
+**改稿：先把问题和取舍讲明白**
+
+> 可转动的压头能贴合斜面，但加载时继续保持自由，也可能产生横向漂移。关键在于何时锁住它。在给定斜面记录中，先就位再锁定，相比全程自由，漂移从 125 μm 降至 19 μm，就位时间则从 17 秒增至 32 秒。平面条件没有重复性收益，另一方向的斜面也未得到矫正。
+
+读者现在能看见研究问题、有效的比较和付出的代价。方法部分再解释为何需要预载保持、为何锁定时不能抬起压头；这些工作有了理由，也有对应的证据。
+
+[原始材料](examples/clamp-timing/input/rough.txt) · [清稿 PDF](examples/clamp-timing/clean.pdf) · [黄色审阅稿 PDF](examples/clamp-timing/review.pdf) · [Word 与重建源码](examples/clamp-timing/README.md)
+
+这是一个经过审阅和修正的完整案例。不同版本的优缺点及首次产物保留在[对照记录](examples/clamp-timing/comparison/model-review.md)中。
+
+## 它具体改什么
+
+| 稿件中的问题 | 修改重点 |
+|---|---|
+| 摘要写满了步骤，贡献却不突出 | 从材料中区分继承工作与新增设计，把问题、变化和关键证据前置 |
+| 做了很多实现与验证，读起来像清单 | 解释具体困难、必要的设计决定，以及每组验证解决了什么疑问 |
+| 图、图注和正文各讲各的 | 重新分配解释任务，让主图与论文主线对应；绘图可配合 FigureCraft |
+| Word 已有公式、引用和历史修改 | 修改可支持的文字区域，保留受保护对象，输出独立清稿和审阅稿 |
+
+改稿通常附一份简短中文说明：改了哪里、依据是什么、还有什么问题。黄色表示本轮文字改动，**不是 Word 原生修订**；已有修订不会被静默接受。
+
+## 开始使用
+
+在可以读写本地文件的 Codex 环境中使用。安装前请查看[许可说明](LICENSE.md)，已有同名技能目录时先备份。
+
+下载 [Release 中的技能包](https://github.com/zlsjtj/PaperCraft/releases/latest)，将 `paper-evidence-framing` 文件夹放进 `~/.codex/skills/`；设置了 `CODEX_HOME` 时放进该目录下的 `skills/`。也可以用 PowerShell 安装：
 
 ```powershell
 $skillRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME 'skills' } else { Join-Path $env:USERPROFILE '.codex/skills' }
@@ -20,91 +47,33 @@ New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
 git clone https://github.com/zlsjtj/PaperCraft.git (Join-Path $skillRoot 'paper-evidence-framing')
 ```
 
-已有同名目录时先备份，不要覆盖正在使用的版本。在新会话中显式调用技能，可检查当前宿主是否识别了安装结果。自动发现由宿主管理；仓库中的配置允许隐式调用。
+在新的 Codex 会话中提供稿件和相关材料，然后这样说：
 
-## 怎么用
-
-直接提供论文和范围，例如：
-
-> 使用 $paper-evidence-framing 修改这份论文。先指出影响理解的问题，再修订创新定位、工程解释和结果讨论。保留原始数据、公式和负结果，给我清稿、黄色审阅稿、PDF 和中文前后对照。
-
-也可以只审阅、只改一段、继续上一版，或在实验未完成时整理已得到支持的内容。局部修改不会自动扩展成全文重写。
-
-一次完整修订通常交付：
-
-- 独立保存的清稿和黄色审阅稿；黄色表示本轮新增或改写的文字，删除、移动及图片替换另记。
-- 中文诊断与代表性前后对照，说明原问题、改法、依据和仍未解决的部分。
-- 图表的来源、修改状态、正文引用和实际入稿尺寸；新图应进入最终文件。
-- 内容保护、页面检查和作者确认记录。文件检查通过不等于作者已经认可。
-
-## 工具与依赖
-
-阅读、判断和改写由宿主模型执行。脚本负责定位、受控写入和检查，不会自行证明创新性。
-
-在自己选择的 Python 环境中安装依赖：
-
-```powershell
-python -m pip install -r requirements.txt
-python scripts/check_dependencies.py . --require docx --require preservation --out runtime.json
-python scripts/review_docx.py inspect manuscript.docx --out inventory.json
+```text
+使用 $paper-evidence-framing 修改这份论文。
+先判断最值得突出的贡献，让摘要和引言更快讲清问题、差异与证据，
+把必要的技术工作写充分。保留数据、公式和负结果，不扩大结论。
+交付独立清稿、黄色审阅稿，以及简短的中文改动说明。
 ```
 
-简单正文可按照 [清单格式](references/docx-helper.md) 编写补丁，再生成候选：
+第一次可以只试摘要和引言，满意后再处理全文。除了论文，尽量提供实现说明、结果表和图源；缺少的证据会单独标明，已有依据的内容仍可继续修改。
 
-```powershell
-python scripts/review_docx.py build manuscript.docx revision.json output --clean
-python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候选稿.docx --out protection.json
-```
+Word 工具需要 Python 依赖，PDF 另需文档渲染环境。安装和命令见[进阶使用](docs/usage.md)。
 
-输出目录应为新目录。含公式、域、交叉引用和混合格式的段落，其普通文字可用 replace_span；完整样例见[复杂 Word 流程](references/complex-word.md)。已完成整段写作但普通文字分成许多 run 时，可用 `apply_authored_edits.py` 的 `rewrite_prose_preserving_runs` 接续；示例和拒绝边界见复杂 Word 流程。整段替换仍严格保护这些对象。PDF 和逐页图片还需要宿主的 documents 技能、可用文档渲染器与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
+## 更多可检查的例子
 
-新版补充[选择规则复核与定范围审阅](references/method-transfer-audit.md)：检查训练配置如何映射到测试输入，并通过 `make_review_packet.py` 只提供明确选定的段落和图片。生成材料不等于完成独立审阅。
+- [复杂 Word 中只改一句话](examples/complex-word/README.md)：保留公式、斜体、交叉引用、超链接和历史修订。
+- [三种提示方式的改写对照](examples/three-way-reading-demo/README.md)：看不同写法实际得到和失去了什么。
+- [箱角解锁案例](examples/bin-latch/README.md)：从原始材料到前后稿，包含图形、源码与评阅。
 
-## 这次怎样判断是否改得更好
+## 使用边界与反馈
 
-先看实际阅读阻碍，再决定改哪里。入口要分清主贡献、支撑、证据和边界；方法要让具体困难先变得可见，实验要说明每个比较在区分什么。必要推导和参数完整留在论文内，不把“简洁”变成删掉证据。
+它帮助已有研究得到更清楚的表达，不补造实验、引用或创新，也不保证录用。示例中的模型评阅与技术检查都可查阅；没有把它们写成真人审稿认可。
 
-[论证修复](references/argument-repair.md)负责连接具体困难、必要决定和证据。全文检查各节是否推进中心判断；已有清楚的内容可以保留，不以每段改写或篇幅增加证明效果。
+如果有一段改稿反而更难读，或一个重要限定被遗漏，欢迎[提交 Issue](https://github.com/zlsjtj/PaperCraft/issues/new)。附上允许公开的最小片段、期望效果和实际结果即可；未发表稿件请勿直接贴进公开 Issue。
 
-审阅用实际前后稿回答：读者先看见什么，重要工作为何必要，哪里仍需往返查找。没有真实读者时明确称模型辅助评估。词数、答案齐全和工具通过不证明整篇好读；局部修改也不能冒充全文修订。
+觉得这些例子有用，可以点个 **Star** 留着下次改稿时用。
 
-## 示例与检查
+[测试与验证](docs/usage.md#示例与检查) · [来源说明](references/video-source-notes.md) · [许可说明](LICENSE.md)
 
-当前统一技术入口：
-
-```powershell
-python tests/run_all_tests.py --out test-output/current
-```
-
-它检查全库Python语法、旧回归、自动发现的单元测试和复杂Word示例的源码生成/build/verify路径。逐组报告失败、缺依赖和跳过，不能把这些状态合并成全部通过。输出不包括页面视觉验收或论文表达效果；这两项要另看精确产物。下面的旧单组命令继续有效，适合只复验受影响部分。
-
-[检查点流水线示例](references/checkpoint-demo/input.md)提供原文、限定证据、英文改稿和中文改动记录。数据是教学构造值，不能作为研究结果引用。其他[完整示例](references/worked-examples.md)展示贡献、工程段和结果段的修改理由。
-
-```powershell
-python tests/run_tests.py --work-dir test-output/basic
-python tests/run_preservation_tests.py --work-dir test-output/protection
-python tests/run_integration_tests.py --out test-output/integration
-python tests/run_effect_record_tests.py --out test-output/effect
-python tests/run_review_packet_tests.py --out test-output/reading
-python tests/run_representation_tests.py --out test-output/representations
-```
-
-再次执行时换用新的输出目录。本轮实际运行范围和产出审阅分别见[当前记录](tests/current-validation.md)，旧结果保留在[历史验收](tests/acceptance-results.md)。脚本通过不能作为写作效果的替代证据。
-
-## 文件与发布范围
-
-`SKILL.md` 是入口，`references/` 是具体方法，`templates/` 是工作记录，`scripts/` 和 `tests/` 是可执行工具及测试。
-
-公开版保留当前功能代码，使用中文说明和匿名教学案例。私人稿件、未公开测量记录、本机路径、代理会话记录和历次生成缓存留在本地归档。英文论文示例、命令参数和第三方专有名称保留原文。来源见[来源说明](references/video-source-notes.md)，许可状态见 [LICENSE.md](LICENSE.md)。
-
-包装不能补出不存在的研究贡献，也不能保证期刊初审。已经表达清楚的段落可以保留；缺实验、缺对照和缺来源应明确记录。
-
-历史试用在 Git 历史和版本验收中保留，不能代替当前版本验证。本轮区分首次完整稿、自主复读、外部评语后的开发修改，以及冻结后换材料再生成；共同排版工具的修复不记作某一生成条件的优势。
-
-新增可执行示例：[复杂 Word 局部修改](examples/complex-word/README.md)、[明确退步与回退](examples/effect-tradeoff/README.md)、[三组真实改写对照](examples/three-way-reading-demo/README.md)。
-
-科研图示例的重建依赖单独列在示例目录。可用 `python -m pip install -r examples/visual-editorial/requirements.txt` 安装 Python 部分，另提供本机字体和 Poppler；生成 Word 后仍需实际渲染和检查页面。
-
-[箱角解锁新材料试用](examples/bin-latch/README.md)保存普通提示、旧技能、新技能的首次产物与匿名比较。新版的状态对照更直接，但并非全面胜出；反馈后修复单独记录。
-
-[锁止时序新材料案例](examples/clamp-timing/README.md)提供原始材料、清稿与黄色审阅稿、可编辑图源和真实比较得失。该案例没有预写贡献答案，也没有把新版包装成全面胜者。
+当前自有内容尚未指定开源许可证，相关使用与再分发授权请联系维护者。技能内容版本为 2.30.1；历史发布的文件清单对应其固定 Git 标签。
