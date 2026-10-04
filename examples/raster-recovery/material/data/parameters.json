@@ -1,0 +1,22 @@
+{
+  "rows": 12,
+  "columns": 16,
+  "records_per_block": 4,
+  "x_pitch_mm": 4,
+  "y_pitch_mm": 6,
+  "payload_bytes_per_record": 256,
+  "home_ms": 120,
+  "row_anchor_ms": 30,
+  "acquire_ms": 10,
+  "AR_record_commit_ms": 0.8,
+  "RC_row_commit_ms": 4.0,
+  "BS_block_seal_ms": 2.0,
+  "BS_row_checkpoint_ms": 1.0,
+  "recovery_lookup_ms": {
+    "AR": 4,
+    "RC": 1,
+    "BS": 6
+  },
+  "power_off_gap_ms": 40,
+  "model_scope": "Synthetic discrete-event accounting; no hardware or real workload measurements"
+}

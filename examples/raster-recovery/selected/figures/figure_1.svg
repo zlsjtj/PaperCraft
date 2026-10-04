@@ -1,0 +1,355 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="112mm" viewBox="0 0 1600 1120">
+<title>figure_1: synthetic DEMO</title>
+<rect id="g1" x="0" y="0" width="1600" height="1120" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text id="label2" x="55" y="64" font-family="Arial" font-size="44" font-weight="bold" fill="#20343D" text-anchor="start">1  Where does the next sample belong?</text>
+<text id="label3" x="1545" y="106" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">SYNTHETIC DEMO</text>
+<text id="label4" x="95" y="135" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">12 × 16 centers</text>
+<text id="label5" x="420" y="135" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="start">60 × 66 mm extent</text>
+<text id="label6" x="70" y="170" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">r</text>
+<text id="label7" x="104" y="170" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">0</text>
+<text id="label8" x="705" y="170" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">15</text>
+<text id="label9" x="385" y="170" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">physical column c</text>
+<line id="line10" x1="705" y1="190" x2="705" y2="250" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g11" points="705,250 712.0,236.0 698.0,236.0" fill="#8D9AA0" stroke="none"/>
+<line id="line12" x1="105" y1="190" x2="705" y2="190" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g13" points="705,190 691.0,183.0 691.0,197.0" fill="#8D9AA0" stroke="none"/>
+<line id="line14" x1="105" y1="250" x2="105" y2="310" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g15" points="105,310 112.0,296.0 98.0,296.0" fill="#8D9AA0" stroke="none"/>
+<line id="line16" x1="705" y1="250" x2="105" y2="250" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g17" points="105,250 119.0,257.0 119.0,243.0" fill="#8D9AA0" stroke="none"/>
+<line id="line18" x1="705" y1="310" x2="705" y2="370" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g19" points="705,370 712.0,356.0 698.0,356.0" fill="#8D9AA0" stroke="none"/>
+<line id="line20" x1="105" y1="310" x2="705" y2="310" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g21" points="705,310 691.0,303.0 691.0,317.0" fill="#8D9AA0" stroke="none"/>
+<line id="line22" x1="105" y1="370" x2="105" y2="430" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g23" points="105,430 112.0,416.0 98.0,416.0" fill="#8D9AA0" stroke="none"/>
+<line id="line24" x1="705" y1="370" x2="105" y2="370" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g25" points="105,370 119.0,377.0 119.0,363.0" fill="#8D9AA0" stroke="none"/>
+<line id="line26" x1="705" y1="430" x2="705" y2="490" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g27" points="705,490 712.0,476.0 698.0,476.0" fill="#8D9AA0" stroke="none"/>
+<line id="line28" x1="105" y1="430" x2="705" y2="430" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g29" points="705,430 691.0,423.0 691.0,437.0" fill="#8D9AA0" stroke="none"/>
+<line id="line30" x1="105" y1="490" x2="105" y2="550" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g31" points="105,550 112.0,536.0 98.0,536.0" fill="#8D9AA0" stroke="none"/>
+<line id="line32" x1="705" y1="490" x2="105" y2="490" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g33" points="105,490 119.0,497.0 119.0,483.0" fill="#8D9AA0" stroke="none"/>
+<line id="line34" x1="705" y1="550" x2="705" y2="610" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g35" points="705,610 712.0,596.0 698.0,596.0" fill="#8D9AA0" stroke="none"/>
+<line id="line36" x1="105" y1="550" x2="705" y2="550" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g37" points="705,550 691.0,543.0 691.0,557.0" fill="#8D9AA0" stroke="none"/>
+<line id="line38" x1="105" y1="610" x2="105" y2="670" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g39" points="105,670 112.0,656.0 98.0,656.0" fill="#8D9AA0" stroke="none"/>
+<line id="line40" x1="705" y1="610" x2="105" y2="610" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g41" points="105,610 119.0,617.0 119.0,603.0" fill="#8D9AA0" stroke="none"/>
+<line id="line42" x1="705" y1="670" x2="705" y2="730" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g43" points="705,730 712.0,716.0 698.0,716.0" fill="#8D9AA0" stroke="none"/>
+<line id="line44" x1="105" y1="670" x2="705" y2="670" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g45" points="705,670 691.0,663.0 691.0,677.0" fill="#8D9AA0" stroke="none"/>
+<line id="line46" x1="105" y1="730" x2="105" y2="790" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g47" points="105,790 112.0,776.0 98.0,776.0" fill="#8D9AA0" stroke="none"/>
+<line id="line48" x1="705" y1="730" x2="105" y2="730" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g49" points="105,730 119.0,737.0 119.0,723.0" fill="#8D9AA0" stroke="none"/>
+<line id="line50" x1="705" y1="790" x2="705" y2="850" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g51" points="705,850 712.0,836.0 698.0,836.0" fill="#8D9AA0" stroke="none"/>
+<line id="line52" x1="105" y1="790" x2="705" y2="790" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g53" points="705,790 691.0,783.0 691.0,797.0" fill="#8D9AA0" stroke="none"/>
+<line id="line54" x1="705" y1="850" x2="105" y2="850" stroke="#8D9AA0" stroke-width="2"/>
+<polygon id="g55" points="105,850 119.0,857.0 119.0,843.0" fill="#8D9AA0" stroke="none"/>
+<rect id="g56" x="80" y="466" width="652" height="48" rx="12" fill="#F6F3FA" stroke="#68489A" stroke-width="2"/>
+<text id="label57" x="67" y="200" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">0</text>
+<text id="label58" x="763" y="200" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">→</text>
+<circle id="center-r0-c0" cx="105" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c1" cx="145" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c2" cx="185" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c3" cx="225" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c4" cx="265" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c5" cx="305" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c6" cx="345" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c7" cx="385" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c8" cx="425" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c9" cx="465" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c10" cx="505" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c11" cx="545" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c12" cx="585" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c13" cx="625" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c14" cx="665" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r0-c15" cx="705" cy="190" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<text id="label59" x="67" y="260" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">1</text>
+<text id="label60" x="763" y="260" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">←</text>
+<circle id="center-r1-c0" cx="105" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c1" cx="145" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c2" cx="185" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c3" cx="225" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c4" cx="265" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c5" cx="305" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c6" cx="345" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c7" cx="385" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c8" cx="425" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c9" cx="465" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c10" cx="505" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c11" cx="545" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c12" cx="585" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c13" cx="625" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c14" cx="665" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r1-c15" cx="705" cy="250" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<text id="label61" x="67" y="320" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">2</text>
+<text id="label62" x="763" y="320" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">→</text>
+<circle id="center-r2-c0" cx="105" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c1" cx="145" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c2" cx="185" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c3" cx="225" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c4" cx="265" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c5" cx="305" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c6" cx="345" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c7" cx="385" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c8" cx="425" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c9" cx="465" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c10" cx="505" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c11" cx="545" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c12" cx="585" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c13" cx="625" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c14" cx="665" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r2-c15" cx="705" cy="310" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<text id="label63" x="67" y="380" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">3</text>
+<text id="label64" x="763" y="380" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">←</text>
+<circle id="center-r3-c0" cx="105" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c1" cx="145" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c2" cx="185" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c3" cx="225" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c4" cx="265" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c5" cx="305" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c6" cx="345" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c7" cx="385" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c8" cx="425" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c9" cx="465" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c10" cx="505" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c11" cx="545" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c12" cx="585" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c13" cx="625" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c14" cx="665" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r3-c15" cx="705" cy="370" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<text id="label65" x="67" y="440" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">4</text>
+<text id="label66" x="763" y="440" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">→</text>
+<circle id="center-r4-c0" cx="105" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c1" cx="145" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c2" cx="185" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c3" cx="225" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c4" cx="265" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c5" cx="305" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c6" cx="345" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c7" cx="385" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c8" cx="425" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c9" cx="465" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c10" cx="505" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c11" cx="545" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c12" cx="585" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c13" cx="625" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c14" cx="665" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<circle id="center-r4-c15" cx="705" cy="430" r="11" fill="#ACB9BC" stroke="#73858C" stroke-width="2"/>
+<text id="label67" x="67" y="500" font-family="Arial" font-size="30" font-weight="bold" fill="#20343D" text-anchor="end">5</text>
+<text id="label68" x="763" y="500" font-family="Arial" font-size="30" font-weight="normal" fill="#68489A" text-anchor="middle">←</text>
+<circle id="center-r5-c0" cx="105" cy="490" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r5-c1" cx="145" cy="490" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r5-c2" cx="185" cy="490" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r5-c3" cx="225" cy="490" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r5-c4" cx="265" cy="490" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r5-c5" cx="305" cy="490" r="11" fill="#FFFFFF" stroke="#B2423A" stroke-width="2"/>
+<line id="line69" x1="299" y1="484" x2="311" y2="496" stroke="#B2423A" stroke-width="2"/>
+<line id="line70" x1="299" y1="496" x2="311" y2="484" stroke="#B2423A" stroke-width="2"/>
+<circle id="center-r5-c6" cx="345" cy="490" r="11" fill="#FBECCA" stroke="#A66F18" stroke-width="2"/>
+<circle id="center-r5-c7" cx="385" cy="490" r="11" fill="#FBECCA" stroke="#A66F18" stroke-width="2"/>
+<circle id="restart-ring" cx="385" cy="490" r="18" fill="#FBECCA" stroke="#68489A" stroke-width="4"/>
+<circle id="center-r5-c8" cx="425" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c9" cx="465" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c10" cx="505" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c11" cx="545" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c12" cx="585" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c13" cx="625" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c14" cx="665" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="center-r5-c15" cx="705" cy="490" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label71" x="67" y="560" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">6</text>
+<text id="label72" x="763" y="560" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">→</text>
+<circle id="center-r6-c0" cx="105" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c1" cx="145" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c2" cx="185" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c3" cx="225" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c4" cx="265" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c5" cx="305" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c6" cx="345" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c7" cx="385" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c8" cx="425" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c9" cx="465" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c10" cx="505" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c11" cx="545" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c12" cx="585" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c13" cx="625" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c14" cx="665" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r6-c15" cx="705" cy="550" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label73" x="67" y="620" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">7</text>
+<text id="label74" x="763" y="620" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">←</text>
+<circle id="center-r7-c0" cx="105" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c1" cx="145" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c2" cx="185" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c3" cx="225" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c4" cx="265" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c5" cx="305" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c6" cx="345" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c7" cx="385" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c8" cx="425" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c9" cx="465" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c10" cx="505" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c11" cx="545" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c12" cx="585" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c13" cx="625" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c14" cx="665" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r7-c15" cx="705" cy="610" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label75" x="67" y="680" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">8</text>
+<text id="label76" x="763" y="680" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">→</text>
+<circle id="center-r8-c0" cx="105" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c1" cx="145" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c2" cx="185" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c3" cx="225" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c4" cx="265" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c5" cx="305" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c6" cx="345" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c7" cx="385" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c8" cx="425" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c9" cx="465" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c10" cx="505" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c11" cx="545" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c12" cx="585" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c13" cx="625" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c14" cx="665" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r8-c15" cx="705" cy="670" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label77" x="67" y="740" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">9</text>
+<text id="label78" x="763" y="740" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">←</text>
+<circle id="center-r9-c0" cx="105" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c1" cx="145" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c2" cx="185" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c3" cx="225" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c4" cx="265" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c5" cx="305" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c6" cx="345" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c7" cx="385" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c8" cx="425" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c9" cx="465" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c10" cx="505" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c11" cx="545" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c12" cx="585" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c13" cx="625" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c14" cx="665" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r9-c15" cx="705" cy="730" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label79" x="67" y="800" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">10</text>
+<text id="label80" x="763" y="800" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">→</text>
+<circle id="center-r10-c0" cx="105" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c1" cx="145" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c2" cx="185" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c3" cx="225" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c4" cx="265" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c5" cx="305" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c6" cx="345" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c7" cx="385" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c8" cx="425" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c9" cx="465" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c10" cx="505" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c11" cx="545" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c12" cx="585" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c13" cx="625" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c14" cx="665" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r10-c15" cx="705" cy="790" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label81" x="67" y="860" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">11</text>
+<text id="label82" x="763" y="860" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">←</text>
+<circle id="center-r11-c0" cx="105" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c1" cx="145" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c2" cx="185" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c3" cx="225" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c4" cx="265" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c5" cx="305" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c6" cx="345" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c7" cx="385" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c8" cx="425" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c9" cx="465" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c10" cx="505" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c11" cx="545" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c12" cx="585" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c13" cx="625" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c14" cx="665" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="center-r11-c15" cx="705" cy="850" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="entry-ring" cx="705" cy="490" r="18" fill="#FFFFFF" stroke="#20343D" stroke-width="3"/>
+<circle id="g83" cx="705" cy="490" r="10" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<line id="line84" x1="120" y1="881" x2="693" y2="881" stroke="#56636B" stroke-width="2"/>
+<text id="label85" x="406" y="916" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">x increases →</text>
+<text id="label86" x="80" y="954" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">Row 5 detail · same centers</text>
+<text id="label87" x="815" y="195" font-family="Arial" font-size="36" font-weight="bold" fill="#20343D" text-anchor="start">Checkpoint: next_row = 5</text>
+<text id="label88" x="815" y="236" font-family="Arial" font-size="31" font-weight="normal" fill="#56636B" text-anchor="start">Epoch 7 · rows 0–4 complete</text>
+<line id="line89" x1="815" y1="269" x2="1535" y2="269" stroke="#EAF0F2" stroke-width="3"/>
+<circle id="g90" cx="833" cy="313" r="11" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label91" x="862" y="322" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">Sealed</text>
+<text id="label92" x="862" y="359" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="start">b0 + b1 · 8 records</text>
+<circle id="g93" cx="833" cy="397" r="11" fill="#FBECCA" stroke="#A66F18" stroke-width="2"/>
+<text id="label94" x="862" y="406" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">Volatile</text>
+<text id="label95" x="862" y="443" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="start">k = 8, 9 · repeat after reset</text>
+<circle id="g96" cx="833" cy="481" r="11" fill="#FFFFFF" stroke="#B2423A" stroke-width="2"/>
+<line id="line97" x1="827" y1="475" x2="839" y2="487" stroke="#B2423A" stroke-width="2"/>
+<line id="line98" x1="827" y1="487" x2="839" y2="475" stroke="#B2423A" stroke-width="2"/>
+<text id="label99" x="862" y="490" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">Interrupted</text>
+<text id="label100" x="862" y="527" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="start">k = 10 · no completed sample</text>
+<rect id="g101" x="810" y="555" width="725" height="161" rx="13" fill="#F6F3FA" stroke="none" stroke-width="2"/>
+<text id="label102" x="839" y="600" font-family="Arial" font-size="40" font-weight="bold" fill="#68489A" text-anchor="start">Restart: q = 88</text>
+<text id="label103" x="839" y="645" font-family="Arial" font-size="34" font-weight="normal" fill="#20343D" text-anchor="start">r = 5, k = 8 → c = 7</text>
+<text id="label104" x="839" y="686" font-family="Arial" font-size="34" font-weight="normal" fill="#20343D" text-anchor="start">(x, y) = (28, 30) mm</text>
+<text id="label105" x="815" y="774" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">Entry reference: c = 15</text>
+<text id="label106" x="815" y="815" font-family="Arial" font-size="32" font-weight="normal" fill="#20343D" text-anchor="start">(60, 30) mm → anchor → q = 88</text>
+<circle id="g107" cx="833" cy="869" r="11" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label108" x="862" y="880" font-family="Arial" font-size="32" font-weight="normal" fill="#20343D" text-anchor="start">Not yet acquired</text>
+<text id="label109" x="815" y="920" font-family="Arial" font-size="32" font-weight="bold" fill="#20343D" text-anchor="start">Anchoring establishes position.</text>
+<rect id="g110" x="1144" y="992" width="328" height="73" rx="8" fill="#D7EEEA" stroke="#11736A" stroke-width="2"/>
+<text id="label111" x="1308.0" y="983" font-family="Arial" font-size="30" font-weight="normal" fill="#11736A" text-anchor="middle">b0</text>
+<rect id="g112" x="792" y="992" width="328" height="73" rx="8" fill="#D7EEEA" stroke="#11736A" stroke-width="2"/>
+<text id="label113" x="956.0" y="983" font-family="Arial" font-size="30" font-weight="normal" fill="#11736A" text-anchor="middle">b1</text>
+<rect id="g114" x="440" y="992" width="328" height="73" rx="8" fill="#F8F9FA" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label115" x="604.0" y="983" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">b2</text>
+<rect id="g116" x="88" y="992" width="328" height="73" rx="8" fill="#F8F9FA" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label117" x="252.0" y="983" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">b3</text>
+<circle id="row5-detail-c0" cx="120" cy="1030" r="16" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label118" x="120" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">0</text>
+<circle id="row5-detail-c1" cx="208" cy="1030" r="16" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label119" x="208" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">1</text>
+<circle id="row5-detail-c2" cx="296" cy="1030" r="16" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label120" x="296" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">2</text>
+<circle id="row5-detail-c3" cx="384" cy="1030" r="16" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label121" x="384" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">3</text>
+<circle id="row5-detail-c4" cx="472" cy="1030" r="16" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label122" x="472" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">4</text>
+<circle id="row5-detail-c5" cx="560" cy="1030" r="16" fill="#FFFFFF" stroke="#B2423A" stroke-width="2"/>
+<line id="line123" x1="551" y1="1021" x2="569" y2="1039" stroke="#B2423A" stroke-width="3"/>
+<line id="line124" x1="551" y1="1039" x2="569" y2="1021" stroke="#B2423A" stroke-width="3"/>
+<text id="label125" x="560" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">5</text>
+<circle id="row5-detail-c6" cx="648" cy="1030" r="16" fill="#FBECCA" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label126" x="648" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">6</text>
+<circle id="row5-detail-c7" cx="736" cy="1030" r="16" fill="#FBECCA" stroke="#8D9AA0" stroke-width="2"/>
+<circle id="g127" cx="736" cy="1030" r="24" fill="#FBECCA" stroke="#68489A" stroke-width="4"/>
+<text id="label128" x="736" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">7</text>
+<circle id="row5-detail-c8" cx="824" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label129" x="824" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">8</text>
+<circle id="row5-detail-c9" cx="912" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label130" x="912" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">9</text>
+<circle id="row5-detail-c10" cx="1000" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label131" x="1000" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">10</text>
+<circle id="row5-detail-c11" cx="1088" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label132" x="1088" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">11</text>
+<circle id="row5-detail-c12" cx="1176" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label133" x="1176" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">12</text>
+<circle id="row5-detail-c13" cx="1264" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label134" x="1264" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">13</text>
+<circle id="row5-detail-c14" cx="1352" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label135" x="1352" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">14</text>
+<circle id="row5-detail-c15" cx="1440" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<circle id="g136" cx="1440" cy="1030" r="24" fill="#FFFFFF" stroke="#20343D" stroke-width="3"/>
+<circle id="g137" cx="1440" cy="1030" r="16" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label138" x="1440" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">15</text>
+<text id="label139" x="56" y="1100" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="start">c</text>
+<line id="line140" x1="1520" y1="951" x2="1280" y2="951" stroke="#68489A" stroke-width="3"/>
+<polygon id="g141" points="1280,951 1295.0,958.5 1295.0,943.5" fill="#68489A" stroke="none"/>
+<text id="label142" x="1250" y="962" font-family="Arial" font-size="30" font-weight="normal" fill="#68489A" text-anchor="end">row 5 traversal</text>
+</svg>

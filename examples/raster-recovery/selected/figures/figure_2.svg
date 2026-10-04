@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="112mm" viewBox="0 0 1600 1120">
+<title>figure_2: synthetic DEMO</title>
+<rect id="g1" x="0" y="0" width="1600" height="1120" rx="0" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text id="label2" x="55" y="64" font-family="Arial" font-size="42" font-weight="bold" fill="#20343D" text-anchor="start">2  Sealed output and position recover separately</text>
+<text id="label3" x="1545" y="108" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="end">SYNTHETIC DEMO</text>
+<text id="label4" x="55" y="155" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">FORWARD</text>
+<rect id="g5" x="55" y="198" width="270" height="75" rx="8" fill="#E9EFF7" stroke="#315D87" stroke-width="2"/>
+<text id="label6" x="190" y="245" font-family="Arial" font-size="30" font-weight="normal" fill="#315D87" text-anchor="middle">Ordinal q = 16r + k</text>
+<rect id="g7" x="55" y="296" width="270" height="75" rx="8" fill="#F0ECF8" stroke="#68489A" stroke-width="2"/>
+<text id="label8" x="190" y="342" font-family="Arial" font-size="32" font-weight="normal" fill="#68489A" text-anchor="middle">Physical (x, y)</text>
+<line id="line9" x1="325" y1="236" x2="400" y2="236" stroke="#315D87" stroke-width="3"/>
+<polygon id="g10" points="400,236 385.0,228.5 385.0,243.5" fill="#315D87" stroke="none"/>
+<line id="line11" x1="325" y1="334" x2="400" y2="334" stroke="#68489A" stroke-width="3"/>
+<polygon id="g12" points="400,334 385.0,326.5 385.0,341.5" fill="#68489A" stroke="none"/>
+<rect id="g13" x="400" y="199" width="285" height="173" rx="10" fill="#FBECCA" stroke="#A66F18" stroke-width="2"/>
+<text id="label14" x="542" y="238" font-family="Arial" font-size="32" font-weight="bold" fill="#20343D" text-anchor="middle">Acquired records</text>
+<rect id="g15" x="418" y="258" width="57" height="55" rx="3" fill="#FFFFFF" stroke="#A66F18" stroke-width="2"/>
+<rect id="g16" x="482" y="258" width="57" height="55" rx="3" fill="#FFFFFF" stroke="#A66F18" stroke-width="2"/>
+<rect id="g17" x="546" y="258" width="57" height="55" rx="3" fill="#FFFFFF" stroke="#A66F18" stroke-width="2"/>
+<rect id="g18" x="610" y="258" width="57" height="55" rx="3" fill="#FFFFFF" stroke="#A66F18" stroke-width="2"/>
+<text id="label19" x="542" y="351" font-family="Arial" font-size="32" font-weight="normal" fill="#20343D" text-anchor="middle">RAM · 4 × 256 B</text>
+<text id="label20" x="542" y="413" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">10 ms / acquisition</text>
+<line id="line21" x1="685" y1="281" x2="810" y2="281" stroke="#11736A" stroke-width="4"/>
+<polygon id="g22" points="810,281 794.0,273.0 794.0,289.0" fill="#11736A" stroke="none"/>
+<text id="label23" x="748" y="259" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">write</text>
+<rect id="g24" x="810" y="198" width="360" height="90" rx="7" fill="#D7EEEA" stroke="#11736A" stroke-width="3"/>
+<text id="label25" x="990" y="236" font-family="Arial" font-size="34" font-weight="bold" fill="#11736A" text-anchor="middle">Persistent payload</text>
+<text id="label26" x="990" y="274" font-family="Arial" font-size="30" font-weight="normal" fill="#11736A" text-anchor="middle">1024 B</text>
+<rect id="g27" x="810" y="304" width="360" height="68" rx="7" fill="#11736A" stroke="#11736A" stroke-width="2"/>
+<text id="label28" x="990" y="349" font-family="Arial" font-size="34" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Seal · 24 B</text>
+<line id="line29" x1="990" y1="288" x2="990" y2="302" stroke="#11736A" stroke-width="3"/>
+<polygon id="g30" points="990,302 997.5,287.0 982.5,287.0" fill="#11736A" stroke="none"/>
+<text id="label31" x="990" y="413" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">2 ms combined event</text>
+<line id="line32" x1="1170" y1="338" x2="1260" y2="338" stroke="#11736A" stroke-width="3"/>
+<polygon id="g33" points="1260,338 1245.0,330.5 1245.0,345.5" fill="#11736A" stroke="none"/>
+<text id="label34" x="1357" y="188" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="middle">Row checkpoint</text>
+<rect id="g35" x="1260" y="210" width="135" height="160" rx="8" fill="#EAF0F2" stroke="#315D87" stroke-width="2"/>
+<text id="label36" x="1327" y="255" font-family="Arial" font-size="36" font-weight="bold" fill="#315D87" text-anchor="middle">A</text>
+<text id="label37" x="1327" y="305" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">64 B</text>
+<text id="label38" x="1327" y="350" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">slot</text>
+<rect id="g39" x="1405" y="210" width="135" height="160" rx="8" fill="#EAF0F2" stroke="#315D87" stroke-width="2"/>
+<text id="label40" x="1472" y="255" font-family="Arial" font-size="36" font-weight="bold" fill="#315D87" text-anchor="middle">B</text>
+<text id="label41" x="1472" y="305" font-family="Arial" font-size="30" font-weight="normal" fill="#20343D" text-anchor="middle">64 B</text>
+<text id="label42" x="1472" y="350" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">slot</text>
+<text id="label43" x="1400" y="413" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">after 4 blocks · 1 ms</text>
+<line id="line44" x1="55" y1="468" x2="1545" y2="468" stroke="#8D9AA0" stroke-width="2" stroke-dasharray="9 8"/>
+<line id="line45" x1="415" y1="461" x2="439" y2="485" stroke="#B2423A" stroke-width="4"/>
+<line id="line46" x1="415" y1="485" x2="439" y2="461" stroke="#B2423A" stroke-width="4"/>
+<text id="label47" x="455" y="513" font-family="Arial" font-size="31" font-weight="normal" fill="#B2423A" text-anchor="start">cut discards buffer</text>
+<text id="label48" x="55" y="579" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="start">RESTART</text>
+<rect id="g49" x="55" y="650" width="210" height="165" rx="10" fill="#F0ECF8" stroke="#68489A" stroke-width="2"/>
+<text id="label50" x="160" y="703" font-family="Arial" font-size="36" font-weight="bold" fill="#68489A" text-anchor="middle">Home</text>
+<text id="label51" x="160" y="749" font-family="Arial" font-size="32" font-weight="normal" fill="#20343D" text-anchor="middle">120 ms</text>
+<text id="label52" x="160" y="789" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">known origin</text>
+<line id="line53" x1="265" y1="733" x2="347" y2="733" stroke="#20343D" stroke-width="3"/>
+<polygon id="g54" points="347,733 332.0,725.5 332.0,740.5" fill="#20343D" stroke="none"/>
+<rect id="g55" x="347" y="624" width="463" height="253" rx="10" fill="#F6F9FA" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label56" x="578" y="668" font-family="Arial" font-size="34" font-weight="bold" fill="#20343D" text-anchor="middle">Recovery reader · 6 ms</text>
+<text id="label57" x="578" y="709" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">checkpoint → row → seal scan</text>
+<rect id="g58" x="370" y="737" width="93" height="60" rx="5" fill="#D7EEEA" stroke="#11736A" stroke-width="2"/>
+<text id="label59" x="416" y="775" font-family="Arial" font-size="31" font-weight="normal" fill="#11736A" text-anchor="middle">b0</text>
+<line id="line60" x1="408" y1="817" x2="415" y2="824" stroke="#11736A" stroke-width="3"/>
+<line id="line61" x1="415" y1="824" x2="429" y2="807" stroke="#11736A" stroke-width="3"/>
+<rect id="g62" x="476" y="737" width="93" height="60" rx="5" fill="#D7EEEA" stroke="#11736A" stroke-width="2"/>
+<text id="label63" x="522" y="775" font-family="Arial" font-size="31" font-weight="normal" fill="#11736A" text-anchor="middle">b1</text>
+<line id="line64" x1="514" y1="817" x2="521" y2="824" stroke="#11736A" stroke-width="3"/>
+<line id="line65" x1="521" y1="824" x2="535" y2="807" stroke="#11736A" stroke-width="3"/>
+<rect id="g66" x="582" y="737" width="93" height="60" rx="5" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label67" x="628" y="775" font-family="Arial" font-size="31" font-weight="normal" fill="#56636B" text-anchor="middle">b2</text>
+<line id="line68" x1="619" y1="807" x2="639" y2="827" stroke="#B2423A" stroke-width="3"/>
+<line id="line69" x1="619" y1="827" x2="639" y2="807" stroke="#B2423A" stroke-width="3"/>
+<rect id="g70" x="688" y="737" width="93" height="60" rx="5" fill="#FFFFFF" stroke="#8D9AA0" stroke-width="2"/>
+<text id="label71" x="734" y="775" font-family="Arial" font-size="31" font-weight="normal" fill="#56636B" text-anchor="middle">b3</text>
+<line id="line72" x1="719" y1="817" x2="750" y2="817" stroke="#8D9AA0" stroke-width="3"/>
+<text id="label73" x="578" y="856" font-family="Arial" font-size="30" font-weight="normal" fill="#B2423A" text-anchor="middle">stop at first invalid / absent</text>
+<line id="line74" x1="810" y1="733" x2="900" y2="733" stroke="#315D87" stroke-width="4"/>
+<polygon id="g75" points="900,733 884.0,725.0 884.0,741.0" fill="#315D87" stroke="none"/>
+<text id="label76" x="854" y="703" font-family="Arial" font-size="32" font-weight="normal" fill="#315D87" text-anchor="middle">q</text>
+<rect id="g77" x="900" y="650" width="295" height="165" rx="10" fill="#F0ECF8" stroke="#68489A" stroke-width="2"/>
+<text id="label78" x="1048" y="699" font-family="Arial" font-size="36" font-weight="bold" fill="#68489A" text-anchor="middle">Row anchor</text>
+<text id="label79" x="1048" y="741" font-family="Arial" font-size="32" font-weight="normal" fill="#20343D" text-anchor="middle">30 ms</text>
+<text id="label80" x="1048" y="785" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">travel to missing q</text>
+<line id="line81" x1="1195" y1="733" x2="1310" y2="733" stroke="#68489A" stroke-width="4"/>
+<polygon id="g82" points="1310,733 1294.0,725.0 1294.0,741.0" fill="#68489A" stroke="none"/>
+<text id="label83" x="1252" y="695" font-family="Arial" font-size="30" font-weight="normal" fill="#68489A" text-anchor="middle">(x, y)</text>
+<rect id="g84" x="1310" y="650" width="235" height="165" rx="10" fill="#D7EEEA" stroke="#11736A" stroke-width="2"/>
+<text id="label85" x="1428" y="704" font-family="Arial" font-size="36" font-weight="bold" fill="#11736A" text-anchor="middle">Acquire</text>
+<text id="label86" x="1428" y="749" font-family="Arial" font-size="31" font-weight="normal" fill="#20343D" text-anchor="middle">next sample</text>
+<text id="label87" x="1428" y="789" font-family="Arial" font-size="32" font-weight="normal" fill="#20343D" text-anchor="middle">10 ms</text>
+<line id="line88" x1="578" y1="877" x2="578" y2="949" stroke="#315D87" stroke-width="3"/>
+<line id="line89" x1="578" y1="949" x2="1428" y2="949" stroke="#315D87" stroke-width="3" stroke-dasharray="10 6"/>
+<line id="line90" x1="1428" y1="949" x2="1428" y2="815" stroke="#315D87" stroke-width="3"/>
+<polygon id="g91" points="1428,815 1420.5,830.0 1435.5,830.0" fill="#315D87" stroke="none"/>
+<text id="label92" x="1000" y="934" font-family="Arial" font-size="33" font-weight="normal" fill="#315D87" text-anchor="middle">Logical label q = 88</text>
+<text id="label93" x="57" y="1020" font-family="Arial" font-size="32" font-weight="bold" fill="#20343D" text-anchor="start">Prefix acceptance: matching metadata + payload CRC</text>
+<text id="label94" x="57" y="1068" font-family="Arial" font-size="32" font-weight="bold" fill="#68489A" text-anchor="start">Position acceptance: home + row anchor</text>
+<line id="line95" x1="574" y1="727" x2="574" y2="833" stroke="#B2423A" stroke-width="3" stroke-dasharray="5 5"/>
+<line id="line96" x1="842" y1="372" x2="842" y2="535" stroke="#11736A" stroke-width="2"/>
+<line id="line97" x1="1260" y1="357" x2="1230" y2="357" stroke="#315D87" stroke-width="2"/>
+<line id="line98" x1="1230" y1="357" x2="1230" y2="535" stroke="#315D87" stroke-width="2"/>
+<line id="line99" x1="788" y1="535" x2="1230" y2="535" stroke="#20343D" stroke-width="2"/>
+<line id="line100" x1="788" y1="535" x2="788" y2="624" stroke="#20343D" stroke-width="2"/>
+<polygon id="g101" points="788,624 795.0,610.0 781.0,610.0" fill="#20343D" stroke="none"/>
+<text id="label102" x="1137" y="507" font-family="Arial" font-size="30" font-weight="normal" fill="#56636B" text-anchor="middle">read durable state</text>
+</svg>

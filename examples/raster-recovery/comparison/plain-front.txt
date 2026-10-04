@@ -1,0 +1,17 @@
+Restarting a Raster Job: Durable Granularity and Physical Re-anchoring in a Synthetic Model
+
+Synthetic engineering DEMO. Geometry, event costs, interruption schedules, and coordinate faults are constructed. The evidence comprises a deterministic local model and finite checks; no physical apparatus or measured benchmark is represented.
+
+Abstract
+
+Restarting an interrupted raster job requires identifying both the surviving output and the physical position for the next acquisition. We examine these obligations in a synthetic, deterministic model of 192 sample centers. Three policies persist a complete row (RC), each record (AR), or four-record blocks with row checkpoints (BS). Their payload buffers are 4096, 256, and 1024 bytes, respectively. Across twelve constructed interruption schedules, all 36 cases finish with 192 durable logical records, but no policy is fastest throughout. RC takes 2448.0 ms without interruption; BS takes 2508.0 ms and AR 2553.6 ms. Under ten cuts, AR outperforms BS despite the latter's lower commit frequency. A separate prescribed displacement control misassigns eight of eight remaining row samples when anchoring is omitted. These results distinguish persistence granularity, event-phase effects, and coordinate recovery. Finite checks support the configured model, while hardware timing, storage ordering, real failure behavior, and external novelty remain unverified.
+
+1 Introduction
+
+An interrupted raster acquisition has two recovery questions: which results are durable, and where the next acquisition will occur. A valid checkpoint can answer the first while leaving the second unresolved. This distinction matters when volatile state includes both uncommitted samples and the remembered carriage coordinate. We use a constructed raster job to examine the interaction between storage granularity and restart work. Acquisition here is a discrete model event, not a measurement from an instrument; no physical carriage is evaluated [S1].
+
+The comparison starts with row commit (RC), whose payload buffer holds sixteen 256-byte records. Append record (AR) instead persists each sample, reducing the payload buffer from 4096 to 256 bytes. Block seal (BS) persists four successive records at a time and requires 1024 payload bytes. BS retains the RC scaffold's alternating row checkpoints and adds seals within each row. This construction history identifies what was reused and added locally [S2]. It does not establish novelty relative to published restart systems.
+
+AR is a necessary simple comparator: small, frequent commits can limit repeated acquisition without a block recovery protocol. RC tests the opposite tradeoff, accepting more volatile work to reduce commit frequency. BS lies between these granularities, but an intermediate buffer size does not imply intermediate completion time. Different event durations change which operation a common power cut interrupts. Consequently, neither the number of reacquisitions nor the number of cuts alone determines the ordering of policies.
+
+The study provides an inspectable comparison for one configured instance, rather than a universally preferred restart policy. Its evidence consists of twelve complete trace profiles, event-level time accounting, finite model checks, and a separate coordinate failure control. We first define the logical and physical states and the persistence rules, then compare completion times and storage allowances. The resulting argument separates durable output recovery from physical re-anchoring and keeps the limits of both explicit.

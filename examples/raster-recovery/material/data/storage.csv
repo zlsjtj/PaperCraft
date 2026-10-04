@@ -1,0 +1,4 @@
+﻿policy,payload_buffer_bytes,persistent_bytes,expression
+RC,4096,49280,192*256+2*64
+AR,256,52224,192*(256+16)
+BS,1024,50432,48*(4*256+24)+2*64

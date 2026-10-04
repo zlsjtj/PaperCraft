@@ -1,0 +1,99 @@
+{
+  "review_type": "targeted_post_review_revision_recheck",
+  "independent_first_draft_review": false,
+  "human_review": false,
+  "human_or_author_acceptance": false,
+  "original_anonymous_reports_changed": false,
+  "manuscript_edited_by_reviewer": false,
+  "delivery": "selected-raster/delivery-v2",
+  "inspected": [
+    "manuscript_clean.docx",
+    "manuscript_text.md",
+    "clean-render/manuscript_clean.pdf",
+    "clean-render/page-1.png through page-6.png",
+    "trial-evaluation/facts.json",
+    "trial-material/specification.md"
+  ],
+  "verdict": {
+    "requested_repairs_resolved": true,
+    "new_factual_errors_found": false,
+    "deliverable_for_author_review": true,
+    "delivery_scope": "已完成本轮编辑修复的合成 DEMO 清稿",
+    "publication_or_hardware_validation_claim": false,
+    "summary": "摘要配对收益、完整切断条件、11 pt 正文样式、准确表注、采用结论范围和公式分页均落实到实际清稿。"
+  },
+  "checks": [
+    {
+      "issue": "abstract_paired_benefit",
+      "status": "resolved",
+      "page": 1,
+      "quote": "In one two-cut schedule they save 49.0 ms over rows and 40.0 ms over appends",
+      "evidence": "T9: RC 2885.0, AR 2876.0, BS 2836.0 ms；摘要同时保留无中断 +60 ms 和十次切断 AR 更快。"
+    },
+    {
+      "issue": "exact_cut_schedules",
+      "status": "resolved",
+      "page": 4,
+      "evidence": "T1–T4 全部时刻、T5 300…3000 ms、T6–T11 的 s/2s 规则均在正文，并与 facts.trace_definitions 一致。"
+    },
+    {
+      "issue": "condition_paragraph_font",
+      "status": "resolved",
+      "page": 4,
+      "font": "TimesNewRomanPSMT",
+      "font_size_pt": 11,
+      "evidence": "Table 1 compares 与 T6–T11 form 两段均为 11 pt 正体；实际页图显示为正文。"
+    },
+    {
+      "issue": "table_caption_claim",
+      "status": "resolved",
+      "page": 4,
+      "quote": "Powered completion times (ms) and cut counts for all twelve constructed schedules",
+      "evidence": "和实际五列表格一致；不再声称完整日程位于表内。"
+    },
+    {
+      "issue": "adoption_claim_scope",
+      "status": "resolved",
+      "page": 5,
+      "quote": "It supplies no adoption threshold or general ranking from an intermediate commit size alone.",
+      "evidence": "采用段改为单配置下的权衡，保留 T7/T9/T11 和 RC/AR 负结果。"
+    },
+    {
+      "issue": "equation_and_intro_pagination",
+      "status": "resolved",
+      "page": 4,
+      "evidence": "引导段、原生 Equation 1 与后续计时解释位于同一页。"
+    }
+  ],
+  "integrity_observations": {
+    "docx_and_markdown_normalized_text_equal": true,
+    "docx_native_tables": 1,
+    "docx_native_math_objects": 1,
+    "docx_embedded_image_blips": 2,
+    "pdf_pages": 6,
+    "all_pages_visually_inspected": true,
+    "table_time_and_cut_count_mismatches": [],
+    "negative_results_preserved": true,
+    "finite_model_vs_hardware_boundary_preserved": true,
+    "coordinate_control_scope_preserved": true,
+    "visible_text_occlusion_or_table_clipping_found": false,
+    "structural_counts_used_as_writing_score": false
+  },
+  "remaining_limits": [
+    {
+      "type": "optional_explanatory_depth",
+      "description": "正文没有展示具体事件账本片段以逐项解释 T9/T10 反转，仍依赖总时间与相位说明。",
+      "blocks_current_editorial_delivery": false
+    },
+    {
+      "type": "minor_layout_tradeoff",
+      "description": "p4 第一段结果解释跨到 p5，49/40 ms 差值在续页；摘要已有完整差值，没有内容丢失。",
+      "blocks_current_editorial_delivery": false
+    },
+    {
+      "type": "scope_boundary",
+      "description": "未据本次正文复验确认黄色稿一致性、完整图形版本关系或作者接受；不构成独立首稿评阅或真实性能/新颖性结论。",
+      "blocks_current_editorial_delivery": false
+    }
+  ]
+}

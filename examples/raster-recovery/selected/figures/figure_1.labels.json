@@ -1,0 +1,570 @@
+[
+  {
+    "id": "label2",
+    "text": "1  Where does the next sample belong?",
+    "font_size": 44,
+    "effective_pt": 12.47244094488189,
+    "x": 55,
+    "y": 64
+  },
+  {
+    "id": "label3",
+    "text": "SYNTHETIC DEMO",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1545,
+    "y": 106
+  },
+  {
+    "id": "label4",
+    "text": "12 \u00d7 16 centers",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 95,
+    "y": 135
+  },
+  {
+    "id": "label5",
+    "text": "60 \u00d7 66 mm extent",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 420,
+    "y": 135
+  },
+  {
+    "id": "label6",
+    "text": "r",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 70,
+    "y": 170
+  },
+  {
+    "id": "label7",
+    "text": "0",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 104,
+    "y": 170
+  },
+  {
+    "id": "label8",
+    "text": "15",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 705,
+    "y": 170
+  },
+  {
+    "id": "label9",
+    "text": "physical column c",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 385,
+    "y": 170
+  },
+  {
+    "id": "label57",
+    "text": "0",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 200
+  },
+  {
+    "id": "label58",
+    "text": "\u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 200
+  },
+  {
+    "id": "label59",
+    "text": "1",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 260
+  },
+  {
+    "id": "label60",
+    "text": "\u2190",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 260
+  },
+  {
+    "id": "label61",
+    "text": "2",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 320
+  },
+  {
+    "id": "label62",
+    "text": "\u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 320
+  },
+  {
+    "id": "label63",
+    "text": "3",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 380
+  },
+  {
+    "id": "label64",
+    "text": "\u2190",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 380
+  },
+  {
+    "id": "label65",
+    "text": "4",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 440
+  },
+  {
+    "id": "label66",
+    "text": "\u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 440
+  },
+  {
+    "id": "label67",
+    "text": "5",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 500
+  },
+  {
+    "id": "label68",
+    "text": "\u2190",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 500
+  },
+  {
+    "id": "label71",
+    "text": "6",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 560
+  },
+  {
+    "id": "label72",
+    "text": "\u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 560
+  },
+  {
+    "id": "label73",
+    "text": "7",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 620
+  },
+  {
+    "id": "label74",
+    "text": "\u2190",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 620
+  },
+  {
+    "id": "label75",
+    "text": "8",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 680
+  },
+  {
+    "id": "label76",
+    "text": "\u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 680
+  },
+  {
+    "id": "label77",
+    "text": "9",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 740
+  },
+  {
+    "id": "label78",
+    "text": "\u2190",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 740
+  },
+  {
+    "id": "label79",
+    "text": "10",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 800
+  },
+  {
+    "id": "label80",
+    "text": "\u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 800
+  },
+  {
+    "id": "label81",
+    "text": "11",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 67,
+    "y": 860
+  },
+  {
+    "id": "label82",
+    "text": "\u2190",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 763,
+    "y": 860
+  },
+  {
+    "id": "label85",
+    "text": "x increases \u2192",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 406,
+    "y": 916
+  },
+  {
+    "id": "label86",
+    "text": "Row 5 detail \u00b7 same centers",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 80,
+    "y": 954
+  },
+  {
+    "id": "label87",
+    "text": "Checkpoint: next_row = 5",
+    "font_size": 36,
+    "effective_pt": 10.20472440944882,
+    "x": 815,
+    "y": 195
+  },
+  {
+    "id": "label88",
+    "text": "Epoch 7 \u00b7 rows 0\u20134 complete",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 815,
+    "y": 236
+  },
+  {
+    "id": "label91",
+    "text": "Sealed",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 862,
+    "y": 322
+  },
+  {
+    "id": "label92",
+    "text": "b0 + b1 \u00b7 8 records",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 862,
+    "y": 359
+  },
+  {
+    "id": "label94",
+    "text": "Volatile",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 862,
+    "y": 406
+  },
+  {
+    "id": "label95",
+    "text": "k = 8, 9 \u00b7 repeat after reset",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 862,
+    "y": 443
+  },
+  {
+    "id": "label99",
+    "text": "Interrupted",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 862,
+    "y": 490
+  },
+  {
+    "id": "label100",
+    "text": "k = 10 \u00b7 no completed sample",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 862,
+    "y": 527
+  },
+  {
+    "id": "label102",
+    "text": "Restart: q = 88",
+    "font_size": 40,
+    "effective_pt": 11.338582677165356,
+    "x": 839,
+    "y": 600
+  },
+  {
+    "id": "label103",
+    "text": "r = 5, k = 8 \u2192 c = 7",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 839,
+    "y": 645
+  },
+  {
+    "id": "label104",
+    "text": "(x, y) = (28, 30) mm",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 839,
+    "y": 686
+  },
+  {
+    "id": "label105",
+    "text": "Entry reference: c = 15",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 815,
+    "y": 774
+  },
+  {
+    "id": "label106",
+    "text": "(60, 30) mm \u2192 anchor \u2192 q = 88",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 815,
+    "y": 815
+  },
+  {
+    "id": "label108",
+    "text": "Not yet acquired",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 862,
+    "y": 880
+  },
+  {
+    "id": "label109",
+    "text": "Anchoring establishes position.",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 815,
+    "y": 920
+  },
+  {
+    "id": "label111",
+    "text": "b0",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1308.0,
+    "y": 983
+  },
+  {
+    "id": "label113",
+    "text": "b1",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 956.0,
+    "y": 983
+  },
+  {
+    "id": "label115",
+    "text": "b2",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 604.0,
+    "y": 983
+  },
+  {
+    "id": "label117",
+    "text": "b3",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 252.0,
+    "y": 983
+  },
+  {
+    "id": "label118",
+    "text": "0",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 120,
+    "y": 1100
+  },
+  {
+    "id": "label119",
+    "text": "1",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 208,
+    "y": 1100
+  },
+  {
+    "id": "label120",
+    "text": "2",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 296,
+    "y": 1100
+  },
+  {
+    "id": "label121",
+    "text": "3",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 384,
+    "y": 1100
+  },
+  {
+    "id": "label122",
+    "text": "4",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 472,
+    "y": 1100
+  },
+  {
+    "id": "label125",
+    "text": "5",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 560,
+    "y": 1100
+  },
+  {
+    "id": "label126",
+    "text": "6",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 648,
+    "y": 1100
+  },
+  {
+    "id": "label128",
+    "text": "7",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 736,
+    "y": 1100
+  },
+  {
+    "id": "label129",
+    "text": "8",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 824,
+    "y": 1100
+  },
+  {
+    "id": "label130",
+    "text": "9",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 912,
+    "y": 1100
+  },
+  {
+    "id": "label131",
+    "text": "10",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1000,
+    "y": 1100
+  },
+  {
+    "id": "label132",
+    "text": "11",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1088,
+    "y": 1100
+  },
+  {
+    "id": "label133",
+    "text": "12",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1176,
+    "y": 1100
+  },
+  {
+    "id": "label134",
+    "text": "13",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1264,
+    "y": 1100
+  },
+  {
+    "id": "label135",
+    "text": "14",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1352,
+    "y": 1100
+  },
+  {
+    "id": "label138",
+    "text": "15",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1440,
+    "y": 1100
+  },
+  {
+    "id": "label139",
+    "text": "c",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 56,
+    "y": 1100
+  },
+  {
+    "id": "label142",
+    "text": "row 5 traversal",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1250,
+    "y": 962
+  }
+]

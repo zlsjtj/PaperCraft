@@ -3354,24 +3354,24 @@
   "detail_kind": "Original vector terminal face repeated at 1.85x; no additional segment",
   "editability": "Hybrid: editable vector labels/relationships/edges and source-rebuildable material raster layers. Not all-vector.",
   "command": [
-    "E:/PT-RVV/RVV/skill-generation-20260927/repos/PaperCraft/examples/surface-rendering/build_continuous.py",
+    "PaperCraft/examples/surface-rendering/build_continuous.py",
     "--out",
-    "E:/PT-RVV/RVV/papercraft-surface-20260929/audit/repo-rebuild",
+    "<local-runtime>/repo-rebuild",
     "--font",
     "C:/Windows/Fonts/arial.ttf",
     "--bold-font",
     "C:/Windows/Fonts/arialbd.ttf",
     "--pdftoppm",
-    "C:/Users/15014/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe"
+    "<local-runtime>/pdftoppm.exe"
   ],
   "render_command": [
-    "C:\\Users\\15014\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.exe",
+    "<local-runtime>/pdftoppm.exe",
     "-png",
     "-r",
     "300",
     "-singlefile",
-    "E:\\PT-RVV\\RVV\\papercraft-surface-20260929\\audit\\repo-rebuild\\figure.pdf",
-    "E:\\PT-RVV\\RVV\\papercraft-surface-20260929\\audit\\repo-rebuild\\figure"
+    "<local-runtime>/figure.pdf",
+    "<local-runtime>/figure"
   ],
   "render_exit": 0,
   "actual_pdf_text": [
@@ -3427,5 +3427,6 @@
   },
   "stage": "POST_TRIAL_DEVELOPMENT_REPAIR; not independent first-pass validation",
   "visual_review": "REVIEW_REQUIRED",
-  "author_acceptance": "NOT_RUN"
+  "author_acceptance": "NOT_RUN",
+  "publication_note": "仅将本机绝对路径替换为可公开的位置说明；原始回执在维护者本地归档，数据与结果未改。"
 }

@@ -1,0 +1,86 @@
+{
+  "scenario": "DEMO_EXCHANGED_CARRIER_V1",
+  "provenance": "CONSTRUCTED_DEMO",
+  "version": 1,
+  "actual_physical_experiments": 0,
+  "external_literature_search": false,
+  "random_seed": null,
+  "generation": "fully deterministic integer-index formula; no random draw",
+  "independent_event_count": 24,
+  "policy_count": 4,
+  "paired_policy_runs": 96,
+  "field_results_count": 864,
+  "probe_trace_rows": 474,
+  "coordinate_frame": "carrier top surface, mm; x east, y north, z up",
+  "sites": {
+    "SW": [
+      -32.0,
+      -24.0
+    ],
+    "SC": [
+      0.0,
+      -24.0
+    ],
+    "SE": [
+      32.0,
+      -24.0
+    ],
+    "MW": [
+      -32.0,
+      0.0
+    ],
+    "MC": [
+      0.0,
+      0.0
+    ],
+    "ME": [
+      32.0,
+      0.0
+    ],
+    "NW": [
+      -32.0,
+      24.0
+    ],
+    "NC": [
+      0.0,
+      24.0
+    ],
+    "NE": [
+      32.0,
+      24.0
+    ]
+  },
+  "park_mm": [
+    -40.0,
+    -30.0
+  ],
+  "full_order": [
+    "SW",
+    "SC",
+    "SE",
+    "ME",
+    "MC",
+    "MW",
+    "NW",
+    "NC",
+    "NE"
+  ],
+  "center_keepout_xy_mm": [
+    -16.0,
+    16.0,
+    3.0,
+    21.0
+  ],
+  "threshold_um": 8.0,
+  "center_acceptance_um": 8.0,
+  "xy_speed_mm_s": 80.0,
+  "local_probe_stop_s": 0.75,
+  "retract_roundtrip_s": 0.74,
+  "common_registration_s": 5.0,
+  "common_acquisition_s": 8.59,
+  "common_acquisition_path_mm": 340.0,
+  "common_acquisition_retracts": 1,
+  "no_cycle_failures_removed": true,
+  "timing_model": "nominal kinematic bookkeeping, not physical elapsed time",
+  "statistical_scope": "fixed invented cases; no population sampling, standard errors, or empirical confidence intervals"
+}

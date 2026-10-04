@@ -1,0 +1,17 @@
+﻿condition,row,within_row,intended_column,physical_column,coordinate_error_mm,misassigned,injection
+anchor,5,8,7,7,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,9,6,6,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,10,5,5,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,11,4,4,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,12,3,3,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,13,2,2,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,14,1,1,0,False,fixed +4 mm residual x displacement after reset
+anchor,5,15,0,0,0,False,fixed +4 mm residual x displacement after reset
+omit_anchor,5,8,7,8,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,9,6,7,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,10,5,6,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,11,4,5,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,12,3,4,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,13,2,3,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,14,1,2,4,True,fixed +4 mm residual x displacement after reset
+omit_anchor,5,15,0,1,4,True,fixed +4 mm residual x displacement after reset

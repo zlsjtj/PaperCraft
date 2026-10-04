@@ -2,15 +2,15 @@
 
 PaperCraft 用于修改已有研究论文：把贡献讲清楚，把必要的工程工作写充分，让正文、图表和证据相互对应。它关注创新点包装、工作量包装、图文呈现和透明审阅，修改以已有材料为依据。
 
-当前内容版本 **2.25.0**，调用标识 **`$paper-evidence-framing`**。科研绘图可配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用。
+当前内容版本 **2.30.1**，调用标识 **`$paper-evidence-framing`**。科研绘图可配合 [FigureCraft](https://github.com/zlsjtj/FigureCraft) 使用。
 
-这次补齐完整交付路径：受保护文字续改后，同步替换 Word 图片的 PNG/SVG 表示，输出带真实前后图片的中文报告，最后查看确切成稿。主编辑者负责全文收尾，不能用独立样例代替用户指定稿件。[完整压力夹具示例](examples/complete-fixture/README.md)包含原始合成材料、首次生成、一次自修、清稿、黄标稿、图源和重建脚本。
+本轮去掉固定计算案例的入口偏向，按证据问题组织论证，并修正负面过断言。陌生材料比较显示旧、新版各有优点，评后修复与首次生成分开记录。
 
-本轮修复与实际范围见[2.25验收](tests/validation-2.25.md)。版本用于定位文件；真实全文比较只有小幅优势，旧稿更直接的实验动机已保留。源码重建、一次新材料生成、模型阅读评估和作者认可分别记录。之前的[生成对照](examples/raster-publication/README.md)、[有界缓存](examples/cache-reserve/README.md)、[热传输](examples/heat-story/README.md)与[空间对象](examples/space-illustrations/README.md)保留，历史结果不视为本次重做。
+本次公开版本汇总近期经过验证的图文交付改进。[验证记录](tests/validation-2.30.1.md)说明实际得失、技术检查和未验证范围。内容版本用于识别文件，不能代表审稿或审美认证。
 
 ## 安装
 
-使用本地交付包时，备份已有同名目录，再把整个技能目录复制到自己的 skills 目录。下面的克隆命令取得远端已发布状态，应以实际 SKILL.md 的版本为准；本地升级不代表已经推送 GitHub。
+安装前备份已有同名目录。下面的克隆命令取得默认分支；复现本次发布可再切换到标签 `v2.30.1`，或下载对应 Release。
 
 将仓库克隆到 Codex 的技能目录，目录名保留调用标识。以下命令适用于 PowerShell；设置了 `CODEX_HOME` 时使用该目录，否则使用用户目录下的 `.codex`。
 
@@ -56,7 +56,7 @@ python scripts/review_docx.py build manuscript.docx revision.json output --clean
 python scripts/audit_preservation.py manuscript.docx output/manuscript_清洁候选稿.docx --out protection.json
 ```
 
-输出目录应为新目录。含公式、域、交叉引用和混合格式的段落，其普通文字可用 replace_span；完整样例见[复杂 Word 流程](references/complex-word.md)。整段替换仍严格保护这些对象。PDF 和逐页图片还需要宿主的 documents 技能、LibreOffice 与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
+输出目录应为新目录。含公式、域、交叉引用和混合格式的段落，其普通文字可用 replace_span；完整样例见[复杂 Word 流程](references/complex-word.md)。已完成整段写作但普通文字分成许多 run 时，可用 `apply_authored_edits.py` 的 `rewrite_prose_preserving_runs` 接续；示例和拒绝边界见复杂 Word 流程。整段替换仍严格保护这些对象。PDF 和逐页图片还需要宿主的 documents 技能、可用文档渲染器与 Poppler；这些不随本仓库打包，详细说明见[依赖](references/dependencies.md)。
 
 新版补充[选择规则复核与定范围审阅](references/method-transfer-audit.md)：检查训练配置如何映射到测试输入，并通过 `make_review_packet.py` 只提供明确选定的段落和图片。生成材料不等于完成独立审阅。
 
@@ -106,3 +106,5 @@ python tests/run_representation_tests.py --out test-output/representations
 科研图示例的重建依赖单独列在示例目录。可用 `python -m pip install -r examples/visual-editorial/requirements.txt` 安装 Python 部分，另提供本机字体和 Poppler；生成 Word 后仍需实际渲染和检查页面。
 
 [箱角解锁新材料试用](examples/bin-latch/README.md)保存普通提示、旧技能、新技能的首次产物与匿名比较。新版的状态对照更直接，但并非全面胜出；反馈后修复单独记录。
+
+[锁止时序新材料案例](examples/clamp-timing/README.md)提供原始材料、清稿与黄色审阅稿、可编辑图源和真实比较得失。该案例没有预写贡献答案，也没有把新版包装成全面胜者。

@@ -1,0 +1,171 @@
+{
+  "provenance": "CONSTRUCTED_DEMO",
+  "actual_physical_experiments": 0,
+  "dimensions_mm": [
+    160,
+    "<=100"
+  ],
+  "vector_status": "All SVG/PDF drawing primitives and text are vector; PNG is a rendered preview.",
+  "fonts": {
+    "regular": "C:\\Windows\\Fonts\\arial.ttf",
+    "bold": "C:\\Windows\\Fonts\\arialbd.ttf",
+    "pdf": "embedded subsets",
+    "svg": "requires Arial or compatible substitution"
+  },
+  "roles": {
+    "ink": "#213547",
+    "muted": "#52616F",
+    "blue": "#086FA2",
+    "bluefill": "#DCEFF7",
+    "red": "#AD4147",
+    "redfill": "#F6D8D5",
+    "purple": "#745A99",
+    "grey": "#768797",
+    "pale": "#F4F7F9",
+    "line": "#B8C5CE",
+    "white": "#FFFFFF",
+    "clip": "#CBAB5C"
+  },
+  "data_hashes": {
+    "events.csv": "76086313f1cd6cc3547e4e34decbea2e01d7eb4b65e252697de5a9e2b5e9f975",
+    "field_results.csv": "f9ded0973bfd98624a4d7f9ec57de6d7d7c1e3ea3fad6f78a6a7b64e73d28676",
+    "probe_trace.csv": "342ea0c8105734fe607539f3cdb4af34519d0f4b74d849e7cbf4d5291d33c404",
+    "run_results.csv": "1fbf28e99a36c2dd3dd7db2915494a3f27f5adf2dfe7c09f2f24989eeaf6e573",
+    "table_view_1_condition_results.csv": "313580c3bc17e2aa042c092aa1f77ff20a36a2c8df74ca91de9c1e1708545fa7",
+    "table_view_2_all_attempt_costs.csv": "ea9960cd2759dc56c79043cf5305d9d0980711811c3789b9c9537b0d1ce95837"
+  },
+  "figures": [
+    {
+      "id": "figure1",
+      "main_reading": "A local eastern change is measured only if its row triggers.",
+      "entities": [
+        "C01/SW",
+        "C01/SC",
+        "C01/SE",
+        "C01/MW",
+        "C01/MC",
+        "C01/ME",
+        "C01/NW",
+        "C01/NC",
+        "C01/NE",
+        "C05/SW",
+        "C05/SC",
+        "C05/SE",
+        "C05/MW",
+        "C05/MC",
+        "C05/ME",
+        "C05/NW",
+        "C05/NC",
+        "C05/NE"
+      ],
+      "aggregation": "Two explicit events; all nine sites each; not a whole-grid summary.",
+      "relations": "Coordinate position; probe rings; categorical row membership and local offset. No physical flow arrows.",
+      "locked_values": {
+        "C01_observed_SC_um": 11.75,
+        "C05_observed_MC_um": 12.85,
+        "C05_observed_NC_um": 2.1,
+        "C05_NE_error_um": 18.0
+      },
+      "sources": [
+        "field_results.csv",
+        "probe_trace.csv"
+      ],
+      "depth": "D0"
+    },
+    {
+      "id": "figure2",
+      "main_reading": "Safe endpoints do not imply a safe low-travel segment.",
+      "entities": [
+        "carrier",
+        "9 apertures",
+        "9 acquisition fields",
+        "clip",
+        "shoe envelope",
+        "2 fiducials",
+        "3 datums",
+        "PARK"
+      ],
+      "relations": "Containment, center-envelope expansion and directional motion; side section is same x=0 geometry.",
+      "locked_values": {
+        "carrier_mm": [
+          96,
+          76
+        ],
+        "clip_xy_mm": [
+          -10,
+          10,
+          9,
+          15
+        ],
+        "keepout_xy_mm": [
+          -16,
+          16,
+          3,
+          21
+        ],
+        "shoe_xy_mm": [
+          12,
+          12
+        ],
+        "z_low_mm": 1.2,
+        "z_clip_mm": 3.4,
+        "z_raised_mm": 4.4,
+        "raised_transfer_s": 0.74
+      },
+      "depth": "D0 top plan and y-z section; section has distinct labeled lateral/vertical scales"
+    },
+    {
+      "id": "figure3",
+      "main_reading": "Qualification is conditional and ROW3 can be slower than ALL9.",
+      "entities": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "aggregation": "All 24 paired events x 4 policies, no omitted failures.",
+      "relations": "Categorical acceptance matrix and quantitative 2D time ordinate, original event order.",
+      "locked_values": {
+        "complete_runs": 96,
+        "event_accept_counts": {
+          "PLANE": 1,
+          "ALL9": 24,
+          "ROW3": 12,
+          "SHIFT3": 8
+        }
+      },
+      "sources": [
+        "run_results.csv"
+      ],
+      "depth": "D0"
+    }
+  ],
+  "allowable_changes": "Typography, layout and semantic styling; no altered source values, policy behavior, entity count, failure filtering or empirical claims.",
+  "not_run": [
+    "Independent browser render of SVG",
+    "Word/PDF manuscript page review",
+    "Human author acceptance",
+    "Physical feasibility and performance",
+    "Literature novelty"
+  ]
+}

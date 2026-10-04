@@ -1,0 +1,23 @@
+{
+  "synthetic_demo": true,
+  "abstract_words": 152,
+  "body_continuous_prose_words": 1843,
+  "complete_source_words_including_headings_captions_sources": 2331,
+  "native_omml_equations": 1,
+  "native_tables": 1,
+  "embedded_figures": 2,
+  "figure_width_emu": [
+    5760000,
+    5760000
+  ],
+  "figure_height_emu": [
+    4032000,
+    4032000
+  ],
+  "result_rows": 36,
+  "event_rows": 11401,
+  "named_model_checks": 16,
+  "single_cut_sweep_cases": 384,
+  "word_count_rule": "ASCII alphanumeric tokens, internal apostrophes and hyphens retained; continuous prose excludes headings, captions, table, equation, abstract and sources",
+  "render_status": "not rendered by material author; parent task owns Word render inspection"
+}

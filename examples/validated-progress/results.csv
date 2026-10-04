@@ -1,0 +1,5 @@
+trace,description,full_scan_headers,new_progress_reads,new_data_headers,new_replayed_blocks,new_fallback,offset_only_skips_unwritten
+C1,clean finish 100 durable blocks,100,2,1,0,no,no
+C2,block 100 written but not durable and progress at 99,100,2,1,1,no,yes
+C3,block 100 durable latest slot torn previous valid at 99,100,2,1,1,no,no
+C4,both slots invalid 100 durable blocks,100,2,100,0,yes,no

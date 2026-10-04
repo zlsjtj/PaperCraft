@@ -47,7 +47,7 @@ def field_runs(root):
 def ineligible_reason(run,field_set):
     if run.tag!=Q('r'):return 'not a direct ordinary text run'
     if run in field_set:return 'complex field code or cached result'
-    if any(c.tag not in (Q('rPr'),Q('t')) for c in run):return 'complex run content'
+    if any(c.tag not in (Q('rPr'),Q('t'),Q('lastRenderedPageBreak')) for c in run):return 'complex run content'
     if len(run.findall('w:t',NS))!=1:return 'ordinary span requires exactly one text node per run'
     if run.find('w:rPr/w:highlight',NS) is not None:return 'existing highlight'
     if run.find('w:rPr/w:rPrChange',NS) is not None:return 'existing run-property revision'
@@ -61,6 +61,11 @@ def groups(p,field_set):
         if not eligible(run,field_set):
             if group:result.append(group)
             group=[];style=None;continue
+        # Word's cached page marker is not a hard break or revision. Edit the
+        # adjacent text, but keep this run separate so no span crosses its cache.
+        if run.find('w:lastRenderedPageBreak',NS) is not None:
+            if group:result.append(group)
+            result.append([run]);group=[];style=None;continue
         rp=run.find('w:rPr',NS);key=c14n(rp) if rp is not None else b''
         if group and key!=style:result.append(group);group=[]
         group.append(run);style=key
@@ -85,6 +90,7 @@ def span_text_reason(before,after):
     return None
 def new_run(run,value,highlight=False):
     r=copy.deepcopy(run);r.find('w:t',NS).text=value;r.find('w:t',NS).set(XMLSPACE,'preserve')
+    for marker in r.findall('w:lastRenderedPageBreak',NS):r.remove(marker)
     if highlight:
         rp=r.find('w:rPr',NS)
         if rp is None:rp=E.Element(Q('rPr'));r.insert(0,rp)
@@ -94,6 +100,23 @@ def new_run(run,value,highlight=False):
         ordered=parse_xml(E.tostring(rp));r.replace(rp,ordered)
         ordered.get_or_add_highlight().set(Q('val'),'yellow')
     return r
+
+def page_cache_runs(run):
+    """Retain cached markers once, on the same side of the run's text.
+
+    A cached position may be stale after an edit; Word recomputes pagination.
+    Explicit w:br, fields and history are never admitted through this path.
+    """
+    before=[];after=[];seen_text=False
+    for child in run:
+        if child.tag==Q('t'):seen_text=True
+        elif child.tag==Q('lastRenderedPageBreak'):
+            anchor=copy.deepcopy(run)
+            for node in list(anchor):
+                if node.tag!=Q('rPr'):anchor.remove(node)
+            anchor.append(copy.deepcopy(child))
+            (after if seen_text else before).append(anchor)
+    return before,after
 
 def replace_span(p,before,after,highlight,field_set):
     reason=span_text_reason(before,after)
@@ -106,12 +129,14 @@ def replace_span(p,before,after,highlight,field_set):
         value=run_text(run);a=offset;b=a+len(value);offset=b
         if b<=start or a>=end:continue
         prefix=value[:max(0,start-a)];suffix=value[max(0,end-a):] if end<b else ''
-        replacement=[]
+        cache_before,cache_after=page_cache_runs(run)
+        replacement=list(cache_before)
         if prefix:replacement.append(new_run(run,prefix))
         if not inserted:
             if after:replacement.append(new_run(run,after,highlight))
             inserted=True
         if suffix:replacement.append(new_run(run,suffix))
+        replacement.extend(cache_after)
         index=p.index(run)
         for n in replacement:p.insert(index,n);index+=1
         p.remove(run)

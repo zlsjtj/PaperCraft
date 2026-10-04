@@ -1,0 +1,56 @@
+{
+  "version": "2.30.1",
+  "baseline_head": "3f9a138b6518ba57bdac560af58164dafca862d9",
+  "tests": [
+    {
+      "suite": "syntax",
+      "status": "PASS"
+    },
+    {
+      "suite": "basic",
+      "status": "PASS"
+    },
+    {
+      "suite": "preservation",
+      "status": "PASS"
+    },
+    {
+      "suite": "integration",
+      "status": "PASS"
+    },
+    {
+      "suite": "effect",
+      "status": "PASS"
+    },
+    {
+      "suite": "review-packet",
+      "status": "PASS"
+    },
+    {
+      "suite": "representations",
+      "status": "PASS"
+    },
+    {
+      "suite": "units",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-fixture",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-build",
+      "status": "PASS"
+    },
+    {
+      "suite": "readme-verify",
+      "status": "PASS"
+    }
+  ],
+  "official_metadata_validation": "PASS",
+  "readme_rebuild": "PASS",
+  "validation_scope": "Local Windows runtime; source rebuild and file checks, not universal quality certification",
+  "new_example": "锁止时序演示清稿与审阅稿另用LibreOffice重新渲染，各3页，逐页进行模型辅助查看。公开包中的Word PDF为此前经过查看的原生Word导出；本次重建后又检查了另一渲染器，未替换原生Word版本。",
+  "human_acceptance": "NOT_RUN",
+  "private_manuscript_publication": false
+}

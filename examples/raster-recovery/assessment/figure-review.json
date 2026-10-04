@@ -1,0 +1,142 @@
+{
+  "review_type": "independent_context_model_review",
+  "human_participation": false,
+  "author_acceptance": false,
+  "anonymous": true,
+  "read_version_key": false,
+  "read_skills_or_author_rationale": false,
+  "version_inference": false,
+  "modified_artifacts": false,
+  "network_used": false,
+  "delegation_used": false,
+  "first_impression_order": ["V", "J", "R"],
+  "first_impression_saved_before_context": true,
+  "first_impression_file": "first-impression.md",
+  "inspection_scope": {
+    "nominal_width_mm": 160,
+    "primary_review_dpi": 96,
+    "primary_images": "V/J/R figure1-160mm96dpi.png and figure2-160mm96dpi.png",
+    "full_resolution_confirmation": true,
+    "full_manuscript_texts_read": ["V/full.txt", "J/full.txt", "R/full.txt"],
+    "captions_read": ["V/captions.txt", "J/captions.txt", "R/captions.txt"],
+    "real_pages_inspected": ["V/pages/page-2.png", "V/pages/page-3.png", "J/pages/page-2.png", "J/pages/page-3.png", "R/pages/page-2.png", "R/pages/page-3.png"],
+    "facts_used": ["facts/questions.md", "facts/facts.json"],
+    "not_assessed": ["DOCX package integrity", "native editable equations", "SVG editability", "review highlights", "word counts", "physical-display human legibility"]
+  },
+  "shared_factual_checks": {
+    "geometry_12_by_16": "visually consistent in all three",
+    "row5_decreasing_x": "correct in all three",
+    "sealed_b0_b1_eight_records_c15_to_c8": "correct in all three",
+    "volatile_c7_c6": "correct in all three",
+    "interrupted_c5": "correct in all three",
+    "q88_r5_k8_c7_xy28_30": "correct in all three",
+    "entry_c15_xy60_30": "consistent with all figure-caption-text sets",
+    "buffer4_records_payload1024_seal24": "correct with clarity differences",
+    "two_checkpoint_slots_64_each": "present in all three",
+    "payload_before_seal": "present in all three",
+    "stop_at_first_missing_or_invalid": "correct with different visual explicitness",
+    "crc_does_not_establish_position": "no explicit conflicting route found",
+    "synthetic_assumed_evidence_boundary": "preserved in inspected figure-caption-text sets",
+    "confirmed_factual_blockers": []
+  },
+  "mandatory_graphic_fixes": [
+    {
+      "id": "J-F1-01",
+      "candidate": "J",
+      "figure": 1,
+      "type": "text_border_overlap",
+      "severity": "must_fix_before_final_visual_approval",
+      "location": "bottom detail strip, restart at c7 and entry at c15",
+      "finding": "restart and entry labels overlap or sit directly on block bottom borders",
+      "evidence": ["J/figure1-160mm96dpi.png", "J/figure1.png", "J/pages/page-2.png"],
+      "repair": "separate labels from box borders with sufficient whitespace or short leaders",
+      "recheck": "160 mm view and actual page 2"
+    },
+    {
+      "id": "R-F2-01",
+      "candidate": "R",
+      "figure": 2,
+      "type": "connector_text_overlap",
+      "severity": "must_fix_before_final_visual_approval",
+      "location": "durable-state reader downlink crossing RESTART sequence near anchor",
+      "finding": "vertical data-read line crosses the start of anchor in the RESTART heading",
+      "evidence": ["R/figure2-160mm96dpi.png", "R/figure2.png", "R/pages/page-3.png"],
+      "repair": "reroute through a clear lane or reposition the heading while preserving reader input dependencies",
+      "recheck": "160 mm view and actual page 3"
+    }
+  ],
+  "candidate_assessments": {
+    "V": {
+      "figure1": {
+        "factual_status": "no_confirmed_factual_blocker",
+        "strengths": ["explicit block and k ranges with c labels", "complete state legend", "clear target and entry values"],
+        "weaknesses": ["half-width detail keeps 16 c labels and k ranges small", "large target box competes with compressed data detail", "multiple eye movements among map, strip, legend and prose"],
+        "explanation_gain": "explicit logical-to-physical mapping and target highlight, with anchoring still mainly explained in prose",
+        "aesthetic_assessment": "coherent colors and modest shadows; information hierarchy less balanced than R",
+        "mandatory_fix_ids": []
+      },
+      "figure2": {
+        "factual_status": "no_confirmed_factual_blocker",
+        "strengths": ["closed return paths for ordinal and physical position", "most explicit in-figure validation and checkpoint rules"],
+        "weaknesses": ["small explanatory text in reader and checkpoint", "multiple return paths require tracing", "one Persist block box contains b0-b3 and can blur record versus block granularity"],
+        "explanation_gain": "shows recovery dependencies but communicates prefix stopping mainly through text",
+        "aesthetic_assessment": "consistent styling but dense and instruction-like",
+        "mandatory_fix_ids": []
+      }
+    },
+    "J": {
+      "figure1": {
+        "factual_status": "no_confirmed_factual_blocker",
+        "strengths": ["large full-width row strip", "direct restart and entry comparison", "explicit k-state legend"],
+        "weaknesses": ["restart and entry labels collide with borders", "crowded upper-left axis labels", "interrupted state relies on color without a cross symbol"],
+        "explanation_gain": "easy counting and physical-column comparison",
+        "aesthetic_assessment": "clean but plain; local collisions reduce maturity",
+        "mandatory_fix_ids": ["J-F1-01"]
+      },
+      "figure2": {
+        "factual_status": "no_confirmed_factual_blocker",
+        "strengths": ["clearest explicit forward Acquire stage", "four RAM cells and payload-to-seal nested structure", "linear restart sequence"],
+        "weaknesses": ["checkpoint name and four-block/1-ms rule are distant from A/B", "validation rules float outside reader", "no explicit valid/invalid prefix example"],
+        "explanation_gain": "strong publication order and basic restart order; less explicit dual-input recovery than R",
+        "aesthetic_assessment": "readable and restrained; middle whitespace and detached annotations weaken organization",
+        "mandatory_fix_ids": []
+      }
+    },
+    "R": {
+      "figure1": {
+        "factual_status": "no_confirmed_factual_blocker",
+        "strengths": ["clear row5 and q88 hierarchy", "eight-record count and explicit k8-to-c7 mapping", "direction contrast and redundant status symbols", "same-coordinate detail strip"],
+        "weaknesses": ["pending state lacks direct legend", "entry ring is not repeated in detail strip"],
+        "explanation_gain": "best integration of surviving work, lost acquisitions and physical restart mapping",
+        "aesthetic_assessment": "most coherent spacing, weight hierarchy and restrained color; planar presentation is appropriate",
+        "mandatory_fix_ids": []
+      },
+      "figure2": {
+        "factual_status": "no_confirmed_factual_blocker",
+        "strengths": ["explicit b0/b1 accepted and b2 stop example", "q and x/y reach Acquire separately", "effective link to Figure1 q88 state", "clear forward/restart grouping"],
+        "weaknesses": ["durable-state downlink crosses heading", "forward acquisition is implied by heading and timing instead of an explicit node"],
+        "explanation_gain": "best concrete explanation of contiguous prefix and independent logical/physical acceptance",
+        "aesthetic_assessment": "strongest overall visual organization, with one visible finishing defect that blocks final approval",
+        "mandatory_fix_ids": ["R-F2-01"]
+      }
+    }
+  },
+  "preferred_choices": {
+    "figure1": {
+      "candidate": "R",
+      "reason": "best hierarchy and direct mapping between logical state and physical target",
+      "status": "preferred_model_review_choice_not_author_acceptance"
+    },
+    "figure2": {
+      "candidate": "R",
+      "reason": "prefix example and separate q/x-y inputs add the most explanatory power",
+      "status": "preferred_design_requires_graphic_repair",
+      "required_fix": "R-F2-01",
+      "useful_alternative_strength": "J forward Acquire, four RAM cells and payload-to-seal structure"
+    },
+    "single_unconditional_publication_winner": false,
+    "numeric_aesthetic_scores_used": false
+  },
+  "cross_page_finding": "All three place Figure1 on page2 and the detailed row5 walk-through on page3 before Figure2; captions mitigate but do not eliminate a page turn.",
+  "final_acceptance": "not_granted; independent model review only, with mandatory graphical fixes on J/F1 and R/F2"
+}

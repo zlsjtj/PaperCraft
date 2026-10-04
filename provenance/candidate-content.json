@@ -1,0 +1,11 @@
+{
+  "version": "2.30.1",
+  "record_kind": "historical_generation_candidate_pointer",
+  "baseline_head": "3f9a138b6518ba57bdac560af58164dafca862d9",
+  "historical_content_id": "9f6b0bb1501a8edd3d216245172e70151d535e9d889af7d1e816ce9cc839c262",
+  "generation_content_id": "46305dea21d87d9c23d5024d53e1541796880fd26780647a7045677f6ac339e5",
+  "generation_skill_sha256": "759b87812f72a1568f8f7f7fbfec727172a19bbe737143701cad89aa8beb8d51",
+  "current_release_tag": "v2.30.1",
+  "current_manifest": "release-content.json",
+  "note": "生成时的完整清单保留在本地归档。本文件保留历史标识；公开路径整理与新增演示使发布包哈希不同，不能用旧哈希代表当前安装。"
+}

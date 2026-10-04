@@ -1,0 +1,17 @@
+{
+  "source_sha256": "2ee962132d38a1202873922725ebd97dfd5284af68efd47010f945fd593d4693",
+  "edits": [
+    {
+      "paragraph_id": "P0016",
+      "operation": "replace_paragraph",
+      "before": "For C1, C2 and C3, respectively, setup time falls from 8.4 to 3.1, 8.0 to 3.0, and 8.6 to 3.3 min when the three hoses are replaced by the aligned base (Table 1). The absolute reductions are 5.3, 5.0 and 5.3 min, equivalent to 63.1%, 62.5% and 61.6% of each matched hose time. Both assemblies pass all three leak checks. Their maximum absolute pressure differences are 0.12 versus 0.13 kPa in C1, 0.11 versus 0.12 kPa in C2, and 0.14 versus 0.14 kPa in C3. Thus the shorter setup is accompanied by a 0.01 kPa increase in two conditions and no change in the third; it is not a demonstrated accuracy improvement.",
+      "after": "Both complete assemblies pass all three leak checks. Relative to the hose baseline, the aligned base reduces setup time by 5.3, 5.0 and 5.3 min in C1–C3, respectively (63.1%, 62.5% and 61.6%; Table 1). The maximum absolute pressure difference increases by 0.01 kPa in C1 and C2 and is unchanged in C3. These records do not demonstrate improved accuracy or establish pressure equivalence.",
+      "reason": "Anonymous full-text comparison preferred the original introduction and discussion, but this qualification-first result paragraph avoids re-listing all raw paired values already in Table 1. No unmeasured tolerance adjective.",
+      "source": [
+        "DEMO source.docx",
+        "implementation.md",
+        "results.csv"
+      ]
+    }
+  ]
+}

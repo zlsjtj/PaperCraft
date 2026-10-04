@@ -1,0 +1,105 @@
+{
+  "evidence_kind": "executed local synthetic model checks",
+  "named_checks": 16,
+  "named_checks_passed": 16,
+  "single_cut_cases": 384,
+  "checks": [
+    {
+      "name": "all_coordinates_unique",
+      "pass": true,
+      "detail": "192 logical ordinals map to 192 unique grid cells",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "odd_row_reversal",
+      "pass": true,
+      "detail": "row 5 ordinal positions 0 and 8 correspond to columns 15 and 7",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "no_cut_analytic_AR",
+      "pass": true,
+      "detail": "120 + 12*30 + 192*(10+0.8)",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "no_cut_analytic_RC",
+      "pass": true,
+      "detail": "120 + 12*30 + 192*10 + 12*4",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "no_cut_analytic_BS",
+      "pass": true,
+      "detail": "120 + 12*30 + 192*10 + 48*2 + 12*1",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "sealed_row",
+      "pass": true,
+      "detail": "four valid seals yield 16 records",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "reject_unsealed",
+      "pass": true,
+      "detail": "stop at block 2; later block 3 is not accepted",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "reject_old_epoch",
+      "pass": true,
+      "detail": "stop at block 2; later block 3 is not accepted",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "reject_wrong_row",
+      "pass": true,
+      "detail": "stop at block 2; later block 3 is not accepted",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "reject_wrong_index",
+      "pass": true,
+      "detail": "stop at block 2; later block 3 is not accepted",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "reject_wrong_count",
+      "pass": true,
+      "detail": "stop at block 2; later block 3 is not accepted",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "reject_bad_crc",
+      "pass": true,
+      "detail": "stop at block 2; later block 3 is not accepted",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "stop_at_hole",
+      "pass": true,
+      "detail": "an isolated later seal cannot bridge a gap",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "checkpoint_torn_newer_slot",
+      "pass": true,
+      "detail": "fall back to the older valid slot",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "checkpoint_select_newer_valid",
+      "pass": true,
+      "detail": "select generation 12 when both slot checksums are valid",
+      "evidence_kind": "local synthetic model check"
+    },
+    {
+      "name": "finite_single_cut_sweep",
+      "pass": true,
+      "detail": "128 deterministic single-cut positions per policy; not a proof over all failure timings",
+      "evidence_kind": "local synthetic model check"
+    }
+  ],
+  "limitation": "Finite checks; not device experiments or exhaustive crash-consistency proof"
+}

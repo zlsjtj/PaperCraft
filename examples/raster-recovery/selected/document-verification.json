@@ -1,0 +1,78 @@
+{
+  "clean": {
+    "native_math_c14n_equal": true,
+    "native_math_tokens_equal": true,
+    "native_table_cells_equal": true,
+    "drawings": [
+      {
+        "width_mm": 160.0,
+        "height_mm": 112.0,
+        "images": [
+          {
+            "part": "media/image1.png",
+            "sha256": "bbe48237d807e5e04d86af44b2da4420091c6058d0666cfb43b53456ab16d597"
+          }
+        ]
+      },
+      {
+        "width_mm": 160.0,
+        "height_mm": 112.0,
+        "images": [
+          {
+            "part": "media/image2.png",
+            "sha256": "eeed7b440e224bc49a6531683f9ab4b5b7b28e19e23cffff734e6a28354644ab"
+          }
+        ]
+      }
+    ],
+    "all_embeds_match_exports": true
+  },
+  "review": {
+    "native_math_c14n_equal": true,
+    "native_math_tokens_equal": true,
+    "native_table_cells_equal": true,
+    "drawings": [
+      {
+        "width_mm": 160.0,
+        "height_mm": 112.0,
+        "images": [
+          {
+            "part": "media/image1.png",
+            "sha256": "bbe48237d807e5e04d86af44b2da4420091c6058d0666cfb43b53456ab16d597"
+          }
+        ]
+      },
+      {
+        "width_mm": 160.0,
+        "height_mm": 112.0,
+        "images": [
+          {
+            "part": "media/image2.png",
+            "sha256": "eeed7b440e224bc49a6531683f9ab4b5b7b28e19e23cffff734e6a28354644ab"
+          }
+        ]
+      }
+    ],
+    "all_embeds_match_exports": true
+  },
+  "clean_review_prose_equal": true,
+  "review_has_yellow": true,
+  "clean_has_no_yellow": true,
+  "visual_review": {
+    "method": "root model viewed every 120 dpi PNG from exact LibreOffice PDFs",
+    "pages_clean": 6,
+    "pages_review": 6,
+    "clipped_content_observed": false,
+    "conditions_body_11pt": true,
+    "formula_with_introduction": true,
+    "status": "MODEL_REVIEWED",
+    "native_word": false,
+    "physical_print": false,
+    "human_acceptance": false
+  },
+  "source_math_xml": [
+    "534b2c7fa0aa47fd70cab6fbc0695d30c6773dc25187bd28fb5607d63ce28173"
+  ],
+  "clean_sha256": "0695d2676f9bb221cd53fd0403db874d2ddcbb1791f05cb9566ed54cbba147a0",
+  "review_sha256": "510732296a96c84d404736a714dc286e8b200dc6a0d264a01f6ae96a18a01455"
+}

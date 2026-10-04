@@ -44,7 +44,7 @@
 
 实际顺序：读取 QUESTIONS 及 K/L 前 90 行（上述偏差）→读取余文和 cup-facts →读取原研究五文件→查看 U/V 原图→内存生成并查看 605 像素预览→CSV 对表与有限算术复算→记录 SHA-256→写本报告。没有改动输入图、文或源事实。
 
-以下均为本轮从实际输入计算的 SHA-256；前六项位于本报告同目录，后五项位于 `E:/PT-RVV/RVV/skill-generation-20260927/repos/PaperCraft/examples/heat-story/input/`。
+以下均为本轮从实际输入计算的 SHA-256；前六项位于本报告同目录，后五项位于 `../../input/`。
 
 ```text
 9248d04efaa74a37810d2b6de1ac777cda85efeb4f2bfb275a2b757249478d4a  QUESTIONS.md

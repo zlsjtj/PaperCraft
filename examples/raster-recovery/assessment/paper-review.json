@@ -1,0 +1,198 @@
+{
+  "review_type": "independent_context_model_assisted_anonymous_full_manuscript_review",
+  "reviewer_is_human": false,
+  "human_or_author_acceptance": false,
+  "reading_time_collected": false,
+  "labels": ["J", "R", "V"],
+  "protocol": {
+    "front_read_order": ["J", "R", "V"],
+    "first_impression_written_before_full_text_facts_and_pages": true,
+    "first_impression_revised_after_full_reading": false,
+    "read_provenance_key_generation_directories_or_skills": false,
+    "network_used": false,
+    "candidate_artifacts_modified": false,
+    "sources_read": [
+      "anonymous-trial/ORDER.txt",
+      "anonymous-trial/J/front.txt",
+      "anonymous-trial/R/front.txt",
+      "anonymous-trial/V/front.txt",
+      "anonymous-trial/J/full.txt",
+      "anonymous-trial/R/full.txt",
+      "anonymous-trial/V/full.txt",
+      "anonymous-trial/J/manuscript.pdf",
+      "anonymous-trial/R/manuscript.pdf",
+      "anonymous-trial/V/manuscript.pdf",
+      "anonymous-trial/J/pages/page-1.png through page-6.png",
+      "anonymous-trial/R/pages/page-1.png through page-6.png",
+      "anonymous-trial/V/pages/page-1.png through page-6.png",
+      "anonymous-trial/facts/questions.md",
+      "anonymous-trial/facts/facts.json"
+    ],
+    "first_impression_artifact": "first-impression.md",
+    "full_reading_artifact": "full-reading.md"
+  },
+  "overall": {
+    "universal_winner": null,
+    "current_evidence_reading_preference": "V",
+    "reason": "V 在正文内完整给出切断输入，早期相位解释与后文反转相衔接，且没有 R 的日程表注错误；R 的工程动机和成本比较表达更顺，故不构成 V 全面胜出。",
+    "narrative_motivation_preference": "R",
+    "most_concrete_opening_failure_example": "J",
+    "comparative_scope": "三稿匿名局部组织与全文理解比较；未提供可识别原始输入稿，不能确认相对输入的整体重组幅度。",
+    "substantial_structural_rewrite_proven": false,
+    "scientific_novelty_established": false,
+    "physical_performance_established": false,
+    "synthetic_material_absence_of_real_experiments_used_as_editorial_veto": false,
+    "used_word_counts_rule_counts_test_counts_or_model_scores_as_quality_evidence": false
+  },
+  "candidates": {
+    "J": {
+      "strengths": [
+        {
+          "location": "Introduction paragraph 1; PDF page 1",
+          "quote": "intact bytes labelled with the wrong position",
+          "reason": "开头具体说明逻辑数据正确却物理位置错误，后文 row-5 实例和位移控制兑现这一问题。"
+        },
+        {
+          "location": "Section 2 recovery paragraph; PDF page 3",
+          "quote": "a valid later block cannot bridge a hole",
+          "reason": "把连续前缀约束直接写清，并保留旧 checkpoint 完成条件。"
+        },
+        {
+          "location": "Section 3 result discussion; PDF page 4",
+          "quote": "A repetition counter by itself is insufficient.",
+          "reason": "T1 重采数和 RC 仍最快紧邻呈现，读者有具体反例而非只有原则。"
+        }
+      ],
+      "must_fix": ["J-SCHEDULE", "SHARED-LAYOUT", "J-ABSTRACT"],
+      "limitations": ["完整 T1–T5 时刻不在正文或表内。", "摘要 BS 时间孤立，正向价值到表后才形成同场景比较。"]
+    },
+    "R": {
+      "strengths": [
+        {
+          "location": "Introduction paragraph 2; PDF page 1",
+          "quote": "smaller buffering alone cannot establish its merit",
+          "reason": "紧接 AR 和 BS 缓冲比较，提前建立总成本必须证明的工程问题。"
+        },
+        {
+          "location": "Section 3 T5 discussion; PDF page 4",
+          "quote": "the simpler record policy still finishes 56.0 ms earlier",
+          "reason": "保留 BS 相比 RC 大幅减少重复工作，同时给出它仍输 AR 的明确差值。"
+        },
+        {
+          "location": "Section 4 storage paragraph; PDF page 5",
+          "quote": "it reduces the persistent allowance relative to AR but remains above RC",
+          "reason": "直接解释三方资源取舍，减少读者在不同段落间自行比较。"
+        }
+      ],
+      "must_fix": ["R-CAPTION", "SHARED-LAYOUT", "R-ADOPTION"],
+      "limitations": ["完整日程位于表内的说法与实际表不符。", "earns its place 的采用语气超出单配置能定义的阈值。", "公式与引导段跨页。"]
+    },
+    "V": {
+      "strengths": [
+        {
+          "location": "Introduction paragraph 3; PDF page 1",
+          "quote": "Different event durations change which operation a common power cut interrupts.",
+          "reason": "在结果前给读者解释反直觉排序的关键因果机制。"
+        },
+        {
+          "location": "Section 3 and Table 1 caption; PDF page 4",
+          "quote": "The surrounding text specifies every cut schedule",
+          "reason": "实际正文给出 T1–T5 时刻及 T6–T11 的 s/2s 规则，与表注一致，读者不必跳到外部账本恢复输入条件。"
+        },
+        {
+          "location": "Section 2 BS definition and accounting paragraphs; PDF pages 2–4",
+          "quote": "Payload-before-seal durability is assumed by this protocol",
+          "reason": "把硬件未验证的条件放在机制定义旁，并在计时模型旁说明整数前缀与字节检查的区分。"
+        }
+      ],
+      "must_fix": ["V-ABSTRACT", "V-CORRECTNESS", "SHARED-LAYOUT"],
+      "limitations": ["摘要没有展示 BS 的任何具体获胜场景。", "可重复采样与无外部副作用的正确性目标到第 4 节才完整说明。", "完整日程虽在正文，实际排成 9 pt 粗体小字。"]
+    }
+  },
+  "findings": [
+    {
+      "id": "R-CAPTION",
+      "category": "factual_editorial_error",
+      "candidate": "R",
+      "location": "Table 1 caption; PDF page 4",
+      "quote": "The native table retains the complete cut schedules and policy results.",
+      "evidence": "PDF 真实表格和 PDF 文本仅有 Trace/Cuts/RC/AR/BS，Cuts 值为次数；正文没有 T1–T5 的完整时刻。",
+      "required_change": "改为 cut counts，并补齐日程或明确指向 [S3]；不能声称完整日程在表内。"
+    },
+    {
+      "id": "J-SCHEDULE",
+      "category": "reader_traceability_gap",
+      "candidate": "J",
+      "location": "Section 3 opening and Table 1; PDF page 4",
+      "quote": "T1 and T2 have two irregular cuts",
+      "evidence": "正文只给 T1–T5 次数；T6–T11 仅说 spacings，未明确 s 与 2s。",
+      "required_change": "补齐精确日程或清楚标示精确输入在 [S3]，减少独立复核的来回查找。"
+    },
+    {
+      "id": "SHARED-LAYOUT",
+      "category": "rendered_readability",
+      "candidates": ["J", "R", "V"],
+      "location": "Section 3 pre-table setting paragraphs; all PDF page 4",
+      "evidence": "实际页面可见该段形似表注；PDF 字体读取确认 9 pt Times New Roman Bold，而常规正文 11 pt。V 的完整时刻段也如此。",
+      "required_change": "将承载切断时钟、相位条件和精确时刻的段落恢复正文样式，或用清楚的日程表承载，保留条件。"
+    },
+    {
+      "id": "J-ABSTRACT",
+      "category": "early_evidence_explanation",
+      "candidate": "J",
+      "location": "Abstract; PDF page 1",
+      "quote": "BS reaches 2836.0 ms in one two-cut case",
+      "required_change": "给出同一 T9 场景的 RC/AR 对照或差值，并保留 T0/T5 负结果。"
+    },
+    {
+      "id": "R-ADOPTION",
+      "category": "claim_scope_precision",
+      "candidate": "R",
+      "location": "Section 4 paragraph 2; PDF page 5",
+      "quote": "BS earns its place when the cost of publishing every record matters, yet losing a whole row is too expensive.",
+      "required_change": "把未定义阈值的采用判断改为待评价的折中条件，或限定到给定配置中已经观察到的 T7/T9/T11。"
+    },
+    {
+      "id": "V-ABSTRACT",
+      "category": "early_contribution_visibility",
+      "candidate": "V",
+      "location": "Abstract; PDF page 1",
+      "evidence": "摘要完整列出无切断三方成本并保留 T5 AR 胜出，但未展示 BS 的任何同场景优势。",
+      "required_change": "加入现有 T9 的条件优势，并继续保留不利结果，帮助读者理解为何研究中间粒度。"
+    },
+    {
+      "id": "V-CORRECTNESS",
+      "category": "ordering_of_essential_conditions",
+      "candidate": "V",
+      "location": "Section 4 paragraph 3; PDF page 5",
+      "quote": "one durable logical result per ordinal, with repeatable acquisition and no external side effect",
+      "required_change": "在方法节提前说明该正确性定义，再在局限节展开移动目标与破坏性探测的限制。"
+    },
+    {
+      "id": "SHARED-LEDGER",
+      "category": "optional_explanatory_deepening",
+      "candidates": ["J", "R", "V"],
+      "evidence": "T9/T10 与 T1 的比较足以支持条件性，但未在正文展示任一具体事件账本分解来定位反转阶段。",
+      "suggested_change": "从现有账本选一个片段明确政策、日程、完整和部分事件耗时；禁止根据总数猜测事件阶段。"
+    }
+  ],
+  "fact_verification": {
+    "table_powered_times_and_cut_counts_match_facts": {"J": true, "R": true, "V": true},
+    "important_storage_and_reacquisition_values_preserved": true,
+    "negative_cases_preserved": ["T0 RC best", "T5 AR best", "T10 RC best", "T1 fewer reacquisitions not fastest"],
+    "coordinate_control_conditions_preserved": true,
+    "synthetic_scope_explicit": true,
+    "finite_checks_not_presented_as_universal_reliability": true,
+    "numeric_check_is_editorial_quality_score": false,
+    "explicit_factual_editorial_error": "R-CAPTION"
+  },
+  "unverified_or_out_of_scope": [
+    "人类阅读感受、阅读时间及作者接受",
+    "相对未知原始输入的整体重组幅度",
+    "图形的独立视觉排名及全部细部拓扑",
+    "DOCX 原生 OMML、原生表格和黄色稿一致性",
+    "SVG 可编辑性及各图源/PDF/PNG 的最终版本一致性",
+    "严格全套文件格式要求",
+    "真实设备性能、外部科学新颖性与普遍可靠性"
+  ]
+}

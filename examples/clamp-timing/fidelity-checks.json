@@ -1,0 +1,52 @@
+{
+  "source_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "checks": {
+    "clean": {
+      "original_omml_xml": true,
+      "table_xml_unchanged": true,
+      "all_nine_csv_rows_exact": true,
+      "italic_runs_exact": true,
+      "ref_instruction_exact": true,
+      "field_nodes_exact": true,
+      "bookmark_nodes_exact": true,
+      "hyperlink_xml_exact": true,
+      "existing_yellow_run_retained": true,
+      "exactly_one_new_drawing": true,
+      "png_and_svg_hash_bound_at_160x100": true
+    },
+    "review": {
+      "original_omml_xml": true,
+      "table_xml_unchanged": true,
+      "all_nine_csv_rows_exact": true,
+      "italic_runs_exact": true,
+      "ref_instruction_exact": true,
+      "field_nodes_exact": true,
+      "bookmark_nodes_exact": true,
+      "hyperlink_xml_exact": true,
+      "existing_yellow_run_retained": true,
+      "exactly_one_new_drawing": true,
+      "png_and_svg_hash_bound_at_160x100": true
+    },
+    "clean_review_visible_text_equal": true
+  },
+  "limitations": [
+    "No Word rendering in child; parent has exclusive renderer role.",
+    "Automated figure relation endpoints and logical count scope remain REVIEW_REQUIRED; human author acceptance absent."
+  ],
+  "clean": {
+    "sha256": "359926521e763b6b0d3b4dd73fae2a5fe02b903bb1a64adcbc1d668e64608af8",
+    "body_word_count_regex": 911,
+    "highlight_run_count": 1
+  },
+  "review": {
+    "sha256": "32e8bfe5ed7c8d6c49b4613572768314acaa98aa6fed2f50aaf0b8827011a827",
+    "body_word_count_regex": 911,
+    "highlight_run_count": 15
+  },
+  "figure_pdf_mm": [
+    160.0,
+    100.00001
+  ],
+  "figure_text_editable": true,
+  "status": "PASS"
+}

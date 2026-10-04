@@ -1,0 +1,13 @@
+provenance,condition,policy,constructed_events,accepted_events,accepted_centers,total_centers,worst_abs_focus_error_um,mean_total_cycle_s
+CONSTRUCTED_DEMO,broad_row_change,PLANE,8,1,33,72,18.7,13.59
+CONSTRUCTED_DEMO,broad_row_change,ALL9,8,8,72,72,0.6,25.33
+CONSTRUCTED_DEMO,broad_row_change,ROW3,8,8,72,72,0.7,24.03122429
+CONSTRUCTED_DEMO,broad_row_change,SHIFT3,8,8,72,72,2.0,19.26560859
+CONSTRUCTED_DEMO,east_local_change,PLANE,8,0,64,72,25.0,13.59
+CONSTRUCTED_DEMO,east_local_change,ALL9,8,8,72,72,0.6,25.33
+CONSTRUCTED_DEMO,east_local_change,ROW3,8,0,64,72,25.0,19.26560859
+CONSTRUCTED_DEMO,east_local_change,SHIFT3,8,0,64,72,24.5,19.26560859
+CONSTRUCTED_DEMO,combined_change,PLANE,8,0,44,72,38.0,13.59
+CONSTRUCTED_DEMO,combined_change,ALL9,8,8,72,72,0.6,25.33
+CONSTRUCTED_DEMO,combined_change,ROW3,8,4,68,72,20.7,22.18685487
+CONSTRUCTED_DEMO,combined_change,SHIFT3,8,0,64,72,23.85,19.26560859

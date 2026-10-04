@@ -1,0 +1,73 @@
+{
+  "review_type": "post_review_development_recheck",
+  "candidate_directory": "delivery-v2",
+  "independent_first_generation_evaluation": false,
+  "new_anonymous_first_pass": false,
+  "human_participation": false,
+  "author_acceptance": false,
+  "frozen_anonymous_reports_modified": false,
+  "artifacts_modified_by_reviewer": false,
+  "scope": {
+    "primary_view": "160 mm at 96 dpi, approximately 605 px wide",
+    "figures": ["figures/figure_1-160mm96dpi.png", "figures/figure_2-160mm96dpi.png", "figures/figure_1.png", "figures/figure_2.png"],
+    "actual_clean_pages": ["clean-render/page-2.png", "clean-render/page-3.png"],
+    "text_and_captions": "manuscript_text.md",
+    "accessibility_images": ["figures/figure_1_gray.png", "figures/figure_1_deuteranopia.png", "figures/figure_2_gray.png", "figures/figure_2_deuteranopia.png"],
+    "accessibility_checked_at_605px_width": true,
+    "not_assessed": ["DOCX package integrity", "SVG editability", "PDF vector integrity", "real printing", "human readability", "full manuscript layout acceptance"]
+  },
+  "repair_findings": [
+    {
+      "id": "R-F2-01",
+      "status": "resolved",
+      "evidence": "Short FORWARD and RESTART headings leave a clear blank lane for the durable-state reader downlink in both the 160 mm figure and actual page 3.",
+      "regression_observed": false
+    },
+    {
+      "id": "forward_acquisition_buffer_ambiguity",
+      "status": "improved_acceptable",
+      "evidence": "Acquired records plus RAM 4 x 256 B identifies the four cells as volatile acquired records, distinct from persistent payload and seal.",
+      "remaining_limit": "Forward acquisition remains implicit as an action, supported by timing label and caption; no explicit additional node was required.",
+      "regression_observed": false
+    },
+    {
+      "id": "pending_state_legend",
+      "status": "resolved",
+      "evidence": "Not yet acquired hollow-circle legend now directly explains future-row and pending-column symbols.",
+      "regression_observed": false
+    },
+    {
+      "id": "entry_reference_in_detail_strip",
+      "status": "resolved",
+      "evidence": "c15 entry ring is repeated in the detail strip and matches the main grid while c7 remains the restart target.",
+      "regression_observed": false
+    }
+  ],
+  "factual_rechecks": {
+    "grid_and_repeated_detail": "12 x 16 main grid, row5 repeated without adding records",
+    "row5_direction": "c15 toward c0",
+    "sealed_records": "b0/b1, eight records at c15-c8",
+    "volatile_records": "c7/c6",
+    "interrupted_record": "c5",
+    "restart": "q88, r5/k8/c7, (28,30) mm",
+    "entry": "c15, (60,30) mm",
+    "persistence_granularity": "four RAM records, payload1024 B, seal24 B, two64 B checkpoint slots",
+    "timings": "home120 ms, lookup6 ms, anchor30 ms, acquire10 ms, payload-plus-seal2 ms, rowcheckpoint1 ms after four blocks",
+    "prefix_stop": "b0/b1 accepted, b2 invalid-or-absent, b3 not accepted",
+    "logical_and_physical_paths": "q and established x/y remain separate inputs to Acquire",
+    "caption_body_alignment": "consistent in inspected current manuscript",
+    "synthetic_boundary": "preserved",
+    "new_factual_blockers": []
+  },
+  "visual_recheck": {
+    "new_overlap_or_clipping": false,
+    "real_page_recurrence_of_original_overlap": false,
+    "hierarchy": "preserved",
+    "grayscale": "status symbols, ring outlines and filled-vs-hollow markers preserve meaning; volatile c6 contrast is subtle but supported by detail and legend",
+    "cvd": "color distinctions weaken, while explicit labels, symbols and dashed-versus-solid paths preserve meaning",
+    "remaining_cross_page_cost": "Figure1 remains on page2 and detailed row5 prose on page3"
+  },
+  "new_mandatory_fixes": [],
+  "result": "specified_repairs_pass_model_recheck",
+  "claim_limits": ["not human or author acceptance", "not a new blind trial", "not evidence of independent first-generation capability", "does not retroactively alter frozen anonymous rankings", "does not establish broad skill reliability"]
+}

@@ -1,0 +1,30 @@
+{
+  "abstract_words": 149,
+  "body_continuous_prose_words": 2005,
+  "body_source_paragraph_ids": [
+    "P0006",
+    "P0007",
+    "P0008",
+    "P0009",
+    "P0011",
+    "P0014",
+    "P0015",
+    "P0016",
+    "P0017",
+    "P0018",
+    "P0021",
+    "P0023",
+    "P0025",
+    "P0027",
+    "P0028",
+    "P0029",
+    "P0030",
+    "P0032",
+    "P0033",
+    "P0034",
+    "P0035",
+    "P0037"
+  ],
+  "rule": "ASCII alphanumeric tokens with internal apostrophes/hyphens retained; inline numerals/variables/internal citation tokens count. Body is Introduction through Conclusion continuous prose, excluding title, headings, abstract, figure/table captions, native table cells, native equation, declaration and sources.",
+  "delivered_docx_sha256": "0695d2676f9bb221cd53fd0403db874d2ddcbb1791f05cb9566ed54cbba147a0"
+}

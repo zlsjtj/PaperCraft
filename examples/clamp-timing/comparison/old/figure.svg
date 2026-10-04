@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="100mm" viewBox="0 0 160 100">
+<rect x="0" y="0" width="160" height="100" fill="#FFFFFF" stroke="none" stroke-width="0.4" data-entity=""/>
+<text id="label-1" x="27" y="7.8" font-family="Arial" font-size="4.2333333333333325" font-weight="bold" text-anchor="middle" fill="#202D34">E</text>
+<text id="label-2" x="27" y="14" font-family="Arial" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#202D34">Lock before approach</text>
+<line x1="27" y1="19" x2="27" y2="25" stroke="#586B75" stroke-width="0.55"/>
+<polygon points="27.0000,25.0000 27.8500,23.0000 26.1500,23.0000" fill="#586B75" stroke="none" stroke-width="0.4" data-entity=""/>
+<rect x="16" y="26" width="22" height="3.5" fill="#DBE2E6" stroke="#637580" stroke-width="0.35" data-entity="crosshead"/>
+<rect x="25" y="29.5" width="4" height="10.5" fill="#DBE2E6" stroke="#637580" stroke-width="0.35" data-entity="crosshead"/>
+<polygon points="10.0000,40.0000 44.0000,40.0000 44.0000,48.0000 10.0000,48.0000" fill="#9FC5D5" stroke="#275F75" stroke-width="0.5" data-entity="pad"/>
+<circle cx="27" cy="40" r="2.1" fill="#FFFFFF" stroke="#34454F" stroke-width="0.5" data-entity="pivot"/>
+<circle cx="27" cy="40" r="0.55" fill="#34454F" stroke="none" stroke-width="0.4" data-entity=""/>
+<rect x="33.3" y="35.6" width="3.4" height="2.8" fill="#FFFFFF" stroke="#925924" stroke-width="0.5" data-entity=""/>
+<path d="M 33.9,35.6 C 33.9,32.6 36.1,32.6 36.1,35.6" fill="none" stroke="#925924" stroke-width="0.5"/>
+<polygon points="10.0000,48.0000 44.0000,54.0000 44.0000,60.0000 10.0000,60.0000" fill="#E9C48E" stroke="#996528" stroke-width="0.45" data-entity="coupon"/>
+<rect x="6" y="60" width="42" height="4" fill="#E5E9EB" stroke="#637580" stroke-width="0.4" data-entity="lower_platen"/>
+<text id="label-3" x="27" y="70" font-family="Arial" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#202D34">Fixed horizontal</text>
+<text id="label-4" x="27" y="79" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">Locked at approach</text>
+<text id="label-5" x="27" y="85" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">10 N → zero → ramp</text>
+<text id="label-6" x="27" y="28.7" font-family="Arial" font-size="2.998611111111111" font-weight="normal" text-anchor="middle" fill="#202D34">Crosshead</text>
+<text id="label-7" x="27" y="45.4" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">Pad</text>
+<text id="label-8" x="27" y="58.3" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">Coupon</text>
+<text id="label-9" x="27" y="63" font-family="Arial" font-size="2.998611111111111" font-weight="normal" text-anchor="middle" fill="#202D34">Fixed platen</text>
+<text id="label-10" x="14" y="33.7" font-family="Arial" font-size="2.998611111111111" font-weight="normal" text-anchor="middle" fill="#202D34">Pivot</text>
+<line x1="18" y1="34.5" x2="25" y2="38.8" stroke="#637580" stroke-width="0.3"/>
+<text id="label-11" x="80" y="7.8" font-family="Arial" font-size="4.2333333333333325" font-weight="bold" text-anchor="middle" fill="#202D34">F</text>
+<text id="label-12" x="80" y="14" font-family="Arial" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#202D34">Keep free</text>
+<line x1="80" y1="19" x2="80" y2="25" stroke="#586B75" stroke-width="0.55"/>
+<polygon points="80.0000,25.0000 80.8500,23.0000 79.1500,23.0000" fill="#586B75" stroke="none" stroke-width="0.4" data-entity=""/>
+<rect x="69" y="26" width="22" height="3.5" fill="#DBE2E6" stroke="#637580" stroke-width="0.35" data-entity="crosshead"/>
+<rect x="78" y="29.5" width="4" height="13.376387528643733" fill="#DBE2E6" stroke="#637580" stroke-width="0.35" data-entity="crosshead"/>
+<polygon points="63.2587,39.9220 96.7413,45.8307 95.3510,53.7090 61.8684,47.8003" fill="#9FC5D5" stroke="#275F75" stroke-width="0.5" data-entity="pad"/>
+<circle cx="80" cy="42.87638752864373" r="2.1" fill="#FFFFFF" stroke="#34454F" stroke-width="0.5" data-entity="pivot"/>
+<circle cx="80" cy="42.87638752864373" r="0.55" fill="#34454F" stroke="none" stroke-width="0.4" data-entity=""/>
+<rect x="86.3" y="38.476387528643734" width="3.4" height="2.8" fill="#FFFFFF" stroke="#346F7B" stroke-width="0.5" data-entity=""/>
+<path d="M 87.1,38.476387528643734 C 87.1,35.476387528643734 90.1,35.476387528643734 90.1,37.476387528643734" fill="none" stroke="#346F7B" stroke-width="0.5"/>
+<polygon points="63.0000,48.0000 97.0000,54.0000 97.0000,60.0000 63.0000,60.0000" fill="#E9C48E" stroke="#996528" stroke-width="0.45" data-entity="coupon"/>
+<rect x="59" y="60" width="42" height="4" fill="#E5E9EB" stroke="#637580" stroke-width="0.4" data-entity="lower_platen"/>
+<path d="M 73,40.87638752864373 C 74,34.87638752864373 83,33.87638752864373 86,37.87638752864373" fill="none" stroke="#346F7B" stroke-width="0.6"/>
+<polygon points="86.0000,37.8764 83.7000,37.2764 85.7000,35.5764" fill="#346F7B" stroke="none" stroke-width="0.4" data-entity=""/>
+<text id="label-13" x="80" y="70" font-family="Arial" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#202D34">Free to pitch</text>
+<text id="label-14" x="80" y="79" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">Open at approach</text>
+<text id="label-15" x="80" y="85" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">10 N → zero → ramp</text>
+<text id="label-16" x="133" y="7.8" font-family="Arial" font-size="4.2333333333333325" font-weight="bold" text-anchor="middle" fill="#202D34">L</text>
+<text id="label-17" x="133" y="14" font-family="Arial" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#202D34">Seat then lock</text>
+<line x1="133" y1="19" x2="133" y2="25" stroke="#586B75" stroke-width="0.55"/>
+<polygon points="133.0000,25.0000 133.8500,23.0000 132.1500,23.0000" fill="#586B75" stroke="none" stroke-width="0.4" data-entity=""/>
+<rect x="122" y="26" width="22" height="3.5" fill="#DBE2E6" stroke="#637580" stroke-width="0.35" data-entity="crosshead"/>
+<rect x="131" y="29.5" width="4" height="13.376387528643733" fill="#DBE2E6" stroke="#637580" stroke-width="0.35" data-entity="crosshead"/>
+<polygon points="116.2587,39.9220 149.7413,45.8307 148.3510,53.7090 114.8684,47.8003" fill="#9FC5D5" stroke="#275F75" stroke-width="0.5" data-entity="pad"/>
+<circle cx="133" cy="42.87638752864373" r="2.1" fill="#FFFFFF" stroke="#34454F" stroke-width="0.5" data-entity="pivot"/>
+<circle cx="133" cy="42.87638752864373" r="0.55" fill="#34454F" stroke="none" stroke-width="0.4" data-entity=""/>
+<rect x="139.3" y="38.476387528643734" width="3.4" height="2.8" fill="#FFFFFF" stroke="#925924" stroke-width="0.5" data-entity=""/>
+<path d="M 139.9,38.476387528643734 C 139.9,35.476387528643734 142.1,35.476387528643734 142.1,38.476387528643734" fill="none" stroke="#925924" stroke-width="0.5"/>
+<polygon points="116.0000,48.0000 150.0000,54.0000 150.0000,60.0000 116.0000,60.0000" fill="#E9C48E" stroke="#996528" stroke-width="0.45" data-entity="coupon"/>
+<rect x="112" y="60" width="42" height="4" fill="#E5E9EB" stroke="#637580" stroke-width="0.4" data-entity="lower_platen"/>
+<text id="label-18" x="133" y="70" font-family="Arial" font-size="3.5277777777777772" font-weight="bold" text-anchor="middle" fill="#202D34">Seated angle held</text>
+<text id="label-19" x="133" y="79" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">Open at approach</text>
+<text id="label-20" x="133" y="85" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">10 N → hold → lock</text>
+<text id="label-21" x="133" y="91" font-family="Arial" font-size="3.175" font-weight="normal" text-anchor="middle" fill="#202D34">then zero → ramp</text>
+<text id="label-22" x="80" y="98" font-family="Arial" font-size="2.998611111111111" font-weight="normal" text-anchor="middle" fill="#475A65">All ramps: 0.20 mm • pitch view • single axis • schematic DEMO</text>
+</svg>

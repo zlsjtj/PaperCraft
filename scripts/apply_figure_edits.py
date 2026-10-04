@@ -15,7 +15,9 @@ Manifest (SHA values are full SHA-256 hex digests):
 
 Indices are one-based document.xml //w:drawing order, bound to the source hash.
 Each selected drawing must declare every existing representation exactly once.
-Only PNG primary images, optionally with an SVG alternative, are supported.
+PNG or JPEG primary images, optionally with an SVG alternative, are supported.
+JPEG bytes are copied unchanged; .jpg and .jpeg are codec-equivalent. Rotated
+EXIF orientations are refused rather than silently normalizing source pixels.
 Asset paths are relative to the manifest. New intrinsic aspect ratios must be
 within 1% of the existing wp:extent; extents and all XML remain byte-identical.
 VML, AlternateContent, shared media and unknown image forms are refused.
@@ -49,7 +51,11 @@ NS = {'w': W, 'a': A, 'wp': WP}
 DOCUMENT = 'word/document.xml'
 DOCUMENT_RELS = 'word/_rels/document.xml.rels'
 IMAGE_REL = R + '/image'
-MEDIA = re.compile(r'word/media/[^/\\]+\.(png|svg)\Z', re.I)
+MEDIA = re.compile(r'word/media/[^/\\]+\.(png|svg|jpe?g)\Z', re.I)
+
+
+def media_codec(suffix):
+    return 'jpeg' if suffix.lower() in ('.jpg', '.jpeg') else suffix.lower().lstrip('.')
 
 
 def sha(data):
@@ -146,10 +152,13 @@ def svg_ratio(root):
 
 
 def asset_ratio(data, suffix):
-    if suffix == '.png':
+    if suffix in ('.png', '.jpg', '.jpeg'):
+        expected = 'PNG' if suffix == '.png' else 'JPEG'
         with Image.open(io.BytesIO(data)) as im:
-            if im.format != 'PNG' or getattr(im, 'n_frames', 1) != 1:
-                raise ValueError('Asset is not a single-frame PNG')
+            if im.format != expected or getattr(im, 'n_frames', 1) != 1:
+                raise ValueError('Asset is not a single-frame ' + expected)
+            if expected == 'JPEG' and im.getexif().get(274, 1) != 1:
+                raise ValueError('JPEG EXIF orientation requires separate review; pixels not rewritten')
             im.verify()
         with Image.open(io.BytesIO(data)) as im:
             im.load()
@@ -236,14 +245,15 @@ def apply(source, manifest, destination, receipt):
             if rel is None or part is None or rel.get('Type') != IMAGE_REL:
                 raise ValueError('Missing, external or non-image relationship')
             suffix = PurePosixPath(part).suffix.lower()
-            if not MEDIA.fullmatch(part) or suffix != ('.png' if kind == 'primary' else '.svg'):
+            allowed = ('.png', '.jpg', '.jpeg') if kind == 'primary' else ('.svg',)
+            if not MEDIA.fullmatch(part) or suffix not in allowed:
                 raise ValueError('Unsupported media target or extension')
             if rep['part'] != part or part not in parts:
                 raise ValueError('Media part identity mismatch')
             if part in replacements:
                 raise ValueError('Repeated media replacement; shared targets need separate review')
             mime = overrides.get('/' + part, defaults.get(suffix[1:]))
-            if mime != {'.png': 'image/png', '.svg': 'image/svg+xml'}[suffix]:
+            if mime != {'.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg'}[suffix]:
                 raise ValueError('Media extension/content type incompatibility')
             if digest(rep['old_media_sha256'], part) != sha(parts[part]):
                 raise ValueError('Old media SHA-256 mismatch: ' + part)
@@ -251,7 +261,7 @@ def apply(source, manifest, destination, receipt):
             if not isinstance(path_value, str) or not path_value or Path(path_value).is_absolute() or PureWindowsPath(path_value).drive:
                 raise ValueError('Asset paths must be relative to the manifest')
             asset = manifest.resolve().parent / path_value
-            if asset.suffix.lower() != suffix:
+            if media_codec(asset.suffix) != media_codec(suffix):
                 raise ValueError('Asset extension incompatibility')
             payload = asset.read_bytes()
             if digest(rep['source_asset_sha256'], str(asset)) != sha(payload):

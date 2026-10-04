@@ -1,0 +1,1253 @@
+{
+  "schema_version": 1,
+  "figure_id": "lock_timing_demo",
+  "mode": "new_schematic",
+  "demo": true,
+  "scientific_message": "L uses pitch freedom to seat before locking the same pad for the ramp; roll remains outside that freedom.",
+  "evidence_status": "CONSTRUCTED_DEMO_NOT_PHYSICAL_TEST",
+  "source_refs": [
+    {
+      "file": "task.md",
+      "sha256": "7c90d8be407096881757f3d08486a883ea0f2c6aa5d4140a067b217be8fe9ad6"
+    },
+    {
+      "file": "implementation.md",
+      "sha256": "7b34882060e0c1820ab8904a204a2f48fce578a29188d4e3a1c4bf975d08de2d"
+    },
+    {
+      "file": "results.csv",
+      "sha256": "1a04001a7f3c877630ce51e3f956c33cdd668e3f4ebb265ed35e344e83849abc"
+    },
+    {
+      "file": "rough.docx",
+      "sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0"
+    }
+  ],
+  "forbidden_implications": [
+    "No second rotation axis",
+    "No pressure map",
+    "No measured geometry",
+    "No horizontal actuation",
+    "No automatic correction",
+    "No independent material specimens"
+  ],
+  "entities": [
+    {
+      "id": "pad",
+      "semantic_role": "pad",
+      "description": "one rigid rectangular upper contact pad"
+    },
+    {
+      "id": "pin",
+      "semantic_role": "pin",
+      "description": "one transverse single-axis pivot pin"
+    },
+    {
+      "id": "clamp",
+      "semantic_role": "clamp",
+      "description": "existing friction clamp shown only by a lock marker"
+    },
+    {
+      "id": "coupon",
+      "semantic_role": "coupon",
+      "description": "one representative pitch-sloped coupon"
+    },
+    {
+      "id": "platen",
+      "semantic_role": "platen",
+      "description": "fixed lower platen"
+    },
+    {
+      "id": "crosshead",
+      "semantic_role": "crosshead",
+      "description": "crosshead carrying the pivot"
+    }
+  ],
+  "relations": [
+    {
+      "id": "pad_coupon_contact",
+      "from": "pad",
+      "to": "coupon",
+      "kind": "dependency",
+      "meaning": "The lower pad face presses the coupon; contact pose is illustrative"
+    },
+    {
+      "id": "pin_motion",
+      "from": "pin",
+      "to": "pad",
+      "kind": "motion",
+      "meaning": "The pad can pitch about this pin when open"
+    }
+  ],
+  "exact_labels": [
+    "Lock before approach",
+    "Remain free",
+    "Seat then lock",
+    "Roll slope: not corrected",
+    "10 N",
+    "0.20 mm"
+  ],
+  "locked_values": {
+    "preload_N": 10,
+    "ramp_mm": 0.2,
+    "pitch_deg": 1,
+    "roll_deg": 1,
+    "modes": [
+      "E",
+      "F",
+      "L"
+    ],
+    "repeated_views_of_one_fixture": 3,
+    "axes": 1,
+    "results_csv_sha256": "1a04001a7f3c877630ce51e3f956c33cdd668e3f4ebb265ed35e344e83849abc"
+  },
+  "count_constraints": [],
+  "reference_palette": "blue_gold_coral",
+  "role_map": {
+    "pad": {
+      "base": "#A3CDCD"
+    },
+    "coupon": {
+      "base": "#E7C37B"
+    },
+    "support": {
+      "base": "#CBD3D7"
+    }
+  },
+  "layout": {
+    "archetype": "aligned side views plus L timing strip",
+    "reading_order": "E F L then timing and one-axis limit"
+  },
+  "depth": {
+    "mode": "D0",
+    "affects_quantitative_encoding": false
+  },
+  "edit_scope": {
+    "allowed": [
+      "new schematic"
+    ],
+    "protected": [
+      "one-axis topology",
+      "all table values"
+    ]
+  },
+  "output": {
+    "width_mm": 160,
+    "view_width": 1000,
+    "view_height": 625,
+    "placement_width_mm": 160,
+    "font_profile": "Arial_10pt_main_9pt_auxiliary"
+  },
+  "publication": {
+    "target_journal": null,
+    "eligibility": "unverified"
+  },
+  "items": [
+    {
+      "id": "canvas",
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1000,
+      "h": 625,
+      "fill": "#FFFFFF"
+    },
+    {
+      "id": "E-mode",
+      "type": "text",
+      "x": 167,
+      "y": 34,
+      "text": "E",
+      "size": 27,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "E-heading",
+      "type": "text",
+      "x": 167,
+      "y": 64,
+      "text": "Lock before approach",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "E-platen",
+      "type": "rect",
+      "x": 51,
+      "y": 278,
+      "w": 232,
+      "h": 31,
+      "fill": "#CBD3D7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "platen"
+    },
+    {
+      "id": "E-coupon",
+      "type": "polygon",
+      "points": [
+        [
+          72,
+          243
+        ],
+        [
+          262,
+          219
+        ],
+        [
+          262,
+          278
+        ],
+        [
+          72,
+          278
+        ]
+      ],
+      "fill": "#E7C37B",
+      "stroke": "#3F5665",
+      "stroke_width": 2,
+      "entity": "coupon"
+    },
+    {
+      "id": "E-crosshead",
+      "type": "rect",
+      "x": 128,
+      "y": 96,
+      "w": 78,
+      "h": 31,
+      "fill": "#DCE3E7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "crosshead"
+    },
+    {
+      "id": "E-stem",
+      "type": "rect",
+      "x": 156,
+      "y": 127,
+      "w": 22,
+      "h": 80,
+      "fill": "#DCE3E7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "crosshead"
+    },
+    {
+      "id": "E-pad",
+      "type": "polygon",
+      "points": [
+        [
+          72,
+          195
+        ],
+        [
+          262,
+          195
+        ],
+        [
+          262,
+          219
+        ],
+        [
+          72,
+          219
+        ]
+      ],
+      "fill": "#A3CDCD",
+      "stroke": "#3F5665",
+      "stroke_width": 2,
+      "entity": "pad"
+    },
+    {
+      "id": "E-pin",
+      "type": "circle",
+      "x": 167,
+      "y": 207,
+      "r": 11,
+      "fill": "#FFFFFF",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "pin"
+    },
+    {
+      "id": "E-pin-axis",
+      "type": "circle",
+      "x": 167,
+      "y": 207,
+      "r": 3,
+      "fill": "#233746",
+      "entity": "pin"
+    },
+    {
+      "id": "E-lock-body",
+      "type": "rect",
+      "x": 210,
+      "y": 151,
+      "w": 20,
+      "h": 16,
+      "radius": 2,
+      "fill": "#233746",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "clamp"
+    },
+    {
+      "id": "E-lock-loop",
+      "type": "path",
+      "commands": [
+        [
+          "M",
+          213,
+          151
+        ],
+        [
+          "L",
+          213,
+          145
+        ],
+        [
+          "C",
+          213,
+          134,
+          227,
+          134,
+          227,
+          145
+        ],
+        [
+          "L",
+          227,
+          151
+        ]
+      ],
+      "fill": "none",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "clamp"
+    },
+    {
+      "id": "E-lock-leader",
+      "type": "line",
+      "points": [
+        [
+          210,
+          162
+        ],
+        [
+          187,
+          197
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "E-load",
+      "type": "line",
+      "points": [
+        [
+          167,
+          76
+        ],
+        [
+          167,
+          89
+        ]
+      ],
+      "stroke": "#233746",
+      "stroke_width": 2.5
+    },
+    {
+      "id": "E-load-tip",
+      "type": "polygon",
+      "points": [
+        [
+          167,
+          94
+        ],
+        [
+          162,
+          85
+        ],
+        [
+          172,
+          85
+        ]
+      ],
+      "fill": "#233746",
+      "stroke": "#233746",
+      "stroke_width": 1
+    },
+    {
+      "id": "E-ramp-state",
+      "type": "text",
+      "x": 167,
+      "y": 346,
+      "text": "Fixed for ramp",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "F-mode",
+      "type": "text",
+      "x": 500,
+      "y": 34,
+      "text": "F",
+      "size": 27,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "F-heading",
+      "type": "text",
+      "x": 500,
+      "y": 64,
+      "text": "Remain free",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "F-platen",
+      "type": "rect",
+      "x": 384,
+      "y": 278,
+      "w": 232,
+      "h": 31,
+      "fill": "#CBD3D7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "platen"
+    },
+    {
+      "id": "F-coupon",
+      "type": "polygon",
+      "points": [
+        [
+          405,
+          243
+        ],
+        [
+          595,
+          219
+        ],
+        [
+          595,
+          278
+        ],
+        [
+          405,
+          278
+        ]
+      ],
+      "fill": "#E7C37B",
+      "stroke": "#3F5665",
+      "stroke_width": 2,
+      "entity": "coupon"
+    },
+    {
+      "id": "F-crosshead",
+      "type": "rect",
+      "x": 461,
+      "y": 96,
+      "w": 78,
+      "h": 31,
+      "fill": "#DCE3E7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "crosshead"
+    },
+    {
+      "id": "F-stem",
+      "type": "rect",
+      "x": 489,
+      "y": 127,
+      "w": 22,
+      "h": 92,
+      "fill": "#DCE3E7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "crosshead"
+    },
+    {
+      "id": "F-pad",
+      "type": "polygon",
+      "points": [
+        [
+          405,
+          219
+        ],
+        [
+          595,
+          195
+        ],
+        [
+          595,
+          219
+        ],
+        [
+          405,
+          243
+        ]
+      ],
+      "fill": "#A3CDCD",
+      "stroke": "#3F5665",
+      "stroke_width": 2,
+      "entity": "pad"
+    },
+    {
+      "id": "F-pin",
+      "type": "circle",
+      "x": 500,
+      "y": 219,
+      "r": 11,
+      "fill": "#FFFFFF",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "pin"
+    },
+    {
+      "id": "F-pin-axis",
+      "type": "circle",
+      "x": 500,
+      "y": 219,
+      "r": 3,
+      "fill": "#233746",
+      "entity": "pin"
+    },
+    {
+      "id": "F-lock-body",
+      "type": "rect",
+      "x": 543,
+      "y": 151,
+      "w": 20,
+      "h": 16,
+      "radius": 2,
+      "fill": "#FFFFFF",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "clamp"
+    },
+    {
+      "id": "F-lock-loop",
+      "type": "path",
+      "commands": [
+        [
+          "M",
+          546,
+          151
+        ],
+        [
+          "L",
+          546,
+          145
+        ],
+        [
+          "C",
+          546,
+          134,
+          560,
+          134,
+          560,
+          145
+        ],
+        [
+          "L",
+          560,
+          143
+        ]
+      ],
+      "fill": "none",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "clamp"
+    },
+    {
+      "id": "F-lock-leader",
+      "type": "line",
+      "points": [
+        [
+          543,
+          162
+        ],
+        [
+          520,
+          209
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "F-load",
+      "type": "line",
+      "points": [
+        [
+          500,
+          76
+        ],
+        [
+          500,
+          89
+        ]
+      ],
+      "stroke": "#233746",
+      "stroke_width": 2.5
+    },
+    {
+      "id": "F-load-tip",
+      "type": "polygon",
+      "points": [
+        [
+          500,
+          94
+        ],
+        [
+          495,
+          85
+        ],
+        [
+          505,
+          85
+        ]
+      ],
+      "fill": "#233746",
+      "stroke": "#233746",
+      "stroke_width": 1
+    },
+    {
+      "id": "F-ramp-state",
+      "type": "text",
+      "x": 500,
+      "y": 346,
+      "text": "Free during ramp",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "L-mode",
+      "type": "text",
+      "x": 833,
+      "y": 34,
+      "text": "L",
+      "size": 27,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "L-heading",
+      "type": "text",
+      "x": 833,
+      "y": 64,
+      "text": "Seat then lock",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "L-platen",
+      "type": "rect",
+      "x": 717,
+      "y": 278,
+      "w": 232,
+      "h": 31,
+      "fill": "#CBD3D7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "platen"
+    },
+    {
+      "id": "L-coupon",
+      "type": "polygon",
+      "points": [
+        [
+          738,
+          243
+        ],
+        [
+          928,
+          219
+        ],
+        [
+          928,
+          278
+        ],
+        [
+          738,
+          278
+        ]
+      ],
+      "fill": "#E7C37B",
+      "stroke": "#3F5665",
+      "stroke_width": 2,
+      "entity": "coupon"
+    },
+    {
+      "id": "L-crosshead",
+      "type": "rect",
+      "x": 794,
+      "y": 96,
+      "w": 78,
+      "h": 31,
+      "fill": "#DCE3E7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "crosshead"
+    },
+    {
+      "id": "L-stem",
+      "type": "rect",
+      "x": 822,
+      "y": 127,
+      "w": 22,
+      "h": 92,
+      "fill": "#DCE3E7",
+      "stroke": "#607681",
+      "stroke_width": 2,
+      "entity": "crosshead"
+    },
+    {
+      "id": "L-pad",
+      "type": "polygon",
+      "points": [
+        [
+          738,
+          219
+        ],
+        [
+          928,
+          195
+        ],
+        [
+          928,
+          219
+        ],
+        [
+          738,
+          243
+        ]
+      ],
+      "fill": "#A3CDCD",
+      "stroke": "#3F5665",
+      "stroke_width": 2,
+      "entity": "pad"
+    },
+    {
+      "id": "L-pin",
+      "type": "circle",
+      "x": 833,
+      "y": 219,
+      "r": 11,
+      "fill": "#FFFFFF",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "pin"
+    },
+    {
+      "id": "L-pin-axis",
+      "type": "circle",
+      "x": 833,
+      "y": 219,
+      "r": 3,
+      "fill": "#233746",
+      "entity": "pin"
+    },
+    {
+      "id": "L-lock-body",
+      "type": "rect",
+      "x": 876,
+      "y": 151,
+      "w": 20,
+      "h": 16,
+      "radius": 2,
+      "fill": "#233746",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "clamp"
+    },
+    {
+      "id": "L-lock-loop",
+      "type": "path",
+      "commands": [
+        [
+          "M",
+          879,
+          151
+        ],
+        [
+          "L",
+          879,
+          145
+        ],
+        [
+          "C",
+          879,
+          134,
+          893,
+          134,
+          893,
+          145
+        ],
+        [
+          "L",
+          893,
+          151
+        ]
+      ],
+      "fill": "none",
+      "stroke": "#233746",
+      "stroke_width": 2,
+      "entity": "clamp"
+    },
+    {
+      "id": "L-lock-leader",
+      "type": "line",
+      "points": [
+        [
+          876,
+          162
+        ],
+        [
+          853,
+          209
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "L-load",
+      "type": "line",
+      "points": [
+        [
+          833,
+          76
+        ],
+        [
+          833,
+          89
+        ]
+      ],
+      "stroke": "#233746",
+      "stroke_width": 2.5
+    },
+    {
+      "id": "L-load-tip",
+      "type": "polygon",
+      "points": [
+        [
+          833,
+          94
+        ],
+        [
+          828,
+          85
+        ],
+        [
+          838,
+          85
+        ]
+      ],
+      "fill": "#233746",
+      "stroke": "#233746",
+      "stroke_width": 1
+    },
+    {
+      "id": "L-ramp-state",
+      "type": "text",
+      "x": 833,
+      "y": 346,
+      "text": "Fixed for ramp",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "pad-label",
+      "type": "text",
+      "x": 35,
+      "y": 166,
+      "text": "Pad",
+      "size": 21,
+      "fill": "#233746"
+    },
+    {
+      "id": "pad-leader",
+      "type": "line",
+      "points": [
+        [
+          76,
+          170
+        ],
+        [
+          90,
+          195
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "coupon-label",
+      "type": "text",
+      "x": 167,
+      "y": 263,
+      "text": "Coupon",
+      "size": 20,
+      "fill": "#233746",
+      "align": "center",
+      "background": "#E7C37B"
+    },
+    {
+      "id": "platen-label",
+      "type": "text",
+      "x": 167,
+      "y": 300,
+      "text": "Fixed lower platen",
+      "size": 21,
+      "fill": "#233746",
+      "align": "center",
+      "background": "#CBD3D7"
+    },
+    {
+      "id": "pin-label",
+      "type": "text",
+      "x": 25,
+      "y": 126,
+      "text": "Pivot pin",
+      "size": 20,
+      "fill": "#233746"
+    },
+    {
+      "id": "pin-leader",
+      "type": "line",
+      "points": [
+        [
+          111,
+          132
+        ],
+        [
+          158,
+          200
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "clamp-label",
+      "type": "text",
+      "x": 967,
+      "y": 125,
+      "text": "Clamp",
+      "size": 20,
+      "fill": "#233746",
+      "align": "right"
+    },
+    {
+      "id": "clamp-leader",
+      "type": "line",
+      "points": [
+        [
+          930,
+          131
+        ],
+        [
+          900,
+          151
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "F-pitch-arc",
+      "type": "path",
+      "commands": [
+        [
+          "M",
+          446,
+          188
+        ],
+        [
+          "C",
+          452,
+          174,
+          463,
+          164,
+          479,
+          161
+        ]
+      ],
+      "fill": "none",
+      "stroke": "#233746",
+      "stroke_width": 2.5,
+      "entity": "pad",
+      "relation": "pin_motion"
+    },
+    {
+      "id": "F-pitch-tip",
+      "type": "polygon",
+      "points": [
+        [
+          479,
+          161
+        ],
+        [
+          468,
+          158
+        ],
+        [
+          470,
+          168
+        ]
+      ],
+      "fill": "#233746",
+      "stroke": "#233746",
+      "stroke_width": 1,
+      "entity": "pad"
+    },
+    {
+      "id": "F-pitch-label",
+      "type": "text",
+      "x": 411,
+      "y": 153,
+      "text": "Pitch",
+      "size": 20,
+      "fill": "#233746"
+    },
+    {
+      "id": "sequence-bg",
+      "type": "rect",
+      "x": 26,
+      "y": 417,
+      "w": 948,
+      "h": 99,
+      "radius": 10,
+      "fill": "#EEF4F4"
+    },
+    {
+      "id": "sequence-title",
+      "type": "text",
+      "x": 44,
+      "y": 444,
+      "text": "L sequence",
+      "size": 22,
+      "fill": "#233746"
+    },
+    {
+      "id": "seq-a0",
+      "type": "text",
+      "x": 210,
+      "y": 465,
+      "text": "Seat freely",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-b0",
+      "type": "text",
+      "x": 210,
+      "y": 494,
+      "text": "10 N",
+      "size": 20,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-line0",
+      "type": "line",
+      "points": [
+        [
+          296,
+          461
+        ],
+        [
+          324,
+          461
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "seq-tip0",
+      "type": "polygon",
+      "points": [
+        [
+          332,
+          461
+        ],
+        [
+          323,
+          456
+        ],
+        [
+          323,
+          466
+        ]
+      ],
+      "fill": "#607681",
+      "stroke": "#607681",
+      "stroke_width": 1
+    },
+    {
+      "id": "seq-a1",
+      "type": "text",
+      "x": 431,
+      "y": 465,
+      "text": "Hold preload",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-b1",
+      "type": "text",
+      "x": 431,
+      "y": 494,
+      "text": "acknowledge",
+      "size": 20,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-line1",
+      "type": "line",
+      "points": [
+        [
+          517,
+          461
+        ],
+        [
+          545,
+          461
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "seq-tip1",
+      "type": "polygon",
+      "points": [
+        [
+          553,
+          461
+        ],
+        [
+          544,
+          456
+        ],
+        [
+          544,
+          466
+        ]
+      ],
+      "fill": "#607681",
+      "stroke": "#607681",
+      "stroke_width": 1
+    },
+    {
+      "id": "seq-a2",
+      "type": "text",
+      "x": 650,
+      "y": 465,
+      "text": "Close clamp",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-b2",
+      "type": "text",
+      "x": 650,
+      "y": 494,
+      "text": "do not lift",
+      "size": 20,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-line2",
+      "type": "line",
+      "points": [
+        [
+          736,
+          461
+        ],
+        [
+          764,
+          461
+        ]
+      ],
+      "stroke": "#607681",
+      "stroke_width": 2
+    },
+    {
+      "id": "seq-tip2",
+      "type": "polygon",
+      "points": [
+        [
+          772,
+          461
+        ],
+        [
+          763,
+          456
+        ],
+        [
+          763,
+          466
+        ]
+      ],
+      "fill": "#607681",
+      "stroke": "#607681",
+      "stroke_width": 1
+    },
+    {
+      "id": "seq-a3",
+      "type": "text",
+      "x": 864,
+      "y": 465,
+      "text": "Zero, ramp",
+      "size": 23,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "seq-b3",
+      "type": "text",
+      "x": 864,
+      "y": 494,
+      "text": "0.20 mm",
+      "size": 20,
+      "fill": "#233746",
+      "align": "center"
+    },
+    {
+      "id": "axis-boundary",
+      "type": "text",
+      "x": 500,
+      "y": 567,
+      "text": "DEMO  |  One pitch axis  |  Roll slope: not corrected",
+      "size": 20,
+      "fill": "#233746",
+      "align": "center"
+    }
+  ],
+  "caption": "Figure 1. Three uses of the same single-axis compression pad on a pitch-sloped coupon. E fixes the horizontal pad before approach; F allows pitch rotation during seating and the ramp; L settles under 10 N, then locks during the acknowledged preload hold without lifting. Filled and open lock markers denote clamp state, not clamp construction. The side views repeat one fixture; the circular pin is viewed along its axis. The arc denotes permitted pitch rotation, not a measured angle. Slopes and the E-mode gap are exaggerated. The roll slope is outside the permitted motion. Poses are schematic, not contact-pressure maps.",
+  "alt_text": "Three side views of the same compression fixture show a rigid pad, circular transverse pin, coupon and fixed platen. E is locked horizontal before approach with an illustrative edge contact. An arc beside F denotes pitch about the existing pin. F and L lie parallel to the pitch slope, but only F remains free in the ramp. L seats at 10 N, holds and acknowledges preload, locks without lifting, then zeros and ramps 0.20 mm. A roll slope cannot be corrected.",
+  "object_mapping": {
+    "approach": "pad lower face to coupon top; same pin and clamp in all three views",
+    "lock": "symbol attached by leader to pivot; construction deliberately unspecified",
+    "scope": "representative pitch condition; full nine-row table in paper"
+  },
+  "data_source": "inputs/results.csv",
+  "data_sha256": "1a04001a7f3c877630ce51e3f956c33cdd668e3f4ebb265ed35e344e83849abc"
+}

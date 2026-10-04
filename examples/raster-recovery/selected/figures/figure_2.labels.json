@@ -1,0 +1,362 @@
+[
+  {
+    "id": "label2",
+    "text": "2  Sealed output and position recover separately",
+    "font_size": 42,
+    "effective_pt": 11.905511811023622,
+    "x": 55,
+    "y": 64
+  },
+  {
+    "id": "label3",
+    "text": "SYNTHETIC DEMO",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1545,
+    "y": 108
+  },
+  {
+    "id": "label4",
+    "text": "FORWARD",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 55,
+    "y": 155
+  },
+  {
+    "id": "label6",
+    "text": "Ordinal q = 16r + k",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 190,
+    "y": 245
+  },
+  {
+    "id": "label8",
+    "text": "Physical (x, y)",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 190,
+    "y": 342
+  },
+  {
+    "id": "label14",
+    "text": "Acquired records",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 542,
+    "y": 238
+  },
+  {
+    "id": "label19",
+    "text": "RAM \u00b7 4 \u00d7 256 B",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 542,
+    "y": 351
+  },
+  {
+    "id": "label20",
+    "text": "10 ms / acquisition",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 542,
+    "y": 413
+  },
+  {
+    "id": "label23",
+    "text": "write",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 748,
+    "y": 259
+  },
+  {
+    "id": "label25",
+    "text": "Persistent payload",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 990,
+    "y": 236
+  },
+  {
+    "id": "label26",
+    "text": "1024 B",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 990,
+    "y": 274
+  },
+  {
+    "id": "label28",
+    "text": "Seal \u00b7 24 B",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 990,
+    "y": 349
+  },
+  {
+    "id": "label31",
+    "text": "2 ms combined event",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 990,
+    "y": 413
+  },
+  {
+    "id": "label34",
+    "text": "Row checkpoint",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 1357,
+    "y": 188
+  },
+  {
+    "id": "label36",
+    "text": "A",
+    "font_size": 36,
+    "effective_pt": 10.20472440944882,
+    "x": 1327,
+    "y": 255
+  },
+  {
+    "id": "label37",
+    "text": "64 B",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1327,
+    "y": 305
+  },
+  {
+    "id": "label38",
+    "text": "slot",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1327,
+    "y": 350
+  },
+  {
+    "id": "label40",
+    "text": "B",
+    "font_size": 36,
+    "effective_pt": 10.20472440944882,
+    "x": 1472,
+    "y": 255
+  },
+  {
+    "id": "label41",
+    "text": "64 B",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1472,
+    "y": 305
+  },
+  {
+    "id": "label42",
+    "text": "slot",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1472,
+    "y": 350
+  },
+  {
+    "id": "label43",
+    "text": "after 4 blocks \u00b7 1 ms",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1400,
+    "y": 413
+  },
+  {
+    "id": "label47",
+    "text": "cut discards buffer",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 455,
+    "y": 513
+  },
+  {
+    "id": "label48",
+    "text": "RESTART",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 55,
+    "y": 579
+  },
+  {
+    "id": "label50",
+    "text": "Home",
+    "font_size": 36,
+    "effective_pt": 10.20472440944882,
+    "x": 160,
+    "y": 703
+  },
+  {
+    "id": "label51",
+    "text": "120 ms",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 160,
+    "y": 749
+  },
+  {
+    "id": "label52",
+    "text": "known origin",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 160,
+    "y": 789
+  },
+  {
+    "id": "label56",
+    "text": "Recovery reader \u00b7 6 ms",
+    "font_size": 34,
+    "effective_pt": 9.637795275590552,
+    "x": 578,
+    "y": 668
+  },
+  {
+    "id": "label57",
+    "text": "checkpoint \u2192 row \u2192 seal scan",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 578,
+    "y": 709
+  },
+  {
+    "id": "label59",
+    "text": "b0",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 416,
+    "y": 775
+  },
+  {
+    "id": "label63",
+    "text": "b1",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 522,
+    "y": 775
+  },
+  {
+    "id": "label67",
+    "text": "b2",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 628,
+    "y": 775
+  },
+  {
+    "id": "label71",
+    "text": "b3",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 734,
+    "y": 775
+  },
+  {
+    "id": "label73",
+    "text": "stop at first invalid / absent",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 578,
+    "y": 856
+  },
+  {
+    "id": "label76",
+    "text": "q",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 854,
+    "y": 703
+  },
+  {
+    "id": "label78",
+    "text": "Row anchor",
+    "font_size": 36,
+    "effective_pt": 10.20472440944882,
+    "x": 1048,
+    "y": 699
+  },
+  {
+    "id": "label79",
+    "text": "30 ms",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 1048,
+    "y": 741
+  },
+  {
+    "id": "label80",
+    "text": "travel to missing q",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1048,
+    "y": 785
+  },
+  {
+    "id": "label83",
+    "text": "(x, y)",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1252,
+    "y": 695
+  },
+  {
+    "id": "label85",
+    "text": "Acquire",
+    "font_size": 36,
+    "effective_pt": 10.20472440944882,
+    "x": 1428,
+    "y": 704
+  },
+  {
+    "id": "label86",
+    "text": "next sample",
+    "font_size": 31,
+    "effective_pt": 8.78740157480315,
+    "x": 1428,
+    "y": 749
+  },
+  {
+    "id": "label87",
+    "text": "10 ms",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 1428,
+    "y": 789
+  },
+  {
+    "id": "label92",
+    "text": "Logical label q = 88",
+    "font_size": 33,
+    "effective_pt": 9.354330708661417,
+    "x": 1000,
+    "y": 934
+  },
+  {
+    "id": "label93",
+    "text": "Prefix acceptance: matching metadata + payload CRC",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 57,
+    "y": 1020
+  },
+  {
+    "id": "label94",
+    "text": "Position acceptance: home + row anchor",
+    "font_size": 32,
+    "effective_pt": 9.070866141732285,
+    "x": 57,
+    "y": 1068
+  },
+  {
+    "id": "label102",
+    "text": "read durable state",
+    "font_size": 30,
+    "effective_pt": 8.503937007874017,
+    "x": 1137,
+    "y": 507
+  }
+]

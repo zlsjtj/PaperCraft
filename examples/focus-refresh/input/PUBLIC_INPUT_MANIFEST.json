@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN_DEMO_V1",
+  "file_count": 14,
+  "digest_definition": "sha256 of sorted UTF-8 relative_path + TAB + file_sha256 + LF records; excludes this manifest",
+  "input_set_sha256": "57b311a2a641c3cb7c6ad9cb82836b7e7fefffb008e9a7ff5f0971285b6de59b",
+  "files": {
+    "apparatus_and_operations.md": "2751830d0a293275d95f7b003ac9e4d7f817af3ea89c94f8908e2ca3eccbca41",
+    "construct_demo.py": "2ffd65d9e02a523e85c241d150cf825828da8f10ddda5e61faebf531c45116ea",
+    "data_v1/dataset_metadata.json": "732f920b8ea55815e2dec8985b7e0de434f1197d270ed0f3edeac3d25e5c1c47",
+    "data_v1/events.csv": "76086313f1cd6cc3547e4e34decbea2e01d7eb4b65e252697de5a9e2b5e9f975",
+    "data_v1/field_results.csv": "f9ded0973bfd98624a4d7f9ec57de6d7d7c1e3ea3fad6f78a6a7b64e73d28676",
+    "data_v1/generated_files_sha256.json": "590eb4816a86e8f03851dbddb27677d91423310ef3bb6d72fff41bea1fde40d3",
+    "data_v1/probe_trace.csv": "342ea0c8105734fe607539f3cdb4af34519d0f4b74d849e7cbf4d5291d33c404",
+    "data_v1/run_results.csv": "1fbf28e99a36c2dd3dd7db2915494a3f27f5adf2dfe7c09f2f24989eeaf6e573",
+    "implementation_notebook.md": "129f02785371f776842576edc859529850e146281486c6e908caa1220a29f533",
+    "README_DEMO.md": "9ff6f6630c18fe064453777116e9816f957d0008c6f2692d2fbec3ea9974496d",
+    "rough_manuscript_v0.md": "d7acc90f3bc656c25509bff911b4e488f78c75d414fb87f898452ab9d41bdef8",
+    "sources_and_data_dictionary.md": "7f0334799a7b8ede6b82f54b8fbc6a39443697223a23596a7d5b34b8666867d8",
+    "table_view_1_condition_results.csv": "313580c3bc17e2aa042c092aa1f77ff20a36a2c8df74ca91de9c1e1708545fa7",
+    "table_view_2_all_attempt_costs.csv": "ea9960cd2759dc56c79043cf5305d9d0980711811c3789b9c9537b0d1ce95837"
+  }
+}

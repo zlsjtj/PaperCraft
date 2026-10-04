@@ -16,7 +16,7 @@ NS={'w':W,'m':M};Q=lambda n:'{'+W+'}'+n
 _span_spec=importlib.util.spec_from_file_location('_papercraft_spans',Path(__file__).with_name('docx_spans.py'))
 SPAN=importlib.util.module_from_spec(_span_spec);_span_spec.loader.exec_module(SPAN)
 PROTECTED=['m:oMath','w:tbl','w:drawing','w:pict','w:fldSimple','w:fldChar','w:instrText',
-           'w:footnoteReference','w:endnoteReference','w:bookmarkStart','w:bookmarkEnd','w:hyperlink']
+           'w:footnoteReference','w:endnoteReference','w:bookmarkStart','w:bookmarkEnd','w:hyperlink','w:lastRenderedPageBreak']
 WHOLE_OPERATIONS=['replace','insert_after','delete','move_after','format']
 WHOLE_HISTORY_QUERY='//w:ins | //w:del | //w:moveFrom | //w:moveTo | //w:pPrChange | //w:rPrChange'
 def sha(b):return hashlib.sha256(b).hexdigest()
@@ -86,9 +86,17 @@ def inventory(path):
         whole={'available':not whole_blocked,'operations':WHOLE_OPERATIONS if not whole_blocked else [],'blocked_by':whole_blocked}
         protected_content=[located_object(child,field_error[0] if field_error else SPAN.ineligible_reason(child,field_set))
                            for child in p if child.tag!=Q('pPr') and (field_error or not SPAN.eligible(child,field_set))]
+        authored_blocked=list(field_error)+([SPAN.paragraph_span_reason(p)] if SPAN.paragraph_span_reason(p) else [])
+        if p.xpath('.//w:ins|.//w:del|.//w:moveFrom|.//w:moveTo|.//w:rPrChange|.//w:pPrChange',namespaces=NS):
+            authored_blocked.append('Revision-bearing paragraph is not supported by authored prose diff')
+        if not span['groups']:authored_blocked.append('No ordinary-text anchors')
+        authored={'available':not authored_blocked,'operation':'rewrite_prose_preserving_runs',
+                  'entrypoint':'scripts/apply_authored_edits.py','blocked_by':authored_blocked,
+                  'validation':'Requires exact full before/after and source hash. Each changed interval must stay within ordinary runs of the same semantic format; only an eastAsia/default font hint on ASCII text with identical explicit Western fonts may differ. Every protected boundary remains a barrier. Availability identifies a continuation route, not approval of an unseen rewrite.'}
         rows.append({'id':pid,'text':text(p),'text_sha256':sha(text(p).encode()),
           'editable':legacy_reason is None,'reason':legacy_reason,'editable_scope':'legacy whole-paragraph structure only; not an executable capability',
-          'whole_paragraph':whole,'ordinary_spans':span,'protected_content':protected_content,
+          'whole_paragraph':whole,'ordinary_spans':span,'authored_prose_diff':authored,'protected_content':protected_content,
+          'retained_layout_cache':[located_object(n,'cached Word page boundary; text on either side may be edited within its eligible group; not an explicit page break') for n in p.findall('.//w:lastRenderedPageBreak',NS)],
           'operations':whole['operations']+span['operations'],
           'recommended_route':'replace' if whole['available'] else 'replace_span' if span['available'] else None})
     return {'file':str(Path(path).resolve()),'sha256':sha(Path(path).read_bytes()),

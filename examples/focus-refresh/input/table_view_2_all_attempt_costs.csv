@@ -1,0 +1,5 @@
+provenance,policy,constructed_events,accepted_events,mean_local_probe_count,mean_local_path_mm,mean_local_retract_count,mean_local_calibration_s,min_total_cycle_s,mean_total_cycle_s,max_total_cycle_s
+CONSTRUCTED_DEMO,PLANE,24,1,0,0.0,0,0.0,13.59,13.59,13.59
+CONSTRUCTED_DEMO,ALL9,24,24,9,340.0,1,11.74,25.33,25.33,25.33
+CONSTRUCTED_DEMO,ROW3,24,12,4.75,255.63167341,2,8.23789592,19.26560859,21.82789592,28.05059371
+CONSTRUCTED_DEMO,SHIFT3,24,8,3,155.6486873,2,5.67560859,19.26560859,19.26560859,19.26560859
