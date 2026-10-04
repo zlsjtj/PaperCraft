@@ -15,16 +15,25 @@
 
 <sub>英文案例的中文摘述；数值为教学构造数据。</sub>
 
+<details>
+<summary>展开文字对照</summary>
+
+**原稿**：比较了已有压头的三种模式，记录包含九行结果。L 模式在斜面条件下的力变异系数为 2.3%，漂移为 19 μm。其他条件也有差异。
+
+**改稿**：压头转动有助于贴合斜面，但加载时保持自由也可能漂移。比较的关键是何时锁住：先贴合，再锁定，并为较低漂移付出额外准备时间。
+
+同一斜面，相比全程自由，先就位再锁定将漂移从 125 μm 降至 19 μm，准备时间从 17 秒增至 32 秒。末端力 CV 从 2.1% 到 2.3%，不能据此判定等效或显著；平面与另一倾斜方向的结果仍保留在完整稿中。
+
+</details>
+
 [Word 清稿](examples/clamp-timing/clean.docx) · [Word 审阅稿](examples/clamp-timing/review.docx) · [原始材料](examples/clamp-timing/input/rough.docx) · [30 秒案例导览](examples/clamp-timing/showcase/assets/tour.gif)
 
 ## 用在你的论文里
 
-| 想让读者看见什么 | PaperCraft 怎么改 | 看实际案例 |
-|---|---|---|
-| **创新点** | 找到研究约束与实际改变，把主贡献前置 | [锁定时机：从步骤清单到设计问题](examples/clamp-timing/README.md) |
-| **技术工作** | 用难点、必要决定和验证作用解释实现工作 | [快照所有权：把工程工作写进论证](examples/heat-story/README.md) |
-| **证据与取舍** | 让每项收益有对照、有归因，也讲清代价 | [有界缓存：组织混合结果](examples/cache-reserve/README.md) |
-| **成稿交付** | 保留公式、引用与历史标记，生成可审阅的修改文件 | [复杂 Word：局部修改与对象保全](examples/complex-word/README.md) |
+- **创新点**：找到研究约束与实际改变，把主贡献前置。[看锁定时机案例](examples/clamp-timing/README.md)。
+- **技术工作**：用难点、必要决定和验证作用解释实现工作。[看快照所有权案例](examples/heat-story/README.md)。
+- **证据与取舍**：让每项收益有对照、有归因，也讲清代价。[看有界缓存案例](examples/cache-reserve/README.md)。
+- **成稿交付**：保留公式、引用与历史标记，生成可审阅的修改文件。[看复杂 Word 案例](examples/complex-word/README.md)。
 
 [同材料生成对照](examples/window-records-trial/README.md) · [从材料到成稿的教程](docs/from-materials-to-paper.md)
 
