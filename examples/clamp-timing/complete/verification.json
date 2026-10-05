@@ -1,0 +1,45 @@
+{
+  "source_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "checks": {
+    "clean": {
+      "formula": true,
+      "fields": true,
+      "bookmarks": true,
+      "hyperlinks": true,
+      "historical_revisions": true,
+      "italic_variables": true,
+      "original_yellow_retained": true,
+      "table_cell_values": true,
+      "table_header": true,
+      "two_figures_at_160mm": true,
+      "exact_png_svg_embedded": true,
+      "three_pdf_pages": true,
+      "page_roles": true
+    },
+    "review": {
+      "formula": true,
+      "fields": true,
+      "bookmarks": true,
+      "hyperlinks": true,
+      "historical_revisions": true,
+      "italic_variables": true,
+      "original_yellow_retained": true,
+      "table_cell_values": true,
+      "table_header": true,
+      "two_figures_at_160mm": true,
+      "exact_png_svg_embedded": true,
+      "three_pdf_pages": true,
+      "page_roles": true
+    },
+    "same_prose": true,
+    "actual_svg_27_values": true
+  },
+  "pdf_checks": {
+    "clean": "RUN",
+    "review": "RUN"
+  },
+  "visual_review": "separately recorded model inspection",
+  "human_approval": false,
+  "status": "PASS",
+  "note": "表格内容与行列保留；排版属性有变化，未声称表 XML 完全相同。新图为两个 SVG/PNG 对应表示。"
+}

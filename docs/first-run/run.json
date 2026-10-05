@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-05",
+  "host": "Codex desktop, current conversation",
+  "task_type": "documented rerun of public first-use material; not an unseen-task or independent trial",
+  "release": "v2.31.1",
+  "used_skill_files": {
+    "SKILL.md": {
+      "package_sha256": "c13b51fd1e2e663b8d1e9b273a03cdcb2ab99eb9bf32013af36c2e7d14bb9585",
+      "repository_sha256": "6967aa9a55984e95554e140944ee281a4ac170168b7374919b91469d694d3e49"
+    },
+    "references/host-runtime.md": {
+      "package_sha256": "066344c3bda196f2c53d5fe5b062718c98c7d9b0d2565bac3dd3c3c4de82297f",
+      "repository_sha256": "066344c3bda196f2c53d5fe5b062718c98c7d9b0d2565bac3dd3c3c4de82297f"
+    },
+    "references/dependencies.md": {
+      "package_sha256": "b6cd4649f32afa63b7a046822a8ea956134670d45f48c37245e5735307d368e0",
+      "repository_sha256": "42e5740ce171c9d7feae83f6d5fc35ec2e766df57fd5699316ccc5c510caf656"
+    },
+    "references/reviewer-method.md": {
+      "package_sha256": "02d53b74e53741e0b133f96acfab1281e20822df452d70af9647d23d8d3105ff",
+      "repository_sha256": "02d53b74e53741e0b133f96acfab1281e20822df452d70af9647d23d8d3105ff"
+    },
+    "references/complex-word.md": {
+      "package_sha256": "4335af1f8c6af30c4292ae1938ffa1d5efaa704a7098ac359867c5b0ee0aef2e",
+      "repository_sha256": "2dddca3ff0dbf760f39b81db9723a063bfdbae7d3ed1519d25691f673ae9c6a2"
+    },
+    "scripts/apply_authored_edits.py": {
+      "package_sha256": "4b95237fdb96fba503e5c1a3486c44a36917c604f974196fb658e4ac2e17b439",
+      "repository_sha256": "4b95237fdb96fba503e5c1a3486c44a36917c604f974196fb658e4ac2e17b439"
+    },
+    "scripts/review_docx.py": {
+      "package_sha256": "5be3b442476c6933664094aeec70dc70bc30065a6f00eb5454bd57a2076715bd",
+      "repository_sha256": "5be3b442476c6933664094aeec70dc70bc30065a6f00eb5454bd57a2076715bd"
+    }
+  },
+  "package_source_match": "Verified both hashes against package-manifest; packaging rewrites selected reference links.",
+  "downloads": {
+    "first-use": {
+      "url": "https://github.com/zlsjtj/PaperCraft/releases/download/v2.31.1/paper-evidence-framing-first-use.zip",
+      "status": 200,
+      "bytes": 43476,
+      "sha256": "89353084724e305175087606480fb37624018a52a9d7571f2f09c7428c739f96",
+      "retrieved_utc": "2026-10-04T17:56:08.031533+00:00"
+    },
+    "codex": {
+      "url": "https://github.com/zlsjtj/PaperCraft/releases/download/v2.31.1/paper-evidence-framing-codex.zip",
+      "status": 200,
+      "bytes": 2941372,
+      "sha256": "61dcdbc3de7da38ec7c3fcf2bfd2fbdeb75995d3e80d742331fa75eab93d41ad",
+      "retrieved_utc": "2026-10-04T17:56:09.080278+00:00"
+    }
+  },
+  "human_review": false,
+  "native_client_recording": false,
+  "source": "The maintainer model authored the text edits / figure source in this run. Rendering helpers assemble and export them; they do not perform model generation.",
+  "checks": {
+    "clean": {
+      "changed_paragraphs": [
+        2,
+        4
+      ],
+      "all_other_paragraphs_xml_identical": true,
+      "all_non_document_parts_identical": true,
+      "pages": 2,
+      "all_pages_visually_reviewed_by_maintainer_model": true
+    },
+    "review": {
+      "changed_paragraphs": [
+        2,
+        4
+      ],
+      "all_other_paragraphs_xml_identical": true,
+      "all_non_document_parts_identical": true,
+      "pages": 2,
+      "all_pages_visually_reviewed_by_maintainer_model": true
+    }
+  },
+  "artifacts": {
+    "output/clean.docx": "70008569923f1b40300942dfda64627c023cfbe029f0ea3eda1c6dd1fb333820",
+    "output/clean.pdf": "b696db9698317465382a978d7163846268dad0829bc496a5a1395246c05af142",
+    "output/review.docx": "34f252dbb69f1c8b821fa9704c3e39ced578395e24392df3c0155f80a5cb7d68",
+    "output/review.pdf": "f055cf855bebdfde4f8e2fe63570ca5b4f977bf47a55e50d5c6164d97072a8ef"
+  }
+}

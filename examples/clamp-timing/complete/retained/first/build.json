@@ -1,0 +1,14 @@
+{
+  "source_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "builder_sha256": "3f1a7a340be82ec65917e65ce45dead47e69429f54d82ab43f5b12b30f80233b",
+  "papercraft_skill_sha256": "6967aa9a55984e95554e140944ee281a4ac170168b7374919b91469d694d3e49",
+  "figure_sources": {
+    "mechanism.svg": "99b10477e9773702db56a1732456b88abffdfe99b105a8fc50446e5f35a81401",
+    "mechanism.png": "33fcacf882a44bb7d1a9f7479d9321ece3e08a1c6296a77822c0ee94592507c6",
+    "results.svg": "fbff3d2bfe8bfba07f451aef121e0807b0bd90277c6d6c040cddd25fa479ae05",
+    "results.png": "5d89ff3b32f25b6235765d8326f5b5c238f24b192e0646f6b43949bae74b0e70"
+  },
+  "changes": "Narrative and figure sequence; exact original table cell texts retained with new formatting.",
+  "yellow": "Relative to rough.docx; original highlighted statement also retained. Not native Track Changes.",
+  "visual_review": "PENDING"
+}

@@ -1,0 +1,23 @@
+CONSTRUCTED DEMO — NOT REAL RESEARCH RESULTS
+Compression fixture evaluation
+Abstract
+Three modes were tried with an existing pivoting compression pad. The components included a frame, a pin, a clamp, a pad and a lower platen. The records include nine rows. In the pitch condition, mode L had a force coefficient of variation of 2.3%, drift of 19 micrometres and seating time of 32 seconds. E had 7.2%, 12 micrometres and 18 seconds. In flat and roll conditions there were also differences. The fixture was operated at a preload of 10 N and a displacement of 0.20 mm. Repeatability and displacement during the ramp are discussed. These are constructed teaching records.
+Introduction
+Compression measurements require an upper pad and a supported specimen. Mounting, approaching, loading and unloading are parts of the procedure. The upper pad here has one angular degree of freedom. A friction clamp is available to lock that freedom. A rigid pad has a flat contact face, while a coupon top can have a slope. The frame sensors and analysis routine were already available. Surface finish and frame settings were retained throughout the present comparison.
+The records contain three conditions and three modes. There is a flat coupon, a coupon tilted along the available axis, and a coupon tilted across it. Several results improve with different modes, while the timing increases in some runs. The purpose of the comparison is to examine these records and the fixture operation. No contact pressure field was measured. Figure 1 is reserved for the mechanism diagram.
+Method
+In mode E the upper pad was set horizontal and locked before approach. In mode F it remained unlocked throughout approach and loading. In mode L it was unlocked during approach, held at the preload, locked without lifting, and then loaded. A preload hold acknowledgement was required before locking in L. The displacement increment was zeroed after the prescribed approach or lock sequence. The pad was unloaded before releasing the clamp. No acknowledgement was missing in these records.
+The pitch pin axis is perpendicular to a side view of the loading geometry. The pad cannot roll about a second axis. The conditions used planar top faces: flat, one degree in pitch, and one degree in roll. The three modes used the same components. The 10 N preload and 0.20 mm increment were inherited settings rather than tuned settings. Preparation time includes approach and the preload hold and lock where applicable. It excludes unloading and preparation of the coupon.
+Force repeatability is calculated from the sample standard deviation s and mean μ across the eight reseatings: . The value is reported in percent. It is not a measure of force accuracy.
+Each condition uses eight remove-and-reseat cycles of one coupon, not eight independent specimens. The numbers are constructed demonstration values and have no uncertainty intervals.
+Lateral drift is the median magnitude of pad displacement during the ramp. The order of modes was not randomized in the notebook. No angle trace, lock force, pressure map or later correction was recorded. The data are supplied in results.csv and implementation.md.
+Results
+All records are listed in Table 1. E mode has small drift in every condition. F has low variation for pitch but more drift. L uses more seating time. The roll condition remains variable.
+Table 1. Constructed repeated-mounting records.
+In pitch the coefficient of variation was 7.2 for E, 2.1 for F and 2.3 for L. Drift was 12, 125 and 19 micrometres. L used 32 seconds, compared with 18 for E and 17 for F. In flat the coefficients were 1.3, 1.4 and 1.3. In roll they were 7.0, 6.8 and 6.9. The data cover a single fixture and limited constructed conditions, without estimates of uncertainty.
+[Figure 1 placeholder]
+Figure 1. Fixture mechanism. The drawing is to be supplied; dimensions and internal clamp geometry are not specified.
+Conclusion
+The three modes have different results in the supplied records. The tilt direction and the lock sequence are factors to consider when describing the method. Force repeatability does not establish material property accuracy, and the fixture does not provide a second angular degree of freedom. The records are not evidence from real experiments.
+Sources
+[1] Teaching implementation notes and mode definitions. [2] Constructed records

@@ -1,0 +1,27 @@
+{
+  "source_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "edits": [
+    {
+      "paragraph_id": "P0002",
+      "operation": "rewrite_prose_preserving_runs",
+      "before": "Compression fixture evaluation",
+      "after": "Locking after seating in compression tests",
+      "reason": "标题集中于锁定时机；三个比较指标留给摘要，避免标题变成清单。",
+      "source": [
+        "input/implementation.md",
+        "input/results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0004",
+      "operation": "rewrite_prose_preserving_runs",
+      "before": "Three modes were tried with an existing pivoting compression pad. The components included a frame, a pin, a clamp, a pad and a lower platen. The records include nine rows. In the pitch condition, mode L had a force coefficient of variation of 2.3%, drift of 19 micrometres and seating time of 32 seconds. E had 7.2%, 12 micrometres and 18 seconds. In flat and roll conditions there were also differences. The fixture was operated at a preload of 10 N and a displacement of 0.20 mm. Repeatability and displacement during the ramp are discussed. These are constructed teaching records.",
+      "after": "Locking a pivoting compression pad before contact prevents angular seating; leaving it free during loading can permit drift. In this constructed teaching comparison, we instead hold contact at 10 N, lock the existing clamp, and apply the same 0.20 mm ramp. On a 1° pitch slope, the end-force coefficient of variation across eight reseatings of one coupon fell from 7.2% with pre-locking to 2.3%. Compared with remaining free, median drift fell from 125 to 19 μm, but preparation took 32 rather than 17 s; force variation was 2.1% when free. Flat-coupon repeatability changed little, and the single pivot could not accommodate a cross-slope. Findings concern reseating repeatability and drift, with no uncertainty estimates or claim of force accuracy.",
+      "reason": "先解释自由贴合与加载稳定之间的矛盾，再连起操作、三模式对照、时间代价与方向限制。",
+      "source": [
+        "input/implementation.md",
+        "input/results.csv"
+      ]
+    }
+  ]
+}

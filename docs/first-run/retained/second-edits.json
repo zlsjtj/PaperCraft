@@ -1,0 +1,27 @@
+{
+  "source_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "edits": [
+    {
+      "paragraph_id": "P0002",
+      "operation": "rewrite_prose_preserving_runs",
+      "before": "Compression fixture evaluation",
+      "after": "Seating before locking a pivoting compression pad",
+      "reason": "标题集中于锁定时机；三个比较指标留给摘要，避免标题变成清单。",
+      "source": [
+        "input/implementation.md",
+        "input/results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0004",
+      "operation": "rewrite_prose_preserving_runs",
+      "before": "Three modes were tried with an existing pivoting compression pad. The components included a frame, a pin, a clamp, a pad and a lower platen. The records include nine rows. In the pitch condition, mode L had a force coefficient of variation of 2.3%, drift of 19 micrometres and seating time of 32 seconds. E had 7.2%, 12 micrometres and 18 seconds. In flat and roll conditions there were also differences. The fixture was operated at a preload of 10 N and a displacement of 0.20 mm. Repeatability and displacement during the ramp are discussed. These are constructed teaching records.",
+      "after": "A pivoting compression pad can align with a sloped specimen yet drift if it remains free during loading. This constructed teaching comparison asks when to close its existing clamp: before approach, not during loading, or after seating at 10 N. The last sequence holds contact while locking, then applies the same 0.20 mm ramp. Across eight reseatings of one coupon tilted 1° along the pivot direction, end-force coefficients of variation were 7.2%, 2.1% and 2.3%, respectively. Relative to remaining free, locking after seating reduced median drift from 125 to 19 μm, at a preparation-time cost of 32 rather than 17 s. Flat-coupon repeatability showed little difference, and none of the modes corrected a slope across the single pivot axis. The records illustrate a trade-off between seating freedom and stability during loading, with a time cost and a directional boundary. They do not establish force accuracy or statistical equivalence.",
+      "reason": "先解释自由贴合与加载稳定之间的矛盾，再连起操作、三模式对照、时间代价与方向限制。",
+      "source": [
+        "input/implementation.md",
+        "input/results.csv"
+      ]
+    }
+  ]
+}

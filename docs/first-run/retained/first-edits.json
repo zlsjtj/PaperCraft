@@ -1,0 +1,27 @@
+{
+  "source_sha256": "1750e8dc319c329af229c0e4ccaa428dc53c3b3b9b43285d691a679a6c8183a0",
+  "edits": [
+    {
+      "paragraph_id": "P0002",
+      "operation": "rewrite_prose_preserving_runs",
+      "before": "Compression fixture evaluation",
+      "after": "Seating before locking a pivoting compression pad: repeatability, drift and preparation time",
+      "reason": "标题指明操作改变及实际比较的三个量。",
+      "source": [
+        "input/implementation.md",
+        "input/results.csv"
+      ]
+    },
+    {
+      "paragraph_id": "P0004",
+      "operation": "rewrite_prose_preserving_runs",
+      "before": "Three modes were tried with an existing pivoting compression pad. The components included a frame, a pin, a clamp, a pad and a lower platen. The records include nine rows. In the pitch condition, mode L had a force coefficient of variation of 2.3%, drift of 19 micrometres and seating time of 32 seconds. E had 7.2%, 12 micrometres and 18 seconds. In flat and roll conditions there were also differences. The fixture was operated at a preload of 10 N and a displacement of 0.20 mm. Repeatability and displacement during the ramp are discussed. These are constructed teaching records.",
+      "after": "A pivoting compression pad can seat against a sloped specimen, but leaving it free during loading can permit lateral drift. We use constructed teaching records to compare when the existing angular clamp is closed: before approach, never during loading, or after seating at a 10 N preload. The last sequence holds contact while locking, then zeros the displacement increment before the same 0.20 mm ramp. For a 1° slope along the pivot direction, the end-force coefficient of variation across eight reseatings of one coupon was 7.2%, 2.1% and 2.3%, respectively. Locking after seating reduced median drift from 125 to 19 μm relative to remaining free, while median preparation time increased from 17 to 32 s. The sequence offered no clear repeatability benefit on the flat coupon and did not correct a slope across the pivot axis. These records illustrate a trade-off between seating freedom and stability during loading; they do not establish force accuracy or statistical equivalence between modes.",
+      "reason": "先解释自由贴合与加载稳定之间的矛盾，再连起操作、三模式对照、时间代价与方向限制。",
+      "source": [
+        "input/implementation.md",
+        "input/results.csv"
+      ]
+    }
+  ]
+}

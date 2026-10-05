@@ -1,19 +1,18 @@
-<p align="center">
-  <a href="docs/social-preview/README.md"><img src="docs/social-preview/social-preview.jpg" width="100%" alt="PaperCraft 品牌封面：暖纸色、纸页与红色书签"></a>
-</p>
+<h1 align="center">PaperCraft</h1>
+<p align="center"><strong>讲清研究的贡献，把证据写进故事。</strong><br>论文叙事与精修 · Word / PDF · 可审阅修改</p>
 <p align="center"><a href="#改写效果">看改写效果</a> · <a href="#开始使用">下载安装</a> · <a href="docs/examples.md">案例与源码</a> · <a href="LICENSE">MIT</a></p>
 
 给 AI 研究助手使用的论文精修技能。从原稿、实现说明和结果中找到值得讲的主线，把**做了什么**写成**为什么值得做、难在哪里、证据支持什么**。从标题、摘要到方法与结果，最后交付可继续编辑的 **Word 清稿、黄色审阅稿和 PDF**。
 
 ## 改写效果
 
-[![从结果清单到设计选择：同一套夹具，改变的是锁定时机](examples/clamp-timing/showcase/assets/contribution.png)](examples/clamp-timing/showcase/README.md)
+[![实际三页完整稿：问题与机制、必要操作与数据、收益与边界](examples/clamp-timing/complete/preview/overview.png)](examples/clamp-timing/complete/README.md)
 
-**先抓住选择，再讲工作与证据。** 可转动的压头能贴合斜面，但加载时继续保持自由也可能漂移。改稿将“何时锁住”前置，把收益、代价和必要操作串成一条论证。
+**同一套夹具，改变的是锁定时机。** 原稿列出三个模式、九行结果；改稿从“先贴合、再锁住”的选择出发，让必要操作、机制图和完整结果接着回答同一个问题。最终交付三页完整稿，两张图已经进入 Word。
 
-**[完整前后对照](examples/clamp-timing/showcase/README.md)** · [技术工作怎样写](examples/clamp-timing/showcase/README.md#2-把操作写成必要的决定) · [读清稿 PDF](examples/clamp-timing/clean.pdf) · [看黄色审阅 PDF](examples/clamp-timing/review.pdf)
+**[打开联合案例](examples/clamp-timing/complete/README.md)** · [读三页清稿](examples/clamp-timing/complete/selected/clean.pdf) · [看黄色审阅](examples/clamp-timing/complete/selected/review.pdf) · [一句话怎样改](examples/clamp-timing/showcase/README.md)
 
-<sub>英文案例的中文摘述；数值为教学构造数据。</sub>
+<sub>预览来自实际交付页面；材料和数值为教学构造。点开 PDF 阅读正文。</sub>
 
 <details>
 <summary>展开文字对照</summary>
@@ -26,7 +25,7 @@
 
 </details>
 
-[Word 清稿](examples/clamp-timing/clean.docx) · [Word 审阅稿](examples/clamp-timing/review.docx) · [原始材料](examples/clamp-timing/input/rough.docx) · [30 秒案例导览](examples/clamp-timing/showcase/assets/tour.gif)
+[Word 清稿](examples/clamp-timing/complete/selected/clean.docx) · [Word 审阅稿](examples/clamp-timing/complete/selected/review.docx) · [原始材料](examples/clamp-timing/input/rough.docx) · [图源与重建](examples/clamp-timing/complete/README.md#重建)
 
 ## 用在你的论文里
 
@@ -38,6 +37,8 @@
 [同材料生成对照](examples/window-records-trial/README.md) · [从材料到成稿的教程](docs/from-materials-to-paper.md)
 
 ## 开始使用
+
+**[看一次完整试用](docs/first-run/README.md)**：从材料包开始，复制任务，再打开实际生成的文件。
 
 选择你使用的 AI 客户端，安装技能后交给它材料：
 

@@ -4,6 +4,8 @@
 
 ## 摘要有很多信息，却看不出重点
 
+**先看完整联合案例：[三页论文、两张图与原始九行记录](../examples/clamp-timing/complete/README.md)。** 标题、摘要、必要操作、结果图和最终页面沿同一主线展开；清稿与黄色稿均可下载。
+
 [![同一套夹具，改变的是锁定时机](../examples/clamp-timing/showcase/assets/contribution.png)](../examples/clamp-timing/showcase/README.md)
 
 **压头锁止时序。** 原稿列部件、模式和九行结果；改稿把“何时锁住已有压头”及漂移与操作时间的取舍前置。预载保持、锁定时不抬起等工程工作，留在方法中解释其作用。

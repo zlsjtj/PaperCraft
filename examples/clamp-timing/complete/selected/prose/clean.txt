@@ -1,0 +1,47 @@
+CONSTRUCTED DEMO — NOT REAL RESEARCH RESULTS
+
+When to lock a pivoting compression pad
+
+Abstract
+
+On a sloping coupon, the freedom that lets a compression pad seat also remains available during loading. We compare when to lock an existing single-axis pad: before approach (E), remain free (F), or seat under preload and then lock (L). In the constructed 1 degree pitch-slope records, L trades 15 s of extra preparation for lower median ramp drift (19 versus 125 micrometres for F). The endpoint force coefficient of variation (CV) is 2.3% versus 2.1%, without uncertainty estimates; early locking gives 7.2%. Flat coupons gain no repeatability, and a cross-axis slope remains uncompensated. The comparison identifies a conditional benefit of changing the operating sequence on the same hardware.
+
+Introduction
+
+A flat compression pad and a sloping coupon need not first meet across their full faces. Allowing the pad to pitch offers an existing way to accommodate a slope in one direction. Yet the freedom useful during seating remains available during the subsequent displacement ramp unless the operator closes the angular clamp. The practical question is whether that freedom should be retained throughout loading or used only to establish the seated pose.
+
+We vary the timing of one existing friction clamp while retaining the frame, sensors, calibration, pad surface and analysis. Figure 1 separates the freedom needed for seating from the restraint applied during loading. A pitch slope tests this sequence where the pivot can accommodate the surface; flat and roll-sloped coupons test its limits. This operating-sequence comparison uses constructed records [1,2], with no new pivot, controller or feedback algorithm.
+
+Method
+
+Mode E fixes the horizontal pad before approach to 10 N. Mode F approaches with the clamp open and leaves it open during the ramp. Mode L approaches freely to 10 N, holds that preload, and locks without lifting the pad. Holding contact makes the lock act on the seated pose rather than requiring a second approach. A preload-hold acknowledgement is required before locking; its absence aborts the run. All supplied records contain it. The displacement increment is zeroed after the prescribed approach or lock sequence, so every mode then receives the same 0.20 mm ramp. The clamp is released only after unloading.
+
+The crosshead carries a transverse pivot pin, perpendicular to the side-view plane. The rigid pad can pitch about that pin but cannot roll about another axis; its flat face presses the coupon against a fixed lower platen. The coupon tops are planar: flat, tilted 1 degree in pitch, or tilted 1 degree in roll. The 10 N preload and 0.20 mm increment are inherited teaching settings, not optimized values.
+
+Force repeatability is calculated from the sample standard deviation s and mean μ of endpoint force after the 0.20 mm ramp across eight reseatings: CV = 100 s / μ. The value is reported in percent. It is not a measure of force accuracy.
+
+Each row summarizes eight remove-and-reseat cycles of one coupon in that condition, not eight independent specimens. Geometry and synthetic inputs are identical across modes. The numbers are constructed demonstration values and have no uncertainty intervals.
+
+Drift is the median magnitude of lateral pad displacement during the ramp. Seating time is the median interval from starting the approach to starting the ramp, including the hold and lock in L; it excludes unloading and specimen preparation. Full test duration was not measured. Mode order was not randomized, and raw force samples, pad-angle traces, lock-force measurements and pressure maps are unavailable. No automated correction was made.
+
+Results
+
+All records are listed in Table 1. The pitch condition tests whether locking after seating can retain low force variation while limiting ramp drift. Flat and roll conditions test whether that choice is broadly useful.
+
+Table 1. Constructed repeated-mounting records.
+
+The pitch rows show why the comparison needs both E and F. E limits drift to 12 micrometres but gives 7.2% force CV. F gives 2.1% CV but 125 micrometres drift; L gives 2.3% CV and 19 micrometres drift. Relative to F, L therefore trades 15 additional seconds of preparation for 106 micrometres less median drift. The small CV difference does not establish equivalence or significance without uncertainty estimates. Figure 2 keeps this tradeoff alongside the other conditions.
+
+ On flat tops, force CV spans only 1.3-1.4%. L takes 31 s rather than 18 s for E, with drift of 16 rather than 14 micrometres; the extra action offers no repeatability gain on these records. On the roll slope, all modes remain at 6.8-7.0% CV. L reduces drift relative to F but does not repair this variation. The useful sequence is therefore conditional on the available pitch freedom, not a general remedy for a sloping surface.
+
+[Figure 1 placeholder]
+
+Figure 1. Use the same pitch freedom to seat the pad, then lock it for loading. The two views show mode L: seat at 10 N, hold and acknowledge preload, close the clamp without lifting, then zero and ramp 0.20 mm. Lock symbols denote clamp state, not internal construction. The strip compares E, F and L; open and filled circles mean free and locked. The pin permits only pitch. Perspective and slope are schematic, not measured geometry or pressure maps.
+
+Conclusion
+
+The comparison turns an existing degree of freedom into a choice about timing: use it to seat, then restrain it for loading when the reduction in drift justifies the additional preparation. Flat and roll-sloped coupons prevent a universal preference for L. Repeated mountings establish neither force accuracy, material properties nor pressure uniformity. These constructed records demonstrate how to assess an operating sequence; they do not validate physical fixture performance.
+
+Sources
+
+[1] Teaching implementation notes and mode definitions. [2] Constructed records
